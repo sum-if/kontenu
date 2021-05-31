@@ -1,0 +1,4061 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AAB5D70-BDB3-4D05-B8A6-91F960CAEE6C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OmahSoftware</RootNamespace>
+    <AssemblyName>OmahSoftware</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Installer\lv\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://192.168.1.121/installer/</InstallUrl>
+    <TargetCulture>id-ID</TargetCulture>
+    <ProductName>BMS</ProductName>
+    <PublisherName>OmahSoftware</PublisherName>
+    <SuiteName>Retail</SuiteName>
+    <MinimumRequiredVersion>1.0.0.68</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.html</WebPage>
+    <ApplicationRevision>78</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v15.2.Win, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Presets, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Win, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.2.Extensions, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Reporting, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup">
+      <HintPath>..\packages\MySqlBackup.1.0.1\lib\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="OswLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>OswLib\OswLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Akuntansi\Data\DataAdmin.cs" />
+    <Compile Include="Akuntansi\Data\DataKelompokAkun.cs" />
+    <Compile Include="Akuntansi\Data\DataKelompokAkunSetting.cs" />
+    <Compile Include="Akuntansi\Data\DataTransferKas.cs" />
+    <Compile Include="Akuntansi\Form\FrmLaporanMutasiPersediaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanMutasiPersediaan.designer.cs">
+      <DependentUpon>FrmLaporanMutasiPersediaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanNeracaLajur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanNeracaLajur.designer.cs">
+      <DependentUpon>FrmLaporanNeracaLajur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanGunggung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanGunggung.designer.cs">
+      <DependentUpon>FrmLaporanGunggung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanRasioKeuangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanRasioKeuangan.designer.cs">
+      <DependentUpon>FrmLaporanRasioKeuangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanArusKas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanArusKas.designer.cs">
+      <DependentUpon>FrmLaporanArusKas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanAnalisaHPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanAnalisaHPP.designer.cs">
+      <DependentUpon>FrmLaporanAnalisaHPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmSettingAkunTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmSettingAkunTransaksi.designer.cs">
+      <DependentUpon>FrmSettingAkunTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmSettingAkun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmSettingAkun.designer.cs">
+      <DependentUpon>FrmSettingAkun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanAgingPiutang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanAgingPiutang.designer.cs">
+      <DependentUpon>FrmLaporanAgingPiutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanAgingHutang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanAgingHutang.designer.cs">
+      <DependentUpon>FrmLaporanAgingHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanDetailPiutang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanDetailPiutang.designer.cs">
+      <DependentUpon>FrmLaporanDetailPiutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanDetailHutang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanDetailHutang.designer.cs">
+      <DependentUpon>FrmLaporanDetailHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanKasBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanKasBank.designer.cs">
+      <DependentUpon>FrmLaporanKasBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanRincianPelunasanPiutang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanRincianPelunasanPiutang.designer.cs">
+      <DependentUpon>FrmLaporanRincianPelunasanPiutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanRincianPelunasanHutang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanRincianPelunasanHutang.designer.cs">
+      <DependentUpon>FrmLaporanRincianPelunasanHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanRekapPiutang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanRekapPiutang.designer.cs">
+      <DependentUpon>FrmLaporanRekapPiutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanRekapHutang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanRekapHutang.designer.cs">
+      <DependentUpon>FrmLaporanRekapHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanKartuUangTitipanCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanKartuUangTitipanCustomer.designer.cs">
+      <DependentUpon>FrmLaporanKartuUangTitipanCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanKartuUangTitipanSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanKartuUangTitipanSupplier.designer.cs">
+      <DependentUpon>FrmLaporanKartuUangTitipanSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanOmsetSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanOmsetSales.designer.cs">
+      <DependentUpon>FrmLaporanOmsetSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanLabaRugi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanLabaRugi.designer.cs">
+      <DependentUpon>FrmLaporanLabaRugi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanNeraca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanNeraca.designer.cs">
+      <DependentUpon>FrmLaporanNeraca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanPenagihan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanPenagihan.designer.cs">
+      <DependentUpon>FrmLaporanPenagihan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanPriceListUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanPriceListUpdate.designer.cs">
+      <DependentUpon>FrmLaporanPriceListUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanPriceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanPriceList.designer.cs">
+      <DependentUpon>FrmLaporanPriceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanPostDatedCheque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanPostDatedCheque.designer.cs">
+      <DependentUpon>FrmLaporanPostDatedCheque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanKartuPiutang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanKartuPiutang.designer.cs">
+      <DependentUpon>FrmLaporanKartuPiutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanKartuHutang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanKartuHutang.designer.cs">
+      <DependentUpon>FrmLaporanKartuHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanBukuBesar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanBukuBesar.designer.cs">
+      <DependentUpon>FrmLaporanBukuBesar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanJurnalUmum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmLaporanJurnalUmum.designer.cs">
+      <DependentUpon>FrmLaporanJurnalUmum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmTransferKas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmTransferKas.designer.cs">
+      <DependentUpon>FrmTransferKas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmTransferKasAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmTransferKasAdd.designer.cs">
+      <DependentUpon>FrmTransferKasAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmTutupPeriode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmTutupPeriode.designer.cs">
+      <DependentUpon>FrmTutupPeriode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmTutupPeriodeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmTutupPeriodeAdd.designer.cs">
+      <DependentUpon>FrmTutupPeriodeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptAgingPiutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptAgingPiutang.designer.cs">
+      <DependentUpon>RptAgingPiutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptAgingHutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptAgingHutang.designer.cs">
+      <DependentUpon>RptAgingHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLaporanMutasiPersediaan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLaporanMutasiPersediaan.Designer.cs">
+      <DependentUpon>RptLaporanMutasiPersediaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptNeracaLajur.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptNeracaLajur.Designer.cs">
+      <DependentUpon>RptNeracaLajur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptGunggung.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptGunggung.Designer.cs">
+      <DependentUpon>RptGunggung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptRasioKeuangan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptRasioKeuangan.Designer.cs">
+      <DependentUpon>RptRasioKeuangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptArusKas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptArusKas.Designer.cs">
+      <DependentUpon>RptArusKas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptAnalisaHPP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptAnalisaHPP.Designer.cs">
+      <DependentUpon>RptAnalisaHPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptKasBank.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptKasBank.Designer.cs">
+      <DependentUpon>RptKasBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptRincianPelunasanPiutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptRincianPelunasanPiutang.Designer.cs">
+      <DependentUpon>RptRincianPelunasanPiutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptRincianPelunasanHutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptRincianPelunasanHutang.Designer.cs">
+      <DependentUpon>RptRincianPelunasanHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptRekapPiutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptRekapPiutang.Designer.cs">
+      <DependentUpon>RptRekapPiutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptRekapHutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptRekapHutang.Designer.cs">
+      <DependentUpon>RptRekapHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptKartuUangTitipanCustomer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptKartuUangTitipanCustomer.Designer.cs">
+      <DependentUpon>RptKartuUangTitipanCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptKartuUangTitipanSupplier.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptKartuUangTitipanSupplier.Designer.cs">
+      <DependentUpon>RptKartuUangTitipanSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLabaRugi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLabaRugi.designer.cs">
+      <DependentUpon>RptLabaRugi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLaporanDetailPiutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLaporanDetailPiutang.Designer.cs">
+      <DependentUpon>RptLaporanDetailPiutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLaporanPenagihan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLaporanPenagihan.Designer.cs">
+      <DependentUpon>RptLaporanPenagihan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLaporanDetailHutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLaporanDetailHutang.Designer.cs">
+      <DependentUpon>RptLaporanDetailHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLaporanPriceListUpdate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLaporanPriceListUpdate.Designer.cs">
+      <DependentUpon>RptLaporanPriceListUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptNeraca.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptNeraca.designer.cs">
+      <DependentUpon>RptNeraca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptNeracaSub.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptNeracaSub.designer.cs">
+      <DependentUpon>RptNeracaSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptPostDatedCheque.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptPostDatedCheque.Designer.cs">
+      <DependentUpon>RptPostDatedCheque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptKartuHutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptKartuHutang.Designer.cs">
+      <DependentUpon>RptKartuHutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptKartuPiutang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptKartuPiutang.Designer.cs">
+      <DependentUpon>RptKartuPiutang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptCetakJurnalVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptCetakJurnalVoucher.Designer.cs">
+      <DependentUpon>RptCetakJurnalVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptCetakKasMasuk.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptCetakKasMasuk.Designer.cs">
+      <DependentUpon>RptCetakKasMasuk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptCetakKasKeluar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptCetakKasKeluar.Designer.cs">
+      <DependentUpon>RptCetakKasKeluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptBukuBesar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptBukuBesar.Designer.cs">
+      <DependentUpon>RptBukuBesar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptJurnalUmum.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptJurnalUmum.Designer.cs">
+      <DependentUpon>RptJurnalUmum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Data\DataMutasiUangTitipanSupplier.cs" />
+    <Compile Include="Pembelian\Data\DataPembayaranHutangEkspedisi.cs" />
+    <Compile Include="Pembelian\Data\DataPembayaranHutangEkspedisiDetail.cs" />
+    <Compile Include="Pembelian\Data\DataPembayaranPembelianDetail.cs" />
+    <Compile Include="Pembelian\Data\DataMutasiHutang.cs" />
+    <Compile Include="Pembelian\Data\DataPembayaranPembelian.cs" />
+    <Compile Include="Pembelian\Data\DataPesananPembelian.cs" />
+    <Compile Include="Pembelian\Data\DataPesananPembelianDetail.cs" />
+    <Compile Include="Pembelian\Data\DataReturPembelian.cs" />
+    <Compile Include="Pembelian\Data\DataReturPembelianDetail.cs" />
+    <Compile Include="Pembelian\Data\DataFakturPembelian.cs" />
+    <Compile Include="Pembelian\Data\DataFakturPembelianDetail.cs" />
+    <Compile Include="Pembelian\Data\DataSaldoUangTitipanSupplierAktual.cs" />
+    <Compile Include="Pembelian\Data\DataSaldoHutangAktual.cs" />
+    <Compile Include="Pembelian\Data\DataSettlementChequePembelian.cs" />
+    <Compile Include="Pembelian\Data\DataSupplier.cs" />
+    <Compile Include="Akuntansi\Data\DataKasMasuk.cs" />
+    <Compile Include="Akuntansi\Data\DataKasKeluar.cs" />
+    <Compile Include="Akuntansi\Data\DataKasMasukDetail.cs" />
+    <Compile Include="Akuntansi\Data\DataKasKeluarDetail.cs" />
+    <Compile Include="Akuntansi\Data\DataSaldoAkunAktual.cs" />
+    <Compile Include="Akuntansi\Data\DataJurnalVoucherDetail.cs" />
+    <Compile Include="Akuntansi\Data\DataJurnalVoucher.cs" />
+    <Compile Include="Akuntansi\Data\DataAkunSubGroup.cs" />
+    <Compile Include="Akuntansi\Data\DataAkunKategori.cs" />
+    <Compile Include="Akuntansi\Data\DataAkunGroup.cs" />
+    <Compile Include="Akuntansi\Data\DataAkunSubKategori.cs" />
+    <Compile Include="Akuntansi\Data\DataAkun.cs" />
+    <Compile Include="Akuntansi\Data\DataJurnal.cs" />
+    <Compile Include="Akuntansi\Form\FrmKasMasuk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmKasMasuk.designer.cs">
+      <DependentUpon>FrmKasMasuk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmKasKeluar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmKasKeluar.designer.cs">
+      <DependentUpon>FrmKasKeluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmKasMasukAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmKasMasukAdd.designer.cs">
+      <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmKasKeluarAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmKasKeluarAdd.designer.cs">
+      <DependentUpon>FrmKasKeluarAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmJurnalVoucherAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmJurnalVoucherAdd.designer.cs">
+      <DependentUpon>FrmJurnalVoucherAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmJurnalVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmJurnalVoucher.designer.cs">
+      <DependentUpon>FrmJurnalVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkun.designer.cs">
+      <DependentUpon>FrmAkun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunSubGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunSubGroup.designer.cs">
+      <DependentUpon>FrmAkunSubGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunGroup.designer.cs">
+      <DependentUpon>FrmAkunGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunAdd.designer.cs">
+      <DependentUpon>FrmAkunAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunSubGroupAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunSubGroupAdd.designer.cs">
+      <DependentUpon>FrmAkunSubGroupAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunSubKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunSubKategori.designer.cs">
+      <DependentUpon>FrmAkunSubKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunGroupAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunGroupAdd.designer.cs">
+      <DependentUpon>FrmAkunGroupAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunSubKategoriAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\FrmAkunSubKategoriAdd.designer.cs">
+      <DependentUpon>FrmAkunSubKategoriAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmFakturPajakRetur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmFakturPajakRetur.designer.cs">
+      <DependentUpon>FrmFakturPajakRetur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPajakMasukanRetur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPajakMasukanRetur.designer.cs">
+      <DependentUpon>FrmPajakMasukanRetur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakReturCSV2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakReturCSV2.designer.cs">
+      <DependentUpon>RptCetakReturCSV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakReturCSV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakReturCSV.designer.cs">
+      <DependentUpon>RptCetakReturCSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakPajakMasukanRetur.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakPajakMasukanRetur.designer.cs">
+      <DependentUpon>RptCetakPajakMasukanRetur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakReturPembelianBuktiPelaporan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakReturPembelianBuktiPelaporan.designer.cs">
+      <DependentUpon>RptCetakReturPembelianBuktiPelaporan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmPajakKeluaranRetur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmPajakKeluaranRetur.designer.cs">
+      <DependentUpon>FrmPajakKeluaranRetur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmFakturPajakKeluaranRetur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmFakturPajakKeluaranRetur.designer.cs">
+      <DependentUpon>FrmFakturPajakKeluaranRetur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmFakturPajak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmFakturPajak.designer.cs">
+      <DependentUpon>FrmFakturPajak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmLaporanPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmLaporanPembelian.designer.cs">
+      <DependentUpon>FrmLaporanPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPajakMasukan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPajakMasukan.designer.cs">
+      <DependentUpon>FrmPajakMasukan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPembayaranHutangEkspedisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPembayaranHutangEkspedisi.designer.cs">
+      <DependentUpon>FrmPembayaranHutangEkspedisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPembayaranHutangEkspedisiAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPembayaranHutangEkspedisiAdd.designer.cs">
+      <DependentUpon>FrmPembayaranHutangEkspedisiAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPesananPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPesananPembelian.designer.cs">
+      <DependentUpon>FrmPesananPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPesananPembelianAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPesananPembelianAdd.designer.cs">
+      <DependentUpon>FrmPesananPembelianAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmLaporanHistoryPembelianBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmLaporanHistoryPembelianBarang.designer.cs">
+      <DependentUpon>FrmLaporanHistoryPembelianBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmReturPembelianAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmReturPembelianAdd.designer.cs">
+      <DependentUpon>FrmReturPembelianAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPembayaranPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPembayaranPembelian.designer.cs">
+      <DependentUpon>FrmPembayaranPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPembayaranPembelianAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmPembayaranPembelianAdd.designer.cs">
+      <DependentUpon>FrmPembayaranPembelianAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmReturPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmReturPembelian.designer.cs">
+      <DependentUpon>FrmReturPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmFakturPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmFakturPembelian.designer.cs">
+      <DependentUpon>FrmFakturPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmFakturPembelianAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmFakturPembelianAdd.designer.cs">
+      <DependentUpon>FrmFakturPembelianAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmSettlementChequePembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmSettlementChequePembelian.designer.cs">
+      <DependentUpon>FrmSettlementChequePembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmSettlementChequePembelianAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmSettlementChequePembelianAdd.designer.cs">
+      <DependentUpon>FrmSettlementChequePembelianAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmSupplier.designer.cs">
+      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmSupplierAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Form\FrmSupplierAdd.designer.cs">
+      <DependentUpon>FrmSupplierAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakPembayaranHutangEkspedisi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakPembayaranHutangEkspedisi.Designer.cs">
+      <DependentUpon>RptCetakPembayaranHutangEkspedisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakPembayaranPembelian.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakPembayaranPembelian.Designer.cs">
+      <DependentUpon>RptCetakPembayaranPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakLaporanPembelian.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakLaporanPembelian.Designer.cs">
+      <DependentUpon>RptCetakLaporanPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakPajakMasukan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakPajakMasukan.designer.cs">
+      <DependentUpon>RptCetakPajakMasukan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakReturPembelian.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakReturPembelian.designer.cs">
+      <DependentUpon>RptCetakReturPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakPesananPembelian.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Laporan\RptCetakPesananPembelian.designer.cs">
+      <DependentUpon>RptCetakPesananPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Data\DataKota.cs" />
+    <Compile Include="Penjualan\Data\DataMutasiUangTitipanCustomer.cs" />
+    <Compile Include="Penjualan\Data\DataMutasiPiutang.cs" />
+    <Compile Include="Penjualan\Data\DataPenerimaanPenjualanDetail.cs" />
+    <Compile Include="Penjualan\Data\DataBackOrder.cs" />
+    <Compile Include="Penjualan\Data\DataBackOrderDetail.cs" />
+    <Compile Include="Penjualan\Data\DataSaldoUangTitipanCustomerAktual.cs" />
+    <Compile Include="Penjualan\Data\DataSales.cs" />
+    <Compile Include="Penjualan\Data\DataKotaGroup.cs" />
+    <Compile Include="Penjualan\Data\DataSettlementCheque.cs" />
+    <Compile Include="Penjualan\Data\DataPenerimaanPenjualan.cs" />
+    <Compile Include="Penjualan\Data\DataReturPenjualanDetail.cs" />
+    <Compile Include="Penjualan\Data\DataReturPenjualan.cs" />
+    <Compile Include="Penjualan\Data\DataFakturPenjualan.cs" />
+    <Compile Include="Penjualan\Data\DataFakturPenjualanDetail.cs" />
+    <Compile Include="Penjualan\Data\DataEkspedisi.cs" />
+    <Compile Include="Penjualan\Data\DataPesananPenjualan.cs" />
+    <Compile Include="Penjualan\Data\DataPesananPenjualanDetail.cs" />
+    <Compile Include="Penjualan\Data\DataSaldoPiutangAktual.cs" />
+    <Compile Include="Penjualan\Data\DataCustomer.cs" />
+    <Compile Include="Penjualan\Form\FrmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmCustomer.designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmCustomerAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmCustomerAdd.designer.cs">
+      <DependentUpon>FrmCustomerAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmFakturPajakGunggung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmFakturPajakGunggung.designer.cs">
+      <DependentUpon>FrmFakturPajakGunggung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmKota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmKota.designer.cs">
+      <DependentUpon>FrmKota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmKotaAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmKotaAdd.designer.cs">
+      <DependentUpon>FrmKotaAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmBackOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmBackOrder.designer.cs">
+      <DependentUpon>FrmBackOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmBackOrderAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmBackOrderAdd.designer.cs">
+      <DependentUpon>FrmBackOrderAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmLaporanHistoryPenjualanBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmLaporanHistoryPenjualanBarang.designer.cs">
+      <DependentUpon>FrmLaporanHistoryPenjualanBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmLaporanPendingOrderBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmLaporanPendingOrderBarang.designer.cs">
+      <DependentUpon>FrmLaporanPendingOrderBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmSales.designer.cs">
+      <DependentUpon>FrmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmSalesAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmSalesAdd.designer.cs">
+      <DependentUpon>FrmSalesAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmKotaGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmKotaGroup.designer.cs">
+      <DependentUpon>FrmKotaGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmEkspedisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmEkspedisi.designer.cs">
+      <DependentUpon>FrmEkspedisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmKotaGroupAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmKotaGroupAdd.designer.cs">
+      <DependentUpon>FrmKotaGroupAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmEkspedisiAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmEkspedisiAdd.designer.cs">
+      <DependentUpon>FrmEkspedisiAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmFakturPajak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmFakturPajak.designer.cs">
+      <DependentUpon>FrmFakturPajak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmLaporanPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmLaporanPenjualan.designer.cs">
+      <DependentUpon>FrmLaporanPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmFakturPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmFakturPenjualan.designer.cs">
+      <DependentUpon>FrmFakturPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmFakturPenjualanAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmFakturPenjualanAdd.designer.cs">
+      <DependentUpon>FrmFakturPenjualanAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmPenerimaanPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmPenerimaanPenjualan.designer.cs">
+      <DependentUpon>FrmPenerimaanPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmPenerimaanPenjualanAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmPenerimaanPenjualanAdd.designer.cs">
+      <DependentUpon>FrmPenerimaanPenjualanAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmReturPenjualanAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmReturPenjualanAdd.designer.cs">
+      <DependentUpon>FrmReturPenjualanAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmReturPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmReturPenjualan.designer.cs">
+      <DependentUpon>FrmReturPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmPajakKeluaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmPajakKeluaran.designer.cs">
+      <DependentUpon>FrmPajakKeluaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmPesananPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmPesananPenjualan.designer.cs">
+      <DependentUpon>FrmPesananPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmPesananPenjualanAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmPesananPenjualanAdd.designer.cs">
+      <DependentUpon>FrmPesananPenjualanAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmSettlementCheque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmSettlementCheque.designer.cs">
+      <DependentUpon>FrmSettlementCheque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmSettlementChequeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Form\FrmSettlementChequeAdd.designer.cs">
+      <DependentUpon>FrmSettlementChequeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakLaporanPenjualan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakLaporanPenjualan.Designer.cs">
+      <DependentUpon>RptCetakLaporanPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakPajakKeluaranRetur.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakPajakKeluaranRetur.designer.cs">
+      <DependentUpon>RptCetakPajakKeluaranRetur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakPajakKeluaran.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakPajakKeluaran.designer.cs">
+      <DependentUpon>RptCetakPajakKeluaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakFakturPenjualan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakFakturPenjualan.designer.cs">
+      <DependentUpon>RptCetakFakturPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakPenerimaanPenjualan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakPenerimaanPenjualan.Designer.cs">
+      <DependentUpon>RptCetakPenerimaanPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakPengirimanPenjualan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakPengirimanPenjualan.designer.cs">
+      <DependentUpon>RptCetakPengirimanPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakBackOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakBackOrder.designer.cs">
+      <DependentUpon>RptCetakBackOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakPesananPenjualan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakPesananPenjualan.designer.cs">
+      <DependentUpon>RptCetakPesananPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakReturCSV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakReturCSV.designer.cs">
+      <DependentUpon>RptCetakReturCSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakReturCSV2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakReturCSV2.designer.cs">
+      <DependentUpon>RptCetakReturCSV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakReturPembelianBuktiPelaporan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Penjualan\Laporan\RptCetakReturPembelianBuktiPelaporan.designer.cs">
+      <DependentUpon>RptCetakReturPembelianBuktiPelaporan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persediaan\Data\DataMutasiHPP.cs" />
+    <Compile Include="Persediaan\Data\DataMutasiPersediaan.cs" />
+    <Compile Include="Persediaan\Data\DataPenyesuaianPersediaan.cs" />
+    <Compile Include="Persediaan\Data\DataPenyesuaianPersediaanDetail.cs" />
+    <Compile Include="Persediaan\Data\DataSaldoPersediaanHPP.cs" />
+    <Compile Include="Persediaan\Data\DataSaldoPersediaanAktual.cs" />
+    <Compile Include="Persediaan\Form\FrmLaporanKartuStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persediaan\Form\FrmLaporanKartuStok.designer.cs">
+      <DependentUpon>FrmLaporanKartuStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persediaan\Form\FrmLaporanHargaPokokBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persediaan\Form\FrmLaporanHargaPokokBarang.designer.cs">
+      <DependentUpon>FrmLaporanHargaPokokBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persediaan\Form\FrmPenyesuaianPersediaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persediaan\Form\FrmPenyesuaianPersediaan.designer.cs">
+      <DependentUpon>FrmPenyesuaianPersediaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persediaan\Form\FrmPenyesuaianPersediaanAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persediaan\Form\FrmPenyesuaianPersediaanAdd.designer.cs">
+      <DependentUpon>FrmPenyesuaianPersediaanAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persediaan\Form\FrmPersediaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persediaan\Form\FrmPersediaan.designer.cs">
+      <DependentUpon>FrmPersediaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLaporanPriceList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Laporan\RptLaporanPriceList.Designer.cs">
+      <DependentUpon>RptLaporanPriceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persediaan\Laporan\RptLaporanKartuStok.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Persediaan\Laporan\RptLaporanKartuStok.Designer.cs">
+      <DependentUpon>RptLaporanKartuStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persediaan\Laporan\RptCetakPenyesuaianPersediaan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Persediaan\Laporan\RptCetakPenyesuaianPersediaan.designer.cs">
+      <DependentUpon>RptCetakPenyesuaianPersediaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\Data\DataOswSetting.cs" />
+    <Compile Include="Sistem\Data\DataOswPerusahaan.cs" />
+    <Compile Include="Sistem\Data\DataOswJenisDokumen.cs" />
+    <Compile Include="Sistem\Data\DataOswSettingMulti.cs" />
+    <Compile Include="Sistem\SisHakAkses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisHakAkses.designer.cs">
+      <DependentUpon>SisHakAkses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisLogin.designer.cs">
+      <DependentUpon>SisLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\InfUtamaDataTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\InfUtamaDataTable.designer.cs">
+      <DependentUpon>InfUtamaDataTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\InfUtamaDictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\InfUtamaDictionary.designer.cs">
+      <DependentUpon>InfUtamaDictionary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisLogLaporan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisLogLaporan.Designer.cs">
+      <DependentUpon>SisLogLaporan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisLogError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisLogError.Designer.cs">
+      <DependentUpon>SisLogError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisLogTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisLogTransaksi.Designer.cs">
+      <DependentUpon>SisLogTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisLogLoginLogout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisLogLoginLogout.Designer.cs">
+      <DependentUpon>SisLogLoginLogout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisPerusahaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisPerusahaan.designer.cs">
+      <DependentUpon>SisPerusahaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Umum\Combo\ComboQueryUmum.cs" />
+    <Compile Include="Umum\Combo\ComboConstantUmum.cs" />
+    <Compile Include="Umum\Data\DataBarang.cs" />
+    <Compile Include="Umum\Data\DataKategoriBarang.cs" />
+    <Compile Include="Umum\Data\DataRak.cs" />
+    <Compile Include="Umum\Data\DataSatuan.cs" />
+    <Compile Include="Umum\Form\FrmBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Umum\Form\FrmBarang.designer.cs">
+      <DependentUpon>FrmBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Umum\Form\FrmBarangAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Umum\Form\FrmBarangAdd.designer.cs">
+      <DependentUpon>FrmBarangAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Umum\Form\FrmKategoriBarangAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Umum\Form\FrmKategoriBarangAdd.designer.cs">
+      <DependentUpon>FrmKategoriBarangAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Umum\Form\FrmKategoriBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Umum\Form\FrmKategoriBarang.designer.cs">
+      <DependentUpon>FrmKategoriBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Umum\Form\FrmRak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Umum\Form\FrmRak.designer.cs">
+      <DependentUpon>FrmRak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Umum\Form\FrmRakAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Umum\Form\FrmRakAdd.designer.cs">
+      <DependentUpon>FrmRakAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Umum\Form\FrmSatuanAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Umum\Form\FrmSatuanAdd.designer.cs">
+      <DependentUpon>FrmSatuanAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Umum\Form\FrmSatuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Umum\Form\FrmSatuan.designer.cs">
+      <DependentUpon>FrmSatuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OswLib\Constants.cs" />
+    <Compile Include="Sistem\Data\DataOswUserGroup.cs" />
+    <Compile Include="Sistem\Data\DataOswUser.cs" />
+    <Compile Include="Sistem\SisGantiPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisGantiPassword.Designer.cs">
+      <DependentUpon>SisGantiPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisDatabaseRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisDatabaseRestore.Designer.cs">
+      <DependentUpon>SisDatabaseRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisDatabaseBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisDatabaseBackup.Designer.cs">
+      <DependentUpon>SisDatabaseBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisUser.Designer.cs">
+      <DependentUpon>SisUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisUserGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisUserGroup.Designer.cs">
+      <DependentUpon>SisUserGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisUserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisUserAdd.Designer.cs">
+      <DependentUpon>SisUserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisUserGroupAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisUserGroupAdd.Designer.cs">
+      <DependentUpon>SisUserGroupAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OswLib\Tools.cs" />
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Umum\Laporan\LaporanPrintPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Umum\Laporan\LaporanPrintPreview.designer.cs">
+      <DependentUpon>LaporanPrintPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisLogout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisLogout.designer.cs">
+      <DependentUpon>SisLogout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistem\SisUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SisUtama.Designer.cs">
+      <DependentUpon>SisUtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sistem\SplashUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistem\SplashUtama.designer.cs">
+      <DependentUpon>SplashUtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanMutasiPersediaan.resx">
+      <DependentUpon>FrmLaporanMutasiPersediaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanNeracaLajur.resx">
+      <DependentUpon>FrmLaporanNeracaLajur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanGunggung.resx">
+      <DependentUpon>FrmLaporanGunggung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanRasioKeuangan.resx">
+      <DependentUpon>FrmLaporanRasioKeuangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanArusKas.resx">
+      <DependentUpon>FrmLaporanArusKas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanAnalisaHPP.resx">
+      <DependentUpon>FrmLaporanAnalisaHPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmSettingAkunTransaksi.resx">
+      <DependentUpon>FrmSettingAkunTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmSettingAkun.resx">
+      <DependentUpon>FrmSettingAkun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanAgingPiutang.resx">
+      <DependentUpon>FrmLaporanAgingPiutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanAgingHutang.resx">
+      <DependentUpon>FrmLaporanAgingHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanDetailPiutang.resx">
+      <DependentUpon>FrmLaporanDetailPiutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanDetailHutang.resx">
+      <DependentUpon>FrmLaporanDetailHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanKasBank.resx">
+      <DependentUpon>FrmLaporanKasBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanRincianPelunasanPiutang.resx">
+      <DependentUpon>FrmLaporanRincianPelunasanPiutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanRincianPelunasanHutang.resx">
+      <DependentUpon>FrmLaporanRincianPelunasanHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanRekapPiutang.resx">
+      <DependentUpon>FrmLaporanRekapPiutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanRekapHutang.resx">
+      <DependentUpon>FrmLaporanRekapHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanKartuUangTitipanCustomer.resx">
+      <DependentUpon>FrmLaporanKartuUangTitipanCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanKartuUangTitipanSupplier.resx">
+      <DependentUpon>FrmLaporanKartuUangTitipanSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanOmsetSales.resx">
+      <DependentUpon>FrmLaporanOmsetSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanLabaRugi.resx">
+      <DependentUpon>FrmLaporanLabaRugi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanNeraca.resx">
+      <DependentUpon>FrmLaporanNeraca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanPenagihan.resx">
+      <DependentUpon>FrmLaporanPenagihan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanPriceListUpdate.resx">
+      <DependentUpon>FrmLaporanPriceListUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanPriceList.resx">
+      <DependentUpon>FrmLaporanPriceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanPostDatedCheque.resx">
+      <DependentUpon>FrmLaporanPostDatedCheque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanKartuPiutang.resx">
+      <DependentUpon>FrmLaporanKartuPiutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanKartuHutang.resx">
+      <DependentUpon>FrmLaporanKartuHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanBukuBesar.resx">
+      <DependentUpon>FrmLaporanBukuBesar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmLaporanJurnalUmum.resx">
+      <DependentUpon>FrmLaporanJurnalUmum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmTransferKas.resx">
+      <DependentUpon>FrmTransferKas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmTransferKasAdd.resx">
+      <DependentUpon>FrmTransferKasAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmKasMasuk.resx">
+      <DependentUpon>FrmKasMasuk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmKasKeluar.resx">
+      <DependentUpon>FrmKasKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmKasMasukAdd.resx">
+      <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmKasKeluarAdd.resx">
+      <DependentUpon>FrmKasKeluarAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmJurnalVoucherAdd.resx">
+      <DependentUpon>FrmJurnalVoucherAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmJurnalVoucher.resx">
+      <DependentUpon>FrmJurnalVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmAkun.resx">
+      <DependentUpon>FrmAkun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmAkunSubGroup.resx">
+      <DependentUpon>FrmAkunSubGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmAkunGroup.resx">
+      <DependentUpon>FrmAkunGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmAkunAdd.resx">
+      <DependentUpon>FrmAkunAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmAkunSubGroupAdd.resx">
+      <DependentUpon>FrmAkunSubGroupAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmAkunSubKategori.resx">
+      <DependentUpon>FrmAkunSubKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmAkunGroupAdd.resx">
+      <DependentUpon>FrmAkunGroupAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmAkunSubKategoriAdd.resx">
+      <DependentUpon>FrmAkunSubKategoriAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmTutupPeriode.resx">
+      <DependentUpon>FrmTutupPeriode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\FrmTutupPeriodeAdd.resx">
+      <DependentUpon>FrmTutupPeriodeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptAgingPiutang.resx">
+      <DependentUpon>RptAgingPiutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptAgingHutang.resx">
+      <DependentUpon>RptAgingHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptLaporanMutasiPersediaan.resx">
+      <DependentUpon>RptLaporanMutasiPersediaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptNeracaLajur.resx">
+      <DependentUpon>RptNeracaLajur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptGunggung.resx">
+      <DependentUpon>RptGunggung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptRasioKeuangan.resx">
+      <DependentUpon>RptRasioKeuangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptArusKas.resx">
+      <DependentUpon>RptArusKas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptAnalisaHPP.resx">
+      <DependentUpon>RptAnalisaHPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptKasBank.resx">
+      <DependentUpon>RptKasBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptRincianPelunasanPiutang.resx">
+      <DependentUpon>RptRincianPelunasanPiutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptRincianPelunasanHutang.resx">
+      <DependentUpon>RptRincianPelunasanHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptRekapPiutang.resx">
+      <DependentUpon>RptRekapPiutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptRekapHutang.resx">
+      <DependentUpon>RptRekapHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptKartuUangTitipanCustomer.resx">
+      <DependentUpon>RptKartuUangTitipanCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptKartuUangTitipanSupplier.resx">
+      <DependentUpon>RptKartuUangTitipanSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptLabaRugi.resx">
+      <DependentUpon>RptLabaRugi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptLaporanDetailPiutang.resx">
+      <DependentUpon>RptLaporanDetailPiutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptLaporanPenagihan.resx">
+      <DependentUpon>RptLaporanPenagihan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptLaporanDetailHutang.resx">
+      <DependentUpon>RptLaporanDetailHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptLaporanPriceListUpdate.resx">
+      <DependentUpon>RptLaporanPriceListUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptNeraca.resx">
+      <DependentUpon>RptNeraca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptNeracaSub.resx">
+      <DependentUpon>RptNeracaSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptPostDatedCheque.resx">
+      <DependentUpon>RptPostDatedCheque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptKartuHutang.resx">
+      <DependentUpon>RptKartuHutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptKartuPiutang.resx">
+      <DependentUpon>RptKartuPiutang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptCetakJurnalVoucher.resx">
+      <DependentUpon>RptCetakJurnalVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptCetakKasMasuk.resx">
+      <DependentUpon>RptCetakKasMasuk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptCetakKasKeluar.resx">
+      <DependentUpon>RptCetakKasKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptBukuBesar.resx">
+      <DependentUpon>RptBukuBesar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptJurnalUmum.resx">
+      <DependentUpon>RptJurnalUmum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmFakturPajakRetur.resx">
+      <DependentUpon>FrmFakturPajakRetur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmPajakMasukanRetur.resx">
+      <DependentUpon>FrmPajakMasukanRetur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Laporan\RptCetakReturCSV2.resx">
+      <DependentUpon>RptCetakReturCSV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Laporan\RptCetakReturCSV.resx">
+      <DependentUpon>RptCetakReturCSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Laporan\RptCetakPajakMasukanRetur.resx">
+      <DependentUpon>RptCetakPajakMasukanRetur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Laporan\RptCetakReturPembelianBuktiPelaporan.resx">
+      <DependentUpon>RptCetakReturPembelianBuktiPelaporan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmPajakKeluaranRetur.resx">
+      <DependentUpon>FrmPajakKeluaranRetur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmFakturPajakKeluaranRetur.resx">
+      <DependentUpon>FrmFakturPajakKeluaranRetur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmFakturPajak.resx">
+      <DependentUpon>FrmFakturPajak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmLaporanPembelian.resx">
+      <DependentUpon>FrmLaporanPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmPajakMasukan.resx">
+      <DependentUpon>FrmPajakMasukan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmPembayaranHutangEkspedisi.resx">
+      <DependentUpon>FrmPembayaranHutangEkspedisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmPembayaranHutangEkspedisiAdd.resx">
+      <DependentUpon>FrmPembayaranHutangEkspedisiAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmPesananPembelian.resx">
+      <DependentUpon>FrmPesananPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmPesananPembelianAdd.resx">
+      <DependentUpon>FrmPesananPembelianAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmLaporanHistoryPembelianBarang.resx">
+      <DependentUpon>FrmLaporanHistoryPembelianBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmReturPembelianAdd.resx">
+      <DependentUpon>FrmReturPembelianAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmFakturPembelian.resx">
+      <DependentUpon>FrmFakturPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmFakturPembelianAdd.resx">
+      <DependentUpon>FrmFakturPembelianAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmPembayaranPembelian.resx">
+      <DependentUpon>FrmPembayaranPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmPembayaranPembelianAdd.resx">
+      <DependentUpon>FrmPembayaranPembelianAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmReturPembelian.resx">
+      <DependentUpon>FrmReturPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmSettlementChequePembelian.resx">
+      <DependentUpon>FrmSettlementChequePembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmSettlementChequePembelianAdd.resx">
+      <DependentUpon>FrmSettlementChequePembelianAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmSupplier.resx">
+      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Form\FrmSupplierAdd.resx">
+      <DependentUpon>FrmSupplierAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Laporan\RptCetakPembayaranHutangEkspedisi.resx">
+      <DependentUpon>RptCetakPembayaranHutangEkspedisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Laporan\RptCetakPembayaranPembelian.resx">
+      <DependentUpon>RptCetakPembayaranPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Laporan\RptCetakLaporanPembelian.resx">
+      <DependentUpon>RptCetakLaporanPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Laporan\RptCetakPajakMasukan.resx">
+      <DependentUpon>RptCetakPajakMasukan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Laporan\RptCetakReturPembelian.resx">
+      <DependentUpon>RptCetakReturPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Laporan\RptCetakPesananPembelian.resx">
+      <DependentUpon>RptCetakPesananPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmCustomer.resx">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmCustomerAdd.resx">
+      <DependentUpon>FrmCustomerAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmFakturPajakGunggung.resx">
+      <DependentUpon>FrmFakturPajakGunggung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmKota.resx">
+      <DependentUpon>FrmKota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmKotaAdd.resx">
+      <DependentUpon>FrmKotaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmBackOrder.resx">
+      <DependentUpon>FrmBackOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmBackOrderAdd.resx">
+      <DependentUpon>FrmBackOrderAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmLaporanHistoryPenjualanBarang.resx">
+      <DependentUpon>FrmLaporanHistoryPenjualanBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmLaporanPendingOrderBarang.resx">
+      <DependentUpon>FrmLaporanPendingOrderBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmSales.resx">
+      <DependentUpon>FrmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmSalesAdd.resx">
+      <DependentUpon>FrmSalesAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmKotaGroup.resx">
+      <DependentUpon>FrmKotaGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmEkspedisi.resx">
+      <DependentUpon>FrmEkspedisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmKotaGroupAdd.resx">
+      <DependentUpon>FrmKotaGroupAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmEkspedisiAdd.resx">
+      <DependentUpon>FrmEkspedisiAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmFakturPajak.resx">
+      <DependentUpon>FrmFakturPajak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmLaporanPenjualan.resx">
+      <DependentUpon>FrmLaporanPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmFakturPenjualan.resx">
+      <DependentUpon>FrmFakturPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmFakturPenjualanAdd.resx">
+      <DependentUpon>FrmFakturPenjualanAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmPenerimaanPenjualan.resx">
+      <DependentUpon>FrmPenerimaanPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmPenerimaanPenjualanAdd.resx">
+      <DependentUpon>FrmPenerimaanPenjualanAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmReturPenjualanAdd.resx">
+      <DependentUpon>FrmReturPenjualanAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmReturPenjualan.resx">
+      <DependentUpon>FrmReturPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmPajakKeluaran.resx">
+      <DependentUpon>FrmPajakKeluaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmPesananPenjualan.resx">
+      <DependentUpon>FrmPesananPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmPesananPenjualanAdd.resx">
+      <DependentUpon>FrmPesananPenjualanAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmSettlementCheque.resx">
+      <DependentUpon>FrmSettlementCheque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Form\FrmSettlementChequeAdd.resx">
+      <DependentUpon>FrmSettlementChequeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Laporan\RptCetakLaporanPenjualan.resx">
+      <DependentUpon>RptCetakLaporanPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Laporan\RptCetakPajakKeluaranRetur.resx">
+      <DependentUpon>RptCetakPajakKeluaranRetur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Laporan\RptCetakPajakKeluaran.resx">
+      <DependentUpon>RptCetakPajakKeluaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Laporan\RptCetakFakturPenjualan.resx">
+      <DependentUpon>RptCetakFakturPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Laporan\RptCetakPenerimaanPenjualan.resx">
+      <DependentUpon>RptCetakPenerimaanPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Laporan\RptCetakPengirimanPenjualan.resx">
+      <DependentUpon>RptCetakPengirimanPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Laporan\RptCetakBackOrder.resx">
+      <DependentUpon>RptCetakBackOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Laporan\RptCetakPesananPenjualan.resx">
+      <DependentUpon>RptCetakPesananPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Laporan\RptCetakReturCSV.resx">
+      <DependentUpon>RptCetakReturCSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Laporan\RptCetakReturCSV2.resx">
+      <DependentUpon>RptCetakReturCSV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\Laporan\RptCetakReturPembelianBuktiPelaporan.resx">
+      <DependentUpon>RptCetakReturPembelianBuktiPelaporan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persediaan\Form\FrmLaporanKartuStok.resx">
+      <DependentUpon>FrmLaporanKartuStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persediaan\Form\FrmLaporanHargaPokokBarang.resx">
+      <DependentUpon>FrmLaporanHargaPokokBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persediaan\Form\FrmPenyesuaianPersediaan.resx">
+      <DependentUpon>FrmPenyesuaianPersediaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persediaan\Form\FrmPenyesuaianPersediaanAdd.resx">
+      <DependentUpon>FrmPenyesuaianPersediaanAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persediaan\Form\FrmPersediaan.resx">
+      <DependentUpon>FrmPersediaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Laporan\RptLaporanPriceList.resx">
+      <DependentUpon>RptLaporanPriceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persediaan\Laporan\RptLaporanKartuStok.resx">
+      <DependentUpon>RptLaporanKartuStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persediaan\Laporan\RptCetakPenyesuaianPersediaan.resx">
+      <DependentUpon>RptCetakPenyesuaianPersediaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Sistem\SisHakAkses.resx">
+      <DependentUpon>SisHakAkses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisLogin.resx">
+      <DependentUpon>SisLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\InfUtamaDataTable.resx">
+      <DependentUpon>InfUtamaDataTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\InfUtamaDictionary.resx">
+      <DependentUpon>InfUtamaDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisLogLaporan.resx">
+      <DependentUpon>SisLogLaporan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisLogError.resx">
+      <DependentUpon>SisLogError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisLogTransaksi.resx">
+      <DependentUpon>SisLogTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisLogLoginLogout.resx">
+      <DependentUpon>SisLogLoginLogout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisPerusahaan.resx">
+      <DependentUpon>SisPerusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Umum\Form\FrmBarang.resx">
+      <DependentUpon>FrmBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Umum\Form\FrmBarangAdd.resx">
+      <DependentUpon>FrmBarangAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Umum\Form\FrmKategoriBarangAdd.resx">
+      <DependentUpon>FrmKategoriBarangAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Umum\Form\FrmKategoriBarang.resx">
+      <DependentUpon>FrmKategoriBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Umum\Form\FrmRak.resx">
+      <DependentUpon>FrmRak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Umum\Form\FrmRakAdd.resx">
+      <DependentUpon>FrmRakAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Umum\Form\FrmSatuanAdd.resx">
+      <DependentUpon>FrmSatuanAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Umum\Form\FrmSatuan.resx">
+      <DependentUpon>FrmSatuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisGantiPassword.resx">
+      <DependentUpon>SisGantiPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisDatabaseRestore.resx">
+      <DependentUpon>SisDatabaseRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisDatabaseBackup.resx">
+      <DependentUpon>SisDatabaseBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisUser.resx">
+      <DependentUpon>SisUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisUserGroup.resx">
+      <DependentUpon>SisUserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisUserAdd.resx">
+      <DependentUpon>SisUserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisUserGroupAdd.resx">
+      <DependentUpon>SisUserGroupAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Umum\Laporan\LaporanPrintPreview.resx">
+      <DependentUpon>LaporanPrintPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisLogout.resx">
+      <DependentUpon>SisLogout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SisUtama.resx">
+      <DependentUpon>SisUtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistem\SplashUtama.resx">
+      <DependentUpon>SplashUtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\OmahSoftware.Persediaan.DataCetakBarcode.datasource" />
+    <None Include="Properties\DataSources\OmahSoftware.Persediaan.DataGudang.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\login.png" />
+    <EmbeddedResource Include="Resources\logo-osw-256.png" />
+    <EmbeddedResource Include="Resources\logo-osw-128.png" />
+    <EmbeddedResource Include="Resources\logo-osw-64.png" />
+    <EmbeddedResource Include="Resources\logo-osw-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="id\DevExpress.Dashboard.v15.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.Dashboard.v15.2.Win.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.RichEdit.v15.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.Spreadsheet.v15.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.Web.ASPxHtmlEditor.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.Web.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.Xpf.Core.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.Xpf.Grid.v15.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.Xpf.PdfViewer.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraBars.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraCharts.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraCharts.v15.2.Wizard.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraEditors.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraGauges.v15.2.Presets.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraGrid.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraLayout.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraNavBar.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraPdfViewer.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraPivotGrid.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraPrinting.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraReports.v15.2.Extensions.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraReports.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraReports.v15.2.Web.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraRichEdit.v15.2.Extensions.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraRichEdit.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraScheduler.v15.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraScheduler.v15.2.Extensions.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraScheduler.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraSpellChecker.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraSpreadsheet.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraTreeList.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraVerticalGrid.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="id\DevExpress.XtraWizard.v15.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OswLib\OswLib.dll" />
+    <Content Include="OswLib\OswLib.XML" />
+    <EmbeddedResource Include="Resources\logo.jpeg" />
+    <EmbeddedResource Include="Resources\logo3.gif" />
+    <EmbeddedResource Include="Resources\cheque-32.png" />
+    <EmbeddedResource Include="Resources\logo-verotech.png" />
+    <EmbeddedResource Include="Resources\ubah-16.png" />
+    <EmbeddedResource Include="Resources\tambah-16.png" />
+    <EmbeddedResource Include="Resources\simpan-16.png" />
+    <EmbeddedResource Include="Resources\hapus-16.png" />
+    <EmbeddedResource Include="Resources\cetak-16.png" />
+    <EmbeddedResource Include="Resources\cari-16.png" />
+    <EmbeddedResource Include="Resources\ubah-32.png" />
+    <EmbeddedResource Include="Resources\tambah-32.png" />
+    <EmbeddedResource Include="Resources\hapus-32.png" />
+    <EmbeddedResource Include="Resources\cetak-32.png" />
+    <EmbeddedResource Include="Resources\cari-32.png" />
+    <EmbeddedResource Include="Resources\voucher-32.png" />
+    <EmbeddedResource Include="Resources\usergroup-32.png" />
+    <EmbeddedResource Include="Resources\user-32.png" />
+    <EmbeddedResource Include="Resources\tutupperiode-32.png" />
+    <EmbeddedResource Include="Resources\transferpersediaan-32.png" />
+    <EmbeddedResource Include="Resources\termin-32.png" />
+    <EmbeddedResource Include="Resources\supplier-32.png" />
+    <EmbeddedResource Include="Resources\sku-32.png" />
+    <EmbeddedResource Include="Resources\simpan-32.png" />
+    <EmbeddedResource Include="Resources\returpenjualan-32.png" />
+    <EmbeddedResource Include="Resources\returpengiriman-32.png" />
+    <EmbeddedResource Include="Resources\returpembelian-32.png" />
+    <EmbeddedResource Include="Resources\promo-32.png" />
+    <EmbeddedResource Include="Resources\produksi-32.png" />
+    <EmbeddedResource Include="Resources\pospenjualan-32.png" />
+    <EmbeddedResource Include="Resources\poskas-32.png" />
+    <EmbeddedResource Include="Resources\pesananpenjualan-32.png" />
+    <EmbeddedResource Include="Resources\pesananpembelian-32.png" />
+    <EmbeddedResource Include="Resources\perusahaan-32.png" />
+    <EmbeddedResource Include="Resources\permintaanpembelian-32.png" />
+    <EmbeddedResource Include="Resources\penyesuaianpersediaan-32.png" />
+    <EmbeddedResource Include="Resources\penjadwalanproduksi-32.png" />
+    <EmbeddedResource Include="Resources\pengirimanpenjualan-32.png" />
+    <EmbeddedResource Include="Resources\penerimaanpembelian-32.png" />
+    <EmbeddedResource Include="Resources\penerimaanpembayaranpenjualan-32.png" />
+    <EmbeddedResource Include="Resources\pembeliankonsinyasi-32.png" />
+    <EmbeddedResource Include="Resources\pembayaranpembelian-32.png" />
+    <EmbeddedResource Include="Resources\pajak-32.png" />
+    <EmbeddedResource Include="Resources\member-32.png" />
+    <EmbeddedResource Include="Resources\logout-32b.png" />
+    <EmbeddedResource Include="Resources\logout-32a.png" />
+    <EmbeddedResource Include="Resources\log-32.png" />
+    <EmbeddedResource Include="Resources\laporanproduksi-32.png" />
+    <EmbeddedResource Include="Resources\laporanpersedian-32.png" />
+    <EmbeddedResource Include="Resources\laporanpenjualan-32.png" />
+    <EmbeddedResource Include="Resources\laporanpembelian-32.png" />
+    <EmbeddedResource Include="Resources\laporanakuntansi-32.png" />
+    <EmbeddedResource Include="Resources\konversistok-32.png" />
+    <EmbeddedResource Include="Resources\kasmasuk-32.png" />
+    <EmbeddedResource Include="Resources\kaskeluar-32.png" />
+    <EmbeddedResource Include="Resources\karyawan-32.png" />
+    <EmbeddedResource Include="Resources\journalvoucher-32.png" />
+    <EmbeddedResource Include="Resources\jenispembayaran-32.png" />
+    <EmbeddedResource Include="Resources\jasa-32.png" />
+    <EmbeddedResource Include="Resources\hakakses-32.png" />
+    <EmbeddedResource Include="Resources\gudang-32.png" />
+    <EmbeddedResource Include="Resources\gantipassword-32.png" />
+    <EmbeddedResource Include="Resources\formatdokumen-32.png" />
+    <EmbeddedResource Include="Resources\fakturpenjualanlangsung-32.png" />
+    <EmbeddedResource Include="Resources\fakturpenjualan-32.png" />
+    <EmbeddedResource Include="Resources\fakturpembelianlangsung-32.png" />
+    <EmbeddedResource Include="Resources\fakturpembelian-32.png" />
+    <EmbeddedResource Include="Resources\ekspedisi-32.png" />
+    <EmbeddedResource Include="Resources\edc-32.png" />
+    <EmbeddedResource Include="Resources\database-32.png" />
+    <EmbeddedResource Include="Resources\customer-32.png" />
+    <EmbeddedResource Include="Resources\buyget-32.png" />
+    <EmbeddedResource Include="Resources\BOM-32.png" />
+    <EmbeddedResource Include="Resources\barang-32.png" />
+    <EmbeddedResource Include="Resources\aset-32.png" />
+    <EmbeddedResource Include="Resources\akun-32.png" />
+    <EmbeddedResource Include="Resources\penerimaantitipan-32.png" />
+    <EmbeddedResource Include="Resources\pembayarantitipan-32.png" />
+    <EmbeddedResource Include="Resources\laporanpersediaan-32.png" />
+    <EmbeddedResource Include="Resources\barcode-32.png" />
+    <EmbeddedResource Include="Resources\ubahastatuspersediaan-32.png" />
+    <EmbeddedResource Include="Resources\transferkas-32.png" />
+    <EmbeddedResource Include="Resources\settingkelompokakun-32.png" />
+    <EmbeddedResource Include="Resources\satuan-32.png" />
+    <EmbeddedResource Include="Resources\restoredatabase-32.png" />
+    <EmbeddedResource Include="Resources\rekonsiliasi-32.png" />
+    <EmbeddedResource Include="Resources\rak-32.png" />
+    <EmbeddedResource Include="Resources\possetkasawal-32.png" />
+    <EmbeddedResource Include="Resources\possetkasakhir-32.png" />
+    <EmbeddedResource Include="Resources\posprosespersediaankasir-32.png" />
+    <EmbeddedResource Include="Resources\posmastershift-32.png" />
+    <EmbeddedResource Include="Resources\posmasterkasir-32.png" />
+    <EmbeddedResource Include="Resources\penerimaantransfer-32.png" />
+    <EmbeddedResource Include="Resources\penerimaantitipancustomer-32.png" />
+    <EmbeddedResource Include="Resources\penarikantitipansupplier-32.png" />
+    <EmbeddedResource Include="Resources\pembayarantitipansupplier-32.png" />
+    <EmbeddedResource Include="Resources\pembayarantitipancustomer-32.png" />
+    <EmbeddedResource Include="Resources\pemakaianpersediaan-32.png" />
+    <EmbeddedResource Include="Resources\logtransaksi-32.png" />
+    <EmbeddedResource Include="Resources\logout-32.png" />
+    <EmbeddedResource Include="Resources\logloginlogout-32.png" />
+    <EmbeddedResource Include="Resources\loglaporan-32.png" />
+    <EmbeddedResource Include="Resources\login-32.png" />
+    <EmbeddedResource Include="Resources\logerror-32.png" />
+    <EmbeddedResource Include="Resources\kelompokakunsetting-32.png" />
+    <EmbeddedResource Include="Resources\jurnalvoucher-32.png" />
+    <EmbeddedResource Include="Resources\jabatan-32.png" />
+    <EmbeddedResource Include="Resources\departemen-32.png" />
+    <EmbeddedResource Include="Resources\cabang-32.png" />
+    <EmbeddedResource Include="Resources\backupdatabase-32.png" />
+    <EmbeddedResource Include="Resources\usegroup-32.png" />
+    <EmbeddedResource Include="Resources\pilih-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevExpress.BonusSkins.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Charts.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.CodeParser.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Dashboard.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Dashboard.v15.2.Win">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v15.2.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Map.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Office.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v15.2.Drawing">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.PivotGrid.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Printing.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Sparkline.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v15.2.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Xpo.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v15.2.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v15.2.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v15.2.Wizard">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v15.2.Presets">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v15.2.Win">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGrid.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraLayout.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraMap.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraNavBar.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPivotGrid.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v15.2.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v15.2.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v15.2.Reporting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraVerticalGrid.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraWizard.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Data.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.DataAccess.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.DataAccess.v15.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Office.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.PivotGrid.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Printing.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.RichEdit.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Sparkline.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Utils.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Utils.v15.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Xpo.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraBars.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraCharts.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraCharts.v15.2.Wizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraEditors.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGauges.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraLayout.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraNavBar.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraPivotGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraPrinting.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraReports.v15.2.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraReports.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraRichEdit.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraTreeList.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraVerticalGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraWizard.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Data.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.DataAccess.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.DataAccess.v15.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Office.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.PivotGrid.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Printing.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.RichEdit.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Sparkline.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Utils.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Utils.v15.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Xpo.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraBars.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraCharts.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraCharts.v15.2.Wizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraEditors.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraGauges.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraLayout.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraNavBar.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraPivotGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraPrinting.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraReports.v15.2.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraReports.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraRichEdit.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraTreeList.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraVerticalGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraWizard.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.Dashboard.v15.2.Core.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.Dashboard.v15.2.Win.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.RichEdit.v15.2.Core.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.Spreadsheet.v15.2.Core.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.Web.ASPxHtmlEditor.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.Web.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.Xpf.Core.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.Xpf.Grid.v15.2.Core.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.Xpf.PdfViewer.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraBars.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraCharts.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraCharts.v15.2.Wizard.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraEditors.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraGauges.v15.2.Presets.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraGrid.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraLayout.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraNavBar.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraPdfViewer.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraPivotGrid.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraPrinting.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraReports.v15.2.Extensions.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraReports.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraReports.v15.2.Web.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraRichEdit.v15.2.Extensions.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraRichEdit.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraScheduler.v15.2.Core.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraScheduler.v15.2.Extensions.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraScheduler.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraSpellChecker.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraSpreadsheet.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraTreeList.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraVerticalGrid.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="id\DevExpress.XtraWizard.v15.2.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Data.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.DataAccess.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.DataAccess.v15.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Office.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.PivotGrid.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Printing.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.RichEdit.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Sparkline.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Utils.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Utils.v15.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Xpo.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraBars.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraCharts.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraCharts.v15.2.Wizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraEditors.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraGauges.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraLayout.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraNavBar.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraPivotGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraPrinting.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraReports.v15.2.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraReports.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraRichEdit.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraTreeList.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraVerticalGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraWizard.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="MySql.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="OswLib">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="OswLib\OswLib.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Data.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.DataAccess.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.DataAccess.v15.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Office.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.PivotGrid.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Printing.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.RichEdit.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Sparkline.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Utils.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Utils.v15.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Xpo.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraBars.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraCharts.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraCharts.v15.2.Wizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraEditors.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraGauges.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraLayout.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraNavBar.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraPivotGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraPrinting.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraReports.v15.2.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraReports.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraRichEdit.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraTreeList.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraVerticalGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraWizard.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="System.Data.Linq">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

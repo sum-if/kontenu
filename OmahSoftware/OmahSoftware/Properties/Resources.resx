@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cari_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cari-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cetak_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cetak-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hapus_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hapus-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tambah_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tambah-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ubah_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ubah-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="simpan_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\simpan-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pilih_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pilih-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="perusahaan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\perusahaan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gantipassword_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gantipassword-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hakakses_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hakakses-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usegroup_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usegroup-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="akun_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\akun-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backupdatabase_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backupdatabase-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barang_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barang-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cabang_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cabang-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="customer_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\customer-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="departemen_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\departemen-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ekspedisi_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ekspedisi-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fakturpembelianlangsung_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fakturpembelianlangsung-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fakturpembelian_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fakturpembelian-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fakturpenjualanlangsung_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fakturpenjualanlangsung-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fakturpenjualan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fakturpenjualan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formatdokumen_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formatdokumen-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gudang_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gudang-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jabatan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jabatan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jasa_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jasa-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jenispembayaran_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jenispembayaran-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jurnalvoucher_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jurnalvoucher-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="karyawan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karyawan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kaskeluar_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kaskeluar-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kasmasuk_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kasmasuk-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kelompokakunsetting_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kelompokakunsetting-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="konversistok_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\konversistok-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logerror_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logerror-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loglaporan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loglaporan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logloginlogout_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logloginlogout-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logtransaksi_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logtransaksi-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pajak_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pajak-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pemakaianpersediaan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pemakaianpersediaan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pembayaranpembelian_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pembayaranpembelian-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pembayarantitipancustomer_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pembayarantitipancustomer-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pembayarantitipansupplier_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pembayarantitipansupplier-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penarikantitipansupplier_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penarikantitipansupplier-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penerimaanpembayaranpenjualan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penerimaanpembayaranpenjualan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penerimaanpembelian_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penerimaanpembelian-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penerimaantitipancustomer_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penerimaantitipancustomer-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penerimaantransfer_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penerimaantransfer-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pengirimanpenjualan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pengirimanpenjualan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penyesuaianpersediaan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penyesuaianpersediaan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="permintaanpembelian_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\permintaanpembelian-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pesananpembelian_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pesananpembelian-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pesananpenjualan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pesananpenjualan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="posmasterkasir_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\posmasterkasir-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="posmastershift_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\posmastershift-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pospenjualan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pospenjualan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="posprosespersediaankasir_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\posprosespersediaankasir-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="possetkasakhir_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\possetkasakhir-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="possetkasawal_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\possetkasawal-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rak_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rak-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rekonsiliasi_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rekonsiliasi-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="restoredatabase_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restoredatabase-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="returpembelian_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\returpembelian-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="returpengiriman_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\returpengiriman-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="returpenjualan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\returpenjualan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="satuan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\satuan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settingkelompokakun_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settingkelompokakun-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="supplier_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\supplier-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="termin_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termin-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transferkas_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transferkas-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transferpersediaan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transferpersediaan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ubahastatuspersediaan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ubahastatuspersediaan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usergroup_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usergroup-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barcode_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barcode-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laporanakuntansi_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laporanakuntansi-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laporanpersediaan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laporanpersediaan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pembayarantitipan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pembayarantitipan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penerimaantitipan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penerimaantitipan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aset_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aset-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BOM_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BOM-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buyget_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buyget-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="database_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edc_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edc-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="journalvoucher_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\journalvoucher-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laporanpembelian_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laporanpembelian-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laporanpenjualan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laporanpenjualan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laporanpersedian_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laporanpersedian-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laporanproduksi_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laporanproduksi-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout_32a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout-32a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout_32b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout-32b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="log_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="member_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\member-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pembeliankonsinyasi_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pembeliankonsinyasi-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penjadwalanproduksi_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penjadwalanproduksi-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="poskas_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\poskas-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="produksi_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\produksi-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="promo_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\promo-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="simpan_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\simpan-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sku_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sku-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tutupperiode_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tutupperiode-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="voucher_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\voucher-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
