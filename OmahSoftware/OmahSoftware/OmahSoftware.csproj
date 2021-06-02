@@ -2023,7 +2023,7 @@
     <Content Include="OswLib\OswLib.XML">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Resources\logo.png" />
+    <EmbeddedResource Include="Resources\logo.png" />
     <EmbeddedResource Include="Resources\cheque-32.png" />
     <EmbeddedResource Include="Resources\ubah-16.png" />
     <EmbeddedResource Include="Resources\tambah-16.png" />

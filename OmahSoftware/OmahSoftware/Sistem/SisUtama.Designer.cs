@@ -32,7 +32,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "SisUtama";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BMS";
+            this.Text = "KONTENU";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SisUtama_Load);
             this.ResumeLayout(false);
