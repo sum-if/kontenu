@@ -127,14 +127,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Design\Data\DataUnit.cs" />
     <Compile Include="Design\Data\DataJabatan.cs" />
     <Compile Include="Design\Data\DataPIC.cs" />
     <Compile Include="Design\Data\DataOutsource.cs" />
+    <Compile Include="Design\Form\FrmUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\FrmUnit.designer.cs">
+      <DependentUpon>FrmUnit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Design\Form\FrmJabatan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Design\Form\FrmJabatan.designer.cs">
       <DependentUpon>FrmJabatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Form\FrmUnitAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\FrmUnitAdd.designer.cs">
+      <DependentUpon>FrmUnitAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Design\Form\FrmPIC.cs">
       <SubType>Form</SubType>
@@ -326,8 +339,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Design\Form\FrmUnit.resx">
+      <DependentUpon>FrmUnit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\FrmJabatan.resx">
       <DependentUpon>FrmJabatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\FrmUnitAdd.resx">
+      <DependentUpon>FrmUnitAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\FrmPIC.resx">
       <DependentUpon>FrmPIC.cs</DependentUpon>
