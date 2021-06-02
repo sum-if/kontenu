@@ -127,16 +127,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Design\Data\DataJasaOutsource.cs" />
     <Compile Include="Design\Data\DataJasa.cs" />
     <Compile Include="Design\Data\DataUnit.cs" />
     <Compile Include="Design\Data\DataJabatan.cs" />
     <Compile Include="Design\Data\DataPIC.cs" />
     <Compile Include="Design\Data\DataOutsource.cs" />
+    <Compile Include="Design\Form\FrmJasaOutsource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\FrmJasaOutsource.designer.cs">
+      <DependentUpon>FrmJasaOutsource.cs</DependentUpon>
+    </Compile>
     <Compile Include="Design\Form\FrmJasa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Design\Form\FrmJasa.designer.cs">
       <DependentUpon>FrmJasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Form\FrmJasaOutsourceAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\FrmJasaOutsourceAdd.designer.cs">
+      <DependentUpon>FrmJasaOutsourceAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Design\Form\FrmUnit.cs">
       <SubType>Form</SubType>
@@ -352,8 +365,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Design\Form\FrmJasaOutsource.resx">
+      <DependentUpon>FrmJasaOutsource.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\FrmJasa.resx">
       <DependentUpon>FrmJasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\FrmJasaOutsourceAdd.resx">
+      <DependentUpon>FrmJasaOutsourceAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\FrmUnit.resx">
       <DependentUpon>FrmUnit.cs</DependentUpon>
