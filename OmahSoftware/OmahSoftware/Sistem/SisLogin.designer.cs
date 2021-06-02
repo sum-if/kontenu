@@ -90,7 +90,7 @@
             // labelControl16
             // 
             this.labelControl16.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl16.Appearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.labelControl16.Appearance.BorderColor = System.Drawing.Color.Turquoise;
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl16.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl16.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
