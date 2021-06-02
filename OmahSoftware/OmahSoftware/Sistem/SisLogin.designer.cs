@@ -115,7 +115,7 @@
             // 
             // pictureEdit1
             // 
-            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.EditValue = global::OmahSoftware.Properties.Resources.logo;
             this.pictureEdit1.Location = new System.Drawing.Point(12, 3);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.AllowFocused = false;

@@ -136,7 +136,7 @@
             // xrTableCell9
             // 
             this.xrTableCell9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.Customer")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.Customer")});
             this.xrTableCell9.Name = "xrTableCell9";
             this.xrTableCell9.StylePriority.UseTextAlignment = false;
             this.xrTableCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -145,7 +145,7 @@
             // xrTableCell22
             // 
             this.xrTableCell22.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.total", "{0:n2}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.total", "{0:n2}")});
             this.xrTableCell22.Name = "xrTableCell22";
             this.xrTableCell22.StylePriority.UseTextAlignment = false;
             this.xrTableCell22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -154,7 +154,7 @@
             // xrTableCell14
             // 
             this.xrTableCell14.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.Blm Jth Tempo", "{0:n2}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.Blm Jth Tempo", "{0:n2}")});
             this.xrTableCell14.Name = "xrTableCell14";
             this.xrTableCell14.StylePriority.UseTextAlignment = false;
             this.xrTableCell14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -163,7 +163,7 @@
             // xrTableCell15
             // 
             this.xrTableCell15.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.1-30", "{0:n2}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.1-30", "{0:n2}")});
             this.xrTableCell15.Name = "xrTableCell15";
             this.xrTableCell15.StylePriority.UseTextAlignment = false;
             this.xrTableCell15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -172,7 +172,7 @@
             // xrTableCell16
             // 
             this.xrTableCell16.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.31-60", "{0:n2}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.31-60", "{0:n2}")});
             this.xrTableCell16.Name = "xrTableCell16";
             this.xrTableCell16.StylePriority.UseTextAlignment = false;
             this.xrTableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -181,7 +181,7 @@
             // xrTableCell17
             // 
             this.xrTableCell17.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.61-90", "{0:n2}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.61-90", "{0:n2}")});
             this.xrTableCell17.Name = "xrTableCell17";
             this.xrTableCell17.StylePriority.UseTextAlignment = false;
             this.xrTableCell17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -190,7 +190,7 @@
             // xrTableCell4
             // 
             this.xrTableCell4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.91-120", "{0:n2}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.91-120", "{0:n2}")});
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -201,7 +201,7 @@
             this.xrTableCell18.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableCell18.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.>120", "{0:n2}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.>120", "{0:n2}")});
             this.xrTableCell18.Name = "xrTableCell18";
             this.xrTableCell18.StylePriority.UseBorders = false;
             this.xrTableCell18.StylePriority.UseTextAlignment = false;
@@ -228,7 +228,7 @@
             // 
             this.sqlDataSource1.ConnectionName = "databaseoswreport";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "lv_sia_spLaporanAgingPiutang";
+            storedProcQuery1.Name = "osw_kontenu_spLaporanAgingPiutang";
             queryParameter1.Name = "@varGuid";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter1.Value = new DevExpress.DataAccess.Expression("[Parameters.GUID]", typeof(string));
@@ -237,7 +237,7 @@
             queryParameter2.Value = new DevExpress.DataAccess.Expression("[Parameters.tanggal]", typeof(string));
             storedProcQuery1.Parameters.Add(queryParameter1);
             storedProcQuery1.Parameters.Add(queryParameter2);
-            storedProcQuery1.StoredProcName = "lv_sia.spLaporanAgingPiutang";
+            storedProcQuery1.StoredProcName = "osw_kontenu.spLaporanAgingPiutang";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
@@ -367,7 +367,7 @@
             // xrTableCell23
             // 
             this.xrTableCell23.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.total")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.total")});
             this.xrTableCell23.Font = new System.Drawing.Font("Open Sans", 8.5F, System.Drawing.FontStyle.Bold);
             this.xrTableCell23.Name = "xrTableCell23";
             this.xrTableCell23.StylePriority.UseFont = false;
@@ -381,7 +381,7 @@
             // xrTableCell10
             // 
             this.xrTableCell10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.Blm Jth Tempo")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.Blm Jth Tempo")});
             this.xrTableCell10.Font = new System.Drawing.Font("Open Sans", 8.5F, System.Drawing.FontStyle.Bold);
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.StylePriority.UseFont = false;
@@ -395,7 +395,7 @@
             // xrTableCell12
             // 
             this.xrTableCell12.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.1-30")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.1-30")});
             this.xrTableCell12.Font = new System.Drawing.Font("Open Sans", 8.5F, System.Drawing.FontStyle.Bold);
             this.xrTableCell12.Name = "xrTableCell12";
             this.xrTableCell12.StylePriority.UseFont = false;
@@ -409,7 +409,7 @@
             // xrTableCell13
             // 
             this.xrTableCell13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.31-60")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.31-60")});
             this.xrTableCell13.Font = new System.Drawing.Font("Open Sans", 8.5F, System.Drawing.FontStyle.Bold);
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.StylePriority.UseFont = false;
@@ -423,7 +423,7 @@
             // xrTableCell19
             // 
             this.xrTableCell19.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.61-90")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.61-90")});
             this.xrTableCell19.Font = new System.Drawing.Font("Open Sans", 8.5F, System.Drawing.FontStyle.Bold);
             this.xrTableCell19.Name = "xrTableCell19";
             this.xrTableCell19.StylePriority.UseFont = false;
@@ -437,7 +437,7 @@
             // xrTableCell20
             // 
             this.xrTableCell20.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.91-120")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.91-120")});
             this.xrTableCell20.Font = new System.Drawing.Font("Open Sans", 8.5F, System.Drawing.FontStyle.Bold);
             this.xrTableCell20.Name = "xrTableCell20";
             this.xrTableCell20.StylePriority.UseFont = false;
@@ -453,7 +453,7 @@
             this.xrTableCell21.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableCell21.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "lv_sia_spLaporanAgingPiutang.>120")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "osw_kontenu_spLaporanAgingPiutang.>120")});
             this.xrTableCell21.Font = new System.Drawing.Font("Open Sans", 8.5F, System.Drawing.FontStyle.Bold);
             this.xrTableCell21.Name = "xrTableCell21";
             this.xrTableCell21.StylePriority.UseBorders = false;
@@ -579,7 +579,7 @@
             // 
             // total
             // 
-            this.total.DataMember = "lv_sia_spLaporanAgingPiutang";
+            this.total.DataMember = "osw_kontenu_spLaporanAgingPiutang";
             this.total.Expression = "[Blm Jth Tempo] +  [1-30] + [31-60] + [61-90] + [91-120] + [>120]";
             this.total.Name = "total";
             // 
@@ -596,7 +596,7 @@
             this.total});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
-            this.DataMember = "lv_sia_spLaporanAgingPiutang";
+            this.DataMember = "osw_kontenu_spLaporanAgingPiutang";
             this.DataSource = this.sqlDataSource1;
             this.Font = new System.Drawing.Font("Open Sans", 9.75F);
             this.FormattingRuleSheet.AddRange(new DevExpress.XtraReports.UI.FormattingRule[] {

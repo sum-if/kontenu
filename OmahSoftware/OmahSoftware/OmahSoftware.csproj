@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Installer\lv\</PublishUrl>
+    <PublishUrl>C:\Installer\kontenu\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -25,13 +25,13 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://192.168.1.121/installer/</InstallUrl>
     <TargetCulture>id-ID</TargetCulture>
-    <ProductName>BMS</ProductName>
-    <PublisherName>OmahSoftware</PublisherName>
-    <SuiteName>Retail</SuiteName>
+    <ProductName>Kontenu</ProductName>
+    <PublisherName>SUMiF</PublisherName>
+    <SuiteName>Sistem Informasi Akuntansi</SuiteName>
     <MinimumRequiredVersion>1.0.0.68</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>78</ApplicationRevision>
+    <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -1898,8 +1898,6 @@
       <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\OmahSoftware.Persediaan.DataCetakBarcode.datasource" />
-    <None Include="Properties\DataSources\OmahSoftware.Persediaan.DataGudang.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1917,10 +1915,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\login.png" />
-    <EmbeddedResource Include="Resources\logo-osw-256.png" />
-    <EmbeddedResource Include="Resources\logo-osw-128.png" />
-    <EmbeddedResource Include="Resources\logo-osw-64.png" />
-    <EmbeddedResource Include="Resources\logo-osw-32.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\logout.png" />
@@ -2026,11 +2020,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="OswLib\OswLib.dll" />
-    <Content Include="OswLib\OswLib.XML" />
-    <EmbeddedResource Include="Resources\logo.jpeg" />
-    <EmbeddedResource Include="Resources\logo3.gif" />
+    <Content Include="OswLib\OswLib.XML">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\logo.png" />
     <EmbeddedResource Include="Resources\cheque-32.png" />
-    <EmbeddedResource Include="Resources\logo-verotech.png" />
     <EmbeddedResource Include="Resources\ubah-16.png" />
     <EmbeddedResource Include="Resources\tambah-16.png" />
     <EmbeddedResource Include="Resources\simpan-16.png" />

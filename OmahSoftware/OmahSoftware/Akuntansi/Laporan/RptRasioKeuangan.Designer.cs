@@ -196,7 +196,7 @@
             queryParameter2.Value = new DevExpress.DataAccess.Expression("[Parameters.Periode]", typeof(string));
             storedProcQuery1.Parameters.Add(queryParameter1);
             storedProcQuery1.Parameters.Add(queryParameter2);
-            storedProcQuery1.StoredProcName = "lv_sia.spLaporanRasioKeuangan";
+            storedProcQuery1.StoredProcName = "osw_kontenu.spLaporanRasioKeuangan";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");

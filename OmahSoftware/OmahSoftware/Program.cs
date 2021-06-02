@@ -46,7 +46,7 @@ namespace OmahSoftware {
             OswConfig.FORMAT_TANGGAL = "dd/MM/yyyy";
             OswConfig.FORMAT_TANGGAL_MYSQL = "%d/%m/%Y";
             OswConfig.FORMAT_JAM = "";
-            OswConfig.CREATOR = "Developed by: Santos Sabanari - www.santossabanari.com";
+            OswConfig.CREATOR = "Developed by: SUMiF - www.sumif.id";
 
             // jalankan program
             Application.Run(new SisLogin());

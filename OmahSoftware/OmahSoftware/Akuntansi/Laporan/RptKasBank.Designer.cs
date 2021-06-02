@@ -267,7 +267,7 @@
             storedProcQuery1.Parameters.Add(queryParameter5);
             storedProcQuery1.Parameters.Add(queryParameter6);
             storedProcQuery1.Parameters.Add(queryParameter7);
-            storedProcQuery1.StoredProcName = "lv_sia.spLaporanKasBank";
+            storedProcQuery1.StoredProcName = "osw_kontenu.spLaporanKasBank";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");

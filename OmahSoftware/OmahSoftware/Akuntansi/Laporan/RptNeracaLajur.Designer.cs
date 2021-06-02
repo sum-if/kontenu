@@ -342,7 +342,7 @@
             queryParameter2.Value = new DevExpress.DataAccess.Expression("[Parameters.periode2]", typeof(string));
             storedProcQuery1.Parameters.Add(queryParameter1);
             storedProcQuery1.Parameters.Add(queryParameter2);
-            storedProcQuery1.StoredProcName = "lv_sia.spLaporanNeracaLajur";
+            storedProcQuery1.StoredProcName = "osw_kontenu.spLaporanNeracaLajur";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
