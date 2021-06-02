@@ -24,55 +24,12 @@ namespace OmahSoftware.OswLib {
         public static String STATUS_YA = "Ya";
         public static String STATUS_TIDAK = "Tidak";
 
-        public static String STATUS_1 = "1";
-        public static String STATUS_0 = "0";
-
         public static String STATUS_AKTIF = "Aktif";
         public static String STATUS_AKTIF_TIDAK = "Tidak Aktif";
 
         public static String STATUS_SUDAH = "Sudah";
         public static String STATUS_SUDAH_BELUM = "Belum";
 
-        public static String STATUS_PESANAN_PEMBELIAN_DALAM_PROSES = "Dalam Proses";
-        public static String STATUS_PESANAN_PEMBELIAN_SELESAI = "Selesai";
-
-        public static String STATUS_FAKTUR_PEMBELIAN_BELUM_LUNAS = "Belum Lunas";
-        public static String STATUS_FAKTUR_PEMBELIAN_LUNAS = "Lunas";
-
-        public static String STATUS_PESANAN_PENJUALAN_DALAM_PROSES = "Dalam Proses";
-        public static String STATUS_PESANAN_PENJUALAN_SELESAI = "Selesai";
-
-        public static String STATUS_BACK_ORDER_DALAM_PROSES = "Dalam Proses";
-        public static String STATUS_BACK_ORDER_SELESAI = "Selesai";
-
-        public static String JENIS_PESANAN_PENJUALAN_PESANAN_PENJUALAN = "Pesanan Penjualan";
-        public static String JENIS_PESANAN_PENJUALAN_BACK_ORDER = "Back Order";
-
-        public static String STATUS_FAKTUR_PENJUALAN_BELUM_LUNAS = "Belum Lunas";
-        public static String STATUS_FAKTUR_PENJUALAN_LUNAS = "Lunas";
-
-        public static String JENIS_PENERIMAAN_PENJUALAN_TUNAI = "Tunai/Bank";
-        public static String JENIS_PENERIMAAN_PENJUALAN_CEK = "Cheque";
-
-        public static String JENIS_PEMBAYARAN_PEMBELIAN_TUNAI = "Tunai/Bank";
-        public static String JENIS_PEMBAYARAN_PEMBELIAN_CEK = "Cheque";
-
-        public static String JENIS_PPN_NON_PPN = "Non PPN";
-        public static String JENIS_PPN_INCLUDE_PPN = "Include PPN";
-        public static String JENIS_PPN_EXCLUDE_PPN = "Exclude PPN";
-
-        public static String STATUS_CEK_TIDAK_ADA = "Tidak Ada Cheque";
-        public static String STATUS_CEK_MENUNGGU = "Menunggu";
-        public static String STATUS_CEK_DIBATALKAN = "Dibatalkan";
-        public static String STATUS_CEK_SELESAI = "Selesai";
-
-        public static String STATUS_FAKTUR_PAJAK_SUDAH = "Sudah";
-        public static String STATUS_FAKTUR_PAJAK_BELUM = "Belum";
-
-        
-
-        public static String JENIS_SETTLEMENT_CHEQUE_TERIMA = "Terima";
-        public static String JENIS_SETTLEMENT_CHEQUE_TOLAK = "Tolak";
 
         // TIDAK BOLEH DI ComboQueryUmum.getAkun
         // TIDAK BOLEH DI Tools.isKelompokAkun
