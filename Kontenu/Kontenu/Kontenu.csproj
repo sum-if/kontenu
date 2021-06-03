@@ -130,6 +130,7 @@
     <Compile Include="Design\Data\DataJasaOutsource.cs" />
     <Compile Include="Design\Data\DataJasa.cs" />
     <Compile Include="Design\Data\DataPerusahaan.cs" />
+    <Compile Include="Design\Data\DataTujuanProyek.cs" />
     <Compile Include="Design\Data\DataUnit.cs" />
     <Compile Include="Design\Data\DataJabatan.cs" />
     <Compile Include="Design\Data\DataPIC.cs" />
@@ -152,6 +153,12 @@
     <Compile Include="Design\Form\FrmJasaOutsourceAdd.designer.cs">
       <DependentUpon>FrmJasaOutsourceAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Design\Form\FrmTujuanProyek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\FrmTujuanProyek.designer.cs">
+      <DependentUpon>FrmTujuanProyek.cs</DependentUpon>
+    </Compile>
     <Compile Include="Design\Form\FrmUnit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +176,12 @@
     </Compile>
     <Compile Include="Design\Form\FrmJasaAdd.designer.cs">
       <DependentUpon>FrmJasaAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Form\FrmTujuanProyekAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\FrmTujuanProyekAdd.designer.cs">
+      <DependentUpon>FrmTujuanProyekAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Design\Form\FrmUnitAdd.cs">
       <SubType>Form</SubType>
@@ -218,7 +231,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Sistem\Data\DataOswSetting.cs" />
-    <Compile Include="Sistem\Data\DataOswPerusahaan.cs" />
     <Compile Include="Sistem\Data\DataOswJenisDokumen.cs" />
     <Compile Include="Sistem\Data\DataOswSettingMulti.cs" />
     <Compile Include="Sistem\SisHakAkses.cs">
@@ -268,12 +280,6 @@
     </Compile>
     <Compile Include="Sistem\SisLogLoginLogout.Designer.cs">
       <DependentUpon>SisLogLoginLogout.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sistem\SisPerusahaan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sistem\SisPerusahaan.designer.cs">
-      <DependentUpon>SisPerusahaan.cs</DependentUpon>
     </Compile>
     <Compile Include="Umum\Combo\ComboQueryUmum.cs" />
     <Compile Include="Umum\Combo\ComboConstantUmum.cs" />
@@ -381,6 +387,9 @@
     <EmbeddedResource Include="Design\Form\FrmJasaOutsourceAdd.resx">
       <DependentUpon>FrmJasaOutsourceAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\FrmTujuanProyek.resx">
+      <DependentUpon>FrmTujuanProyek.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\FrmUnit.resx">
       <DependentUpon>FrmUnit.cs</DependentUpon>
     </EmbeddedResource>
@@ -389,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\FrmJasaAdd.resx">
       <DependentUpon>FrmJasaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\FrmTujuanProyekAdd.resx">
+      <DependentUpon>FrmTujuanProyekAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\FrmUnitAdd.resx">
       <DependentUpon>FrmUnitAdd.cs</DependentUpon>
@@ -435,9 +447,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sistem\SisLogLoginLogout.resx">
       <DependentUpon>SisLogLoginLogout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisPerusahaan.resx">
-      <DependentUpon>SisPerusahaan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Umum\Form\FrmKlien.resx">
       <DependentUpon>FrmKlien.cs</DependentUpon>
