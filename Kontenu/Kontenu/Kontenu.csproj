@@ -129,6 +129,7 @@
   <ItemGroup>
     <Compile Include="Design\Data\DataJasaOutsource.cs" />
     <Compile Include="Design\Data\DataJasa.cs" />
+    <Compile Include="Design\Data\DataPerusahaan.cs" />
     <Compile Include="Design\Data\DataUnit.cs" />
     <Compile Include="Design\Data\DataJabatan.cs" />
     <Compile Include="Design\Data\DataPIC.cs" />
@@ -204,6 +205,12 @@
     </Compile>
     <Compile Include="Design\Form\FrmOutsourceAdd.designer.cs">
       <DependentUpon>FrmOutsourceAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Form\FrmPerusahaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\FrmPerusahaan.designer.cs">
+      <DependentUpon>FrmPerusahaan.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -400,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\FrmOutsourceAdd.resx">
       <DependentUpon>FrmOutsourceAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\FrmPerusahaan.resx">
+      <DependentUpon>FrmPerusahaan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Sistem\SisHakAkses.resx">
