@@ -136,106 +136,106 @@
     <Compile Include="Design\Data\DataJabatan.cs" />
     <Compile Include="Design\Data\DataPIC.cs" />
     <Compile Include="Design\Data\DataOutsource.cs" />
-    <Compile Include="Design\Form\FrmJenisProyek.cs">
+    <Compile Include="Design\Form\Master\FrmJenisProyek.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmJenisProyek.designer.cs">
+    <Compile Include="Design\Form\Master\FrmJenisProyek.designer.cs">
       <DependentUpon>FrmJenisProyek.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmJenisProyekAdd.cs">
+    <Compile Include="Design\Form\Master\FrmJenisProyekAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmJenisProyekAdd.designer.cs">
+    <Compile Include="Design\Form\Master\FrmJenisProyekAdd.designer.cs">
       <DependentUpon>FrmJenisProyekAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmJasaOutsource.cs">
+    <Compile Include="Design\Form\Master\FrmJasaOutsource.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmJasaOutsource.designer.cs">
+    <Compile Include="Design\Form\Master\FrmJasaOutsource.designer.cs">
       <DependentUpon>FrmJasaOutsource.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmJasa.cs">
+    <Compile Include="Design\Form\Master\FrmJasa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmJasa.designer.cs">
+    <Compile Include="Design\Form\Master\FrmJasa.designer.cs">
       <DependentUpon>FrmJasa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmJasaOutsourceAdd.cs">
+    <Compile Include="Design\Form\Master\FrmJasaOutsourceAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmJasaOutsourceAdd.designer.cs">
+    <Compile Include="Design\Form\Master\FrmJasaOutsourceAdd.designer.cs">
       <DependentUpon>FrmJasaOutsourceAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmTujuanProyek.cs">
+    <Compile Include="Design\Form\Master\FrmTujuanProyek.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmTujuanProyek.designer.cs">
+    <Compile Include="Design\Form\Master\FrmTujuanProyek.designer.cs">
       <DependentUpon>FrmTujuanProyek.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmUnit.cs">
+    <Compile Include="Design\Form\Master\FrmUnit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmUnit.designer.cs">
+    <Compile Include="Design\Form\Master\FrmUnit.designer.cs">
       <DependentUpon>FrmUnit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmJabatan.cs">
+    <Compile Include="Design\Form\Master\FrmJabatan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmJabatan.designer.cs">
+    <Compile Include="Design\Form\Master\FrmJabatan.designer.cs">
       <DependentUpon>FrmJabatan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmJasaAdd.cs">
+    <Compile Include="Design\Form\Master\FrmJasaAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmJasaAdd.designer.cs">
+    <Compile Include="Design\Form\Master\FrmJasaAdd.designer.cs">
       <DependentUpon>FrmJasaAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmTujuanProyekAdd.cs">
+    <Compile Include="Design\Form\Master\FrmTujuanProyekAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmTujuanProyekAdd.designer.cs">
+    <Compile Include="Design\Form\Master\FrmTujuanProyekAdd.designer.cs">
       <DependentUpon>FrmTujuanProyekAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmUnitAdd.cs">
+    <Compile Include="Design\Form\Master\FrmUnitAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmUnitAdd.designer.cs">
+    <Compile Include="Design\Form\Master\FrmUnitAdd.designer.cs">
       <DependentUpon>FrmUnitAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmPIC.cs">
+    <Compile Include="Design\Form\Master\FrmPIC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmPIC.designer.cs">
+    <Compile Include="Design\Form\Master\FrmPIC.designer.cs">
       <DependentUpon>FrmPIC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmPICAdd.cs">
+    <Compile Include="Design\Form\Master\FrmPICAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmPICAdd.designer.cs">
+    <Compile Include="Design\Form\Master\FrmPICAdd.designer.cs">
       <DependentUpon>FrmPICAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmOutsource.cs">
+    <Compile Include="Design\Form\Master\FrmOutsource.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmOutsource.designer.cs">
+    <Compile Include="Design\Form\Master\FrmOutsource.designer.cs">
       <DependentUpon>FrmOutsource.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmJabatanAdd.cs">
+    <Compile Include="Design\Form\Master\FrmJabatanAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmJabatanAdd.designer.cs">
+    <Compile Include="Design\Form\Master\FrmJabatanAdd.designer.cs">
       <DependentUpon>FrmJabatanAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmOutsourceAdd.cs">
+    <Compile Include="Design\Form\Master\FrmOutsourceAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmOutsourceAdd.designer.cs">
+    <Compile Include="Design\Form\Master\FrmOutsourceAdd.designer.cs">
       <DependentUpon>FrmOutsourceAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Form\FrmPerusahaan.cs">
+    <Compile Include="Design\Form\Master\FrmPerusahaan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\Form\FrmPerusahaan.designer.cs">
+    <Compile Include="Design\Form\Master\FrmPerusahaan.designer.cs">
       <DependentUpon>FrmPerusahaan.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -391,55 +391,55 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Design\Form\FrmJenisProyek.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmJenisProyek.resx">
       <DependentUpon>FrmJenisProyek.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmJenisProyekAdd.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmJenisProyekAdd.resx">
       <DependentUpon>FrmJenisProyekAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmJasaOutsource.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmJasaOutsource.resx">
       <DependentUpon>FrmJasaOutsource.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmJasa.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmJasa.resx">
       <DependentUpon>FrmJasa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmJasaOutsourceAdd.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmJasaOutsourceAdd.resx">
       <DependentUpon>FrmJasaOutsourceAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmTujuanProyek.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmTujuanProyek.resx">
       <DependentUpon>FrmTujuanProyek.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmUnit.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmUnit.resx">
       <DependentUpon>FrmUnit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmJabatan.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmJabatan.resx">
       <DependentUpon>FrmJabatan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmJasaAdd.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmJasaAdd.resx">
       <DependentUpon>FrmJasaAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmTujuanProyekAdd.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmTujuanProyekAdd.resx">
       <DependentUpon>FrmTujuanProyekAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmUnitAdd.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmUnitAdd.resx">
       <DependentUpon>FrmUnitAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmPIC.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmPIC.resx">
       <DependentUpon>FrmPIC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmPICAdd.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmPICAdd.resx">
       <DependentUpon>FrmPICAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmOutsource.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmOutsource.resx">
       <DependentUpon>FrmOutsource.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmJabatanAdd.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmJabatanAdd.resx">
       <DependentUpon>FrmJabatanAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmOutsourceAdd.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmOutsourceAdd.resx">
       <DependentUpon>FrmOutsourceAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\FrmPerusahaan.resx">
+    <EmbeddedResource Include="Design\Form\Master\FrmPerusahaan.resx">
       <DependentUpon>FrmPerusahaan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -2667,6 +2667,7 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Design\Form\Transaksi\" />
     <Folder Include="Design\Laporan\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

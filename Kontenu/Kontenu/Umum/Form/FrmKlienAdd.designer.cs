@@ -197,9 +197,9 @@
             // 
             this.labelControl6.Location = new System.Drawing.Point(14, 42);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(18, 13);
+            this.labelControl6.Size = new System.Drawing.Size(17, 13);
             this.labelControl6.TabIndex = 266;
-            this.labelControl6.Text = "KTP";
+            this.labelControl6.Text = "NIK";
             // 
             // FrmKlienAdd
             // 
