@@ -127,6 +127,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Design\Data\DataQuotation.cs" />
+    <Compile Include="Design\Data\DataQuotationDetail.cs" />
+    <Compile Include="Design\Data\DataQuotationDetailJasa.cs" />
     <Compile Include="Design\Data\DataJenisProyek.cs" />
     <Compile Include="Design\Data\DataJasaOutsource.cs" />
     <Compile Include="Design\Data\DataJasa.cs" />
@@ -237,6 +240,12 @@
     </Compile>
     <Compile Include="Design\Form\Master\FrmPerusahaan.designer.cs">
       <DependentUpon>FrmPerusahaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmQuotationAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmQuotationAdd.designer.cs">
+      <DependentUpon>FrmQuotationAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Design\Form\Transaksi\FrmQuotation.cs">
       <SubType>Form</SubType>
@@ -447,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Master\FrmPerusahaan.resx">
       <DependentUpon>FrmPerusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmQuotationAdd.resx">
+      <DependentUpon>FrmQuotationAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Transaksi\FrmQuotation.resx">
       <DependentUpon>FrmQuotation.cs</DependentUpon>
