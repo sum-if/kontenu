@@ -82,7 +82,7 @@ namespace Kontenu.Design {
 
                 OswControlDefaultProperties.setInput(this, id, command);
                 OswControlDefaultProperties.setTanggal(deTanggal);
-                OswControlDefaultProperties.setTanggal(deDeadline);
+                OswControlDefaultProperties.setTanggal(deTanggalBerlaku);
 
                 this.setDefaultInput(command);
 
@@ -350,7 +350,7 @@ namespace Kontenu.Design {
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e) {
-            btnPerincian.PerformClick();
+            //btnPerincian.PerformClick();
         }
 
         private void btnTambahBarang_Click(object sender, EventArgs e) {

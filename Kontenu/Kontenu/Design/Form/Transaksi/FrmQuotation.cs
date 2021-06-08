@@ -174,62 +174,62 @@ namespace Kontenu.Design
 
         private void btnUbah_Click(object sender, EventArgs e)
         {
-            //FrmQuotationAdd form = new FrmQuotationAdd(false);
-            //MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
-            //MySqlCommand command = con.CreateCommand();
-            //MySqlTransaction trans;
+            FrmQuotationAdd form = new FrmQuotationAdd(false);
+            MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
+            MySqlCommand command = con.CreateCommand();
+            MySqlTransaction trans;
 
-            //try
-            //{
-            //    // buka koneksi
-            //    con.Open();
+            try
+            {
+                // buka koneksi
+                con.Open();
 
-            //    // set transaction
-            //    trans = con.BeginTransaction();
-            //    command.Transaction = trans;
+                // set transaction
+                trans = con.BeginTransaction();
+                command.Transaction = trans;
 
-            //    // Function Code
-            //    if (gridView.GetSelectedRows().Length == 0)
-            //    {
-            //        OswPesan.pesanError("Silahkan pilih " + dokumen + " yang akan diubah.");
-            //        return;
-            //    }
+                // Function Code
+                if (gridView.GetSelectedRows().Length == 0)
+                {
+                    OswPesan.pesanError("Silahkan pilih " + dokumen + " yang akan diubah.");
+                    return;
+                }
 
-            //    String strngKode = gridView.GetRowCellValue(gridView.FocusedRowHandle, "Nomor").ToString();
+                String strngKode = gridView.GetRowCellValue(gridView.FocusedRowHandle, "Nomor").ToString();
 
-            //    DataQuotation dQuotation = new DataQuotation(command, Constants.CABANG, strngKode);
-            //    if (!dQuotation.isExist)
-            //    {
-            //        throw new Exception(dokumen + " tidak ditemukan.");
-            //    }
+                DataQuotation dQuotation = new DataQuotation(command, strngKode);
+                if (!dQuotation.isExist)
+                {
+                    throw new Exception(dokumen + " tidak ditemukan.");
+                }
 
-            //    this.AddOwnedForm(form);
-            //    form.txtKode.Text = strngKode;
+                this.AddOwnedForm(form);
+                form.txtKode.Text = strngKode;
 
-            //    // Commit Transaction
-            //    command.Transaction.Commit();
-            //}
-            //catch (MySqlException ex)
-            //{
-            //    OswPesan.pesanErrorCatch(ex, command, dokumen);
-            //}
-            //catch (Exception ex)
-            //{
-            //    OswPesan.pesanErrorCatch(ex, command, dokumen);
-            //}
-            //finally
-            //{
-            //    con.Close();
-            //}
+                // Commit Transaction
+                command.Transaction.Commit();
+            }
+            catch (MySqlException ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            catch (Exception ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            finally
+            {
+                con.Close();
+            }
 
-            //form.ShowDialog();
+            form.ShowDialog();
         }
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
-            //FrmQuotationAdd form = new FrmQuotationAdd(true);
-            //this.AddOwnedForm(form);
-            //form.ShowDialog();
+            FrmQuotationAdd form = new FrmQuotationAdd(true);
+            this.AddOwnedForm(form);
+            form.ShowDialog();
         }
 
         private void btnHapus_Click(object sender, EventArgs e)
@@ -259,24 +259,24 @@ namespace Kontenu.Design
                 {
                     String strngKode = gridView.GetRowCellValue(gridView.FocusedRowHandle, "Nomor").ToString();
 
-                    //DataQuotation dQuotation = new DataQuotation(command, Constants.CABANG, strngKode);
-                    //if (!dQuotation.isExist)
-                    //{
-                    //    throw new Exception(dokumen + " tidak ditemukan.");
-                    //}
+                    DataQuotation dQuotation = new DataQuotation(command, strngKode);
+                    if (!dQuotation.isExist)
+                    {
+                        throw new Exception(dokumen + " tidak ditemukan.");
+                    }
 
-                    //dQuotation.hapus();
+                    dQuotation.hapus();
 
-                    //// tulis log
-                    //OswLog.setTransaksi(command, "Hapus " + dokumen, dQuotation.ToString());
+                    // tulis log
+                    OswLog.setTransaksi(command, "Hapus " + dokumen, dQuotation.ToString());
 
-                    //// reload grid
-                    //this.setGrid(command);
+                    // reload grid
+                    this.setGrid(command);
 
-                    //// Commit Transaction
-                    //command.Transaction.Commit();
+                    // Commit Transaction
+                    command.Transaction.Commit();
 
-                    //OswPesan.pesanInfo(dokumen + " berhasil dihapus.");
+                    OswPesan.pesanInfo(dokumen + " berhasil dihapus.");
                 }
             }
             catch (MySqlException ex)
