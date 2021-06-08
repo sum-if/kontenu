@@ -238,6 +238,12 @@
     <Compile Include="Design\Form\Master\FrmPerusahaan.designer.cs">
       <DependentUpon>FrmPerusahaan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmQuotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmQuotation.designer.cs">
+      <DependentUpon>FrmQuotation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -441,6 +447,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Master\FrmPerusahaan.resx">
       <DependentUpon>FrmPerusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmQuotation.resx">
+      <DependentUpon>FrmQuotation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Sistem\SisHakAkses.resx">
@@ -2667,7 +2676,6 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Design\Form\Transaksi\" />
     <Folder Include="Design\Laporan\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
