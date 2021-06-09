@@ -123,20 +123,20 @@ namespace Kontenu.OswLib {
             return tambah == "1";
         }
 
-        public static double getRoundCalc(double nilai) {
+        public static decimal getRoundCalc(decimal nilai) {
             return Math.Round(nilai, 2);
         }
 
         public static string getRoundCalc(string nilai) {
-            return Math.Round(double.Parse(nilai), 2).ToString();
+            return Math.Round(decimal.Parse(nilai), 2).ToString();
         }
 
-        public static double getRoundMoney(double nilai) {
+        public static decimal getRoundMoney(decimal nilai) {
             return Math.Round(nilai, 2);
         }
 
         public static string getRoundMoney(string nilai) {
-            return Math.Round(double.Parse(nilai), 2).ToString();
+            return Math.Round(decimal.Parse(nilai), 2).ToString();
         }
 
         public static void cekJurnalBalance(MySqlCommand command, String oswjenisdokumen, String noreferensi) {
@@ -148,7 +148,7 @@ namespace Kontenu.OswLib {
             parameters.Add("jenisdokumn", oswjenisdokumen);
             parameters.Add("referensi", noreferensi);
 
-            double debit = Tools.getRoundMoney(double.Parse(OswDataAccess.executeScalarQuery(query, parameters, command)));
+            decimal debit = Tools.getRoundMoney(decimal.Parse(OswDataAccess.executeScalarQuery(query, parameters, command)));
 
             query = @"SELECT COALESCE(SUM(kredit),0)
                             FROM jurnal 
@@ -158,7 +158,7 @@ namespace Kontenu.OswLib {
             parameters.Add("jenisdokumn", oswjenisdokumen);
             parameters.Add("referensi", noreferensi);
 
-            double kredit = Tools.getRoundMoney(double.Parse(OswDataAccess.executeScalarQuery(query, parameters, command)));
+            decimal kredit = Tools.getRoundMoney(decimal.Parse(OswDataAccess.executeScalarQuery(query, parameters, command)));
 
             if(debit != kredit) {
                 throw new Exception("Jurnal [" + oswjenisdokumen + "] [" + noreferensi + "] tidak balance.");

@@ -30,6 +30,9 @@ namespace Kontenu.OswLib {
         public static String STATUS_SUDAH = "Sudah";
         public static String STATUS_SUDAH_BELUM = "Belum";
 
+        public static String STATUS_QUOTATION_PROSES = "Proses";
+        public static String STATUS_QUOTATION_TUTUP = "Tutup";
+
 
         // TIDAK BOLEH DI ComboQueryUmum.getAkun
         // TIDAK BOLEH DI Tools.isKelompokAkun

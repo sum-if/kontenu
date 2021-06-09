@@ -373,7 +373,7 @@ namespace Kontenu.Design {
         }
 
         private void valDetail() {
-            if(double.Parse(this.grandtotal) <= 0) {
+            if(decimal.Parse(this.grandtotal) <= 0) {
                 throw new Exception("Grand Total harus > 0");
             }
         }
