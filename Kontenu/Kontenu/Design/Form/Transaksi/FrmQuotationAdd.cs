@@ -164,8 +164,7 @@ namespace Kontenu.Design
                 {
                     chkTutup.Enabled = false;
                     btnSimpan.Enabled = false;
-
-                    btnPerincian.Enabled = false;
+                    btnCariKlien.Enabled = false;
                 }
             }
             else
@@ -173,7 +172,6 @@ namespace Kontenu.Design
                 OswControlDefaultProperties.resetAllInput(this);
                 deTanggal.EditValue = "";
                 deTanggalBerlaku.EditValue = "";
-                btnPerincian.Enabled = false;
 
                 chkTutup.Enabled = false;
                 chkTutup.Checked = false;
@@ -389,11 +387,12 @@ namespace Kontenu.Design
                 // reload grid di form header
                 FrmQuotation frmQuotation = (FrmQuotation)this.Owner;
                 frmQuotation.setGrid(command);
-
                 // Commit Transaction
                 command.Transaction.Commit();
 
                 OswPesan.pesanInfo("Proses simpan berhasil.");
+
+                setDefaultInput(command);
             }
             catch (MySqlException ex)
             {
@@ -424,8 +423,15 @@ namespace Kontenu.Design
                 return;
             }
 
+            String strngKode = txtKode.Text;
             String strngTEMP = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TEMP").ToString();
             String strngJasa = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Jasa").ToString();
+
+            if (strngKode == "")
+            {
+                OswPesan.pesanError("Silahkan simpan transaksi terlebih dahulu.");
+                return;
+            }
 
             if (strngJasa == "")
             {
@@ -439,54 +445,9 @@ namespace Kontenu.Design
                 return;
             }
 
-            //FrmQuotationAddJasaDetail form = new FrmQuotationAddJasaDetail(false, strngKode, strngID);
-
-            //MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
-            //MySqlCommand command = con.CreateCommand();
-            //MySqlTransaction trans;
-
-            //try
-            //{
-            //    // buka koneksi
-            //    con.Open();
-
-            //    // set transaction
-            //    trans = con.BeginTransaction();
-            //    command.Transaction = trans;
-
-            //    // Function Code
-            //    DataQuotationDetail dQuotationDetail = new DataQuotationDetail(command, Constants.CABANG, strngKode, strngID);
-            //    if (!dQuotationDetail.isExist)
-            //    {
-            //        throw new Exception("Barang tidak ditemukan.");
-            //    }
-
-            //    this.AddOwnedForm(form);
-
-            //    // Commit Transaction
-            //    command.Transaction.Commit();
-            //}
-            //catch (MySqlException ex)
-            //{
-            //    OswPesan.pesanErrorCatch(ex, command, dokumen);
-            //}
-            //catch (Exception ex)
-            //{
-            //    OswPesan.pesanErrorCatch(ex, command, dokumen);
-            //}
-            //finally
-            //{
-            //    con.Close();
-            //    try
-            //    {
-            //        SplashScreenManager.CloseForm();
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //    }
-            //}
-
-            //form.ShowDialog();
+            FrmQuotationAddJasaDetail form = new FrmQuotationAddJasaDetail(strngKode, strngTEMP);
+            this.AddOwnedForm(form);
+            form.ShowDialog();
         }
 
         private void btnCetak_Click(object sender, EventArgs e)
@@ -693,6 +654,10 @@ namespace Kontenu.Design
             if (e.KeyCode == Keys.F1 && gridView.FocusedColumn.FieldName == "Jasa")
             {
                 infoJasa();
+            }
+            else if (e.KeyCode == Keys.F2)
+            {
+                btnPerincian.PerformClick();
             }
         }
 

@@ -136,7 +136,7 @@ namespace Kontenu.Design {
             valExist();
 
             // hapus detail
-            String query = @"DELETE FROM quotationdetailjasa WHERE quotation = @quotation AND no = @no";
+            String query = @"DELETE FROM quotationdetailjasa WHERE quotation = @quotation AND quotationdetailno = @no";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("quotation", this.quotation);

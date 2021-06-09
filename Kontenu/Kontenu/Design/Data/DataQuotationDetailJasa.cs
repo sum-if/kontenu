@@ -62,7 +62,7 @@ namespace Kontenu.Design {
 
             // tambah detail
             String query = @"INSERT INTO quotationdetailjasa(quotation,quotationdetailno,no,keterangan) 
-                             VALUES(,@quotation,@quotationdetailno,@no,@keterangan)";
+                             VALUES(@quotation,@quotationdetailno,@no,@keterangan)";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("quotation", this.quotation);

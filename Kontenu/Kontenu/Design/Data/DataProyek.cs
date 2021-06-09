@@ -10,21 +10,19 @@ using Kontenu.OswLib;
 using Kontenu.Umum;
 
 namespace Kontenu.Design {
-    class DataQuotation {
-        private String id = "QUOTATION";
+    class DataProyek {
+        private String id = "PROYEK";
         public String kode = "";
-        public String tanggal = "";
-        public String tanggalberlaku = "";
+        public String tanggaldeal = "";
         public String klien = "";
-        public String proyeknama = "";
-        public String proyekalamat = "";
-        public String proyekprovinsi = "";
-        public String proyekkota = "";
-        public String proyekkodepos = "";
+        public String nama = "";
+        public String alamat = "";
+        public String provinsi = "";
+        public String kota = "";
+        public String kodepos = "";
         public String tujuanproyek = "";
         public String jenisproyek = "";
         public String pic = "";
-        public String grandtotal = "0";
         public String status = "";
         public Int64 version = 0;
         public Boolean isExist = false;
@@ -33,24 +31,22 @@ namespace Kontenu.Design {
         public override string ToString() {
             String kolom = "";
             kolom += "Kode:" + kode + ";";
-            kolom += "Tanggal:" + tanggal + ";";
-            kolom += "Tanggal Berlaku:" + tanggalberlaku + ";";
+            kolom += "Tanggal:" + tanggaldeal + ";";
             kolom += "Klien:" + klien + ";";
-            kolom += "Proyek Nama:" + proyeknama + ";";
-            kolom += "Proyek Alamat:" + proyekalamat + ";";
-            kolom += "Proyek Provinsi:" + proyekprovinsi + ";";
-            kolom += "Proyek Kota:" + proyekkota + ";";
-            kolom += "Proyek Kode Pos:" + proyekkodepos + ";";
+            kolom += "Proyek Nama:" + nama + ";";
+            kolom += "Proyek Alamat:" + alamat + ";";
+            kolom += "Proyek Provinsi:" + provinsi + ";";
+            kolom += "Proyek Kota:" + kota + ";";
+            kolom += "Proyek Kode Pos:" + kodepos + ";";
             kolom += "Tujuan Proyek:" + tujuanproyek + ";";
             kolom += "Jenis Proyek:" + jenisproyek + ";";
             kolom += "PIC:" + pic + ";";
-            kolom += "Grand Total:" + grandtotal + ";";
             kolom += "Status:" + status + ";";
             kolom += "Version:" + version + ";";
             return kolom;
         }
 
-        public DataQuotation(MySqlCommand command, String kode) {
+        public DataProyek(MySqlCommand command, String kode) {
             this.command = command;
             this.kode = kode;
             this.getOtherAttribute();
@@ -58,8 +54,8 @@ namespace Kontenu.Design {
 
         private void getOtherAttribute() {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT tanggal, tanggalberlaku, klien,proyeknama, proyekalamat,proyekprovinsi,proyekkota,proyekkodepos,tujuanproyek,jenisproyek,pic, grandtotal,status, version
-                             FROM quotation 
+            String query = @"SELECT tanggaldeal, klien,nama, alamat,provinsi,kota,kodepos,tujuanproyek,jenisproyek,pic,status, version
+                             FROM proyek 
                              WHERE kode = @kode";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
@@ -68,18 +64,16 @@ namespace Kontenu.Design {
             MySqlDataReader reader = OswDataAccess.executeReaderQuery(query, parameters, command);
             if(reader.Read()) {
                 this.isExist = true;
-                this.tanggal = reader.GetString("tanggal");
-                this.tanggalberlaku = reader.GetString("tanggalberlaku");
+                this.tanggaldeal = reader.GetString("tanggaldeal");
                 this.klien = reader.GetString("klien");
-                this.proyeknama = reader.GetString("proyeknama");
-                this.proyekalamat = reader.GetString("proyekalamat");
-                this.proyekprovinsi = reader.GetString("proyekprovinsi");
-                this.proyekkota = reader.GetString("proyekkota");
-                this.proyekkodepos = reader.GetString("proyekkodepos");
+                this.nama = reader.GetString("nama");
+                this.alamat = reader.GetString("alamat");
+                this.provinsi = reader.GetString("provinsi");
+                this.kota = reader.GetString("kota");
+                this.kodepos = reader.GetString("kodepos");
                 this.tujuanproyek = reader.GetString("tujuanproyek");
                 this.jenisproyek = reader.GetString("jenisproyek");
                 this.pic = reader.GetString("pic");
-                this.grandtotal = reader.GetString("grandtotal");
                 this.status = reader.GetString("status");
                 this.version = reader.GetInt64("version");
                 reader.Close();
@@ -90,7 +84,7 @@ namespace Kontenu.Design {
         }
 
         private String generateKode() {
-            String strngTanggalSekarang = this.tanggal;
+            String strngTanggalSekarang = this.tanggaldeal;
             String strngTahun = OswDate.getTahun(strngTanggalSekarang);
             String strngTahunDuaDigit = OswDate.getTahunDuaDigit(strngTanggalSekarang);
             String strngBulan = OswDate.getBulan(strngTanggalSekarang);
@@ -114,8 +108,8 @@ namespace Kontenu.Design {
                 }
             }
 
-            DataQuotation dQuotation = new DataQuotation(command, kode);
-            if(dQuotation.isExist) {
+            DataProyek dProyek = new DataProyek(command, kode);
+            if(dProyek.isExist) {
                 kode = generateKode();
             }
 
@@ -129,23 +123,21 @@ namespace Kontenu.Design {
             this.kode = this.generateKode();
             this.version += 1;
 
-            String query = @"INSERT INTO quotation(kode, tanggal, tanggalberlaku, klien,proyeknama, proyekalamat,proyekprovinsi,proyekkota,proyekkodepos,tujuanproyek,jenisproyek,pic, grandtotal, status, version,create_user) 
-                             VALUES(@kode,@tanggal,@tanggalberlaku,  @klien,@proyeknama,@proyekalamat,@proyekprovinsi,@proyekkota,@proyekkodepos,@tujuanproyek,@jenisproyek,@pic, @grandtotal, @status, @version,@create_user)";
+            String query = @"INSERT INTO proyek(kode, tanggaldeal, klien,nama, alamat,provinsi,kota,kodepos,tujuanproyek,jenisproyek,pic, status, version,create_user) 
+                             VALUES(@kode,@tanggaldeal,@klien,@nama,@alamat,@provinsi,@kota,@kodepos,@tujuanproyek,@jenisproyek,@pic, @status, @version,@create_user)";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("kode", this.kode);
-            parameters.Add("tanggal", this.tanggal);
-            parameters.Add("tanggalberlaku", this.tanggalberlaku);
+            parameters.Add("tanggaldeal", this.tanggaldeal);
             parameters.Add("klien", this.klien);
-            parameters.Add("proyeknama", this.proyeknama);
-            parameters.Add("proyekalamat", this.proyekalamat);
-            parameters.Add("proyekprovinsi", this.proyekprovinsi);
-            parameters.Add("proyekkota", this.proyekkota);
-            parameters.Add("proyekkodepos", this.proyekkodepos);
+            parameters.Add("nama", this.nama);
+            parameters.Add("alamat", this.alamat);
+            parameters.Add("provinsi", this.provinsi);
+            parameters.Add("kota", this.kota);
+            parameters.Add("kodepos", this.kodepos);
             parameters.Add("tujuanproyek", this.tujuanproyek);
             parameters.Add("jenisproyek", this.jenisproyek);
             parameters.Add("pic", this.pic);
-            parameters.Add("grandtotal", this.grandtotal);
             parameters.Add("status", this.status);
             parameters.Add("version", "1");
             parameters.Add("create_user", OswConstants.KODEUSER);
@@ -157,43 +149,14 @@ namespace Kontenu.Design {
             // validasi
             valExist();
 
-            // hapus detail
-            this.hapusDetail();
-
             // hapus header
-            String query = @"DELETE FROM quotation
+            String query = @"DELETE FROM proyek
                              WHERE kode = @kode";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("kode", this.kode);
 
             OswDataAccess.executeVoidQuery(query, parameters, command);
-        }
-
-        public void hapusDetail() {
-            String query = @"SELECT no
-                             FROM quotationdetail
-                             WHERE quotation = @quotation";
-
-            Dictionary<String, String> parameters = new Dictionary<String, String>();
-            parameters.Add("quotation", this.kode);
-
-            // buat penampung data itemno
-            DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("no");
-
-            MySqlDataReader reader = OswDataAccess.executeReaderQuery(query, parameters, command);
-            while(reader.Read()) {
-                String strngNo = reader.GetString("no");
-                dataTable.Rows.Add(strngNo);
-            }
-            reader.Close();
-
-            // loop per detail lalu hapus
-            foreach(DataRow row in dataTable.Rows) {
-                DataQuotationDetail dQuotationDetail = new DataQuotationDetail(command, this.kode, row["no"].ToString());
-                dQuotationDetail.hapus();
-            }
         }
 
         public void ubah() {
@@ -204,19 +167,17 @@ namespace Kontenu.Design {
             this.version += 1;
 
             // proses ubah
-            String query = @"UPDATE quotation
-                             SET tanggal = @tanggal,
-                                 tanggalberlaku = @tanggalberlaku, 
+            String query = @"UPDATE proyek
+                             SET tanggaldeal = @tanggaldeal,
                                  klien = @klien,
-                                 proyeknama = @proyeknama,
-                                 proyekalamat = @proyekalamat, 
-                                 proyekprovinsi = @proyekprovinsi,
-                                 proyekkota = @proyekkota,
-                                 proyekkodepos = @proyekkodepos,
+                                 nama = @nama,
+                                 alamat = @alamat, 
+                                 provinsi = @provinsi,
+                                 kota = @kota,
+                                 kodepos = @kodepos,
                                  tujuanproyek = @tujuanproyek,
                                  jenisproyek = @jenisproyek,
                                  pic = @pic, 
-                                 grandtotal = @grandtotal, 
                                  version = @version,
                                  update_at = CURRENT_TIMESTAMP(),
                                  update_user = @update_user
@@ -224,25 +185,24 @@ namespace Kontenu.Design {
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("kode", this.kode);
-            parameters.Add("tanggal", this.tanggal);
-            parameters.Add("tanggalberlaku", this.tanggalberlaku);
+            parameters.Add("tanggaldeal", this.tanggaldeal);
             parameters.Add("klien", this.klien);
-            parameters.Add("proyeknama", this.proyeknama);
-            parameters.Add("proyekalamat", this.proyekalamat);
-            parameters.Add("proyekprovinsi", this.proyekprovinsi);
-            parameters.Add("proyekkota", this.proyekkota);
-            parameters.Add("proyekkodepos", this.proyekkodepos);
+            parameters.Add("nama", this.nama);
+            parameters.Add("alamat", this.alamat);
+            parameters.Add("provinsi", this.provinsi);
+            parameters.Add("kota", this.kota);
+            parameters.Add("kodepos", this.kodepos);
             parameters.Add("tujuanproyek", this.tujuanproyek);
             parameters.Add("jenisproyek", this.jenisproyek);
             parameters.Add("pic", this.pic);
-            parameters.Add("grandtotal", this.grandtotal);
             parameters.Add("version", this.version.ToString());
             parameters.Add("update_user", OswConstants.KODEUSER);
 
             OswDataAccess.executeVoidQuery(query, parameters, command);
         }
 
-        public void ubahStatus() {
+        public void ubahStatus()
+        {
             // validasi
             valExist();
             valVersion();
@@ -250,7 +210,7 @@ namespace Kontenu.Design {
             this.version += 1;
 
             // proses ubah
-            String query = @"UPDATE quotation
+            String query = @"UPDATE proyek
                              SET status = @status,
                                  version = @version,
                                  update_at = CURRENT_TIMESTAMP(),
@@ -279,30 +239,9 @@ namespace Kontenu.Design {
         }
 
         private void valVersion() {
-            DataQuotation dQuotation = new DataQuotation(command, this.kode);
-            if(this.version != dQuotation.version) {
+            DataProyek dProyek = new DataProyek(command, this.kode);
+            if(this.version != dProyek.version) {
                 throw new Exception("Data yang dimiliki bukan yang terbaru, silahkan tutup dan lakukan proses ulang");
-            }
-        }
-
-        public void valJumlahDetail() {
-            String query = @"SELECT COUNT(*)
-                             FROM quotationdetail A
-                             WHERE A.quotation = @quotation";
-
-            Dictionary<String, String> parameters = new Dictionary<string, string>();
-            parameters.Add("quotation", this.kode);
-
-            Double dblJumlahDetailBarang = Double.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
-
-            if(dblJumlahDetailBarang <= 0) {
-                throw new Exception("Jumlah Item detail harus lebih dari 0");
-            }
-        }
-
-        private void valDetail() {
-            if(decimal.Parse(this.grandtotal) <= 0) {
-                throw new Exception("Grand Total harus > 0");
             }
         }
     }

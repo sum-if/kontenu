@@ -354,7 +354,7 @@ namespace Kontenu.Umum {
         {
             String query = @"SELECT 100 AS Urutan, kode AS Kode,nama AS Nama 
                             FROM jenisproyek
-                            WHERE tujuanproyek = @tujuanproyek";
+                            WHERE tujuanproyek LIKE @tujuanproyek";
 
             String queryTambahan = "";
 

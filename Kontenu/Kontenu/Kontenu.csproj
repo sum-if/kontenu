@@ -127,6 +127,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Design\Data\DataProyek.cs" />
     <Compile Include="Design\Data\DataQuotation.cs" />
     <Compile Include="Design\Data\DataQuotationDetail.cs" />
     <Compile Include="Design\Data\DataQuotationDetailJasa.cs" />
@@ -240,6 +241,18 @@
     </Compile>
     <Compile Include="Design\Form\Master\FrmPerusahaan.designer.cs">
       <DependentUpon>FrmPerusahaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmProyek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmProyek.designer.cs">
+      <DependentUpon>FrmProyek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmProyekAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmProyekAdd.designer.cs">
+      <DependentUpon>FrmProyekAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Design\Form\Transaksi\FrmQuotationAddJasaDetail.cs">
       <SubType>Form</SubType>
@@ -462,6 +475,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Master\FrmPerusahaan.resx">
       <DependentUpon>FrmPerusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmProyek.resx">
+      <DependentUpon>FrmProyek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmProyekAdd.resx">
+      <DependentUpon>FrmProyekAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Transaksi\FrmQuotationAddJasaDetail.resx">
       <DependentUpon>FrmQuotationAddJasaDetail.cs</DependentUpon>
