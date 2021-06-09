@@ -130,10 +130,11 @@ namespace Kontenu.Design
                 DataQuotation dQuotation = new DataQuotation(command, strngKode);
                 deTanggal.DateTime = OswDate.getDateTimeFromStringTanggal(dQuotation.tanggal);
                 deTanggalBerlaku.DateTime = OswDate.getDateTimeFromStringTanggal(dQuotation.tanggalberlaku);
-                chkTutup.Checked = dQuotation.status == Constants.STATUS_QUOTATION_PROSES;
+                chkTutup.Checked = dQuotation.status == Constants.STATUS_QUOTATION_TUTUP;
 
                 // KLIEN
                 DataKlien dKlien = new DataKlien(command, dQuotation.klien);
+                txtKodeKlien.Text = dKlien.kode;
                 txtNama.EditValue = dKlien.nama;
                 txtAlamat.Text = dKlien.alamat;
                 txtProvinsi.Text = dKlien.provinsi;
@@ -306,6 +307,8 @@ namespace Kontenu.Design
                 dQuotation.jenisproyek = strngProyekJenis;
                 dQuotation.pic = strngProyekPIC;
 
+                bool simpanDetail = true;
+
                 if (this.isAdd)
                 {
                     dQuotation.status = Constants.STATUS_QUOTATION_PROSES;
@@ -323,48 +326,61 @@ namespace Kontenu.Design
                     {
                         dQuotation.status = Constants.STATUS_QUOTATION_TUTUP;
                         dQuotation.ubahStatus();
+                        simpanDetail = false;
                     }
                     else
                     {
+                        dQuotation.hapusDetail();
                         dQuotation.ubah();
                     }
                 }
 
-                decimal dblGrandTotal = 0;
-                for (int i = 0; i < gridView1.DataRowCount; i++)
+                if (simpanDetail)
                 {
-                    if (gridView1.GetRowCellValue(i, "Jasa") == null)
+
+                    decimal dblGrandTotal = 0;
+                    for (int i = 0; i < gridView1.DataRowCount; i++)
                     {
-                        continue;
+                        if (gridView1.GetRowCellValue(i, "Jasa") == null)
+                        {
+                            continue;
+                        }
+
+                        if (gridView1.GetRowCellValue(i, "Jasa").ToString() == "")
+                        {
+                            continue;
+                        }
+
+                        String strngNo = gridView1.GetRowCellValue(i, "No").ToString();
+                        String strngTEMP = gridView1.GetRowCellValue(i, "TEMP").ToString();
+                        String strngKodeJasa = gridView1.GetRowCellValue(i, "Kode Jasa").ToString();
+                        String strngDeskripsi = gridView1.GetRowCellValue(i, "Deskripsi").ToString();
+                        String strngKodeUnit = gridView1.GetRowCellValue(i, "Kode Unit").ToString();
+                        decimal dblJumlah = Tools.getRoundMoney(decimal.Parse(gridView1.GetRowCellValue(i, "Qty").ToString()));
+                        decimal dblRate = Tools.getRoundMoney(decimal.Parse(gridView1.GetRowCellValue(i, "Rate").ToString()));
+
+                        decimal dblSubtotal = Tools.getRoundMoney(dblJumlah * dblRate);
+
+                        dblGrandTotal = Tools.getRoundMoney(dblGrandTotal + dblSubtotal);
+
+                        // simpan detail
+                        DataQuotationDetail dQuotationDetail = new DataQuotationDetail(command, strngKode, strngNo);
+                        dQuotationDetail.jasa = strngKodeJasa;
+                        dQuotationDetail.deskripsi = strngDeskripsi;
+                        dQuotationDetail.jumlah = dblJumlah.ToString();
+                        dQuotationDetail.unit = strngKodeUnit;
+                        dQuotationDetail.rate = dblRate.ToString();
+                        dQuotationDetail.subtotal = dblSubtotal.ToString();
+                        dQuotationDetail.tambah();
+
+                        // tulis log detail
+                        OswLog.setTransaksi(command, dokumenDetail, dQuotationDetail.ToString());
                     }
 
-                    if (gridView1.GetRowCellValue(i, "Jasa").ToString() == "")
-                    {
-                        continue;
-                    }
-
-                    String strngNo = gridView1.GetRowCellValue(i, "No").ToString();
-                    String strngTEMP = gridView1.GetRowCellValue(i, "TEMP").ToString();
-                    String strngKodeJasa = gridView1.GetRowCellValue(i, "Kode Jasa").ToString();
-                    String strngKodeUnit = gridView1.GetRowCellValue(i, "Kode Unit").ToString();
-                    decimal dblJumlah = Tools.getRoundMoney(decimal.Parse(gridView1.GetRowCellValue(i, "Qty").ToString()));
-                    decimal dblRate = Tools.getRoundMoney(decimal.Parse(gridView1.GetRowCellValue(i, "Rate").ToString()));
-
-                    decimal dblSubtotal = Tools.getRoundMoney(dblJumlah * dblRate);
-
-                    dblGrandTotal = Tools.getRoundMoney(dblGrandTotal + dblSubtotal);
-
-                    // simpan detail
-                    DataQuotationDetail dQuotationDetail = new DataQuotationDetail(command, strngKode, strngNo);
-                    dQuotationDetail.jasa = strngKodeJasa;
-                    dQuotationDetail.jumlah = dblJumlah.ToString();
-                    dQuotationDetail.unit = strngKodeUnit;
-                    dQuotationDetail.rate = dblRate.ToString();
-                    dQuotationDetail.subtotal = dblSubtotal.ToString();
-                    dQuotationDetail.tambah();
-
-                    // tulis log detail
-                    OswLog.setTransaksi(command, dokumenDetail, dQuotationDetail.ToString());
+                    // Update header
+                    dQuotation = new DataQuotation(command, strngKode);
+                    dQuotation.grandtotal = dblGrandTotal.ToString();
+                    dQuotation.ubah();
                 }
 
                 // tulis log
@@ -618,7 +634,7 @@ namespace Kontenu.Design
                 Dictionary<String, String> parameters = new Dictionary<String, String>();
 
                 InfUtamaDataTable form = new InfUtamaDataTable("Info Jasa", query, parameters,
-                                                                new String[] { "Kode Unit" },
+                                                                new String[] { "Kode", "Kode Unit" },
                                                                 new String[] { },
                                                                 new DataTable());
                 this.AddOwnedForm(form);

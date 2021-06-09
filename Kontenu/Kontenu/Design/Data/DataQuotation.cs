@@ -171,7 +171,7 @@ namespace Kontenu.Design {
         }
 
         public void hapusDetail() {
-            String query = @"SELECT id
+            String query = @"SELECT no
                              FROM quotationdetail
                              WHERE quotation = @quotation";
 
@@ -180,18 +180,18 @@ namespace Kontenu.Design {
 
             // buat penampung data itemno
             DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("id");
+            dataTable.Columns.Add("no");
 
             MySqlDataReader reader = OswDataAccess.executeReaderQuery(query, parameters, command);
             while(reader.Read()) {
-                String strngId = reader.GetString("id");
-                dataTable.Rows.Add(strngId);
+                String strngNo = reader.GetString("no");
+                dataTable.Rows.Add(strngNo);
             }
             reader.Close();
 
             // loop per detail lalu hapus
             foreach(DataRow row in dataTable.Rows) {
-                DataQuotationDetail dQuotationDetail = new DataQuotationDetail(command, this.kode, row["id"].ToString());
+                DataQuotationDetail dQuotationDetail = new DataQuotationDetail(command, this.kode, row["no"].ToString());
                 dQuotationDetail.hapus();
             }
         }
@@ -298,78 +298,6 @@ namespace Kontenu.Design {
             if(dblJumlahDetailBarang <= 0) {
                 throw new Exception("Jumlah Item detail harus lebih dari 0");
             }
-        }
-
-        public void prosesHitung() {
-            // detail untuk kolom harga dan biaya
-            String query = @"UPDATE quotationdetail A
-                            LEFT JOIN (
-	                            SELECT quotation,id,SUM(subtotal) AS total
-	                            FROM quotationdetailbarang A
-                                WHERE A.quotation = @quotation
-	                            GROUP BY quotation,id
-                            ) B ON A.quotation = B.quotation AND A.id = B.id
-                            LEFT JOIN (
-	                            SELECT quotation,id,SUM(subtotal) AS total
-	                            FROM quotationdetailbiaya A
-                                WHERE A.quotation = @quotation
-	                            GROUP BY quotation,id
-                            ) C ON A.quotation = C.quotation AND A.id = C.id
-                            SET A.hargabarang = COALESCE(B.total,0), 
-	                            A.biaya = COALESCE(C.total,0)
-                            WHERE A.quotation = @quotation";
-
-            Dictionary<String, String> parameters = new Dictionary<String, String>();
-            parameters.Add("quotation", this.kode);
-
-            OswDataAccess.executeVoidQuery(query, parameters, command);
-
-            // detail untuk kolom harga dasar
-            query = @"UPDATE quotationdetail A
-                    SET A.subhargadasar = (A.hargabarang + A.biaya + A.profit)
-                    WHERE A.quotation = @quotation";
-
-            OswDataAccess.executeVoidQuery(query, parameters, command);
-
-            // detail untuk kolom pic
-            query = @"UPDATE quotationdetail A
-                    INNER JOIN quotation B ON A.quotation = B.kode
-                    SET A.pic = ROUND((A.subhargadasar / (100 - B.pic)) * B.pic)
-                    WHERE A.quotation = @quotation";
-
-            OswDataAccess.executeVoidQuery(query, parameters, command);
-
-            // detail untuk kolom harga jenisproyek
-            query = @"UPDATE quotationdetail A
-                    SET A.hargajenisproyek = CEILING((A.subhargadasar + A.pic) / 100) * 100
-                    WHERE A.quotation = @quotation";
-
-            OswDataAccess.executeVoidQuery(query, parameters, command);
-
-            // detail untuk kolom subtotal
-            query = @"UPDATE quotationdetail A
-                    SET A.subtotal = A.hargajenisproyek * A.jumlah
-                    WHERE A.quotation = @quotation";
-
-            OswDataAccess.executeVoidQuery(query, parameters, command);
-
-
-            // update header untuk totalbiaya,totalprofit,totalpic, totalhargadasar,dpp,ppn
-            query = @"UPDATE quotation A
-                    LEFT JOIN (
-	                    SELECT A.quotation, SUM(A.pic * A.jumlah) AS totalpic, SUM(A.biaya * A.jumlah) AS totalbiaya, SUM(A.profit * A.jumlah) AS totalprofit, SUM(A.hargabarang * A.jumlah) AS subhargadasar, SUM(A.subtotal) AS total
-	                    FROM quotationdetail A
-	                    WHERE A.quotation = @quotation
-	                    GROUP BY A.quotation
-                    ) B ON A.kode = B.quotation
-                    SET A.totalbiaya = COALESCE(B.totalbiaya,0), 
-	                    A.totalprofit = COALESCE(B.totalprofit,0),
-                        A.totalhargadasar = COALESCE(B.subhargadasar,0),
-                        A.totalpic = COALESCE(B.totalpic,0), 
-                        A.dpp = COALESCE(B.total,0)
-                    WHERE A.kode = @quotation";
-
-            OswDataAccess.executeVoidQuery(query, parameters, command);
         }
 
         private void valDetail() {

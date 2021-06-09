@@ -129,10 +129,6 @@ namespace Kontenu.Design {
             parameters.Add("no", this.no);
 
             OswDataAccess.executeVoidQuery(query, parameters, command);
-
-            // proses hitung
-            DataQuotation dQuotation = new DataQuotation(command, this.quotation);
-            dQuotation.prosesHitung();
         }
 
         public void hapusDetail() {

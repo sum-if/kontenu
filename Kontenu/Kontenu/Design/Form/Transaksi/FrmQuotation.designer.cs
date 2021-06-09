@@ -29,6 +29,8 @@
             this.btnUbah = new DevExpress.XtraEditors.SimpleButton();
             this.btnTambah = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl = new DevExpress.XtraEditors.GroupControl();
+            this.txtNamaProyek = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtNamaKlien = new DevExpress.XtraEditors.TextEdit();
             this.btnCari = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -40,10 +42,9 @@
             this.lblNama = new DevExpress.XtraEditors.LabelControl();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.txtNamaProyek = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl)).BeginInit();
             this.groupControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNamaProyek.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamaKlien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggalAkhir.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggalAkhir.Properties)).BeginInit();
@@ -52,7 +53,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNamaProyek.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCetak
@@ -72,7 +72,7 @@
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(90, 23);
             this.btnHapus.TabIndex = 30;
-            this.btnHapus.Text = "Batalkan [F3]";
+            this.btnHapus.Text = "Hapus [F3]";
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // btnUbah
@@ -113,6 +113,21 @@
             this.groupControl.Size = new System.Drawing.Size(802, 121);
             this.groupControl.TabIndex = 31;
             this.groupControl.Text = "Pencarian";
+            // 
+            // txtNamaProyek
+            // 
+            this.txtNamaProyek.Location = new System.Drawing.Point(510, 58);
+            this.txtNamaProyek.Name = "txtNamaProyek";
+            this.txtNamaProyek.Size = new System.Drawing.Size(276, 20);
+            this.txtNamaProyek.TabIndex = 132;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(415, 61);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(63, 13);
+            this.labelControl4.TabIndex = 131;
+            this.labelControl4.Text = "Nama Proyek";
             // 
             // txtNamaKlien
             // 
@@ -210,21 +225,6 @@
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             // 
-            // txtNamaProyek
-            // 
-            this.txtNamaProyek.Location = new System.Drawing.Point(510, 58);
-            this.txtNamaProyek.Name = "txtNamaProyek";
-            this.txtNamaProyek.Size = new System.Drawing.Size(276, 20);
-            this.txtNamaProyek.TabIndex = 132;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(415, 61);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(63, 13);
-            this.labelControl4.TabIndex = 131;
-            this.labelControl4.Text = "Nama Proyek";
-            // 
             // FrmQuotation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,6 +242,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl)).EndInit();
             this.groupControl.ResumeLayout(false);
             this.groupControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNamaProyek.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamaKlien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggalAkhir.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggalAkhir.Properties)).EndInit();
@@ -250,7 +251,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNamaProyek.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
