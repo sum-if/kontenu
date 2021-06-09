@@ -105,7 +105,7 @@ namespace Kontenu.Design
             String strngNamaProyek = txtNamaProyek.Text;
 
             String query = @"SELECT A.kode AS Nomor, A.tanggal AS Tanggal, A.tanggalberlaku AS 'Tanggal Berlaku', B.nama AS Klien, B.telp AS Telp, B.email AS Email,
-		                            A.proyeknama AS 'Nama Proyek', A.proyekalamat AS 'Alamat Proyek', A.proyekkota AS 'Kota Proyek', A.grandtotal AS 'Grand Total', A.status
+		                            A.proyeknama AS 'Nama Proyek', A.proyekalamat AS 'Alamat Proyek', A.proyekkota AS 'Kota Proyek', A.grandtotal AS 'Grand Total', A.status AS Status
                             FROM quotation A
                             INNER JOIN klien B ON A.klien = B.kode
                             WHERE toDate(A.tanggal) BETWEEN toDate(@tanggalawal) AND toDate(@tanggalakhir) AND 

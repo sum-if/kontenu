@@ -58,7 +58,7 @@ namespace Kontenu.Design {
 
         private void getOtherAttribute() {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT tanggal, tanggalberlaku, klien,proyeknama, proyekalamat,proyekprovinsi,proyekkota,proyekkodepos,tujuanproyek,jenisproyek,pic, grandtotal,grandtotal,catatan, status, version
+            String query = @"SELECT tanggal, tanggalberlaku, klien,proyeknama, proyekalamat,proyekprovinsi,proyekkota,proyekkodepos,tujuanproyek,jenisproyek,pic, grandtotal,grandtotal,status, version
                              FROM quotation 
                              WHERE kode = @kode";
 

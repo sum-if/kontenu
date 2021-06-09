@@ -192,7 +192,7 @@ namespace Kontenu.Design
             String strngKode = txtKode.Text;
 
             String query = @"SELECT A.no AS No, B.kode AS 'Kode Jasa', B.nama AS Jasa, A.deskripsi AS Deskripsi, A.jumlah AS Qty, 
-                                    C.kode 'Kode Unit', C.nama AS Unit, A.rate AS Rate, A.subtotal AS Subtotal, LEFT(UUID(),8) AS TEMP
+                                    C.kode 'Kode Unit', C.nama AS Unit, A.rate AS Rate, A.subtotal AS Subtotal, A.no AS TEMP
                             FROM quotationdetail A
                             INNER JOIN jasa B ON A.jasa = B.kode
                             INNER JOIN unit C ON A.unit = C.kode
@@ -244,8 +244,10 @@ namespace Kontenu.Design
             // validation
             dxValidationProvider1.SetValidationRule(deTanggal, OswValidation.IsNotBlank());
             dxValidationProvider1.SetValidationRule(deTanggalBerlaku, OswValidation.IsNotBlank());
-            dxValidationProvider1.SetValidationRule(txtNama, OswValidation.IsNotBlank());
+            dxValidationProvider1.SetValidationRule(txtKodeKlien, OswValidation.IsNotBlank());
 
+            dxValidationProvider1.SetValidationRule(txtProyekNama, OswValidation.IsNotBlank());
+            dxValidationProvider1.SetValidationRule(txtProyekAlamat, OswValidation.IsNotBlank());
             dxValidationProvider1.SetValidationRule(cmbProyekTujuan, OswValidation.IsNotBlank());
             dxValidationProvider1.SetValidationRule(cmbProyekJenis, OswValidation.IsNotBlank());
             dxValidationProvider1.SetValidationRule(cmbProyekPIC, OswValidation.IsNotBlank());
@@ -259,120 +261,143 @@ namespace Kontenu.Design
                 return;
             }
 
-            //MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
-            //MySqlCommand command = con.CreateCommand();
-            //MySqlTransaction trans;
+            MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
+            MySqlCommand command = con.CreateCommand();
+            MySqlTransaction trans;
 
-            //try
-            //{
-            //    // buka koneksi
-            //    con.Open();
+            try
+            {
+                // buka koneksi
+                con.Open();
 
-            //    // set transaction
-            //    trans = con.BeginTransaction();
-            //    command.Transaction = trans;
+                // set transaction
+                trans = con.BeginTransaction();
+                command.Transaction = trans;
 
-            //    // Function Code
+                // Function Code
+                String strngKode = txtKode.Text;
+                String strngTanggal = deTanggal.Text;
+                String strngTanggalBerlaku = deTanggalBerlaku.Text;
+                String strngTutup = chkTutup.Checked ? Constants.STATUS_YA : Constants.STATUS_TIDAK;
 
-            //    String strngKode = txtKode.Text;
-            //    String strngTanggal = deTanggal.Text;
-            //    String strngDeadline = deDeadline.Text;
-            //    String strngDelivery = deDelivery.Text;
-            //    String strngPenawaran = dePenawaran.Text;
-            //    String strngKlien = txtNama.Text;
-            //    String strngCatatan = txtCatatan.Text;
-            //    String strngTutupPesanan = chkTutup.Checked ? Constants.STATUS_YA : Constants.STATUS_TIDAK;
-            //    String strngSales = cmbSales.EditValue.ToString();
-            //    String strngKomisi = txtKomisi.EditValue.ToString();
-            //    String strngAlamat = txtAlamat.Text;
-            //    String strngProvinsi = txtProvinsi.Text;
-            //    String strngKota = txtKota.Text;
-            //    String strngKodePos = txtKodePos.Text;
-            //    String strngTelp = txtTelepon.Text;
-            //    String strngTelp2 = txtTelepon2.Text;
-            //    String strngFaks = txtFaks.Text;
-            //    String strngEmail = txtEmail.Text;
+                String strngKlien = txtKodeKlien.Text;
 
-            //    DataQuotation dQuotation = new DataQuotation(command, Constants.CABANG, strngKode);
-            //    dQuotation.tanggal = strngTanggal;
-            //    dQuotation.deadline = strngDeadline;
-            //    dQuotation.delivery = strngDelivery;
-            //    dQuotation.penawaran = strngPenawaran;
-            //    dQuotation.sales = strngSales;
-            //    dQuotation.komisi = strngKomisi;
-            //    dQuotation.customer = strngKlien;
-            //    dQuotation.alamat = strngAlamat;
-            //    dQuotation.provinsi = strngProvinsi;
-            //    dQuotation.kota = strngKota;
-            //    dQuotation.kodepos = strngKodePos;
-            //    dQuotation.telp = strngTelp;
-            //    dQuotation.telp2 = strngTelp2;
-            //    dQuotation.faks = strngFaks;
-            //    dQuotation.email = strngEmail;
-            //    dQuotation.catatan = strngCatatan;
+                String strngProyekNama = txtProyekNama.Text;
+                String strngProyekAlamat = txtProyekAlamat.Text;
+                String strngProyekKota = txtProyekKota.Text;
+                String strngProyekProvinsi = txtProyekProvinsi.Text;
+                String strngProyekKodePos = txtProyekKodePos.Text;
+                String strngProyekTujuan = cmbProyekTujuan.EditValue.ToString();
+                String strngProyekJenis = cmbProyekJenis.EditValue.ToString();
+                String strngProyekPIC = cmbProyekPIC.EditValue.ToString();
 
-            //    if (this.isAdd)
-            //    {
-            //        dQuotation.status = Constants.STATUS_Quotation_DALAM_PROSES;
-            //        dQuotation.tambah();
-            //        // update kode header --> setelah generate
-            //        strngKode = dQuotation.kode;
-            //        txtKode.Text = strngKode;
+                DataQuotation dQuotation = new DataQuotation(command, strngKode);
+                dQuotation.tanggal = strngTanggal;
+                dQuotation.tanggalberlaku = strngTanggalBerlaku;
 
-            //        btnTambahBarang.Enabled = true;
-            //        btnUbahBarang.Enabled = true;
-            //        btnHapusBarang.Enabled = true;
+                dQuotation.klien = strngKlien;
 
-            //        this.isAdd = false;
-            //    }
-            //    else
-            //    {
-            //        if (chkTutup.Checked)
-            //        {
-            //            dQuotation.status = Constants.STATUS_Quotation_SELESAI;
-            //            dQuotation.ubahStatus();
-            //        }
-            //        else
-            //        {
-            //            dQuotation.ubah();
-            //        }
+                dQuotation.proyeknama = strngProyekNama;
+                dQuotation.proyekalamat = strngProyekAlamat;
+                dQuotation.proyekkota = strngProyekKota;
+                dQuotation.proyekprovinsi = strngProyekProvinsi;
+                dQuotation.proyekkodepos = strngProyekKodePos;
+                dQuotation.tujuanproyek = strngProyekTujuan;
+                dQuotation.jenisproyek = strngProyekJenis;
+                dQuotation.pic = strngProyekPIC;
 
-            //        dQuotation.prosesHitung();
-            //    }
+                if (this.isAdd)
+                {
+                    dQuotation.status = Constants.STATUS_QUOTATION_PROSES;
+                    dQuotation.tambah();
 
-            //    this.setDefaultInput(command);
+                    // update kode header --> setelah generate
+                    strngKode = dQuotation.kode;
+                    txtKode.Text = strngKode;
 
-            //    // tulis log
-            //    OswLog.setTransaksi(command, dokumen, dQuotation.ToString());
+                    this.isAdd = false;
+                }
+                else
+                {
+                    if (chkTutup.Checked)
+                    {
+                        dQuotation.status = Constants.STATUS_QUOTATION_TUTUP;
+                        dQuotation.ubahStatus();
+                    }
+                    else
+                    {
+                        dQuotation.ubah();
+                    }
+                }
 
-            //    // reload grid di form header
-            //    FrmQuotation frmQuotation = (FrmQuotation)this.Owner;
-            //    frmQuotation.setGrid(command);
+                decimal dblGrandTotal = 0;
+                for (int i = 0; i < gridView1.DataRowCount; i++)
+                {
+                    if (gridView1.GetRowCellValue(i, "Jasa") == null)
+                    {
+                        continue;
+                    }
 
-            //    // Commit Transaction
-            //    command.Transaction.Commit();
+                    if (gridView1.GetRowCellValue(i, "Jasa").ToString() == "")
+                    {
+                        continue;
+                    }
 
-            //    OswPesan.pesanInfo("Proses simpan header berhasil.");
-            //}
-            //catch (MySqlException ex)
-            //{
-            //    OswPesan.pesanErrorCatch(ex, command, dokumen);
-            //}
-            //catch (Exception ex)
-            //{
-            //    OswPesan.pesanErrorCatch(ex, command, dokumen);
-            //}
-            //finally
-            //{
-            //    con.Close();
-            //    try
-            //    {
-            //        SplashScreenManager.CloseForm();
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //    }
-            //}
+                    String strngNo = gridView1.GetRowCellValue(i, "No").ToString();
+                    String strngTEMP = gridView1.GetRowCellValue(i, "TEMP").ToString();
+                    String strngKodeJasa = gridView1.GetRowCellValue(i, "Kode Jasa").ToString();
+                    String strngKodeUnit = gridView1.GetRowCellValue(i, "Kode Unit").ToString();
+                    decimal dblJumlah = Tools.getRoundMoney(decimal.Parse(gridView1.GetRowCellValue(i, "Qty").ToString()));
+                    decimal dblRate = Tools.getRoundMoney(decimal.Parse(gridView1.GetRowCellValue(i, "Rate").ToString()));
+
+                    decimal dblSubtotal = Tools.getRoundMoney(dblJumlah * dblRate);
+
+                    dblGrandTotal = Tools.getRoundMoney(dblGrandTotal + dblSubtotal);
+
+                    // simpan detail
+                    DataQuotationDetail dQuotationDetail = new DataQuotationDetail(command, strngKode, strngNo);
+                    dQuotationDetail.jasa = strngKodeJasa;
+                    dQuotationDetail.jumlah = dblJumlah.ToString();
+                    dQuotationDetail.unit = strngKodeUnit;
+                    dQuotationDetail.rate = dblRate.ToString();
+                    dQuotationDetail.subtotal = dblSubtotal.ToString();
+                    dQuotationDetail.tambah();
+
+                    // tulis log detail
+                    OswLog.setTransaksi(command, dokumenDetail, dQuotationDetail.ToString());
+                }
+
+                // tulis log
+                OswLog.setTransaksi(command, dokumen, dQuotation.ToString());
+
+                // reload grid di form header
+                FrmQuotation frmQuotation = (FrmQuotation)this.Owner;
+                frmQuotation.setGrid(command);
+
+                // Commit Transaction
+                command.Transaction.Commit();
+
+                OswPesan.pesanInfo("Proses simpan berhasil.");
+            }
+            catch (MySqlException ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            catch (Exception ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            finally
+            {
+                con.Close();
+                try
+                {
+                    SplashScreenManager.CloseForm();
+                }
+                catch (Exception ex)
+                {
+                }
+            }
         }
 
         private void btnPerincian_Click(object sender, EventArgs e)
@@ -389,6 +414,12 @@ namespace Kontenu.Design
             if (strngJasa == "")
             {
                 OswPesan.pesanError("Silahkan pilih jasa.");
+                return;
+            }
+
+            if (strngTEMP == "")
+            {
+                OswPesan.pesanError("Jasa belum disimpan.");
                 return;
             }
 
@@ -488,6 +519,7 @@ namespace Kontenu.Design
                 String strngKodeKlien = form.hasil["Kode Klien"];
 
                 DataKlien dKlien = new DataKlien(command, strngKodeKlien);
+                txtKodeKlien.EditValue = strngKodeKlien;
                 txtNama.EditValue = dKlien.nama;
                 txtAlamat.Text = dKlien.alamat;
                 txtProvinsi.Text = dKlien.provinsi;
@@ -696,7 +728,7 @@ namespace Kontenu.Design
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Qty"], "0");
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Rate"], "0");
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Subtotal"], "0");
-            gridView.SetRowCellValue(e.RowHandle, gridView.Columns["TEMP"], OswRandom.generateFromString(8));            
+            gridView.SetRowCellValue(e.RowHandle, gridView.Columns["TEMP"], "");
         }
 
         private void gridView1_RowDeleted(object sender, DevExpress.Data.RowDeletedEventArgs e)

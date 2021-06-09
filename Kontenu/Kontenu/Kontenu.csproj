@@ -241,6 +241,12 @@
     <Compile Include="Design\Form\Master\FrmPerusahaan.designer.cs">
       <DependentUpon>FrmPerusahaan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmQuotationAddJasaDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmQuotationAddJasaDetail.designer.cs">
+      <DependentUpon>FrmQuotationAddJasaDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Design\Form\Transaksi\FrmQuotationAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -456,6 +462,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Master\FrmPerusahaan.resx">
       <DependentUpon>FrmPerusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmQuotationAddJasaDetail.resx">
+      <DependentUpon>FrmQuotationAddJasaDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Transaksi\FrmQuotationAdd.resx">
       <DependentUpon>FrmQuotationAdd.cs</DependentUpon>

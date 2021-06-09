@@ -51,6 +51,8 @@
             this.lblGrandTotal = new DevExpress.XtraEditors.LabelControl();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtKodeKlien = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnCariCustomer = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.txtHandphone = new DevExpress.XtraEditors.TextEdit();
@@ -93,6 +95,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKodeKlien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHandphone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).BeginInit();
@@ -345,6 +348,8 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.txtKodeKlien);
+            this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Controls.Add(this.btnCariCustomer);
             this.groupControl2.Controls.Add(this.labelControl17);
             this.groupControl2.Controls.Add(this.txtHandphone);
@@ -362,9 +367,25 @@
             this.groupControl2.Controls.Add(this.txtKota);
             this.groupControl2.Location = new System.Drawing.Point(465, 12);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(504, 223);
+            this.groupControl2.Size = new System.Drawing.Size(504, 245);
             this.groupControl2.TabIndex = 202;
             this.groupControl2.Text = "Data Klien";
+            // 
+            // txtKodeKlien
+            // 
+            this.txtKodeKlien.Enabled = false;
+            this.txtKodeKlien.Location = new System.Drawing.Point(135, 35);
+            this.txtKodeKlien.Name = "txtKodeKlien";
+            this.txtKodeKlien.Size = new System.Drawing.Size(292, 20);
+            this.txtKodeKlien.TabIndex = 246;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(18, 38);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(24, 13);
+            this.labelControl2.TabIndex = 247;
+            this.labelControl2.Text = "Kode";
             // 
             // btnCariCustomer
             // 
@@ -378,7 +399,7 @@
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(19, 143);
+            this.labelControl17.Location = new System.Drawing.Point(19, 169);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(55, 13);
             this.labelControl17.TabIndex = 244;
@@ -388,14 +409,14 @@
             // 
             this.txtHandphone.EditValue = "";
             this.txtHandphone.Enabled = false;
-            this.txtHandphone.Location = new System.Drawing.Point(136, 140);
+            this.txtHandphone.Location = new System.Drawing.Point(136, 166);
             this.txtHandphone.Name = "txtHandphone";
             this.txtHandphone.Size = new System.Drawing.Size(353, 20);
             this.txtHandphone.TabIndex = 243;
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(19, 169);
+            this.labelControl18.Location = new System.Drawing.Point(19, 195);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(24, 13);
             this.labelControl18.TabIndex = 215;
@@ -405,7 +426,7 @@
             // 
             this.txtEmail.EditValue = "";
             this.txtEmail.Enabled = false;
-            this.txtEmail.Location = new System.Drawing.Point(136, 166);
+            this.txtEmail.Location = new System.Drawing.Point(136, 192);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(353, 20);
             this.txtEmail.TabIndex = 200;
@@ -413,14 +434,14 @@
             // txtNama
             // 
             this.txtNama.Enabled = false;
-            this.txtNama.Location = new System.Drawing.Point(135, 35);
+            this.txtNama.Location = new System.Drawing.Point(135, 61);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(292, 20);
+            this.txtNama.Size = new System.Drawing.Size(353, 20);
             this.txtNama.TabIndex = 110;
             // 
             // labelControl21
             // 
-            this.labelControl21.Location = new System.Drawing.Point(18, 116);
+            this.labelControl21.Location = new System.Drawing.Point(18, 142);
             this.labelControl21.Name = "labelControl21";
             this.labelControl21.Size = new System.Drawing.Size(38, 13);
             this.labelControl21.TabIndex = 206;
@@ -430,14 +451,14 @@
             // 
             this.txtTelepon.EditValue = "";
             this.txtTelepon.Enabled = false;
-            this.txtTelepon.Location = new System.Drawing.Point(135, 113);
+            this.txtTelepon.Location = new System.Drawing.Point(135, 139);
             this.txtTelepon.Name = "txtTelepon";
             this.txtTelepon.Size = new System.Drawing.Size(353, 20);
             this.txtTelepon.TabIndex = 170;
             // 
             // labelControl22
             // 
-            this.labelControl22.Location = new System.Drawing.Point(18, 38);
+            this.labelControl22.Location = new System.Drawing.Point(18, 64);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(27, 13);
             this.labelControl22.TabIndex = 203;
@@ -447,14 +468,14 @@
             // 
             this.txtProvinsi.EditValue = "";
             this.txtProvinsi.Enabled = false;
-            this.txtProvinsi.Location = new System.Drawing.Point(135, 87);
+            this.txtProvinsi.Location = new System.Drawing.Point(135, 113);
             this.txtProvinsi.Name = "txtProvinsi";
             this.txtProvinsi.Size = new System.Drawing.Size(113, 20);
             this.txtProvinsi.TabIndex = 140;
             // 
             // labelControl25
             // 
-            this.labelControl25.Location = new System.Drawing.Point(18, 90);
+            this.labelControl25.Location = new System.Drawing.Point(18, 116);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(96, 13);
             this.labelControl25.TabIndex = 205;
@@ -464,7 +485,7 @@
             // 
             this.txtKodePos.EditValue = "";
             this.txtKodePos.Enabled = false;
-            this.txtKodePos.Location = new System.Drawing.Point(417, 87);
+            this.txtKodePos.Location = new System.Drawing.Point(417, 113);
             this.txtKodePos.Name = "txtKodePos";
             this.txtKodePos.Size = new System.Drawing.Size(72, 20);
             this.txtKodePos.TabIndex = 160;
@@ -472,14 +493,14 @@
             // txtAlamat
             // 
             this.txtAlamat.Enabled = false;
-            this.txtAlamat.Location = new System.Drawing.Point(135, 61);
+            this.txtAlamat.Location = new System.Drawing.Point(135, 87);
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(354, 20);
             this.txtAlamat.TabIndex = 120;
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(18, 64);
+            this.labelControl26.Location = new System.Drawing.Point(18, 90);
             this.labelControl26.Name = "labelControl26";
             this.labelControl26.Size = new System.Drawing.Size(33, 13);
             this.labelControl26.TabIndex = 204;
@@ -489,7 +510,7 @@
             // 
             this.txtKota.EditValue = "";
             this.txtKota.Enabled = false;
-            this.txtKota.Location = new System.Drawing.Point(254, 87);
+            this.txtKota.Location = new System.Drawing.Point(254, 113);
             this.txtKota.Name = "txtKota";
             this.txtKota.Size = new System.Drawing.Size(157, 20);
             this.txtKota.TabIndex = 150;
@@ -614,6 +635,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKodeKlien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHandphone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).EndInit();
@@ -686,5 +708,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl30;
         private DevExpress.XtraEditors.LabelControl labelControl28;
         private DevExpress.XtraEditors.LabelControl labelControl20;
+        public DevExpress.XtraEditors.TextEdit txtKodeKlien;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }
