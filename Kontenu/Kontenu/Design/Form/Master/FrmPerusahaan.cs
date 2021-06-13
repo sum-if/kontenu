@@ -31,10 +31,11 @@ using DevExpress.XtraEditors.DXErrorProvider;
 using System.Net;
 using Kontenu.Umum;
 using Kontenu.Sistem;
+using Kontenu.OswLib;
 
 namespace Kontenu.Master {
     public partial class FrmPerusahaan : DevExpress.XtraEditors.XtraForm {
-        private String kode = "KONTENU";
+        private String kode = Constants.PERUSAHAAN_KONTENU;
         private byte[] arrIcon;
 
         public FrmPerusahaan() {

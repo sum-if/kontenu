@@ -13,6 +13,8 @@ namespace Kontenu.OswLib {
         public static String FORMAT_TANGGAL_BULAN_TAHUN_TRANSAKSI = "MMyy";
         public static String FORMAT_TANGGAL_TAHUN = "yyyy";
 
+        public static String PERUSAHAAN_KONTENU = "KONTENU";
+
         // Jangan lupa ubah di tutup periode
         public static String PROSES_TUTUP_PERIODE = "Tutup Periode";
 

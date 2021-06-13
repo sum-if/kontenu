@@ -33,10 +33,9 @@ using Kontenu.OswLib;
 using Kontenu.Umum.Laporan;
 using Kontenu.Umum;
 using DevExpress.XtraEditors.Controls;
-
-
 using DevExpress.XtraEditors.ViewInfo;
 using DevExpress.Utils.Drawing;
+using Kontenu.Master;
 
 namespace Kontenu.Design
 {
@@ -452,6 +451,92 @@ namespace Kontenu.Design
 
         private void btnCetak_Click(object sender, EventArgs e)
         {
+            String strngKode = txtKode.Text;
+            cetak(strngKode);
+
+        }
+
+        private void cetak(String kode)
+        {
+            SplashScreenManager.ShowForm(typeof(SplashUtama));
+            MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
+            MySqlCommand command = con.CreateCommand();
+            MySqlTransaction trans;
+
+            try
+            {
+                // buka koneksi
+                con.Open();
+
+                // set transaction
+                trans = con.BeginTransaction();
+                command.Transaction = trans;
+
+                // function code
+                RptQuotation report = new RptQuotation();
+
+                // PERUSAHAAN
+                DataPerusahaan dPerusahaan = new DataPerusahaan(command, Constants.PERUSAHAAN_KONTENU);
+                report.Parameters["PerusahaanKode"].Value = dPerusahaan.kode;
+                report.Parameters["PerusahaanNama"].Value = dPerusahaan.nama;
+                report.Parameters["PerusahaanAlamat"].Value = dPerusahaan.alamat;
+                report.Parameters["PerusahaanKota"].Value = dPerusahaan.kota;
+                report.Parameters["PerusahaanEmail"].Value = dPerusahaan.email;
+                report.Parameters["PerusahaanTelepon"].Value = "+62 811 318 6880";
+                report.Parameters["PerusahaanWebsite"].Value = dPerusahaan.website;
+
+                // TRANSAKSI
+                DataQuotation dQuotation = new DataQuotation(command, kode);
+                report.Parameters["Kode"].Value = dQuotation.kode;
+                report.Parameters["Tanggal"].Value = dQuotation.tanggal;
+                report.Parameters["ProyekNama"].Value = dQuotation.proyeknama;
+                report.Parameters["ProyekAlamat"].Value = dQuotation.proyekalamat;
+                report.Parameters["ProyekKota"].Value = dQuotation.proyekkota;
+                report.Parameters["ProyekJenis"].Value = (new DataJenisProyek(command, dQuotation.jenisproyek)).nama;
+                report.Parameters["ProyekTanggalBerlaku"].Value = dQuotation.tanggalberlaku;
+
+                // KLIEN
+                DataKlien dKlien = new DataKlien(command, dQuotation.klien);
+                report.Parameters["KlienNama"].Value = dKlien.nama;
+                report.Parameters["KlienAlamat"].Value = dKlien.alamat;
+                report.Parameters["KlienKota"].Value = dKlien.kota;
+                report.Parameters["KlienEmail"].Value = dKlien.email;
+                report.Parameters["KlienTelp"].Value = dKlien.telp;
+                
+
+                // assign the printing system to the document viewer.
+                LaporanPrintPreview laporan = new LaporanPrintPreview();
+                laporan.documentViewer1.DocumentSource = report;
+
+                //reportprinttool printtool = new reportprinttool(report);
+                //printtool.print();
+
+                OswLog.setLaporan(command, dokumen);
+
+                laporan.Show();
+
+                // commit transaction
+                command.Transaction.Commit();
+            }
+            catch (MySqlException ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            catch (Exception ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            finally
+            {
+                con.Close();
+                try
+                {
+                    SplashScreenManager.CloseForm();
+                }
+                catch (Exception ex)
+                {
+                }
+            }
         }
 
         private void btnCariKlien_Click(object sender, EventArgs e)
