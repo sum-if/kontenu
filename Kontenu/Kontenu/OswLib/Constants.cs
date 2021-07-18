@@ -35,6 +35,9 @@ namespace Kontenu.OswLib {
         public static String STATUS_QUOTATION_PROSES = "Proses";
         public static String STATUS_QUOTATION_TUTUP = "Tutup";
 
+        public static String STATUS_INVOICE_PROSES = "Proses";
+        public static String STATUS_INVOICE_TUTUP = "Tutup";
+
         public static String STATUS_PROYEK_AKTIF = "Aktif";
         public static String STATUS_PROYEK_TIDAK_AKTIF = "Tidak Aktif";
 

@@ -128,7 +128,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Design\Data\DataProyek.cs" />
+    <Compile Include="Design\Data\DataInvoice.cs" />
     <Compile Include="Design\Data\DataQuotation.cs" />
+    <Compile Include="Design\Data\DataInvoiceDetail.cs" />
     <Compile Include="Design\Data\DataQuotationDetail.cs" />
     <Compile Include="Design\Data\DataQuotationDetailJasa.cs" />
     <Compile Include="Design\Data\DataJenisProyek.cs" />
@@ -259,6 +261,18 @@
     </Compile>
     <Compile Include="Design\Form\Transaksi\FrmProyekAdd.designer.cs">
       <DependentUpon>FrmProyekAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmInvoice.designer.cs">
+      <DependentUpon>FrmInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmInvoiceAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmInvoiceAdd.designer.cs">
+      <DependentUpon>FrmInvoiceAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Design\Form\Transaksi\FrmQuotationAddJasaDetail.cs">
       <SubType>Form</SubType>
@@ -490,6 +504,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Transaksi\FrmProyekAdd.resx">
       <DependentUpon>FrmProyekAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmInvoice.resx">
+      <DependentUpon>FrmInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmInvoiceAdd.resx">
+      <DependentUpon>FrmInvoiceAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Transaksi\FrmQuotationAddJasaDetail.resx">
       <DependentUpon>FrmQuotationAddJasaDetail.cs</DependentUpon>
