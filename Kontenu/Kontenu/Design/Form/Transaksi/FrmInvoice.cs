@@ -108,7 +108,7 @@ namespace Kontenu.Design
 		                            C.nama AS 'Nama Proyek', C.alamat AS 'Alamat Proyek', C.kota AS 'Kota Proyek', A.grandtotal AS 'Grand Total', A.totalterima AS 'Total Terima', A.status AS Status
                             FROM invoice A
                             INNER JOIN proyek C ON A.proyek = C.kode
-                            INNER JOIN klien B ON C.klien = B.kode
+                            INNER JOIN klien B ON A.klien = B.kode
                             WHERE toDate(A.tanggal) BETWEEN toDate(@tanggalawal) AND toDate(@tanggalakhir) AND 
                                   A.kode LIKE @kode AND B.nama LIKE @klien AND C.nama LIKE @proyek
                             ORDER BY A.kode";
