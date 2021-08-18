@@ -261,10 +261,10 @@
     <Compile Include="Design\Data\DataJabatan.cs" />
     <Compile Include="Design\Data\DataPIC.cs" />
     <Compile Include="Design\Data\DataOutsource.cs" />
-    <Compile Include="Design\Form\Cetak\RptQuotation.cs">
+    <Compile Include="Design\Rpt\RptQuotation.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Design\Form\Cetak\RptQuotation.designer.cs">
+    <Compile Include="Design\Rpt\RptQuotation.designer.cs">
       <DependentUpon>RptQuotation.cs</DependentUpon>
     </Compile>
     <Compile Include="Design\Form\Master\FrmJenisProyek.cs">
@@ -615,7 +615,7 @@
     <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.resx">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Form\Cetak\RptQuotation.resx">
+    <EmbeddedResource Include="Design\Rpt\RptQuotation.resx">
       <DependentUpon>RptQuotation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Master\FrmJenisProyek.resx">
