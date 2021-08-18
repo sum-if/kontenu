@@ -45,7 +45,6 @@ namespace Kontenu.Design
         private String dokumen = "INVOICE";
         private String dokumenDetail = "INVOICE";
         private Boolean isAdd;
-        public Dictionary<string, DataTable> dicDetailJasa;
 
         public FrmInvoiceAdd(bool pIsAdd)
         {
@@ -86,10 +85,9 @@ namespace Kontenu.Design
 
                 OswControlDefaultProperties.setInput(this, id, command);
                 OswControlDefaultProperties.setTanggal(deTanggal);
-                OswControlDefaultProperties.setTanggal(deTanggalBerlaku);
 
-                cmbProyekTujuan = ComboQueryUmum.getTujuanProyek(cmbProyekTujuan, command);
-                cmbProyekPIC = ComboQueryUmum.getPIC(cmbProyekPIC, command);
+                cmbProyekID = ComboQueryUmum.getProyek(cmbProyekID, command);
+                
 
                 this.setDefaultInput(command);
 
@@ -119,78 +117,97 @@ namespace Kontenu.Design
 
         private void setDefaultInput(MySqlCommand command)
         {
-            //if (!this.isAdd)
-            //{
-            //    String strngKode = txtKode.Text;
-            //    deTanggal.Enabled = false;
-            //    btnCetak.Enabled = true;
+            if (!this.isAdd)
+            {
+                String strngKode = txtKode.Text;
+                deTanggal.Enabled = false;
+                btnCetak.Enabled = true;
 
-            //    // INVOICE
-            //    DataInvoice dInvoice = new DataInvoice(command, strngKode);
-            //    deTanggal.DateTime = OswDate.getDateTimeFromStringTanggal(dInvoice.tanggal);
-            //    deTanggalBerlaku.DateTime = OswDate.getDateTimeFromStringTanggal(dInvoice.tanggalberlaku);
-            //    chkTutup.Checked = dInvoice.status == Constants.STATUS_INVOICE_TUTUP;
+                // INVOICE
+                DataInvoice dInvoice = new DataInvoice(command, strngKode);
+                deTanggal.DateTime = OswDate.getDateTimeFromStringTanggal(dInvoice.tanggal);
 
-            //    // KLIEN
-            //    DataKlien dKlien = new DataKlien(command, dInvoice.klien);
-            //    txtKodeKlien.Text = dKlien.kode;
-            //    txtNama.EditValue = dKlien.nama;
-            //    txtAlamat.Text = dKlien.alamat;
-            //    txtProvinsi.Text = dKlien.provinsi;
-            //    txtKota.Text = dKlien.kota;
-            //    txtKodePos.Text = dKlien.kodepos;
-            //    txtTelepon.Text = dKlien.telp;
-            //    txtHandphone.Text = dKlien.handphone;
-            //    txtEmail.Text = dKlien.email;
+                rdoJenisInvoiceInterior.Checked = (dInvoice.jenis == Constants.JENIS_INVOICE_INTERIOR);
+                rdoJenisInvoiceProduct.Checked = (dInvoice.jenis == Constants.JENIS_INVOICE_PRODUCT);
 
-            //    // PROYEK
-            //    txtProyekNama.Text = dInvoice.proyeknama;
-            //    txtProyekAlamat.Text = dInvoice.proyekalamat;
-            //    txtProyekKota.Text = dInvoice.proyekkota;
-            //    txtProyekProvinsi.Text = dInvoice.proyekprovinsi;
-            //    txtProyekKodePos.Text = dInvoice.proyekkodepos;
+                // PROYEK
+                cmbProyekID.EditValue = dInvoice.proyek;
+                cmbQuotation.EditValue = dInvoice.quotation;
 
-            //    cmbProyekTujuan.EditValue = dInvoice.tujuanproyek;
-            //    cmbProyekJenis.EditValue = dInvoice.jenisproyek;
-            //    cmbProyekPIC.EditValue = dInvoice.pic;
+                updateDataProyek(command);
+            }
+            else
+            {
+                OswControlDefaultProperties.resetAllInput(this);
+                deTanggal.EditValue = "";
+                rdoJenisInvoiceInterior.Checked = true;
 
+                btnCetak.Enabled = false;
 
-            //    // BUTTON
-            //    btnPerincian.Enabled = true;
-            //    chkTutup.Enabled = true;
+                cmbProyekID.ItemIndex = 0;
+                updateDataProyek(command);
+            }
 
-            //    if (chkTutup.Checked)
-            //    {
-            //        chkTutup.Enabled = false;
-            //        btnSimpan.Enabled = false;
-            //        btnCariKlien.Enabled = false;
-            //    }
-            //}
-            //else
-            //{
-            //    OswControlDefaultProperties.resetAllInput(this);
-            //    deTanggal.EditValue = "";
-            //    deTanggalBerlaku.EditValue = "";
+            this.setGrid(command);
+            txtKode.Focus();
+        }
 
-            //    chkTutup.Enabled = false;
-            //    chkTutup.Checked = false;
+        private void updateDataProyek(MySqlCommand command)
+        {
+            txtProyekNama.Text = "";
+            txtProyekAlamat.Text = "";
+            txtProyekKota.Text = "";
+            txtProyekProvinsi.Text = "";
+            txtProyekKodePos.Text = "";
 
-            //    btnCetak.Enabled = false;
+            txtProyekTujuan.Text = "";
+            txtProyekJenis.Text = "";
+            txtProyekPIC.Text = "";
 
-            //    cmbProyekTujuan.ItemIndex = 0;
-            //    cmbProyekPIC.ItemIndex = 0;
-            //}
+            DataProyek dProyek = new DataProyek(command, cmbProyekID.EditValue.ToString());
 
-            //this.setGrid(command);
-            //txtKode.Focus();
+            if (dProyek.isExist)
+            {
+                txtProyekNama.Text = dProyek.nama;
+                txtProyekAlamat.Text = dProyek.alamat;
+                txtProyekKota.Text = dProyek.kota;
+                txtProyekProvinsi.Text = dProyek.provinsi;
+                txtProyekKodePos.Text = dProyek.kodepos;
+
+                DataTujuanProyek dTujuanProyek = new DataTujuanProyek(command, dProyek.tujuanproyek);
+                DataJenisProyek dJenisProyek = new DataJenisProyek(command, dProyek.jenisproyek);
+                DataPIC dPIC = new DataPIC(command, dProyek.pic);
+
+                txtProyekTujuan.Text = dTujuanProyek.nama;
+                txtProyekJenis.Text = dJenisProyek.nama;
+                txtProyekPIC.Text = dPIC.nama;
+
+                // KLIEN
+                DataKlien dKlien = new DataKlien(command, dProyek.klien);
+                txtKodeKlien.Text = dProyek.klien;
+                txtNama.EditValue = dKlien.nama;
+                txtAlamat.Text = dKlien.alamat;
+                txtProvinsi.Text = dKlien.provinsi;
+                txtKota.Text = dKlien.kota;
+                txtKodePos.Text = dKlien.kodepos;
+                txtTelepon.Text = dKlien.telp;
+                txtHandphone.Text = dKlien.handphone;
+                txtEmail.Text = dKlien.email;
+
+                // QUOTATION
+                cmbQuotation = ComboQueryUmum.getQuotation(cmbQuotation, command, txtKodeKlien.Text, false, true);
+                cmbQuotation.ItemIndex = 0;
+
+                setGrid(command);
+            }
         }
 
         public void setGrid(MySqlCommand command)
         {
             String strngKode = txtKode.Text;
 
-            String query = @"SELECT A.no AS No, B.kode AS 'Kode Jasa', B.nama AS Jasa, A.deskripsi AS Deskripsi, A.jumlah AS Qty, 
-                                    C.kode 'Kode Unit', C.nama AS Unit, A.rate AS Rate, A.subtotal AS Subtotal, A.no AS TEMP
+            String query = @"SELECT A.no AS No, B.kode AS 'Kode Jasa', B.nama AS Jasa, A.deskripsi AS Deskripsi, A.quotation AS Quotation, A.quotationdetailno AS 'Quotation Detail No', A.jumlah AS Qty, 
+                                    C.kode 'Kode Unit', C.nama AS Unit, A.rate AS Rate, A.subtotal AS Subtotal
                             FROM invoicedetail A
                             INNER JOIN jasa B ON A.jasa = B.kode
                             INNER JOIN unit C ON A.unit = C.kode
@@ -202,12 +219,13 @@ namespace Kontenu.Design
 
             Dictionary<String, int> widths = new Dictionary<String, int>();
             // 960 - 21 (kiri) - 17 (vertikal lines) - 35 (No) = 927
-            widths.Add("Jasa", 180);
-            widths.Add("Deskripsi", 302);
-            widths.Add("Qty", 90);
-            widths.Add("Unit", 110);
-            widths.Add("Rate", 120);
-            widths.Add("Subtotal", 120);
+            widths.Add("Jasa", 200);
+            widths.Add("Deskripsi", 207);
+            widths.Add("Quotation", 135);
+            widths.Add("Qty", 80);
+            widths.Add("Unit", 90);
+            widths.Add("Rate", 100);
+            widths.Add("Subtotal", 110);
 
             Dictionary<String, String> inputType = new Dictionary<string, string>();
             inputType.Add("Qty", OswInputType.NUMBER);
@@ -215,8 +233,8 @@ namespace Kontenu.Design
             inputType.Add("Subtotal", OswInputType.NUMBER);
 
             OswGrid.getGridInput(gridControl1, command, query, parameters, widths, inputType,
-                                 new String[] { "No", "Kode Jasa", "Kode Unit", "TEMP" },
-                                 new String[] { "Unit", "Subtotal" });
+                                 new String[] { "No", "Kode Jasa", "Kode Unit", "Quotation Detail No" },
+                                 new String[] { "Unit", "Subtotal", "Quotation" });
 
             // search produk di kolom kode
             RepositoryItemButtonEdit searchJasa = new RepositoryItemButtonEdit();
@@ -502,7 +520,7 @@ namespace Kontenu.Design
             //    report.Parameters["KlienKota"].Value = dKlien.kota;
             //    report.Parameters["KlienEmail"].Value = dKlien.email;
             //    report.Parameters["KlienTelp"].Value = dKlien.telp;
-                
+
 
             //    // assign the printing system to the document viewer.
             //    LaporanPrintPreview laporan = new LaporanPrintPreview();
@@ -539,125 +557,6 @@ namespace Kontenu.Design
             //}
         }
 
-        private void btnCariKlien_Click(object sender, EventArgs e)
-        {
-            infoKlien();
-        }
-
-        private void infoKlien()
-        {
-            MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
-            MySqlCommand command = con.CreateCommand();
-            MySqlTransaction trans;
-
-            try
-            {
-                // buka koneksi
-                con.Open();
-
-                // set transaction
-                trans = con.BeginTransaction();
-                command.Transaction = trans;
-
-                // Function Code
-                String query = @"SELECT A.kode AS 'Kode Klien',A.nama AS Klien, A.alamat AS Alamat, A.provinsi AS Provinsi, A.kota AS Kota, A.kodepos AS 'Kode Pos', 
-                                        A.telp AS Telp, A.handphone AS Handphone, A.email AS Email, A.ktp AS NIK
-                                FROM klien A
-                                ORDER BY A.kode";
-
-                Dictionary<String, String> parameters = new Dictionary<String, String>();
-
-                InfUtamaDictionary form = new InfUtamaDictionary("Info Klien", query, parameters,
-                                                                new String[] { "Kode Klien" },
-                                                                new String[] { "Kode Klien" },
-                                                                new String[] { });
-                this.AddOwnedForm(form);
-                form.ShowDialog();
-                if (!form.hasil.ContainsKey("Kode Klien"))
-                {
-                    return;
-                }
-
-                String strngKodeKlien = form.hasil["Kode Klien"];
-
-                DataKlien dKlien = new DataKlien(command, strngKodeKlien);
-                txtKodeKlien.EditValue = strngKodeKlien;
-                txtNama.EditValue = dKlien.nama;
-                txtAlamat.Text = dKlien.alamat;
-                txtProvinsi.Text = dKlien.provinsi;
-                txtKota.Text = dKlien.kota;
-                txtKodePos.Text = dKlien.kodepos;
-                txtTelepon.Text = dKlien.telp;
-                txtHandphone.Text = dKlien.handphone;
-                txtEmail.Text = dKlien.email;
-
-                // Commit Transaction
-                command.Transaction.Commit();
-            }
-            catch (MySqlException ex)
-            {
-                OswPesan.pesanErrorCatch(ex, command, dokumen);
-            }
-            catch (Exception ex)
-            {
-                OswPesan.pesanErrorCatch(ex, command, dokumen);
-            }
-            finally
-            {
-                con.Close();
-                try
-                {
-                    SplashScreenManager.CloseForm();
-                }
-                catch (Exception ex)
-                {
-                }
-            }
-        }
-
-        private void cmbProyekTujuan_EditValueChanged(object sender, EventArgs e)
-        {
-            MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
-            MySqlCommand command = con.CreateCommand();
-            MySqlTransaction trans;
-
-            try
-            {
-                // buka koneksi
-                con.Open();
-
-                // set transaction
-                trans = con.BeginTransaction();
-                command.Transaction = trans;
-
-                // Function Code
-                cmbProyekJenis = ComboQueryUmum.getJenisProyek(cmbProyekJenis, command, cmbProyekTujuan.ItemIndex < 0 ? "" : cmbProyekTujuan.EditValue.ToString());
-                cmbProyekJenis.ItemIndex = 0;
-
-                // Commit Transaction
-                command.Transaction.Commit();
-            }
-            catch (MySqlException ex)
-            {
-                OswPesan.pesanErrorCatch(ex, command, dokumen);
-            }
-            catch (Exception ex)
-            {
-                OswPesan.pesanErrorCatch(ex, command, dokumen);
-            }
-            finally
-            {
-                con.Close();
-                try
-                {
-                    SplashScreenManager.CloseForm();
-                }
-                catch (Exception ex)
-                {
-                }
-            }
-        }
-
         private void infoJasa()
         {
             MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
@@ -673,14 +572,27 @@ namespace Kontenu.Design
                 trans = con.BeginTransaction();
                 command.Transaction = trans;
 
-                String query = @"SELECT A.kode AS Kode, A.nama AS Nama, B.kode AS 'Kode Unit', B.nama AS Unit
-                                    FROM jasa A
-                                    INNER JOIN unit B ON A.unit = B.kode";
+                String query = @"SELECT * 
+                                    FROM (
+	                                    SELECT A.kode AS Kode, A.nama AS Nama, B.kode AS 'Kode Unit', B.nama AS Unit, '' AS Quotation, '0' AS 'Quotation Detail No', '' AS Deskripsi,
+                                               0 AS Qty, 0 AS Rate
+	                                    FROM jasa A
+	                                    INNER JOIN unit B ON A.unit = B.kode
+	                                    UNION
+	                                    SELECT B.kode AS Kode, B.nama AS Nama, C.kode AS 'Kode Unit', C.nama AS Unit, A.quotation AS Quotation, A.no AS 'Quotation Detail No', A.deskripsi AS Deskripsi,
+                                               A.jumlah AS Qty, A.rate AS Rate
+	                                    FROM quotationdetail A
+	                                    INNER JOIN jasa B ON A.jasa = B.kode
+	                                    INNER JOIN unit C ON A.unit = C.kode
+	                                    WHERE A.quotation = @quotation
+                                    ) A
+                                    ORDER BY A.nama";
 
                 Dictionary<String, String> parameters = new Dictionary<String, String>();
+                parameters.Add("quotation", cmbQuotation.EditValue.ToString());
 
                 InfUtamaDataTable form = new InfUtamaDataTable("Info Jasa", query, parameters,
-                                                                new String[] { "Kode", "Kode Unit" },
+                                                                new String[] { "Kode", "Kode Unit", "Quotation Detail No", "Qty", "Rate" },
                                                                 new String[] { },
                                                                 new DataTable());
                 this.AddOwnedForm(form);
@@ -699,6 +611,11 @@ namespace Kontenu.Design
                     String strngNama = row["Nama"].ToString();
                     String strngKodeUnit = row["Kode Unit"].ToString();
                     String strngUnit = row["Unit"].ToString();
+                    String strngKodeQuotation = row["Quotation"].ToString();
+                    String strngQuotationDetailNo = row["Quotation Detail No"].ToString();
+                    String strngDeskripsi = row["Deskripsi"].ToString();
+                    String strngQty = row["Qty"].ToString();
+                    String strngRate = row["Rate"].ToString();
 
                     gridView.AddNewRow();
                     gridView.MoveLast();
@@ -706,8 +623,15 @@ namespace Kontenu.Design
                     gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Jasa"], strngNama);
                     gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Kode Unit"], strngKodeUnit);
                     gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Unit"], strngUnit);
+                    gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Quotation"], strngKodeQuotation);
+                    gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Quotation Detail No"], strngQuotationDetailNo);
+                    gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Deskripsi"], strngDeskripsi);
+                    gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Qty"], strngQty);
+                    gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Rate"], strngRate);
                     gridView.UpdateCurrentRow();
                 }
+
+                setFooter();
 
                 // commit transaction
                 command.Transaction.Commit();
@@ -739,10 +663,6 @@ namespace Kontenu.Design
             if (e.KeyCode == Keys.F1 && gridView.FocusedColumn.FieldName == "Jasa")
             {
                 infoJasa();
-            }
-            else if (e.KeyCode == Keys.F2)
-            {
-                btnPerincian.PerformClick();
             }
         }
 
@@ -780,6 +700,8 @@ namespace Kontenu.Design
                 gridView.FocusedColumn = gridView.Columns["Jasa"];
                 return;
             }
+
+            setFooter();
         }
 
         private void gridView1_InitNewRow(object sender, InitNewRowEventArgs e)
@@ -789,12 +711,14 @@ namespace Kontenu.Design
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["No"], gridView.DataRowCount + 1);
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Kode Jasa"], "");
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Jasa"], "");
+            gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Deskripsi"], "");
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Kode Unit"], "");
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Unit"], "");
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Qty"], "0");
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Rate"], "0");
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Subtotal"], "0");
-            gridView.SetRowCellValue(e.RowHandle, gridView.Columns["TEMP"], "");
+            gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Quotation"], "");
+            gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Quotation Detail No"], "0");
         }
 
         private void gridView1_RowDeleted(object sender, DevExpress.Data.RowDeletedEventArgs e)
@@ -870,6 +794,76 @@ namespace Kontenu.Design
                 }
 
                 lblGrandTotal.Text = OswConvert.convertToRupiah(dblGrandTotal);
+
+                // Commit Transaction
+                command.Transaction.Commit();
+            }
+            catch (MySqlException ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            catch (Exception ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void cmbProyekID_EditValueChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
+            MySqlCommand command = con.CreateCommand();
+            MySqlTransaction trans;
+
+            try
+            {
+                // buka koneksi
+                con.Open();
+
+                // set transaction
+                trans = con.BeginTransaction();
+                command.Transaction = trans;
+
+                // Function Code
+                updateDataProyek(command);
+
+                // Commit Transaction
+                command.Transaction.Commit();
+            }
+            catch (MySqlException ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            catch (Exception ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void cmbQuotation_EditValueChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
+            MySqlCommand command = con.CreateCommand();
+            MySqlTransaction trans;
+
+            try
+            {
+                // buka koneksi
+                con.Open();
+
+                // set transaction
+                trans = con.BeginTransaction();
+                command.Transaction = trans;
+
+                // Function Code
+                setGrid(command);
 
                 // Commit Transaction
                 command.Transaction.Commit();

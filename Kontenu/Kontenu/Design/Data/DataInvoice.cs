@@ -15,6 +15,8 @@ namespace Kontenu.Design {
         public String kode = "";
         public String tanggal = "";
         public String jenis = "";
+        public String proyek = "";
+        public String klien = "";
         public String quotation = "";
         public String grandtotal = "0";
         public String totalterima = "0";
@@ -28,6 +30,8 @@ namespace Kontenu.Design {
             kolom += "Kode:" + kode + ";";
             kolom += "Tanggal:" + tanggal + ";";
             kolom += "Jenis:" + jenis + ";";
+            kolom += "Proyek:" + proyek + ";";
+            kolom += "Klien:" + klien + ";";
             kolom += "Quotation:" + quotation + ";";
             kolom += "Grand Total:" + grandtotal + ";";
             kolom += "Total Terima:" + totalterima + ";";
@@ -44,7 +48,7 @@ namespace Kontenu.Design {
 
         private void getOtherAttribute() {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT tanggal, jenis, quotation,grandtotal, totalterima,status, version
+            String query = @"SELECT tanggal, jenis, proyek, klien, quotation,grandtotal, totalterima,status, version
                              FROM invoice 
                              WHERE kode = @kode";
 
@@ -56,6 +60,8 @@ namespace Kontenu.Design {
                 this.isExist = true;
                 this.tanggal = reader.GetString("tanggal");
                 this.jenis = reader.GetString("jenis");
+                this.proyek = reader.GetString("proyek");
+                this.klien = reader.GetString("klien");
                 this.quotation = reader.GetString("quotation");
                 this.grandtotal = reader.GetString("grandtotal");
                 this.totalterima = reader.GetString("totalterima");
@@ -108,13 +114,15 @@ namespace Kontenu.Design {
             this.kode = this.generateKode();
             this.version += 1;
 
-            String query = @"INSERT INTO invoice(kode, tanggal, jenis, quotation,grandtotal, totalterima,status, version,create_user) 
-                             VALUES(@kode,@tanggal,@jenis,  @quotation,@grandtotal,@totalterima,@status, @version,@create_user)";
+            String query = @"INSERT INTO invoice(kode, tanggal, jenis, proyek, klien, quotation,grandtotal, totalterima,status, version,create_user) 
+                             VALUES(@kode,@tanggal,@jenis, @proyek, @klien,  @quotation,@grandtotal,@totalterima,@status, @version,@create_user)";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("kode", this.kode);
             parameters.Add("tanggal", this.tanggal);
             parameters.Add("jenis", this.jenis);
+            parameters.Add("proyek", this.proyek);
+            parameters.Add("klien", this.klien);
             parameters.Add("quotation", this.quotation);
             parameters.Add("grandtotal", this.grandtotal);
             parameters.Add("totalterima", this.totalterima);
@@ -179,6 +187,8 @@ namespace Kontenu.Design {
             String query = @"UPDATE invoice
                              SET tanggal = @tanggal,
                                  jenis = @jenis, 
+                                 proyek = @proyek, 
+                                 klien = @klien, 
                                  quotation = @quotation,
                                  grandtotal = @grandtotal,
                                  totalterima = @totalterima,
@@ -191,6 +201,8 @@ namespace Kontenu.Design {
             parameters.Add("kode", this.kode);
             parameters.Add("tanggal", this.tanggal);
             parameters.Add("jenis", this.jenis);
+            parameters.Add("proyek", this.proyek);
+            parameters.Add("klien", this.klien);
             parameters.Add("quotation", this.quotation);
             parameters.Add("grandtotal", this.grandtotal);
             parameters.Add("totalterima", this.totalterima);

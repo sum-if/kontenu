@@ -41,6 +41,9 @@ namespace Kontenu.OswLib {
         public static String STATUS_PROYEK_AKTIF = "Aktif";
         public static String STATUS_PROYEK_TIDAK_AKTIF = "Tidak Aktif";
 
+        public static String JENIS_INVOICE_INTERIOR = "Interior";
+        public static String JENIS_INVOICE_PRODUCT = "Product";
+
 
         // TIDAK BOLEH DI ComboQueryUmum.getAkun
         // TIDAK BOLEH DI Tools.isKelompokAkun

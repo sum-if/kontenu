@@ -372,5 +372,54 @@ namespace Kontenu.Umum {
 
             return OswCombo.getComboQuery(combo, command, query, parameters, new String[] { "Kode", "Urutan" }, "Kode", "Nama");
         }
+
+        public static LookUpEdit getProyek(LookUpEdit combo, MySqlCommand command, Boolean pilihanSemua = false)
+        {
+            String query = @"SELECT 100 AS Urutan, kode AS Kode,nama AS Nama 
+                            FROM proyek";
+
+            String queryTambahan = "";
+
+            if (pilihanSemua)
+            {
+                queryTambahan += "SELECT 10 AS Urutan, '%' AS Kode, '[Semua]' AS Nama UNION ";
+            }
+
+            query = queryTambahan + query;
+
+            query = @"SELECT * FROM (" + query + ") Z ORDER BY Urutan, Nama";
+
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+
+            return OswCombo.getComboQuery(combo, command, query, parameters, new String[] { "Kode", "Urutan" }, "Kode", "Nama");
+        }
+
+        public static LookUpEdit getQuotation(LookUpEdit combo, MySqlCommand command, String klien, Boolean pilihanSemua = false, Boolean pilihanTidakAda = false)
+        {
+            String query = @"(SELECT 100 AS Urutan, kode AS Kode,kode AS Nama 
+                            FROM quotation
+                            WHERE klien = @klien)";
+
+            String queryTambahan = "";
+
+            if (pilihanSemua)
+            {
+                queryTambahan += "SELECT 10 AS Urutan, '%' AS Kode, '[Semua]' AS Nama UNION ";
+            }
+
+            if (pilihanTidakAda)
+            {
+                queryTambahan += "SELECT 20 AS Urutan, '' AS Kode, '[Tidak Ada]' AS Nama UNION ";
+            }
+
+            query = queryTambahan + query;
+
+            query = @"SELECT * FROM (" + query + ") Z ORDER BY Urutan, Nama";
+
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("klien", klien);
+
+            return OswCombo.getComboQuery(combo, command, query, parameters, new String[] { "Kode", "Urutan" }, "Kode", "Nama");
+        }
     }
 }
