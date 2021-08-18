@@ -127,6 +127,107 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Akuntansi\Data\DataAdmin.cs" />
+    <Compile Include="Akuntansi\Data\DataAkun.cs" />
+    <Compile Include="Akuntansi\Data\DataAkunGroup.cs" />
+    <Compile Include="Akuntansi\Data\DataAkunKategori.cs" />
+    <Compile Include="Akuntansi\Data\DataAkunSubGroup.cs" />
+    <Compile Include="Akuntansi\Data\DataAkunSubKategori.cs" />
+    <Compile Include="Akuntansi\Data\DataJurnal.cs" />
+    <Compile Include="Akuntansi\Data\DataJurnalVoucher.cs" />
+    <Compile Include="Akuntansi\Data\DataJurnalVoucherDetail.cs" />
+    <Compile Include="Akuntansi\Data\DataKasKeluar.cs" />
+    <Compile Include="Akuntansi\Data\DataKasKeluarDetail.cs" />
+    <Compile Include="Akuntansi\Data\DataKasMasuk.cs" />
+    <Compile Include="Akuntansi\Data\DataKasMasukDetail.cs" />
+    <Compile Include="Akuntansi\Data\DataKelompokAkun.cs" />
+    <Compile Include="Akuntansi\Data\DataKelompokAkunSetting.cs" />
+    <Compile Include="Akuntansi\Data\DataSaldoAkunAktual.cs" />
+    <Compile Include="Akuntansi\Data\DataTransferKas.cs" />
+    <Compile Include="Akuntansi\Master\FrmAkun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkun.designer.cs">
+      <DependentUpon>FrmAkun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunAdd.designer.cs">
+      <DependentUpon>FrmAkunAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunGroup.designer.cs">
+      <DependentUpon>FrmAkunGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunGroupAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunGroupAdd.designer.cs">
+      <DependentUpon>FrmAkunGroupAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunSubGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunSubGroup.designer.cs">
+      <DependentUpon>FrmAkunSubGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunSubGroupAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunSubGroupAdd.designer.cs">
+      <DependentUpon>FrmAkunSubGroupAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunSubKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunSubKategori.designer.cs">
+      <DependentUpon>FrmAkunSubKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunSubKategoriAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Master\FrmAkunSubKategoriAdd.designer.cs">
+      <DependentUpon>FrmAkunSubKategoriAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Transaksi\FrmJurnalVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Transaksi\FrmJurnalVoucher.designer.cs">
+      <DependentUpon>FrmJurnalVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Transaksi\FrmJurnalVoucherAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Transaksi\FrmJurnalVoucherAdd.designer.cs">
+      <DependentUpon>FrmJurnalVoucherAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Transaksi\FrmKasKeluar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Transaksi\FrmKasKeluar.designer.cs">
+      <DependentUpon>FrmKasKeluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Transaksi\FrmKasKeluarAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Transaksi\FrmKasKeluarAdd.designer.cs">
+      <DependentUpon>FrmKasKeluarAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Transaksi\FrmKasMasuk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Transaksi\FrmKasMasuk.designer.cs">
+      <DependentUpon>FrmKasMasuk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Transaksi\FrmKasMasukAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Transaksi\FrmKasMasukAdd.designer.cs">
+      <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Design\Data\DataInvoice.cs" />
     <Compile Include="Design\Data\DataInvoiceDetail.cs" />
     <Compile Include="Design\Data\DataProyek.cs" />
@@ -445,6 +546,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Akuntansi\Master\FrmAkun.resx">
+      <DependentUpon>FrmAkun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Master\FrmAkunAdd.resx">
+      <DependentUpon>FrmAkunAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Master\FrmAkunGroup.resx">
+      <DependentUpon>FrmAkunGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Master\FrmAkunGroupAdd.resx">
+      <DependentUpon>FrmAkunGroupAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Master\FrmAkunSubGroup.resx">
+      <DependentUpon>FrmAkunSubGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Master\FrmAkunSubGroupAdd.resx">
+      <DependentUpon>FrmAkunSubGroupAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Master\FrmAkunSubKategori.resx">
+      <DependentUpon>FrmAkunSubKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Master\FrmAkunSubKategoriAdd.resx">
+      <DependentUpon>FrmAkunSubKategoriAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Transaksi\FrmJurnalVoucher.resx">
+      <DependentUpon>FrmJurnalVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Transaksi\FrmJurnalVoucherAdd.resx">
+      <DependentUpon>FrmJurnalVoucherAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Transaksi\FrmKasKeluar.resx">
+      <DependentUpon>FrmKasKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Transaksi\FrmKasKeluarAdd.resx">
+      <DependentUpon>FrmKasKeluarAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Transaksi\FrmKasMasuk.resx">
+      <DependentUpon>FrmKasMasuk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Transaksi\FrmKasMasukAdd.resx">
+      <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Cetak\RptQuotation.resx">
       <DependentUpon>RptQuotation.cs</DependentUpon>
     </EmbeddedResource>

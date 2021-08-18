@@ -87,7 +87,7 @@ namespace Kontenu.Design
                 OswControlDefaultProperties.setTanggal(deTanggal);
 
                 cmbProyekID = ComboQueryUmum.getProyek(cmbProyekID, command);
-                
+
 
                 this.setDefaultInput(command);
 
@@ -257,214 +257,160 @@ namespace Kontenu.Design
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            //// validation
-            //dxValidationProvider1.SetValidationRule(deTanggal, OswValidation.IsNotBlank());
-            //dxValidationProvider1.SetValidationRule(deTanggalBerlaku, OswValidation.IsNotBlank());
-            //dxValidationProvider1.SetValidationRule(txtKodeKlien, OswValidation.IsNotBlank());
+            // validation
+            dxValidationProvider1.SetValidationRule(deTanggal, OswValidation.IsNotBlank());
+            dxValidationProvider1.SetValidationRule(txtKodeKlien, OswValidation.IsNotBlank());
+            dxValidationProvider1.SetValidationRule(cmbProyekID, OswValidation.IsNotBlank());
+            dxValidationProvider1.SetValidationRule(txtProyekNama, OswValidation.IsNotBlank());
+            dxValidationProvider1.SetValidationRule(txtKodeKlien, OswValidation.IsNotBlank());
 
-            //dxValidationProvider1.SetValidationRule(txtProyekNama, OswValidation.IsNotBlank());
-            //dxValidationProvider1.SetValidationRule(txtProyekAlamat, OswValidation.IsNotBlank());
-            //dxValidationProvider1.SetValidationRule(cmbProyekTujuan, OswValidation.IsNotBlank());
-            //dxValidationProvider1.SetValidationRule(cmbProyekJenis, OswValidation.IsNotBlank());
-            //dxValidationProvider1.SetValidationRule(cmbProyekPIC, OswValidation.IsNotBlank());
+            if (!dxValidationProvider1.Validate())
+            {
+                foreach (Control x in dxValidationProvider1.GetInvalidControls())
+                {
+                    dxValidationProvider1.SetIconAlignment(x, ErrorIconAlignment.MiddleRight);
+                }
+                return;
+            }
 
-            //if (!dxValidationProvider1.Validate())
-            //{
-            //    foreach (Control x in dxValidationProvider1.GetInvalidControls())
-            //    {
-            //        dxValidationProvider1.SetIconAlignment(x, ErrorIconAlignment.MiddleRight);
-            //    }
-            //    return;
-            //}
+            MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
+            MySqlCommand command = con.CreateCommand();
+            MySqlTransaction trans;
 
-            //MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
-            //MySqlCommand command = con.CreateCommand();
-            //MySqlTransaction trans;
+            try
+            {
+                // buka koneksi
+                con.Open();
 
-            //try
-            //{
-            //    // buka koneksi
-            //    con.Open();
+                // set transaction
+                trans = con.BeginTransaction();
+                command.Transaction = trans;
 
-            //    // set transaction
-            //    trans = con.BeginTransaction();
-            //    command.Transaction = trans;
+                // Function Code
+                String strngKode = txtKode.Text;
+                String strngTanggal = deTanggal.Text;
+                String strngJenis = rdoJenisInvoiceInterior.Checked ? Constants.JENIS_INVOICE_INTERIOR : Constants.JENIS_INVOICE_PRODUCT;
 
-            //    // Function Code
-            //    String strngKode = txtKode.Text;
-            //    String strngTanggal = deTanggal.Text;
-            //    String strngTanggalBerlaku = deTanggalBerlaku.Text;
-            //    String strngTutup = chkTutup.Checked ? Constants.STATUS_YA : Constants.STATUS_TIDAK;
+                String strngProyek = cmbProyekID.EditValue.ToString();
+                String strngKodeKlien = txtKodeKlien.Text;
+                String strngQuotation = cmbQuotation.EditValue.ToString();
 
-            //    String strngKlien = txtKodeKlien.Text;
+                DataInvoice dInvoice = new DataInvoice(command, strngKode);
+                dInvoice.tanggal = strngTanggal;
+                dInvoice.jenis = strngJenis;
+                dInvoice.proyek = strngProyek;
+                dInvoice.klien = strngKodeKlien;
+                dInvoice.quotation = strngQuotation;
 
-            //    String strngProyekNama = txtProyekNama.Text;
-            //    String strngProyekAlamat = txtProyekAlamat.Text;
-            //    String strngProyekKota = txtProyekKota.Text;
-            //    String strngProyekProvinsi = txtProyekProvinsi.Text;
-            //    String strngProyekKodePos = txtProyekKodePos.Text;
-            //    String strngProyekTujuan = cmbProyekTujuan.EditValue.ToString();
-            //    String strngProyekJenis = cmbProyekJenis.EditValue.ToString();
-            //    String strngProyekPIC = cmbProyekPIC.EditValue.ToString();
+                if (this.isAdd)
+                {
+                    dInvoice.status = Constants.STATUS_INVOICE_PROSES;
+                    dInvoice.tambah();
 
-            //    DataInvoice dInvoice = new DataInvoice(command, strngKode);
-            //    dInvoice.tanggal = strngTanggal;
-            //    dInvoice.tanggalberlaku = strngTanggalBerlaku;
+                    // update kode header --> setelah generate
+                    strngKode = dInvoice.kode;
+                    txtKode.Text = strngKode;
 
-            //    dInvoice.klien = strngKlien;
+                    this.isAdd = false;
+                }
+                else
+                {
+                    dInvoice.hapusDetail();
+                    dInvoice.ubah();
+                }
 
-            //    dInvoice.proyeknama = strngProyekNama;
-            //    dInvoice.proyekalamat = strngProyekAlamat;
-            //    dInvoice.proyekkota = strngProyekKota;
-            //    dInvoice.proyekprovinsi = strngProyekProvinsi;
-            //    dInvoice.proyekkodepos = strngProyekKodePos;
-            //    dInvoice.tujuanproyek = strngProyekTujuan;
-            //    dInvoice.jenisproyek = strngProyekJenis;
-            //    dInvoice.pic = strngProyekPIC;
+                // simpan detail
+                setFooter();
 
-            //    bool simpanDetail = true;
+                decimal dblGrandTotal = 0;
+                for (int i = 0; i < gridView1.DataRowCount; i++)
+                {
+                    if (gridView1.GetRowCellValue(i, "Jasa") == null)
+                    {
+                        continue;
+                    }
 
-            //    if (this.isAdd)
-            //    {
-            //        dInvoice.status = Constants.STATUS_INVOICE_PROSES;
-            //        dInvoice.tambah();
+                    if (gridView1.GetRowCellValue(i, "Jasa").ToString() == "")
+                    {
+                        continue;
+                    }
 
-            //        // update kode header --> setelah generate
-            //        strngKode = dInvoice.kode;
-            //        txtKode.Text = strngKode;
+                    String strngNo = gridView1.GetRowCellValue(i, "No").ToString();
+                    String strngKodeJasa = gridView1.GetRowCellValue(i, "Kode Jasa").ToString();
+                    String strngDeskripsi = gridView1.GetRowCellValue(i, "Deskripsi").ToString();
+                    String strngKodeUnit = gridView1.GetRowCellValue(i, "Kode Unit").ToString();
+                    decimal dblJumlah = Tools.getRoundMoney(decimal.Parse(gridView1.GetRowCellValue(i, "Qty").ToString()));
+                    decimal dblRate = Tools.getRoundMoney(decimal.Parse(gridView1.GetRowCellValue(i, "Rate").ToString()));
 
-            //        this.isAdd = false;
-            //    }
-            //    else
-            //    {
-            //        if (chkTutup.Checked)
-            //        {
-            //            dInvoice.status = Constants.STATUS_INVOICE_TUTUP;
-            //            dInvoice.ubahStatus();
-            //            simpanDetail = false;
-            //        }
-            //        else
-            //        {
-            //            dInvoice.hapusDetail();
-            //            dInvoice.ubah();
-            //        }
-            //    }
+                    String strngQuotationDetail = gridView1.GetRowCellValue(i, "Quotation").ToString();
+                    String strngQuotationDetailNo = gridView1.GetRowCellValue(i, "Quotation Detail No").ToString();
 
-            //    if (simpanDetail)
-            //    {
+                    decimal dblSubtotal = Tools.getRoundMoney(dblJumlah * dblRate);
+                    dblGrandTotal = Tools.getRoundMoney(dblGrandTotal + dblSubtotal);
 
-            //        decimal dblGrandTotal = 0;
-            //        for (int i = 0; i < gridView1.DataRowCount; i++)
-            //        {
-            //            if (gridView1.GetRowCellValue(i, "Jasa") == null)
-            //            {
-            //                continue;
-            //            }
+                    // simpan detail
+                    DataInvoiceDetail dInvoiceDetail = new DataInvoiceDetail(command, strngKode, strngNo);
+                    dInvoiceDetail.jasa = strngKodeJasa;
+                    dInvoiceDetail.deskripsi = strngDeskripsi;
+                    dInvoiceDetail.jumlah = dblJumlah.ToString();
+                    dInvoiceDetail.unit = strngKodeUnit;
+                    dInvoiceDetail.rate = dblRate.ToString();
+                    dInvoiceDetail.subtotal = dblSubtotal.ToString();
+                    dInvoiceDetail.quotation = strngQuotationDetail;
+                    dInvoiceDetail.quotationdetailno = strngQuotationDetailNo;
+                    dInvoiceDetail.tambah();
 
-            //            if (gridView1.GetRowCellValue(i, "Jasa").ToString() == "")
-            //            {
-            //                continue;
-            //            }
+                    // tulis log detail
+                    OswLog.setTransaksi(command, dokumenDetail, dInvoiceDetail.ToString());
+                }
 
-            //            String strngNo = gridView1.GetRowCellValue(i, "No").ToString();
-            //            String strngTEMP = gridView1.GetRowCellValue(i, "TEMP").ToString();
-            //            String strngKodeJasa = gridView1.GetRowCellValue(i, "Kode Jasa").ToString();
-            //            String strngDeskripsi = gridView1.GetRowCellValue(i, "Deskripsi").ToString();
-            //            String strngKodeUnit = gridView1.GetRowCellValue(i, "Kode Unit").ToString();
-            //            decimal dblJumlah = Tools.getRoundMoney(decimal.Parse(gridView1.GetRowCellValue(i, "Qty").ToString()));
-            //            decimal dblRate = Tools.getRoundMoney(decimal.Parse(gridView1.GetRowCellValue(i, "Rate").ToString()));
+                // Update header
+                dInvoice = new DataInvoice(command, strngKode);
+                dInvoice.grandtotal = dblGrandTotal.ToString();
+                dInvoice.ubah();
 
-            //            decimal dblSubtotal = Tools.getRoundMoney(dblJumlah * dblRate);
+                // validasi setelah simpan
+                dInvoice.valJumlahDetail();
 
-            //            dblGrandTotal = Tools.getRoundMoney(dblGrandTotal + dblSubtotal);
+                // tulis log
+                OswLog.setTransaksi(command, dokumen, dInvoice.ToString());
 
-            //            // simpan detail
-            //            DataInvoiceDetail dInvoiceDetail = new DataInvoiceDetail(command, strngKode, strngNo);
-            //            dInvoiceDetail.jasa = strngKodeJasa;
-            //            dInvoiceDetail.deskripsi = strngDeskripsi;
-            //            dInvoiceDetail.jumlah = dblJumlah.ToString();
-            //            dInvoiceDetail.unit = strngKodeUnit;
-            //            dInvoiceDetail.rate = dblRate.ToString();
-            //            dInvoiceDetail.subtotal = dblSubtotal.ToString();
-            //            dInvoiceDetail.tambah();
+                // reload grid di form header
+                FrmInvoice frmInvoice = (FrmInvoice)this.Owner;
+                frmInvoice.setGrid(command);
+                // Commit Transaction
+                command.Transaction.Commit();
 
-            //            // tulis log detail
-            //            OswLog.setTransaksi(command, dokumenDetail, dInvoiceDetail.ToString());
-            //        }
+                OswPesan.pesanInfo("Proses simpan berhasil.");
 
-            //        // Update header
-            //        dInvoice = new DataInvoice(command, strngKode);
-            //        dInvoice.grandtotal = dblGrandTotal.ToString();
-            //        dInvoice.ubah();
-            //    }
-
-            //    // tulis log
-            //    OswLog.setTransaksi(command, dokumen, dInvoice.ToString());
-
-            //    // reload grid di form header
-            //    FrmInvoice frmInvoice = (FrmInvoice)this.Owner;
-            //    frmInvoice.setGrid(command);
-            //    // Commit Transaction
-            //    command.Transaction.Commit();
-
-            //    OswPesan.pesanInfo("Proses simpan berhasil.");
-
-            //    setDefaultInput(command);
-            //}
-            //catch (MySqlException ex)
-            //{
-            //    OswPesan.pesanErrorCatch(ex, command, dokumen);
-            //}
-            //catch (Exception ex)
-            //{
-            //    OswPesan.pesanErrorCatch(ex, command, dokumen);
-            //}
-            //finally
-            //{
-            //    con.Close();
-            //    try
-            //    {
-            //        SplashScreenManager.CloseForm();
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //    }
-            //}
-        }
-
-        private void btnPerincian_Click(object sender, EventArgs e)
-        {
-            //if (gridView1.GetSelectedRows().Length == 0)
-            //{
-            //    OswPesan.pesanError("Silahkan pilih jasa.");
-            //    return;
-            //}
-
-            //String strngKode = txtKode.Text;
-            //String strngTEMP = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TEMP").ToString();
-            //String strngJasa = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Jasa").ToString();
-
-            //if (strngKode == "")
-            //{
-            //    OswPesan.pesanError("Silahkan simpan transaksi terlebih dahulu.");
-            //    return;
-            //}
-
-            //if (strngJasa == "")
-            //{
-            //    OswPesan.pesanError("Silahkan pilih jasa.");
-            //    return;
-            //}
-
-            //if (strngTEMP == "")
-            //{
-            //    OswPesan.pesanError("Jasa belum disimpan.");
-            //    return;
-            //}
-
-            //FrmInvoiceAddJasaDetail form = new FrmInvoiceAddJasaDetail(strngKode, strngTEMP);
-            //this.AddOwnedForm(form);
-            //form.ShowDialog();
+                if (this.isAdd)
+                {
+                    setDefaultInput(command);
+                }
+                else
+                {
+                    this.Close();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            catch (Exception ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            finally
+            {
+                con.Close();
+                try
+                {
+                    SplashScreenManager.CloseForm();
+                }
+                catch (Exception ex)
+                {
+                }
+            }
         }
 
         private void btnCetak_Click(object sender, EventArgs e)
