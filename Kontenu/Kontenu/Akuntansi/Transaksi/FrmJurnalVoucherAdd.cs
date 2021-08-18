@@ -32,10 +32,8 @@ using System.Net;
 using Kontenu.OswLib;
 using Kontenu.Umum;
 using DevExpress.XtraEditors.Controls;
-using Kontenu.Pembelian;
-using Kontenu.Penjualan;
-using Kontenu.Akuntansi.Laporan;
 using Kontenu.Umum.Laporan;
+using Kontenu.Master;
 
 namespace Kontenu.Akuntansi {
     public partial class FrmJurnalVoucherAdd : DevExpress.XtraEditors.XtraForm {
@@ -266,8 +264,8 @@ namespace Kontenu.Akuntansi {
                 // simpan detail
                 GridView gridView = gridView1;
 
-                double dblTotalDebit = 0;
-                double dblTotalKredit = 0;
+                decimal dblTotalDebit = 0;
+                decimal dblTotalKredit = 0;
                 for(int i = 0; i < gridView.DataRowCount; i++) {
                     if(gridView.GetRowCellValue(i, "Kode Akun").ToString() == "") {
                         continue;
@@ -287,8 +285,8 @@ namespace Kontenu.Akuntansi {
                     dJurnalVoucherDetail.kredit = strngKredit;
                     dJurnalVoucherDetail.tambah();
 
-                    dblTotalDebit += double.Parse(strngDebit);
-                    dblTotalKredit += double.Parse(strngKredit);
+                    dblTotalDebit += decimal.Parse(strngDebit);
+                    dblTotalKredit += decimal.Parse(strngKredit);
 
                     // tulis log detail
                     OswLog.setTransaksi(command, dokumenDetail, dJurnalVoucherDetail.ToString());
@@ -355,8 +353,8 @@ namespace Kontenu.Akuntansi {
                 // Function Code
                 GridView gridView = gridView1;
 
-                double dblTotalDebit = 0;
-                double dblTotalKredit = 0;
+                decimal dblTotalDebit = 0;
+                decimal dblTotalKredit = 0;
 
                 for(int i = 0; i < gridView.DataRowCount; i++) {
                     if(gridView.GetRowCellValue(i, "Kode Akun").ToString() == "") {
@@ -366,8 +364,8 @@ namespace Kontenu.Akuntansi {
                     String strngDebit = gridView.GetRowCellValue(i, "Debit").ToString();
                     String strngKredit = gridView.GetRowCellValue(i, "Kredit").ToString();
 
-                    dblTotalDebit += double.Parse(strngDebit);
-                    dblTotalKredit += double.Parse(strngKredit);
+                    dblTotalDebit += decimal.Parse(strngDebit);
+                    dblTotalKredit += decimal.Parse(strngKredit);
                 }
 
                 lblTotalDebit.Text = OswConvert.convertToRupiah(dblTotalDebit);
@@ -462,12 +460,12 @@ namespace Kontenu.Akuntansi {
                 // Function Code
                 RptCetakJurnalVoucher report = new RptCetakJurnalVoucher();
 
-                DataOswPerusahaan dPerusahaan = new DataOswPerusahaan(command);
+                DataPerusahaan dPerusahaan = new DataPerusahaan(command, Constants.PERUSAHAAN_KONTENU);
                 report.Parameters["perusahaanNama"].Value = dPerusahaan.nama;
                 report.Parameters["perusahaanAlamat"].Value = dPerusahaan.alamat;
-                report.Parameters["perusahaanTelepon"].Value = dPerusahaan.telp;
+                report.Parameters["perusahaanTelepon"].Value = "";
                 report.Parameters["perusahaanEmail"].Value = dPerusahaan.email;
-                report.Parameters["perusahaanNPWP"].Value = dPerusahaan.npwp;
+                report.Parameters["perusahaanNPWP"].Value = "";
 
                 DataJurnalVoucher dJurnalVoucher = new DataJurnalVoucher(command, kode);
                 report.Parameters["nomor"].Value = kode;

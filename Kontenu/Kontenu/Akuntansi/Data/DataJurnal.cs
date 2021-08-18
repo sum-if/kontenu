@@ -45,20 +45,21 @@ namespace Kontenu.Akuntansi {
             this.debit = Tools.getRoundMoney(this.debit);
             this.kredit = Tools.getRoundMoney(this.kredit);
 
-            if(double.Parse(this.debit) == 0 && double.Parse(this.kredit) == 0) {
+            if(decimal.Parse(this.debit) == 0 && decimal.Parse(this.kredit) == 0) {
                 return;
             }
 
             // set saldo akun aktual
-            double selisih = 0;
+            decimal selisih = 0;
+            
             if(dAkun.saldonormal == "Debit") {
-                selisih = Tools.getRoundMoney(double.Parse(this.debit) - double.Parse(this.kredit));
+                selisih = Tools.getRoundMoney(decimal.Parse(this.debit) - decimal.Parse(this.kredit));
             } else {
-                selisih = Tools.getRoundMoney(double.Parse(this.kredit) - double.Parse(this.debit));
+                selisih = Tools.getRoundMoney(decimal.Parse(this.kredit) - decimal.Parse(this.debit));
             }
 
             DataSaldoAkunAktual dSaldoAkunAktual = new DataSaldoAkunAktual(command, this.akun);
-            dSaldoAkunAktual.jumlah = Tools.getRoundMoney((double.Parse(dSaldoAkunAktual.jumlah) + selisih).ToString());
+            dSaldoAkunAktual.jumlah = Tools.getRoundMoney((decimal.Parse(dSaldoAkunAktual.jumlah) + selisih).ToString());
 
             if(dSaldoAkunAktual.isExist) {
                 dSaldoAkunAktual.ubah();
@@ -110,8 +111,8 @@ namespace Kontenu.Akuntansi {
             MySqlDataReader reader = OswDataAccess.executeReaderQuery(query, parameters, command);
             while(reader.Read()) {
                 string akunJurnal = reader.GetString("akun");
-                double debitJurnal = double.Parse(reader.GetString("debit"));
-                double kreditJurnal = double.Parse(reader.GetString("kredit"));
+                decimal debitJurnal = decimal.Parse(reader.GetString("debit"));
+                decimal kreditJurnal = decimal.Parse(reader.GetString("kredit"));
 
                 dataTable.Rows.Add(akunJurnal, debitJurnal, kreditJurnal);
             }
@@ -119,15 +120,15 @@ namespace Kontenu.Akuntansi {
 
             foreach(DataRow row in dataTable.Rows) {
                 string akunJurnal = row["akun"].ToString();
-                double debitJurnal = double.Parse(row["debit"].ToString());
-                double kreditJurnal = double.Parse(row["kredit"].ToString());
+                decimal debitJurnal = decimal.Parse(row["debit"].ToString());
+                decimal kreditJurnal = decimal.Parse(row["kredit"].ToString());
 
                 DataAkun dAkun = new DataAkun(command, akunJurnal);
                 if(!dAkun.isExist) {
                     throw new Exception("Akun [" + akunJurnal + "] tidak ditemukan.");
                 }
 
-                double selisih = 0;
+                decimal selisih = 0;
 
                 if(dAkun.saldonormal == "Debit") {
                     selisih = debitJurnal - kreditJurnal;
@@ -136,7 +137,7 @@ namespace Kontenu.Akuntansi {
                 }
 
                 DataSaldoAkunAktual dSaldoAkunAktual = new DataSaldoAkunAktual(command, akunJurnal);
-                dSaldoAkunAktual.jumlah = (double.Parse(dSaldoAkunAktual.jumlah) - selisih).ToString();
+                dSaldoAkunAktual.jumlah = (decimal.Parse(dSaldoAkunAktual.jumlah) - selisih).ToString();
                 if(dSaldoAkunAktual.isExist) {
                     dSaldoAkunAktual.ubah();
                 } else {

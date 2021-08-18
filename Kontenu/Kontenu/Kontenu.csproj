@@ -192,6 +192,24 @@
     <Compile Include="Akuntansi\Master\FrmAkunSubKategoriAdd.designer.cs">
       <DependentUpon>FrmAkunSubKategoriAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Akuntansi\Rpt\RptCetakJurnalVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Rpt\RptCetakJurnalVoucher.designer.cs">
+      <DependentUpon>RptCetakJurnalVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Rpt\RptCetakKasKeluar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Rpt\RptCetakKasKeluar.designer.cs">
+      <DependentUpon>RptCetakKasKeluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Rpt\RptCetakKasMasuk.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Rpt\RptCetakKasMasuk.designer.cs">
+      <DependentUpon>RptCetakKasMasuk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Akuntansi\Transaksi\FrmJurnalVoucher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -569,6 +587,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Akuntansi\Master\FrmAkunSubKategoriAdd.resx">
       <DependentUpon>FrmAkunSubKategoriAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Rpt\RptCetakJurnalVoucher.resx">
+      <DependentUpon>RptCetakJurnalVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Rpt\RptCetakKasKeluar.resx">
+      <DependentUpon>RptCetakKasKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Rpt\RptCetakKasMasuk.resx">
+      <DependentUpon>RptCetakKasMasuk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Akuntansi\Transaksi\FrmJurnalVoucher.resx">
       <DependentUpon>FrmJurnalVoucher.cs</DependentUpon>
@@ -2888,6 +2915,7 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Akuntansi\Laporan\" />
     <Folder Include="Design\Laporan\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

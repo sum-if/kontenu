@@ -8,8 +8,6 @@ using System.Data;
 using OswLib;
 using Kontenu.OswLib;
 using Kontenu.Umum;
-using Kontenu.Pembelian;
-using Kontenu.Penjualan;
 
 namespace Kontenu.Akuntansi {
     class DataJurnalVoucherDetail {

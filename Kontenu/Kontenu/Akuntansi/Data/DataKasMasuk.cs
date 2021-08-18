@@ -244,7 +244,7 @@ namespace Kontenu.Akuntansi {
 
             parameters.Add("kasmasuk", this.kode);
 
-            Double dblJumlahDetail = Double.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
+            decimal dblJumlahDetail = decimal.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
 
             if(dblJumlahDetail <= 0) {
                 throw new Exception("Jumlah Item detail harus lebih dari 0");

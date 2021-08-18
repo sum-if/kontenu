@@ -293,7 +293,7 @@ namespace Kontenu.Design {
             Dictionary<String, String> parameters = new Dictionary<string, string>();
             parameters.Add("quotation", this.kode);
 
-            Double dblJumlahDetailBarang = Double.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
+            decimal dblJumlahDetailBarang = decimal.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
 
             if(dblJumlahDetailBarang <= 0) {
                 throw new Exception("Jumlah Item detail harus lebih dari 0");

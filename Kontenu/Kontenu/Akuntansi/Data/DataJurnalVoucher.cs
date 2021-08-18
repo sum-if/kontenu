@@ -241,7 +241,7 @@ namespace Kontenu.Akuntansi {
             
             parameters.Add("jurnalvoucher", this.kode);
 
-            Double dblJumlahDetail = Double.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
+            decimal dblJumlahDetail = decimal.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
 
             if(dblJumlahDetail <= 0) {
                 throw new Exception("Jumlah Item detail harus lebih dari 0");
@@ -250,8 +250,8 @@ namespace Kontenu.Akuntansi {
 
         public void valBalance() {
             // cek apakah jumlah total kredit dan debit sama
-            Double dblTotalDebit = Double.Parse(this.totaldebit);
-            Double dblTotalKredit = Double.Parse(this.totalkredit);
+            decimal dblTotalDebit = decimal.Parse(this.totaldebit);
+            decimal dblTotalKredit = decimal.Parse(this.totalkredit);
 
             if(dblTotalDebit != dblTotalKredit) {
                 throw new Exception("Jurnal Voucher Harus Balance");
@@ -266,7 +266,7 @@ namespace Kontenu.Akuntansi {
             
             parameters.Add("jurnalvoucher", this.kode);
 
-            Double dblJumlahDetail = Double.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
+            decimal dblJumlahDetail = decimal.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
 
             if(dblJumlahDetail > 0) {
                 throw new Exception("Terdapat Item detail yang debit dan kreditnya = 0");

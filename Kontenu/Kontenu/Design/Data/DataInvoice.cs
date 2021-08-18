@@ -250,105 +250,105 @@ namespace Kontenu.Design {
             Debit		akun_persediaan					    Total HPP (HPP * Jumlah)
             */
 
-            int no = 1;
-            DataCustomer dCustomer = new DataCustomer(command, this.customer);
-            String strngKeteranganJurnal = "Retur Penjualan dari [" + dCustomer.nama + "]";
+//            int no = 1;
+//            DataCustomer dCustomer = new DataCustomer(command, this.customer);
+//            String strngKeteranganJurnal = "Retur Penjualan dari [" + dCustomer.nama + "]";
 
-            // Debet			ppn_keluaran					
-            String strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_PAJAK_KELUARAN);
-            DataAkun dAkun = new DataAkun(command, strngAkun);
-            if (!dAkun.isExist)
-            {
-                throw new Exception("Akun Pajak Keluaran [" + strngAkun + "] tidak ditemukan.");
-            }
+//            // Debet			ppn_keluaran					
+//            String strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_PAJAK_KELUARAN);
+//            DataAkun dAkun = new DataAkun(command, strngAkun);
+//            if (!dAkun.isExist)
+//            {
+//                throw new Exception("Akun Pajak Keluaran [" + strngAkun + "] tidak ditemukan.");
+//            }
 
-            DataJurnal dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, this.totalppn, "0");
-            dJurnal.prosesJurnal();
+//            DataJurnal dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, this.totalppn, "0");
+//            dJurnal.prosesJurnal();
 
-            // Debet			retur_penjualan
-            double dblPenjualan = Tools.getRoundMoney(double.Parse(this.grandtotal) + double.Parse(this.totaldiskon) - double.Parse(totalppn));
-            strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_RETUR_PENJUALAN);
-            dAkun = new DataAkun(command, strngAkun);
-            if (!dAkun.isExist)
-            {
-                throw new Exception("Akun Retur Penjualan [" + strngAkun + "] tidak ditemukan.");
-            }
+//            // Debet			retur_penjualan
+//            decimal dblPenjualan = Tools.getRoundMoney(decimal.Parse(this.grandtotal) + decimal.Parse(this.totaldiskon) - decimal.Parse(totalppn));
+//            strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_RETUR_PENJUALAN);
+//            dAkun = new DataAkun(command, strngAkun);
+//            if (!dAkun.isExist)
+//            {
+//                throw new Exception("Akun Retur Penjualan [" + strngAkun + "] tidak ditemukan.");
+//            }
 
-            dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, dblPenjualan.ToString(), "0");
-            dJurnal.prosesJurnal();
+//            dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, dblPenjualan.ToString(), "0");
+//            dJurnal.prosesJurnal();
 
-            if (double.Parse(this.kembalipiutang) > 0)
-            {
-                // Kredit			akun_piutang					
-                strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_PIUTANG);
-                dAkun = new DataAkun(command, strngAkun);
-                if (!dAkun.isExist)
-                {
-                    throw new Exception("Akun Piutang [" + strngAkun + "] tidak ditemukan.");
-                }
+//            if (decimal.Parse(this.kembalipiutang) > 0)
+//            {
+//                // Kredit			akun_piutang					
+//                strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_PIUTANG);
+//                dAkun = new DataAkun(command, strngAkun);
+//                if (!dAkun.isExist)
+//                {
+//                    throw new Exception("Akun Piutang [" + strngAkun + "] tidak ditemukan.");
+//                }
 
-                dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, "0", this.kembalipiutang);
-                dJurnal.prosesJurnal();
-            }
+//                dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, "0", this.kembalipiutang);
+//                dJurnal.prosesJurnal();
+//            }
 
-            if (double.Parse(this.kembaliuangtitipan) > 0)
-            {
-                // Kredit			akun_uang_titipan_customer					
-                strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_UANG_TITIPAN_CUSTOMER);
-                dAkun = new DataAkun(command, strngAkun);
-                if (!dAkun.isExist)
-                {
-                    throw new Exception("Akun Uang Titipan Customer [" + strngAkun + "] tidak ditemukan.");
-                }
+//            if (decimal.Parse(this.kembaliuangtitipan) > 0)
+//            {
+//                // Kredit			akun_uang_titipan_customer					
+//                strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_UANG_TITIPAN_CUSTOMER);
+//                dAkun = new DataAkun(command, strngAkun);
+//                if (!dAkun.isExist)
+//                {
+//                    throw new Exception("Akun Uang Titipan Customer [" + strngAkun + "] tidak ditemukan.");
+//                }
 
-                dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, "0", this.kembaliuangtitipan);
-                dJurnal.prosesJurnal();
-            }
+//                dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, "0", this.kembaliuangtitipan);
+//                dJurnal.prosesJurnal();
+//            }
 
 
-            // Kredit			diskon_penjualan
-            strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_DISKON_PENJUALAN);
-            dAkun = new DataAkun(command, strngAkun);
-            if (!dAkun.isExist)
-            {
-                throw new Exception("Akun Diskon Penjualan [" + strngAkun + "] tidak ditemukan.");
-            }
+//            // Kredit			diskon_penjualan
+//            strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_DISKON_PENJUALAN);
+//            dAkun = new DataAkun(command, strngAkun);
+//            if (!dAkun.isExist)
+//            {
+//                throw new Exception("Akun Diskon Penjualan [" + strngAkun + "] tidak ditemukan.");
+//            }
 
-            dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, "0", this.totaldiskon);
-            dJurnal.prosesJurnal();
+//            dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, "0", this.totaldiskon);
+//            dJurnal.prosesJurnal();
 
-            // Kredit		akun_HPP						    Total HPP (HPP * Jumlah)
-            String query = @"SELECT SUM(jumlahretur * hpp) 
-                            FROM returpenjualandetail 
-                            WHERE returpenjualan = @returpenjualan";
+//            // Kredit		akun_HPP						    Total HPP (HPP * Jumlah)
+//            String query = @"SELECT SUM(jumlahretur * hpp) 
+//                            FROM returpenjualandetail 
+//                            WHERE returpenjualan = @returpenjualan";
 
-            Dictionary<String, String> parameters = new Dictionary<String, String>();
-            parameters.Add("returpenjualan", this.kode);
+//            Dictionary<String, String> parameters = new Dictionary<String, String>();
+//            parameters.Add("returpenjualan", this.kode);
 
-            double dblHPP = Tools.getRoundMoney(double.Parse(OswDataAccess.executeScalarQuery(query, parameters, command)));
+//            decimal dblHPP = Tools.getRoundMoney(decimal.Parse(OswDataAccess.executeScalarQuery(query, parameters, command)));
 
-            strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_HPP);
-            dAkun = new DataAkun(command, strngAkun);
-            if (!dAkun.isExist)
-            {
-                throw new Exception("Akun HPP [" + strngAkun + "] tidak ditemukan.");
-            }
+//            strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_HPP);
+//            dAkun = new DataAkun(command, strngAkun);
+//            if (!dAkun.isExist)
+//            {
+//                throw new Exception("Akun HPP [" + strngAkun + "] tidak ditemukan.");
+//            }
 
-            dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, "0", dblHPP.ToString());
-            dJurnal.prosesJurnal();
+//            dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, "0", dblHPP.ToString());
+//            dJurnal.prosesJurnal();
 
-            // Debit		akun_persediaan					    Total HPP (HPP * Jumlah)
-            strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_PERSEDIAAN);
-            dAkun = new DataAkun(command, strngAkun);
-            if (!dAkun.isExist)
-            {
-                throw new Exception("Akun Persediaan [" + strngAkun + "] tidak ditemukan.");
-            }
+//            // Debit		akun_persediaan					    Total HPP (HPP * Jumlah)
+//            strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_PERSEDIAAN);
+//            dAkun = new DataAkun(command, strngAkun);
+//            if (!dAkun.isExist)
+//            {
+//                throw new Exception("Akun Persediaan [" + strngAkun + "] tidak ditemukan.");
+//            }
 
-            dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, dblHPP.ToString(), "0");
-            dJurnal.prosesJurnal();
+//            dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, dblHPP.ToString(), "0");
+//            dJurnal.prosesJurnal();
 
-            Tools.cekJurnalBalance(command, this.id, this.kode);
+//            Tools.cekJurnalBalance(command, this.id, this.kode);
         }
 
         private void valNotExist() {
@@ -378,7 +378,7 @@ namespace Kontenu.Design {
             Dictionary<String, String> parameters = new Dictionary<string, string>();
             parameters.Add("invoice", this.kode);
 
-            Double dblJumlahDetailBarang = Double.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
+            decimal dblJumlahDetailBarang = decimal.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
 
             if(dblJumlahDetailBarang <= 0) {
                 throw new Exception("Jumlah Item detail harus lebih dari 0");

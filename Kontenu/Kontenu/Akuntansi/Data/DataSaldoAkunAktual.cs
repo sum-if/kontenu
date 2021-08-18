@@ -58,7 +58,7 @@ namespace Kontenu.Akuntansi {
             // validasi
             valNotExist();
 
-            if(double.Parse(this.jumlah) == 0) {
+            if(decimal.Parse(this.jumlah) == 0) {
                 if(this.isExist) {
                     this.hapus();
                 }
@@ -101,7 +101,7 @@ namespace Kontenu.Akuntansi {
 
             // proses ubah
             // jika saldo 0 --> hapus
-            if(double.Parse(this.jumlah) == 0) {
+            if(decimal.Parse(this.jumlah) == 0) {
                 this.hapus();
             } else {
                 this.version += 1;

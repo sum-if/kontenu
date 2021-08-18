@@ -32,7 +32,7 @@ using System.Net;
 using Kontenu.OswLib;
 using Kontenu.Umum;
 using Kontenu.Umum.Laporan;
-using Kontenu.Akuntansi.Laporan;
+using Kontenu.Master;
 using DevExpress.XtraEditors.Controls;
 
 namespace Kontenu.Akuntansi {
@@ -276,7 +276,7 @@ namespace Kontenu.Akuntansi {
                 // simpan detail
                 GridView gridView = gridView1;
 
-                double dblTotal = 0;
+                decimal dblTotal = 0;
                 for(int i = 0; i < gridView.DataRowCount; i++) {
                     if(gridView.GetRowCellValue(i, "Kode Akun").ToString() == "") {
                         continue;
@@ -293,7 +293,7 @@ namespace Kontenu.Akuntansi {
                     dKasMasukDetail.jumlah = strngNominal;
                     dKasMasukDetail.tambah();
 
-                    dblTotal += double.Parse(strngNominal);
+                    dblTotal += decimal.Parse(strngNominal);
                     dblTotal = Tools.getRoundMoney(dblTotal);
 
                     // tulis log detail
@@ -359,14 +359,14 @@ namespace Kontenu.Akuntansi {
                 // Function Code
                 GridView gridView = gridView1;
 
-                double dblTotal = 0;
+                decimal dblTotal = 0;
                 for(int i = 0; i < gridView.DataRowCount; i++) {
                     if(gridView.GetRowCellValue(i, "Kode Akun").ToString() == "") {
                         continue;
                     }
                     String strngNominal = Tools.getRoundMoney(gridView.GetRowCellValue(i, "Nominal").ToString());
 
-                    dblTotal += double.Parse(strngNominal);
+                    dblTotal += decimal.Parse(strngNominal);
                     dblTotal = Tools.getRoundMoney(dblTotal);
                 }
 
@@ -478,12 +478,12 @@ namespace Kontenu.Akuntansi {
                 // Function Code
                 RptCetakKasMasuk report = new RptCetakKasMasuk();
 
-                DataOswPerusahaan dPerusahaan = new DataOswPerusahaan(command);
+                DataPerusahaan dPerusahaan = new DataPerusahaan(command, Constants.PERUSAHAAN_KONTENU);
                 report.Parameters["perusahaanNama"].Value = dPerusahaan.nama;
                 report.Parameters["perusahaanAlamat"].Value = dPerusahaan.alamat;
-                report.Parameters["perusahaanTelepon"].Value = dPerusahaan.telp;
+                report.Parameters["perusahaanTelepon"].Value = "";
                 report.Parameters["perusahaanEmail"].Value = dPerusahaan.email;
-                report.Parameters["perusahaanNPWP"].Value = dPerusahaan.npwp;
+                report.Parameters["perusahaanNPWP"].Value = "";
 
                 DataKasMasuk dKasMasuk = new DataKasMasuk(command, kode);
                 report.Parameters["nomor"].Value = kode;

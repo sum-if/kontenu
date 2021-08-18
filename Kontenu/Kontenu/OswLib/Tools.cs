@@ -29,6 +29,7 @@ using System;
 using Kontenu.Sistem;
 using OswLib;
 using MySql.Data.MySqlClient;
+using Kontenu.Akuntansi;
 
 namespace Kontenu.OswLib {
     class Tools {
@@ -162,6 +163,15 @@ namespace Kontenu.OswLib {
 
             if(debit != kredit) {
                 throw new Exception("Jurnal [" + oswjenisdokumen + "] [" + noreferensi + "] tidak balance.");
+            }
+        }
+
+        public static void valAdmin(MySqlCommand command, String tanggal)
+        {
+            DataAdmin dAdmin = new DataAdmin(command, OswDate.getTahunBulan(tanggal), Constants.PROSES_TUTUP_PERIODE);
+            if (dAdmin.isProcessed())
+            {
+                throw new Exception("Proses " + Constants.PROSES_TUTUP_PERIODE + " untuk periode '" + OswConvert.toNamaPeriode(OswDate.getTahunBulan(tanggal)) + "' sudah dilakukan.");
             }
         }
     }
