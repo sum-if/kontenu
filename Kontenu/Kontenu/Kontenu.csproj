@@ -144,52 +144,52 @@
     <Compile Include="Akuntansi\Data\DataKelompokAkunSetting.cs" />
     <Compile Include="Akuntansi\Data\DataSaldoAkunAktual.cs" />
     <Compile Include="Akuntansi\Data\DataTransferKas.cs" />
-    <Compile Include="Akuntansi\Master\FrmAkun.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkun.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkun.designer.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkun.designer.cs">
       <DependentUpon>FrmAkun.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunAdd.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunAdd.designer.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunAdd.designer.cs">
       <DependentUpon>FrmAkunAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunGroup.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunGroup.designer.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunGroup.designer.cs">
       <DependentUpon>FrmAkunGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunGroupAdd.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunGroupAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunGroupAdd.designer.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunGroupAdd.designer.cs">
       <DependentUpon>FrmAkunGroupAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunSubGroup.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunSubGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunSubGroup.designer.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunSubGroup.designer.cs">
       <DependentUpon>FrmAkunSubGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunSubGroupAdd.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunSubGroupAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunSubGroupAdd.designer.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunSubGroupAdd.designer.cs">
       <DependentUpon>FrmAkunSubGroupAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunSubKategori.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunSubKategori.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunSubKategori.designer.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunSubKategori.designer.cs">
       <DependentUpon>FrmAkunSubKategori.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunSubKategoriAdd.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunSubKategoriAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Master\FrmAkunSubKategoriAdd.designer.cs">
+    <Compile Include="Akuntansi\Form\Master\FrmAkunSubKategoriAdd.designer.cs">
       <DependentUpon>FrmAkunSubKategoriAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Akuntansi\Rpt\RptCetakJurnalVoucher.cs">
@@ -210,40 +210,40 @@
     <Compile Include="Akuntansi\Rpt\RptCetakKasMasuk.designer.cs">
       <DependentUpon>RptCetakKasMasuk.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Transaksi\FrmJurnalVoucher.cs">
+    <Compile Include="Akuntansi\Form\Transaksi\FrmJurnalVoucher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Transaksi\FrmJurnalVoucher.designer.cs">
+    <Compile Include="Akuntansi\Form\Transaksi\FrmJurnalVoucher.designer.cs">
       <DependentUpon>FrmJurnalVoucher.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Transaksi\FrmJurnalVoucherAdd.cs">
+    <Compile Include="Akuntansi\Form\Transaksi\FrmJurnalVoucherAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Transaksi\FrmJurnalVoucherAdd.designer.cs">
+    <Compile Include="Akuntansi\Form\Transaksi\FrmJurnalVoucherAdd.designer.cs">
       <DependentUpon>FrmJurnalVoucherAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Transaksi\FrmKasKeluar.cs">
+    <Compile Include="Akuntansi\Form\Transaksi\FrmKasKeluar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Transaksi\FrmKasKeluar.designer.cs">
+    <Compile Include="Akuntansi\Form\Transaksi\FrmKasKeluar.designer.cs">
       <DependentUpon>FrmKasKeluar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Transaksi\FrmKasKeluarAdd.cs">
+    <Compile Include="Akuntansi\Form\Transaksi\FrmKasKeluarAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Transaksi\FrmKasKeluarAdd.designer.cs">
+    <Compile Include="Akuntansi\Form\Transaksi\FrmKasKeluarAdd.designer.cs">
       <DependentUpon>FrmKasKeluarAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Transaksi\FrmKasMasuk.cs">
+    <Compile Include="Akuntansi\Form\Transaksi\FrmKasMasuk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Transaksi\FrmKasMasuk.designer.cs">
+    <Compile Include="Akuntansi\Form\Transaksi\FrmKasMasuk.designer.cs">
       <DependentUpon>FrmKasMasuk.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akuntansi\Transaksi\FrmKasMasukAdd.cs">
+    <Compile Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akuntansi\Transaksi\FrmKasMasukAdd.designer.cs">
+    <Compile Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.designer.cs">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Design\Data\DataInvoice.cs" />
@@ -419,52 +419,52 @@
     <Compile Include="Sistem\Data\DataOswSetting.cs" />
     <Compile Include="Sistem\Data\DataOswJenisDokumen.cs" />
     <Compile Include="Sistem\Data\DataOswSettingMulti.cs" />
-    <Compile Include="Sistem\SisHakAkses.cs">
+    <Compile Include="Sistem\Form\SisHakAkses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisHakAkses.designer.cs">
+    <Compile Include="Sistem\Form\SisHakAkses.designer.cs">
       <DependentUpon>SisHakAkses.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisLogin.cs">
+    <Compile Include="Sistem\Form\SisLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisLogin.designer.cs">
+    <Compile Include="Sistem\Form\SisLogin.designer.cs">
       <DependentUpon>SisLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\InfUtamaDataTable.cs">
+    <Compile Include="Sistem\Form\InfUtamaDataTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\InfUtamaDataTable.designer.cs">
+    <Compile Include="Sistem\Form\InfUtamaDataTable.designer.cs">
       <DependentUpon>InfUtamaDataTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\InfUtamaDictionary.cs">
+    <Compile Include="Sistem\Form\InfUtamaDictionary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\InfUtamaDictionary.designer.cs">
+    <Compile Include="Sistem\Form\InfUtamaDictionary.designer.cs">
       <DependentUpon>InfUtamaDictionary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisLogLaporan.cs">
+    <Compile Include="Sistem\Form\SisLogLaporan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisLogLaporan.Designer.cs">
+    <Compile Include="Sistem\Form\SisLogLaporan.Designer.cs">
       <DependentUpon>SisLogLaporan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisLogError.cs">
+    <Compile Include="Sistem\Form\SisLogError.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisLogError.Designer.cs">
+    <Compile Include="Sistem\Form\SisLogError.Designer.cs">
       <DependentUpon>SisLogError.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisLogTransaksi.cs">
+    <Compile Include="Sistem\Form\SisLogTransaksi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisLogTransaksi.Designer.cs">
+    <Compile Include="Sistem\Form\SisLogTransaksi.Designer.cs">
       <DependentUpon>SisLogTransaksi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisLogLoginLogout.cs">
+    <Compile Include="Sistem\Form\SisLogLoginLogout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisLogLoginLogout.Designer.cs">
+    <Compile Include="Sistem\Form\SisLogLoginLogout.Designer.cs">
       <DependentUpon>SisLogLoginLogout.cs</DependentUpon>
     </Compile>
     <Compile Include="Umum\Combo\ComboQueryUmum.cs" />
@@ -485,46 +485,46 @@
     <Compile Include="OswLib\Constants.cs" />
     <Compile Include="Sistem\Data\DataOswUserGroup.cs" />
     <Compile Include="Sistem\Data\DataOswUser.cs" />
-    <Compile Include="Sistem\SisGantiPassword.cs">
+    <Compile Include="Sistem\Form\SisGantiPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisGantiPassword.Designer.cs">
+    <Compile Include="Sistem\Form\SisGantiPassword.Designer.cs">
       <DependentUpon>SisGantiPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisDatabaseRestore.cs">
+    <Compile Include="Sistem\Form\SisDatabaseRestore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisDatabaseRestore.Designer.cs">
+    <Compile Include="Sistem\Form\SisDatabaseRestore.Designer.cs">
       <DependentUpon>SisDatabaseRestore.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisDatabaseBackup.cs">
+    <Compile Include="Sistem\Form\SisDatabaseBackup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisDatabaseBackup.Designer.cs">
+    <Compile Include="Sistem\Form\SisDatabaseBackup.Designer.cs">
       <DependentUpon>SisDatabaseBackup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisUser.cs">
+    <Compile Include="Sistem\Form\SisUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisUser.Designer.cs">
+    <Compile Include="Sistem\Form\SisUser.Designer.cs">
       <DependentUpon>SisUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisUserGroup.cs">
+    <Compile Include="Sistem\Form\SisUserGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisUserGroup.Designer.cs">
+    <Compile Include="Sistem\Form\SisUserGroup.Designer.cs">
       <DependentUpon>SisUserGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisUserAdd.cs">
+    <Compile Include="Sistem\Form\SisUserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisUserAdd.Designer.cs">
+    <Compile Include="Sistem\Form\SisUserAdd.Designer.cs">
       <DependentUpon>SisUserAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisUserGroupAdd.cs">
+    <Compile Include="Sistem\Form\SisUserGroupAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisUserGroupAdd.Designer.cs">
+    <Compile Include="Sistem\Form\SisUserGroupAdd.Designer.cs">
       <DependentUpon>SisUserGroupAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="OswLib\Tools.cs" />
@@ -539,24 +539,24 @@
     <Compile Include="Umum\Laporan\LaporanPrintPreview.designer.cs">
       <DependentUpon>LaporanPrintPreview.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisLogout.cs">
+    <Compile Include="Sistem\Form\SisLogout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisLogout.designer.cs">
+    <Compile Include="Sistem\Form\SisLogout.designer.cs">
       <DependentUpon>SisLogout.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sistem\SisUtama.cs">
+    <Compile Include="Sistem\Form\SisUtama.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SisUtama.Designer.cs">
+    <Compile Include="Sistem\Form\SisUtama.Designer.cs">
       <DependentUpon>SisUtama.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sistem\SplashUtama.cs">
+    <Compile Include="Sistem\Form\SplashUtama.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sistem\SplashUtama.designer.cs">
+    <Compile Include="Sistem\Form\SplashUtama.designer.cs">
       <DependentUpon>SplashUtama.cs</DependentUpon>
     </Compile>
     <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
@@ -564,28 +564,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Akuntansi\Master\FrmAkun.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Master\FrmAkun.resx">
       <DependentUpon>FrmAkun.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Master\FrmAkunAdd.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Master\FrmAkunAdd.resx">
       <DependentUpon>FrmAkunAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Master\FrmAkunGroup.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Master\FrmAkunGroup.resx">
       <DependentUpon>FrmAkunGroup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Master\FrmAkunGroupAdd.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Master\FrmAkunGroupAdd.resx">
       <DependentUpon>FrmAkunGroupAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Master\FrmAkunSubGroup.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Master\FrmAkunSubGroup.resx">
       <DependentUpon>FrmAkunSubGroup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Master\FrmAkunSubGroupAdd.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Master\FrmAkunSubGroupAdd.resx">
       <DependentUpon>FrmAkunSubGroupAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Master\FrmAkunSubKategori.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Master\FrmAkunSubKategori.resx">
       <DependentUpon>FrmAkunSubKategori.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Master\FrmAkunSubKategoriAdd.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Master\FrmAkunSubKategoriAdd.resx">
       <DependentUpon>FrmAkunSubKategoriAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Akuntansi\Rpt\RptCetakJurnalVoucher.resx">
@@ -597,22 +597,22 @@
     <EmbeddedResource Include="Akuntansi\Rpt\RptCetakKasMasuk.resx">
       <DependentUpon>RptCetakKasMasuk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Transaksi\FrmJurnalVoucher.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmJurnalVoucher.resx">
       <DependentUpon>FrmJurnalVoucher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Transaksi\FrmJurnalVoucherAdd.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmJurnalVoucherAdd.resx">
       <DependentUpon>FrmJurnalVoucherAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Transaksi\FrmKasKeluar.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmKasKeluar.resx">
       <DependentUpon>FrmKasKeluar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Transaksi\FrmKasKeluarAdd.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmKasKeluarAdd.resx">
       <DependentUpon>FrmKasKeluarAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Transaksi\FrmKasMasuk.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmKasMasuk.resx">
       <DependentUpon>FrmKasMasuk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Akuntansi\Transaksi\FrmKasMasukAdd.resx">
+    <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.resx">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Cetak\RptQuotation.resx">
@@ -691,28 +691,28 @@
       <DependentUpon>FrmQuotation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Sistem\SisHakAkses.resx">
+    <EmbeddedResource Include="Sistem\Form\SisHakAkses.resx">
       <DependentUpon>SisHakAkses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisLogin.resx">
+    <EmbeddedResource Include="Sistem\Form\SisLogin.resx">
       <DependentUpon>SisLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\InfUtamaDataTable.resx">
+    <EmbeddedResource Include="Sistem\Form\InfUtamaDataTable.resx">
       <DependentUpon>InfUtamaDataTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\InfUtamaDictionary.resx">
+    <EmbeddedResource Include="Sistem\Form\InfUtamaDictionary.resx">
       <DependentUpon>InfUtamaDictionary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisLogLaporan.resx">
+    <EmbeddedResource Include="Sistem\Form\SisLogLaporan.resx">
       <DependentUpon>SisLogLaporan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisLogError.resx">
+    <EmbeddedResource Include="Sistem\Form\SisLogError.resx">
       <DependentUpon>SisLogError.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisLogTransaksi.resx">
+    <EmbeddedResource Include="Sistem\Form\SisLogTransaksi.resx">
       <DependentUpon>SisLogTransaksi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisLogLoginLogout.resx">
+    <EmbeddedResource Include="Sistem\Form\SisLogLoginLogout.resx">
       <DependentUpon>SisLogLoginLogout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Umum\Form\FrmKlien.resx">
@@ -721,25 +721,25 @@
     <EmbeddedResource Include="Umum\Form\FrmKlienAdd.resx">
       <DependentUpon>FrmKlienAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisGantiPassword.resx">
+    <EmbeddedResource Include="Sistem\Form\SisGantiPassword.resx">
       <DependentUpon>SisGantiPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisDatabaseRestore.resx">
+    <EmbeddedResource Include="Sistem\Form\SisDatabaseRestore.resx">
       <DependentUpon>SisDatabaseRestore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisDatabaseBackup.resx">
+    <EmbeddedResource Include="Sistem\Form\SisDatabaseBackup.resx">
       <DependentUpon>SisDatabaseBackup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisUser.resx">
+    <EmbeddedResource Include="Sistem\Form\SisUser.resx">
       <DependentUpon>SisUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisUserGroup.resx">
+    <EmbeddedResource Include="Sistem\Form\SisUserGroup.resx">
       <DependentUpon>SisUserGroup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisUserAdd.resx">
+    <EmbeddedResource Include="Sistem\Form\SisUserAdd.resx">
       <DependentUpon>SisUserAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisUserGroupAdd.resx">
+    <EmbeddedResource Include="Sistem\Form\SisUserGroupAdd.resx">
       <DependentUpon>SisUserGroupAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
@@ -750,10 +750,10 @@
     <EmbeddedResource Include="Umum\Laporan\LaporanPrintPreview.resx">
       <DependentUpon>LaporanPrintPreview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisLogout.resx">
+    <EmbeddedResource Include="Sistem\Form\SisLogout.resx">
       <DependentUpon>SisLogout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SisUtama.resx">
+    <EmbeddedResource Include="Sistem\Form\SisUtama.resx">
       <DependentUpon>SisUtama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -761,7 +761,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sistem\SplashUtama.resx">
+    <EmbeddedResource Include="Sistem\Form\SplashUtama.resx">
       <DependentUpon>SplashUtama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
@@ -2915,8 +2915,8 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Akuntansi\Laporan\" />
-    <Folder Include="Design\Laporan\" />
+    <Folder Include="Akuntansi\Form\Laporan\" />
+    <Folder Include="Design\Form\Laporan\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
