@@ -19,8 +19,6 @@ namespace Kontenu.Design {
         public String klien = "";
         public String quotation = "";
         public String grandtotal = "0";
-        public String totaltagih = "0";
-        public String totalterima = "0";
         public String status = "";
         public Int64 version = 0;
         public Boolean isExist = false;
@@ -35,8 +33,6 @@ namespace Kontenu.Design {
             kolom += "Klien:" + klien + ";";
             kolom += "Quotation:" + quotation + ";";
             kolom += "Grand Total:" + grandtotal + ";";
-            kolom += "Total Tagih:" + totaltagih + ";";
-            kolom += "Total Terima:" + totalterima + ";";
             kolom += "Status:" + status + ";";
             kolom += "Version:" + version + ";";
             return kolom;
@@ -50,7 +46,7 @@ namespace Kontenu.Design {
 
         private void getOtherAttribute() {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT tanggal, jenis, proyek, klien, quotation,grandtotal, totaltagih, totalterima,status, version
+            String query = @"SELECT tanggal, jenis, proyek, klien, quotation,grandtotal, status, version
                              FROM invoice 
                              WHERE kode = @kode";
 
@@ -66,8 +62,6 @@ namespace Kontenu.Design {
                 this.klien = reader.GetString("klien");
                 this.quotation = reader.GetString("quotation");
                 this.grandtotal = reader.GetString("grandtotal");
-                this.totaltagih = reader.GetString("totaltagih");
-                this.totalterima = reader.GetString("totalterima");
                 this.status = reader.GetString("status");
                 this.version = reader.GetInt64("version");
                 reader.Close();
@@ -117,8 +111,8 @@ namespace Kontenu.Design {
             this.kode = this.generateKode();
             this.version += 1;
 
-            String query = @"INSERT INTO invoice(kode, tanggal, jenis, proyek, klien, quotation,grandtotal, totaltagih, totalterima,status, version,create_user) 
-                             VALUES(@kode,@tanggal,@jenis, @proyek, @klien,  @quotation,@grandtotal,@totaltagih,@totalterima,@status, @version,@create_user)";
+            String query = @"INSERT INTO invoice(kode, tanggal, jenis, proyek, klien, quotation,grandtotal, status, version,create_user) 
+                             VALUES(@kode,@tanggal,@jenis, @proyek, @klien,  @quotation,@grandtotal,@status, @version,@create_user)";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("kode", this.kode);
@@ -128,8 +122,6 @@ namespace Kontenu.Design {
             parameters.Add("klien", this.klien);
             parameters.Add("quotation", this.quotation);
             parameters.Add("grandtotal", this.grandtotal);
-            parameters.Add("totaltagih", this.totaltagih);
-            parameters.Add("totalterima", this.totalterima);
             parameters.Add("status", this.status);
             parameters.Add("version", "1");
             parameters.Add("create_user", OswConstants.KODEUSER);
@@ -195,8 +187,6 @@ namespace Kontenu.Design {
                                  klien = @klien, 
                                  quotation = @quotation,
                                  grandtotal = @grandtotal,
-                                 totaltagih = @totaltagih,
-                                 totalterima = @totalterima,
                                  version = @version,
                                  update_at = CURRENT_TIMESTAMP(),
                                  update_user = @update_user
@@ -210,8 +200,6 @@ namespace Kontenu.Design {
             parameters.Add("klien", this.klien);
             parameters.Add("quotation", this.quotation);
             parameters.Add("grandtotal", this.grandtotal);
-            parameters.Add("totaltagih", this.totaltagih);
-            parameters.Add("totalterima", this.totalterima);
             parameters.Add("version", this.version.ToString());
             parameters.Add("update_user", OswConstants.KODEUSER);
 

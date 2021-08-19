@@ -485,10 +485,13 @@ namespace Kontenu.Design
                 command.Transaction = trans;
 
                 // Function Code
-                String query = @"SELECT A.kode AS Kode, A.tanggal AS Tanggal, A.jenis AS Jenis, C.nama AS Klien, B.nama AS Proyek
+                String query = @"SELECT A.kode AS Kode, A.tanggal AS Tanggal, A.jenis AS Jenis, C.nama AS Klien, B.nama AS Proyek, 
+                                        A.grandtotal AS 'Grand Total', AA.totaltagih AS 'Total Tagih'
                                 FROM invoice A
+                                INNER JOIN v_invoice_totaltagih AA ON A.kode = AA.invoice
                                 INNER JOIN proyek B ON A.proyek = B.kode
                                 INNER JOIN klien C ON A.klien = C.kode
+                                WHERE A.grandtotal > AA.totaltagih
                                 ORDER BY A.kode";
 
                 Dictionary<String, String> parameters = new Dictionary<String, String>();
