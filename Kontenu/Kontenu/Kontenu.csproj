@@ -246,6 +246,7 @@
     <Compile Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.designer.cs">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Design\Data\DataPenagihan.cs" />
     <Compile Include="Design\Data\DataInvoice.cs" />
     <Compile Include="Design\Data\DataInvoiceDetail.cs" />
     <Compile Include="Design\Data\DataProyek.cs" />
@@ -261,6 +262,18 @@
     <Compile Include="Design\Data\DataJabatan.cs" />
     <Compile Include="Design\Data\DataPIC.cs" />
     <Compile Include="Design\Data\DataOutsource.cs" />
+    <Compile Include="Design\Form\Transaksi\FrmPenagihan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmPenagihan.designer.cs">
+      <DependentUpon>FrmPenagihan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmPenagihanAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmPenagihanAdd.designer.cs">
+      <DependentUpon>FrmPenagihanAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Design\Rpt\Transaksi\RptQuotation.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -614,6 +627,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.resx">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmPenagihan.resx">
+      <DependentUpon>FrmPenagihan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmPenagihanAdd.resx">
+      <DependentUpon>FrmPenagihanAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Rpt\Transaksi\RptQuotation.resx">
       <DependentUpon>RptQuotation.cs</DependentUpon>
