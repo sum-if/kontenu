@@ -132,9 +132,8 @@ namespace Kontenu.Design
 
                 // PROYEK
                 cmbProyekID.EditValue = dInvoice.proyek;
+                updateDataProyek(command, true);
                 cmbQuotation.EditValue = dInvoice.quotation;
-
-                updateDataProyek(command);
             }
             else
             {
@@ -146,13 +145,14 @@ namespace Kontenu.Design
 
                 cmbProyekID.ItemIndex = 0;
                 updateDataProyek(command);
+                cmbQuotation.ItemIndex = 0;
             }
 
             this.setGrid(command);
             txtKode.Focus();
         }
 
-        private void updateDataProyek(MySqlCommand command)
+        private void updateDataProyek(MySqlCommand command, bool isFormEditLoad = false)
         {
             txtProyekNama.Text = "";
             txtProyekAlamat.Text = "";
@@ -196,17 +196,26 @@ namespace Kontenu.Design
 
                 // QUOTATION
                 cmbQuotation = ComboQueryUmum.getQuotation(cmbQuotation, command, txtKodeKlien.Text, false, true);
-                cmbQuotation.ItemIndex = 0;
-
-                setGrid(command);
+                if (!isFormEditLoad)
+                {
+                    setGrid(command, true);
+                }
             }
         }
 
-        public void setGrid(MySqlCommand command)
+        public void setGrid(MySqlCommand command, bool isKosong = false)
         {
             String strngKode = txtKode.Text;
 
-            String query = @"SELECT A.no AS No, B.kode AS 'Kode Jasa', B.nama AS Jasa, A.deskripsi AS Deskripsi, A.quotation AS Quotation, A.quotationdetailno AS 'Quotation Detail No', A.jumlah AS Qty, 
+            String query = @"SELECT 0 AS No, '' AS 'Kode Jasa', '' AS Jasa, '' AS Deskripsi, '' AS Quotation, 0 AS 'Quotation Detail No', 0 AS Qty, 
+                                    '' AS 'Kode Unit', '' AS Unit, 0 AS Rate, 0 AS Subtotal";
+
+            Dictionary<String, String> parameters = new Dictionary<String, String>();
+
+            if (!isKosong)
+            {
+                query = @"SELECT A.no AS No, B.kode AS 'Kode Jasa', B.nama AS Jasa, A.deskripsi AS Deskripsi, 
+                                    A.quotation AS Quotation, A.quotationdetailno AS 'Quotation Detail No', A.jumlah AS Qty, 
                                     C.kode 'Kode Unit', C.nama AS Unit, A.rate AS Rate, A.subtotal AS Subtotal
                             FROM invoicedetail A
                             INNER JOIN jasa B ON A.jasa = B.kode
@@ -214,8 +223,8 @@ namespace Kontenu.Design
                             WHERE A.invoice = @kode
                             ORDER BY A.no";
 
-            Dictionary<String, String> parameters = new Dictionary<String, String>();
-            parameters.Add("kode", strngKode);
+                parameters.Add("kode", strngKode);
+            }
 
             Dictionary<String, int> widths = new Dictionary<String, int>();
             // 960 - 21 (kiri) - 17 (vertikal lines) - 35 (No) = 927
@@ -378,6 +387,7 @@ namespace Kontenu.Design
                 // reload grid di form header
                 FrmInvoice frmInvoice = (FrmInvoice)this.Owner;
                 frmInvoice.setGrid(command);
+
                 // Commit Transaction
                 command.Transaction.Commit();
 
@@ -774,7 +784,8 @@ namespace Kontenu.Design
                 command.Transaction = trans;
 
                 // Function Code
-                updateDataProyek(command);
+                updateDataProyek(command, true);
+                cmbQuotation.ItemIndex = 0;
 
                 // Commit Transaction
                 command.Transaction.Commit();
@@ -809,7 +820,7 @@ namespace Kontenu.Design
                 command.Transaction = trans;
 
                 // Function Code
-                setGrid(command);
+                setGrid(command, true);
 
                 // Commit Transaction
                 command.Transaction.Commit();
