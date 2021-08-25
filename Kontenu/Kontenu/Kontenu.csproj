@@ -246,6 +246,7 @@
     <Compile Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.designer.cs">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Design\Data\DataVInvoiceTotalTerima.cs" />
     <Compile Include="Design\Data\DataPenagihan.cs" />
     <Compile Include="Design\Data\DataInvoice.cs" />
     <Compile Include="Design\Data\DataInvoiceDetail.cs" />

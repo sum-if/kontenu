@@ -36,6 +36,7 @@
             this.lblGrandTotal = new DevExpress.XtraEditors.LabelControl();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.btnCariInvoice = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -49,6 +50,8 @@
             this.txtProyekProvinsi = new DevExpress.XtraEditors.TextEdit();
             this.txtProyekNama = new DevExpress.XtraEditors.TextEdit();
             this.txtKodeInvoice = new DevExpress.XtraEditors.TextEdit();
+            this.txtNoQuotation = new DevExpress.XtraEditors.TextEdit();
+            this.txtProyekID = new DevExpress.XtraEditors.TextEdit();
             this.txtTanggalInvoice = new DevExpress.XtraEditors.TextEdit();
             this.txtProyekPIC = new DevExpress.XtraEditors.TextEdit();
             this.txtProyekJenis = new DevExpress.XtraEditors.TextEdit();
@@ -58,7 +61,6 @@
             this.txtProyekAlamat = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.deTanggal = new DevExpress.XtraEditors.DateEdit();
-            this.txtKodeKlien = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtKode = new DevExpress.XtraEditors.TextEdit();
@@ -79,9 +81,18 @@
             this.txtTelepon = new DevExpress.XtraEditors.TextEdit();
             this.txtNama = new DevExpress.XtraEditors.TextEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
-            this.txtProyekID = new DevExpress.XtraEditors.TextEdit();
-            this.txtNoQuotation = new DevExpress.XtraEditors.TextEdit();
-            this.btnCariInvoice = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.lblTelahDibayar = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
+            this.lblSisa = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDitagihkan = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCariKlien = new DevExpress.XtraEditors.SimpleButton();
+            this.txtKodeKlien = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -95,6 +106,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekProvinsi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekNama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKodeInvoice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNoQuotation.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProyekID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTanggalInvoice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekPIC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekJenis.Properties)).BeginInit();
@@ -104,7 +117,6 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKodeKlien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKota.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlamat.Properties)).BeginInit();
@@ -115,12 +127,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelepon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProyekID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNoQuotation.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDitagihkan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKodeKlien.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraScrollableControl1
             // 
+            this.xtraScrollableControl1.Controls.Add(this.simpleButton1);
             this.xtraScrollableControl1.Controls.Add(this.btnCetak);
             this.xtraScrollableControl1.Controls.Add(this.gridControl1);
             this.xtraScrollableControl1.Controls.Add(this.btnSimpan);
@@ -137,11 +150,11 @@
             // btnCetak
             // 
             this.btnCetak.Image = ((System.Drawing.Image)(resources.GetObject("btnCetak.Image")));
-            this.btnCetak.Location = new System.Drawing.Point(113, 546);
+            this.btnCetak.Location = new System.Drawing.Point(113, 460);
             this.btnCetak.Name = "btnCetak";
-            this.btnCetak.Size = new System.Drawing.Size(86, 23);
+            this.btnCetak.Size = new System.Drawing.Size(86, 44);
             this.btnCetak.TabIndex = 263;
-            this.btnCetak.Text = "Cetak";
+            this.btnCetak.Text = "Cetak DP";
             this.btnCetak.Click += new System.EventHandler(this.btnCetak_Click);
             // 
             // gridControl1
@@ -149,7 +162,7 @@
             this.gridControl1.Location = new System.Drawing.Point(12, 307);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(960, 225);
+            this.gridControl1.Size = new System.Drawing.Size(960, 142);
             this.gridControl1.TabIndex = 261;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -162,27 +175,36 @@
             // btnSimpan
             // 
             this.btnSimpan.Image = ((System.Drawing.Image)(resources.GetObject("btnSimpan.Image")));
-            this.btnSimpan.Location = new System.Drawing.Point(12, 546);
+            this.btnSimpan.Location = new System.Drawing.Point(12, 460);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(86, 23);
+            this.btnSimpan.Size = new System.Drawing.Size(86, 44);
             this.btnSimpan.TabIndex = 250;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.labelControl31);
+            this.panelControl1.Controls.Add(this.labelControl24);
+            this.panelControl1.Controls.Add(this.labelControl12);
             this.panelControl1.Controls.Add(this.labelControl13);
+            this.panelControl1.Controls.Add(this.lblSisa);
+            this.panelControl1.Controls.Add(this.lblTelahDibayar);
+            this.panelControl1.Controls.Add(this.txtDitagihkan);
             this.panelControl1.Controls.Add(this.lblGrandTotal);
+            this.panelControl1.Controls.Add(this.labelControl27);
+            this.panelControl1.Controls.Add(this.labelControl16);
+            this.panelControl1.Controls.Add(this.labelControl10);
             this.panelControl1.Controls.Add(this.labelControl15);
-            this.panelControl1.Location = new System.Drawing.Point(674, 538);
+            this.panelControl1.Location = new System.Drawing.Point(601, 455);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(298, 30);
+            this.panelControl1.Size = new System.Drawing.Size(371, 114);
             this.panelControl1.TabIndex = 203;
             // 
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.labelControl13.Location = new System.Drawing.Point(108, 5);
+            this.labelControl13.Location = new System.Drawing.Point(181, 5);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(6, 19);
             this.labelControl13.TabIndex = 192;
@@ -193,7 +215,7 @@
             this.lblGrandTotal.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.lblGrandTotal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblGrandTotal.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblGrandTotal.Location = new System.Drawing.Point(120, 5);
+            this.lblGrandTotal.Location = new System.Drawing.Point(193, 5);
             this.lblGrandTotal.Name = "lblGrandTotal";
             this.lblGrandTotal.Size = new System.Drawing.Size(164, 19);
             this.lblGrandTotal.TabIndex = 191;
@@ -202,11 +224,11 @@
             // labelControl15
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.labelControl15.Location = new System.Drawing.Point(5, 5);
+            this.labelControl15.Location = new System.Drawing.Point(22, 5);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(97, 19);
+            this.labelControl15.Size = new System.Drawing.Size(120, 19);
             this.labelControl15.TabIndex = 190;
-            this.labelControl15.Text = "Grand Total";
+            this.labelControl15.Text = "GRAND TOTAL";
             // 
             // groupControl2
             // 
@@ -238,6 +260,16 @@
             this.groupControl2.Size = new System.Drawing.Size(441, 294);
             this.groupControl2.TabIndex = 202;
             this.groupControl2.Text = "Data Invoice";
+            // 
+            // btnCariInvoice
+            // 
+            this.btnCariInvoice.Image = global::Kontenu.Properties.Resources.cari_16;
+            this.btnCariInvoice.Location = new System.Drawing.Point(373, 27);
+            this.btnCariInvoice.Name = "btnCariInvoice";
+            this.btnCariInvoice.Size = new System.Drawing.Size(55, 23);
+            this.btnCariInvoice.TabIndex = 246;
+            this.btnCariInvoice.Text = "Cari";
+            this.btnCariInvoice.Click += new System.EventHandler(this.btnCariInvoice_Click);
             // 
             // labelControl5
             // 
@@ -346,6 +378,22 @@
             this.txtKodeInvoice.Size = new System.Drawing.Size(244, 20);
             this.txtKodeInvoice.TabIndex = 207;
             // 
+            // txtNoQuotation
+            // 
+            this.txtNoQuotation.Enabled = false;
+            this.txtNoQuotation.Location = new System.Drawing.Point(123, 107);
+            this.txtNoQuotation.Name = "txtNoQuotation";
+            this.txtNoQuotation.Size = new System.Drawing.Size(305, 20);
+            this.txtNoQuotation.TabIndex = 207;
+            // 
+            // txtProyekID
+            // 
+            this.txtProyekID.Enabled = false;
+            this.txtProyekID.Location = new System.Drawing.Point(123, 81);
+            this.txtProyekID.Name = "txtProyekID";
+            this.txtProyekID.Size = new System.Drawing.Size(305, 20);
+            this.txtProyekID.TabIndex = 207;
+            // 
             // txtTanggalInvoice
             // 
             this.txtTanggalInvoice.Enabled = false;
@@ -404,8 +452,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.btnCariKlien);
             this.groupControl1.Controls.Add(this.deTanggal);
-            this.groupControl1.Controls.Add(this.txtKodeKlien);
             this.groupControl1.Controls.Add(this.labelControl8);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.txtKode);
@@ -424,6 +472,7 @@
             this.groupControl1.Controls.Add(this.txtStatus);
             this.groupControl1.Controls.Add(this.txtEmail);
             this.groupControl1.Controls.Add(this.txtTelepon);
+            this.groupControl1.Controls.Add(this.txtKodeKlien);
             this.groupControl1.Controls.Add(this.txtNama);
             this.groupControl1.Controls.Add(this.labelControl21);
             this.groupControl1.Location = new System.Drawing.Point(12, 7);
@@ -443,14 +492,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deTanggal.Size = new System.Drawing.Size(362, 20);
             this.deTanggal.TabIndex = 20;
-            // 
-            // txtKodeKlien
-            // 
-            this.txtKodeKlien.Enabled = false;
-            this.txtKodeKlien.Location = new System.Drawing.Point(127, 81);
-            this.txtKodeKlien.Name = "txtKodeKlien";
-            this.txtKodeKlien.Size = new System.Drawing.Size(362, 20);
-            this.txtKodeKlien.TabIndex = 246;
             // 
             // labelControl8
             // 
@@ -619,31 +660,118 @@
             this.labelControl21.TabIndex = 206;
             this.labelControl21.Text = "Telepon";
             // 
-            // txtProyekID
+            // labelControl10
             // 
-            this.txtProyekID.Enabled = false;
-            this.txtProyekID.Location = new System.Drawing.Point(123, 81);
-            this.txtProyekID.Name = "txtProyekID";
-            this.txtProyekID.Size = new System.Drawing.Size(305, 20);
-            this.txtProyekID.TabIndex = 207;
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl10.Location = new System.Drawing.Point(22, 30);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(137, 19);
+            this.labelControl10.TabIndex = 190;
+            this.labelControl10.Text = "TELAH DIBAYAR";
             // 
-            // txtNoQuotation
+            // lblTelahDibayar
             // 
-            this.txtNoQuotation.Enabled = false;
-            this.txtNoQuotation.Location = new System.Drawing.Point(123, 107);
-            this.txtNoQuotation.Name = "txtNoQuotation";
-            this.txtNoQuotation.Size = new System.Drawing.Size(305, 20);
-            this.txtNoQuotation.TabIndex = 207;
+            this.lblTelahDibayar.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTelahDibayar.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTelahDibayar.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblTelahDibayar.Location = new System.Drawing.Point(193, 30);
+            this.lblTelahDibayar.Name = "lblTelahDibayar";
+            this.lblTelahDibayar.Size = new System.Drawing.Size(164, 19);
+            this.lblTelahDibayar.TabIndex = 191;
+            this.lblTelahDibayar.Text = "Grand Total";
             // 
-            // btnCariInvoice
+            // labelControl12
             // 
-            this.btnCariInvoice.Image = global::Kontenu.Properties.Resources.cari_16;
-            this.btnCariInvoice.Location = new System.Drawing.Point(373, 27);
-            this.btnCariInvoice.Name = "btnCariInvoice";
-            this.btnCariInvoice.Size = new System.Drawing.Size(55, 23);
-            this.btnCariInvoice.TabIndex = 246;
-            this.btnCariInvoice.Text = "Cari";
-            this.btnCariInvoice.Click += new System.EventHandler(this.btnCariInvoice_Click);
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl12.Location = new System.Drawing.Point(181, 30);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(6, 19);
+            this.labelControl12.TabIndex = 192;
+            this.labelControl12.Text = ":";
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl16.Location = new System.Drawing.Point(22, 55);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(108, 19);
+            this.labelControl16.TabIndex = 190;
+            this.labelControl16.Text = "DITAGIHKAN";
+            // 
+            // labelControl24
+            // 
+            this.labelControl24.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl24.Location = new System.Drawing.Point(181, 55);
+            this.labelControl24.Name = "labelControl24";
+            this.labelControl24.Size = new System.Drawing.Size(6, 19);
+            this.labelControl24.TabIndex = 192;
+            this.labelControl24.Text = ":";
+            // 
+            // labelControl27
+            // 
+            this.labelControl27.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl27.Location = new System.Drawing.Point(22, 80);
+            this.labelControl27.Name = "labelControl27";
+            this.labelControl27.Size = new System.Drawing.Size(39, 19);
+            this.labelControl27.TabIndex = 190;
+            this.labelControl27.Text = "SISA";
+            // 
+            // lblSisa
+            // 
+            this.lblSisa.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSisa.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblSisa.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblSisa.Location = new System.Drawing.Point(193, 80);
+            this.lblSisa.Name = "lblSisa";
+            this.lblSisa.Size = new System.Drawing.Size(164, 19);
+            this.lblSisa.TabIndex = 191;
+            this.lblSisa.Text = "Grand Total";
+            // 
+            // labelControl31
+            // 
+            this.labelControl31.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl31.Location = new System.Drawing.Point(181, 80);
+            this.labelControl31.Name = "labelControl31";
+            this.labelControl31.Size = new System.Drawing.Size(6, 19);
+            this.labelControl31.TabIndex = 192;
+            this.labelControl31.Text = ":";
+            // 
+            // txtDitagihkan
+            // 
+            this.txtDitagihkan.EditValue = "";
+            this.txtDitagihkan.Location = new System.Drawing.Point(193, 55);
+            this.txtDitagihkan.Name = "txtDitagihkan";
+            this.txtDitagihkan.Size = new System.Drawing.Size(164, 20);
+            this.txtDitagihkan.TabIndex = 200;
+            this.txtDitagihkan.EditValueChanged += new System.EventHandler(this.txtDitagihkan_EditValueChanged);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(216, 460);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(135, 44);
+            this.simpleButton1.TabIndex = 263;
+            this.simpleButton1.Text = "Cetak Penagihan";
+            this.simpleButton1.Click += new System.EventHandler(this.btnCetak_Click);
+            // 
+            // btnCariKlien
+            // 
+            this.btnCariKlien.Image = global::Kontenu.Properties.Resources.cari_16;
+            this.btnCariKlien.Location = new System.Drawing.Point(434, 79);
+            this.btnCariKlien.Name = "btnCariKlien";
+            this.btnCariKlien.Size = new System.Drawing.Size(55, 23);
+            this.btnCariKlien.TabIndex = 248;
+            this.btnCariKlien.Text = "Cari";
+            this.btnCariKlien.Click += new System.EventHandler(this.btnCariKlien_Click);
+            // 
+            // txtKodeKlien
+            // 
+            this.txtKodeKlien.Enabled = false;
+            this.txtKodeKlien.Location = new System.Drawing.Point(128, 81);
+            this.txtKodeKlien.Name = "txtKodeKlien";
+            this.txtKodeKlien.Size = new System.Drawing.Size(300, 20);
+            this.txtKodeKlien.TabIndex = 110;
             // 
             // FrmPenagihanAdd
             // 
@@ -669,6 +797,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekProvinsi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekNama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKodeInvoice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNoQuotation.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProyekID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTanggalInvoice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekPIC.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekJenis.Properties)).EndInit();
@@ -679,7 +809,6 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKodeKlien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKota.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlamat.Properties)).EndInit();
@@ -690,8 +819,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelepon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProyekID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNoQuotation.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDitagihkan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKodeKlien.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -739,7 +868,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl30;
         private DevExpress.XtraEditors.LabelControl labelControl28;
         private DevExpress.XtraEditors.LabelControl labelControl20;
-        public DevExpress.XtraEditors.TextEdit txtKodeKlien;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
@@ -755,5 +883,17 @@
         private DevExpress.XtraEditors.TextEdit txtNoQuotation;
         private DevExpress.XtraEditors.TextEdit txtProyekID;
         public DevExpress.XtraEditors.SimpleButton btnCariInvoice;
+        private DevExpress.XtraEditors.LabelControl labelControl31;
+        private DevExpress.XtraEditors.LabelControl labelControl24;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.LabelControl lblSisa;
+        private DevExpress.XtraEditors.LabelControl lblTelahDibayar;
+        private DevExpress.XtraEditors.LabelControl labelControl27;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.TextEdit txtDitagihkan;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        public DevExpress.XtraEditors.SimpleButton btnCariKlien;
+        public DevExpress.XtraEditors.TextEdit txtKodeKlien;
     }
 }

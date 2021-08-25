@@ -55,7 +55,6 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbQuotation = new DevExpress.XtraEditors.LookUpEdit();
             this.cmbProyekID = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.rdoJenisInvoiceProduct = new System.Windows.Forms.RadioButton();
@@ -78,6 +77,7 @@
             this.txtProyekAlamat = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.cmbQuotation = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -97,7 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKota.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbQuotation.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProyekID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties)).BeginInit();
@@ -110,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekJenis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekTujuan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbQuotation.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraScrollableControl1
@@ -414,16 +414,6 @@
             this.labelControl6.TabIndex = 226;
             this.labelControl6.Text = "Project ID";
             // 
-            // cmbQuotation
-            // 
-            this.cmbQuotation.Location = new System.Drawing.Point(120, 133);
-            this.cmbQuotation.Name = "cmbQuotation";
-            this.cmbQuotation.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbQuotation.Size = new System.Drawing.Size(305, 20);
-            this.cmbQuotation.TabIndex = 225;
-            this.cmbQuotation.EditValueChanged += new System.EventHandler(this.cmbQuotation_EditValueChanged);
-            // 
             // cmbProyekID
             // 
             this.cmbProyekID.Location = new System.Drawing.Point(120, 107);
@@ -615,6 +605,16 @@
             this.labelControl14.TabIndex = 208;
             this.labelControl14.Text = "Alamat";
             // 
+            // cmbQuotation
+            // 
+            this.cmbQuotation.Location = new System.Drawing.Point(120, 133);
+            this.cmbQuotation.Name = "cmbQuotation";
+            this.cmbQuotation.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbQuotation.Size = new System.Drawing.Size(305, 20);
+            this.cmbQuotation.TabIndex = 225;
+            this.cmbQuotation.EditValueChanged += new System.EventHandler(this.cmbQuotation_EditValueChanged);
+            // 
             // FrmInvoiceAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -646,7 +646,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbQuotation.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProyekID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties)).EndInit();
@@ -659,6 +658,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekJenis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekTujuan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbQuotation.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -713,10 +713,10 @@
         private System.Windows.Forms.RadioButton rdoJenisInvoiceProduct;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LookUpEdit cmbQuotation;
         private DevExpress.XtraEditors.LookUpEdit cmbProyekID;
         private DevExpress.XtraEditors.TextEdit txtProyekPIC;
         private DevExpress.XtraEditors.TextEdit txtProyekJenis;
         private DevExpress.XtraEditors.TextEdit txtProyekTujuan;
+        private DevExpress.XtraEditors.LookUpEdit cmbQuotation;
     }
 }
