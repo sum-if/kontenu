@@ -355,85 +355,90 @@ namespace Kontenu.Design
 
         private void cetak(String kode)
         {
-            //SplashScreenManager.ShowForm(typeof(SplashUtama));
-            //MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
-            //MySqlCommand command = con.CreateCommand();
-            //MySqlTransaction trans;
+            SplashScreenManager.ShowForm(typeof(SplashUtama));
+            MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
+            MySqlCommand command = con.CreateCommand();
+            MySqlTransaction trans;
 
-            //try
-            //{
-            //    // buka koneksi
-            //    con.Open();
+            try
+            {
+                // buka koneksi
+                con.Open();
 
-            //    // set transaction
-            //    trans = con.BeginTransaction();
-            //    command.Transaction = trans;
+                // set transaction
+                trans = con.BeginTransaction();
+                command.Transaction = trans;
 
-            //    // function code
-            //    RptPenerimaan report = new RptPenerimaan();
+                // function code
+                RptPenerimaan report = new RptPenerimaan();
 
-            //    // PERUSAHAAN
-            //    DataPerusahaan dPerusahaan = new DataPerusahaan(command, Constants.PERUSAHAAN_KONTENU);
-            //    report.Parameters["PerusahaanKode"].Value = dPerusahaan.kode;
-            //    report.Parameters["PerusahaanNama"].Value = dPerusahaan.nama;
-            //    report.Parameters["PerusahaanAlamat"].Value = dPerusahaan.alamat;
-            //    report.Parameters["PerusahaanKota"].Value = dPerusahaan.kota;
-            //    report.Parameters["PerusahaanEmail"].Value = dPerusahaan.email;
-            //    report.Parameters["PerusahaanTelepon"].Value = "+62 811 318 6880";
-            //    report.Parameters["PerusahaanWebsite"].Value = dPerusahaan.website;
+                // PERUSAHAAN
+                DataPerusahaan dPerusahaan = new DataPerusahaan(command, Constants.PERUSAHAAN_KONTENU);
+                report.Parameters["PerusahaanKode"].Value = dPerusahaan.kode;
+                report.Parameters["PerusahaanNama"].Value = dPerusahaan.nama;
+                report.Parameters["PerusahaanAlamat"].Value = dPerusahaan.alamat;
+                report.Parameters["PerusahaanKota"].Value = dPerusahaan.kota;
+                report.Parameters["PerusahaanEmail"].Value = dPerusahaan.email;
+                report.Parameters["PerusahaanTelepon"].Value = "+62 811 318 6880";
+                report.Parameters["PerusahaanWebsite"].Value = dPerusahaan.website;
 
-            //    // TRANSAKSI
-            //    DataPenerimaan dPenerimaan = new DataPenerimaan(command, kode);
-            //    report.Parameters["Kode"].Value = dPenerimaan.kode;
-            //    report.Parameters["Tanggal"].Value = dPenerimaan.tanggal;
-            //    report.Parameters["ProyekNama"].Value = dPenerimaan.proyeknama;
-            //    report.Parameters["ProyekAlamat"].Value = dPenerimaan.proyekalamat;
-            //    report.Parameters["ProyekKota"].Value = dPenerimaan.proyekkota;
-            //    report.Parameters["ProyekJenis"].Value = (new DataJenisProyek(command, dPenerimaan.jenisproyek)).nama;
-            //    report.Parameters["ProyekTanggalBerlaku"].Value = dPenerimaan.tanggalberlaku;
+                // TRANSAKSI
+                DataPenerimaan dPenerimaan = new DataPenerimaan(command, kode);
+                report.Parameters["Kode"].Value = kode;
+                report.Parameters["Tanggal"].Value = dPenerimaan.tanggal;
 
-            //    // KLIEN
-            //    DataKlien dKlien = new DataKlien(command, dPenerimaan.klien);
-            //    report.Parameters["KlienNama"].Value = dKlien.nama;
-            //    report.Parameters["KlienAlamat"].Value = dKlien.alamat;
-            //    report.Parameters["KlienKota"].Value = dKlien.kota;
-            //    report.Parameters["KlienEmail"].Value = dKlien.email;
-            //    report.Parameters["KlienTelp"].Value = dKlien.telp;
+                // PROYEK
+                DataPenagihan dPenagihan = new DataPenagihan(command, dPenerimaan.penagihan);
+                DataInvoice dInvoice = new DataInvoice(command, dPenagihan.invoice);
+                DataProyek dProyek = new DataProyek(command, dInvoice.proyek);
+                report.Parameters["ProyekNama"].Value = dProyek.nama;
+                report.Parameters["ProyekAlamat"].Value = dProyek.alamat;
+                report.Parameters["ProyekKota"].Value = dProyek.kota;
+                report.Parameters["ProyekJenis"].Value = (new DataJenisProyek(command, dProyek.jenisproyek)).nama;
+                report.Parameters["ProyekTanggalBerlaku"].Value = dProyek.tanggaldeal;
+
+                // KLIEN
+                DataKlien dKlien = new DataKlien(command, dPenagihan.klien);
+                report.Parameters["KlienNama"].Value = dKlien.nama;
+                report.Parameters["KlienAlamat"].Value = dKlien.alamat;
+                report.Parameters["KlienKota"].Value = dKlien.kota;
+                report.Parameters["KlienEmail"].Value = dKlien.email;
+                report.Parameters["KlienTelp"].Value = dKlien.telp;
 
 
-            //    // assign the printing system to the document viewer.
-            //    LaporanPrintPreview laporan = new LaporanPrintPreview();
-            //    laporan.documentViewer1.DocumentSource = report;
+                // assign the printing system to the document viewer.
+                LaporanPrintPreview laporan = new LaporanPrintPreview();
+                laporan.documentViewer1.DocumentSource = report;
 
-            //    //reportprinttool printtool = new reportprinttool(report);
-            //    //printtool.print();
+                //reportprinttool printtool = new reportprinttool(report);
+                //printtool.print();
 
-            //    OswLog.setLaporan(command, dokumen);
+                OswLog.setLaporan(command, dokumen);
 
-            //    laporan.Show();
+                laporan.Show();
 
-            //    // commit transaction
-            //    command.Transaction.Commit();
-            //}
-            //catch (MySqlException ex)
-            //{
-            //    OswPesan.pesanErrorCatch(ex, command, dokumen);
-            //}
-            //catch (Exception ex)
-            //{
-            //    OswPesan.pesanErrorCatch(ex, command, dokumen);
-            //}
-            //finally
-            //{
-            //    con.Close();
-            //    try
-            //    {
-            //        SplashScreenManager.CloseForm();
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //    }
-            //}
+                // commit transaction
+                command.Transaction.Commit();
+            }
+            catch (MySqlException ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            catch (Exception ex)
+            {
+                OswPesan.pesanErrorCatch(ex, command, dokumen);
+            }
+            finally
+            {
+                con.Close();
+                try
+                {
+                    SplashScreenManager.CloseForm();
+                }
+                catch (Exception ex)
+                {
+                }
+            }
         }
 
         private void setFooter()
