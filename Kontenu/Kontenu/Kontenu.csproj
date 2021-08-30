@@ -288,6 +288,12 @@
     <Compile Include="Design\Form\Transaksi\FrmPenagihanAdd.designer.cs">
       <DependentUpon>FrmPenagihanAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Design\Rpt\Transaksi\RptInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\Rpt\Transaksi\RptInvoice.designer.cs">
+      <DependentUpon>RptInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Design\Rpt\Transaksi\RptPenerimaan.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -665,6 +671,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Transaksi\FrmPenagihanAdd.resx">
       <DependentUpon>FrmPenagihanAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Rpt\Transaksi\RptInvoice.resx">
+      <DependentUpon>RptInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Rpt\Transaksi\RptPenerimaan.resx">
       <DependentUpon>RptPenerimaan.cs</DependentUpon>
