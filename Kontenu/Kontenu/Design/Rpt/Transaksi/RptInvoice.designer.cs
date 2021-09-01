@@ -428,6 +428,7 @@
             this.xrLabel1,
             this.xrTable1,
             this.xrTable5});
+            this.SubBand1.Expanded = false;
             this.SubBand1.HeightF = 950F;
             this.SubBand1.Name = "SubBand1";
             // 
@@ -2018,7 +2019,6 @@
             this.xrLabel64,
             this.xrLabel65,
             this.xrLabel72});
-            this.SubBand3.Expanded = false;
             this.SubBand3.HeightF = 950F;
             this.SubBand3.Name = "SubBand3";
             // 
