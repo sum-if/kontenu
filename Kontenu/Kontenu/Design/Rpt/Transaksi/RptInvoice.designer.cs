@@ -47,11 +47,10 @@
             this.Kode = new DevExpress.XtraReports.Parameters.Parameter();
             this.PerusahaanNama = new DevExpress.XtraReports.Parameters.Parameter();
             this.PerusahaanKode = new DevExpress.XtraReports.Parameters.Parameter();
-            this.qtySatuan = new DevExpress.XtraReports.UI.CalculatedField();
+            this.TanggalBerlaku = new DevExpress.XtraReports.UI.CalculatedField();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
-            this.xrPageBreak1 = new DevExpress.XtraReports.UI.XRPageBreak();
             this.xrTable4 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow20 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell51 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -186,7 +185,6 @@
             this.xrTableRow23 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell57 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell58 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrPageBreak2 = new DevExpress.XtraReports.UI.XRPageBreak();
             this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
             this.xrTable9 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow28 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -202,7 +200,6 @@
             this.xrLabel51 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel52 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel53 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPageBreak3 = new DevExpress.XtraReports.UI.XRPageBreak();
             this.xrTable8 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow25 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell61 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -258,7 +255,6 @@
             this.xrTableRow34 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell79 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell80 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrPageBreak4 = new DevExpress.XtraReports.UI.XRPageBreak();
             this.xrLabel111 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel112 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel113 = new DevExpress.XtraReports.UI.XRLabel();
@@ -271,6 +267,8 @@
             this.xrTableRow36 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell83 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell84 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.ProyekNama = new DevExpress.XtraReports.Parameters.Parameter();
+            this.ProyekTanggalBerlaku = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -392,11 +390,13 @@
             this.PerusahaanKode.ValueInfo = "KONTENU";
             this.PerusahaanKode.Visible = false;
             // 
-            // qtySatuan
+            // TanggalBerlaku
             // 
-            this.qtySatuan.DataMember = "Query";
-            this.qtySatuan.Expression = "Concat([Qty],\' \', [Satuan])";
-            this.qtySatuan.Name = "qtySatuan";
+            this.TanggalBerlaku.DisplayName = "TanggalBerlaku";
+            this.TanggalBerlaku.Expression = "Concat(\'Pada tanggal \',[Parameters.ProyekTanggalBerlaku], \', yang bertanda tangan" +
+    " di bawah ini:\')";
+            this.TanggalBerlaku.FieldType = DevExpress.XtraReports.UI.FieldType.String;
+            this.TanggalBerlaku.Name = "TanggalBerlaku";
             // 
             // sqlDataSource1
             // 
@@ -416,7 +416,6 @@
             // SubBand1
             // 
             this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPageBreak1,
             this.xrTable4,
             this.xrLabel6,
             this.xrLabel5,
@@ -428,14 +427,10 @@
             this.xrLabel1,
             this.xrTable1,
             this.xrTable5});
-            this.SubBand1.Expanded = false;
             this.SubBand1.HeightF = 950F;
+            this.SubBand1.KeepTogether = true;
             this.SubBand1.Name = "SubBand1";
-            // 
-            // xrPageBreak1
-            // 
-            this.xrPageBreak1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 940.0001F);
-            this.xrPageBreak1.Name = "xrPageBreak1";
+            this.SubBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBand;
             // 
             // xrTable4
             // 
@@ -820,7 +815,8 @@
             this.xrLabel4.SizeF = new System.Drawing.SizeF(484.0068F, 23F);
             this.xrLabel4.StylePriority.UseFont = false;
             this.xrLabel4.StylePriority.UsePadding = false;
-            this.xrLabel4.Text = "Pada tanggal 23 Maret 2021, yang bertanda tangan di bawah ini:";
+            this.xrLabel4.Text = "Pada tanggal #tanggalberlaku, yang bertanda tangan di bawah ini:";
+            this.xrLabel4.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrLabel4_BeforePrint);
             // 
             // xrTable2
             // 
@@ -1409,11 +1405,11 @@
             this.xrLabel9,
             this.xrLabel8,
             this.xrLabel7,
-            this.xrTable6,
-            this.xrPageBreak2});
-            this.SubBand2.Expanded = false;
+            this.xrTable6});
             this.SubBand2.HeightF = 950F;
+            this.SubBand2.KeepTogether = true;
             this.SubBand2.Name = "SubBand2";
+            this.SubBand2.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBand;
             // 
             // xrLabel39
             // 
@@ -1839,11 +1835,11 @@
             // 
             this.xrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.Right;
             this.xrLabel8.KeepTogether = true;
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(0.9998687F, 121.3334F);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(0.9998639F, 121.3334F);
             this.xrLabel8.Multiline = true;
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
-            this.xrLabel8.SizeF = new System.Drawing.SizeF(234.2262F, 568.6562F);
+            this.xrLabel8.SizeF = new System.Drawing.SizeF(234.2262F, 598.3575F);
             this.xrLabel8.StylePriority.UseBorders = false;
             this.xrLabel8.StylePriority.UsePadding = false;
             // 
@@ -1975,11 +1971,6 @@
             this.xrTableCell58.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell58.Weight = 4.6346103458714243D;
             // 
-            // xrPageBreak2
-            // 
-            this.xrPageBreak2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 948F);
-            this.xrPageBreak2.Name = "xrPageBreak2";
-            // 
             // SubBand3
             // 
             this.SubBand3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -1994,7 +1985,6 @@
             this.xrLabel51,
             this.xrLabel52,
             this.xrLabel53,
-            this.xrPageBreak3,
             this.xrTable8,
             this.xrLabel40,
             this.xrLabel41,
@@ -2181,11 +2171,6 @@
             this.xrLabel53.StylePriority.UsePadding = false;
             this.xrLabel53.Text = "5.";
             // 
-            // xrPageBreak3
-            // 
-            this.xrPageBreak3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 948F);
-            this.xrPageBreak3.Name = "xrPageBreak3";
-            // 
             // xrTable8
             // 
             this.xrTable8.LocationFloat = new DevExpress.Utils.PointFloat(1.000039F, 0F);
@@ -2318,11 +2303,11 @@
             // 
             this.xrLabel41.Borders = DevExpress.XtraPrinting.BorderSide.Right;
             this.xrLabel41.KeepTogether = true;
-            this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(1.999807F, 121.3334F);
+            this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(1.999807F, 121.3333F);
             this.xrLabel41.Multiline = true;
             this.xrLabel41.Name = "xrLabel41";
             this.xrLabel41.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
-            this.xrLabel41.SizeF = new System.Drawing.SizeF(234.2262F, 568.6563F);
+            this.xrLabel41.SizeF = new System.Drawing.SizeF(234.2262F, 618.1611F);
             this.xrLabel41.StylePriority.UseBorders = false;
             this.xrLabel41.StylePriority.UsePadding = false;
             // 
@@ -2591,16 +2576,15 @@
             this.xrLabel99,
             this.xrLabel100,
             this.xrTable12,
-            this.xrPageBreak4,
             this.xrLabel111,
             this.xrLabel112,
             this.xrLabel113,
             this.xrLabel114,
             this.xrLabel115,
             this.xrTable13});
-            this.SubBand4.Expanded = false;
             this.SubBand4.HeightF = 950F;
             this.SubBand4.Name = "SubBand4";
+            this.SubBand4.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand;
             // 
             // xrTable10
             // 
@@ -2838,11 +2822,6 @@
             this.xrTableCell80.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell80.Weight = 4.6346103458714243D;
             // 
-            // xrPageBreak4
-            // 
-            this.xrPageBreak4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 941F);
-            this.xrPageBreak4.Name = "xrPageBreak4";
-            // 
             // xrLabel111
             // 
             this.xrLabel111.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2973,13 +2952,25 @@
             // 
             // xrTableCell84
             // 
+            this.xrTableCell84.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.ProyekNama, "Text", "")});
             this.xrTableCell84.Font = new System.Drawing.Font("AT Surt Extd", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell84.Name = "xrTableCell84";
             this.xrTableCell84.StylePriority.UseFont = false;
             this.xrTableCell84.StylePriority.UseTextAlignment = false;
-            this.xrTableCell84.Text = "Poenya Nyonya Anina";
             this.xrTableCell84.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrTableCell84.Weight = 1D;
+            // 
+            // ProyekNama
+            // 
+            this.ProyekNama.Name = "ProyekNama";
+            this.ProyekNama.Visible = false;
+            // 
+            // ProyekTanggalBerlaku
+            // 
+            this.ProyekTanggalBerlaku.Name = "ProyekTanggalBerlaku";
+            this.ProyekTanggalBerlaku.ValueInfo = "10/08/2021";
+            this.ProyekTanggalBerlaku.Visible = false;
             // 
             // RptInvoice
             // 
@@ -2989,9 +2980,10 @@
             this.BottomMargin,
             this.ReportHeader});
             this.CalculatedFields.AddRange(new DevExpress.XtraReports.UI.CalculatedField[] {
-            this.qtySatuan});
+            this.TanggalBerlaku});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
+            this.DataSource = this.sqlDataSource1;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margins = new System.Drawing.Printing.Margins(19, 19, 25, 30);
             this.PageHeight = 1169;
@@ -3015,7 +3007,9 @@
             this.KlienEmail,
             this.KlienKTP,
             this.KlienJabatan,
-            this.Perihal});
+            this.Perihal,
+            this.ProyekNama,
+            this.ProyekTanggalBerlaku});
             this.ShowPrintMarginsWarning = false;
             this.SnapToGrid = false;
             this.Version = "15.2";
@@ -3046,7 +3040,7 @@
         private DevExpress.XtraReports.Parameters.Parameter PerusahaanKota;
         private DevExpress.XtraReports.Parameters.Parameter PerusahaanAlamat;
         private DevExpress.XtraReports.Parameters.Parameter PerusahaanKode;
-        private DevExpress.XtraReports.UI.CalculatedField qtySatuan;
+        private DevExpress.XtraReports.UI.CalculatedField TanggalBerlaku;
         private DevExpress.XtraReports.Parameters.Parameter PerusahaanEmail;
         private DevExpress.XtraReports.Parameters.Parameter PerusahaanWebsite;
         private DevExpress.XtraReports.Parameters.Parameter Kode;
@@ -3143,8 +3137,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell23;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell24;
         private DevExpress.XtraReports.UI.SubBand SubBand2;
-        private DevExpress.XtraReports.UI.XRPageBreak xrPageBreak2;
-        private DevExpress.XtraReports.UI.XRPageBreak xrPageBreak1;
         private DevExpress.XtraReports.UI.XRTable xrTable6;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow21;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell53;
@@ -3193,7 +3185,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell60;
         private DevExpress.XtraReports.UI.XRLabel xrLabel39;
         private DevExpress.XtraReports.UI.SubBand SubBand3;
-        private DevExpress.XtraReports.UI.XRPageBreak xrPageBreak3;
         private DevExpress.XtraReports.UI.XRTable xrTable8;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow25;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell61;
@@ -3255,7 +3246,6 @@
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow34;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell79;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell80;
-        private DevExpress.XtraReports.UI.XRPageBreak xrPageBreak4;
         private DevExpress.XtraReports.UI.XRLabel xrLabel111;
         private DevExpress.XtraReports.UI.XRLabel xrLabel112;
         private DevExpress.XtraReports.UI.XRLabel xrLabel113;
@@ -3279,5 +3269,7 @@
         private DevExpress.XtraReports.Parameters.Parameter KlienKTP;
         private DevExpress.XtraReports.Parameters.Parameter KlienJabatan;
         private DevExpress.XtraReports.Parameters.Parameter Perihal;
+        private DevExpress.XtraReports.Parameters.Parameter ProyekNama;
+        private DevExpress.XtraReports.Parameters.Parameter ProyekTanggalBerlaku;
     }
 }
