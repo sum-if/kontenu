@@ -35,12 +35,8 @@
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Tanggal = new DevExpress.XtraReports.Parameters.Parameter();
             this.KlienNama = new DevExpress.XtraReports.Parameters.Parameter();
-            this.ProyekNama = new DevExpress.XtraReports.Parameters.Parameter();
             this.KlienAlamat = new DevExpress.XtraReports.Parameters.Parameter();
-            this.ProyekAlamat = new DevExpress.XtraReports.Parameters.Parameter();
             this.KlienKota = new DevExpress.XtraReports.Parameters.Parameter();
-            this.ProyekKota = new DevExpress.XtraReports.Parameters.Parameter();
-            this.ProyekJenis = new DevExpress.XtraReports.Parameters.Parameter();
             this.KlienTelp = new DevExpress.XtraReports.Parameters.Parameter();
             this.KlienEmail = new DevExpress.XtraReports.Parameters.Parameter();
             this.PerusahaanEmail = new DevExpress.XtraReports.Parameters.Parameter();
@@ -52,8 +48,6 @@
             this.PerusahaanNama = new DevExpress.XtraReports.Parameters.Parameter();
             this.PerusahaanKode = new DevExpress.XtraReports.Parameters.Parameter();
             this.qtySatuan = new DevExpress.XtraReports.UI.CalculatedField();
-            this.ProyekTanggalBerlaku = new DevExpress.XtraReports.Parameters.Parameter();
-            this.JenisInvoice = new DevExpress.XtraReports.Parameters.Parameter();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
@@ -274,6 +268,9 @@
             this.xrTableRow29 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell69 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell70 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.KlienKTP = new DevExpress.XtraReports.Parameters.Parameter();
+            this.KlienJabatan = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Perihal = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -323,41 +320,17 @@
             this.KlienNama.ValueInfo = "ANDRE ARIWARSITA";
             this.KlienNama.Visible = false;
             // 
-            // ProyekNama
-            // 
-            this.ProyekNama.Name = "ProyekNama";
-            this.ProyekNama.ValueInfo = "KEPENGEN";
-            this.ProyekNama.Visible = false;
-            // 
             // KlienAlamat
             // 
             this.KlienAlamat.Name = "KlienAlamat";
             this.KlienAlamat.ValueInfo = "JL. BUBUTAN NO. 28";
             this.KlienAlamat.Visible = false;
             // 
-            // ProyekAlamat
-            // 
-            this.ProyekAlamat.Name = "ProyekAlamat";
-            this.ProyekAlamat.ValueInfo = "JL. BUBUTAN NO. 28";
-            this.ProyekAlamat.Visible = false;
-            // 
             // KlienKota
             // 
             this.KlienKota.Name = "KlienKota";
             this.KlienKota.ValueInfo = "SURABAYA";
             this.KlienKota.Visible = false;
-            // 
-            // ProyekKota
-            // 
-            this.ProyekKota.Name = "ProyekKota";
-            this.ProyekKota.ValueInfo = "SURABAYA";
-            this.ProyekKota.Visible = false;
-            // 
-            // ProyekJenis
-            // 
-            this.ProyekJenis.Name = "ProyekJenis";
-            this.ProyekJenis.ValueInfo = "CAFÉ & BOOTH";
-            this.ProyekJenis.Visible = false;
             // 
             // KlienTelp
             // 
@@ -425,18 +398,6 @@
             this.qtySatuan.Expression = "Concat([Qty],\' \', [Satuan])";
             this.qtySatuan.Name = "qtySatuan";
             // 
-            // ProyekTanggalBerlaku
-            // 
-            this.ProyekTanggalBerlaku.Name = "ProyekTanggalBerlaku";
-            this.ProyekTanggalBerlaku.ValueInfo = "01/06/2021";
-            this.ProyekTanggalBerlaku.Visible = false;
-            // 
-            // JenisInvoice
-            // 
-            this.JenisInvoice.Name = "JenisInvoice";
-            this.JenisInvoice.ValueInfo = "Interior";
-            this.JenisInvoice.Visible = false;
-            // 
             // sqlDataSource1
             // 
             this.sqlDataSource1.ConnectionName = "databasereport";
@@ -467,7 +428,6 @@
             this.xrLabel1,
             this.xrTable1,
             this.xrTable5});
-            this.SubBand1.Expanded = false;
             this.SubBand1.HeightF = 922.0057F;
             this.SubBand1.Name = "SubBand1";
             // 
@@ -610,6 +570,8 @@
             // 
             this.xrTableCell35.BorderColor = System.Drawing.Color.Gray;
             this.xrTableCell35.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell35.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.KlienNama, "Text", "")});
             this.xrTableCell35.Name = "xrTableCell35";
             this.xrTableCell35.StylePriority.UseBorderColor = false;
             this.xrTableCell35.StylePriority.UseBorders = false;
@@ -648,6 +610,8 @@
             // 
             this.xrTableCell38.BorderColor = System.Drawing.Color.Gray;
             this.xrTableCell38.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell38.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.KlienKTP, "Text", "")});
             this.xrTableCell38.Name = "xrTableCell38";
             this.xrTableCell38.StylePriority.UseBorderColor = false;
             this.xrTableCell38.StylePriority.UseBorders = false;
@@ -686,6 +650,8 @@
             // 
             this.xrTableCell41.BorderColor = System.Drawing.Color.Gray;
             this.xrTableCell41.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell41.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.KlienJabatan, "Text", "")});
             this.xrTableCell41.Name = "xrTableCell41";
             this.xrTableCell41.StylePriority.UseBorderColor = false;
             this.xrTableCell41.StylePriority.UseBorders = false;
@@ -724,6 +690,8 @@
             // 
             this.xrTableCell44.BorderColor = System.Drawing.Color.Gray;
             this.xrTableCell44.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell44.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.KlienTelp, "Text", "")});
             this.xrTableCell44.Name = "xrTableCell44";
             this.xrTableCell44.StylePriority.UseBorderColor = false;
             this.xrTableCell44.StylePriority.UseBorders = false;
@@ -762,6 +730,8 @@
             // 
             this.xrTableCell47.BorderColor = System.Drawing.Color.Gray;
             this.xrTableCell47.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell47.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.KlienEmail, "Text", "")});
             this.xrTableCell47.Name = "xrTableCell47";
             this.xrTableCell47.StylePriority.UseBorderColor = false;
             this.xrTableCell47.StylePriority.UseBorders = false;
@@ -800,6 +770,8 @@
             // 
             this.xrTableCell50.BorderColor = System.Drawing.Color.Gray;
             this.xrTableCell50.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell50.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.KlienAlamat, "Text", "")});
             this.xrTableCell50.Name = "xrTableCell50";
             this.xrTableCell50.StylePriority.UseBorderColor = false;
             this.xrTableCell50.StylePriority.UseBorders = false;
@@ -807,11 +779,13 @@
             // 
             // xrLabel4
             // 
+            this.xrLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel4.KeepTogether = true;
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(242.8651F, 161.6722F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrLabel4.SizeF = new System.Drawing.SizeF(484.0068F, 23F);
+            this.xrLabel4.StylePriority.UseFont = false;
             this.xrLabel4.StylePriority.UsePadding = false;
             this.xrLabel4.Text = "Pada tanggal 23 Maret 2021, yang bertanda tangan di bawah ini:";
             // 
@@ -893,6 +867,7 @@
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.StylePriority.UseBorderColor = false;
             this.xrTableCell13.StylePriority.UseBorders = false;
+            this.xrTableCell13.Text = "Anette Firmawan Panghegar";
             this.xrTableCell13.Weight = 3.5692363739519792D;
             // 
             // xrTableRow5
@@ -931,6 +906,7 @@
             this.xrTableCell15.Name = "xrTableCell15";
             this.xrTableCell15.StylePriority.UseBorderColor = false;
             this.xrTableCell15.StylePriority.UseBorders = false;
+            this.xrTableCell15.Text = "3678205309960000";
             this.xrTableCell15.Weight = 3.5692363739519792D;
             // 
             // xrTableRow9
@@ -969,6 +945,7 @@
             this.xrTableCell19.Name = "xrTableCell19";
             this.xrTableCell19.StylePriority.UseBorderColor = false;
             this.xrTableCell19.StylePriority.UseBorders = false;
+            this.xrTableCell19.Text = "Pemilik";
             this.xrTableCell19.Weight = 3.5692363739519792D;
             // 
             // xrTableRow10
@@ -1007,6 +984,7 @@
             this.xrTableCell22.Name = "xrTableCell22";
             this.xrTableCell22.StylePriority.UseBorderColor = false;
             this.xrTableCell22.StylePriority.UseBorders = false;
+            this.xrTableCell22.Text = "+62 817 0333 7713";
             this.xrTableCell22.Weight = 3.5692363739519792D;
             // 
             // xrTableRow11
@@ -1045,6 +1023,7 @@
             this.xrTableCell28.Name = "xrTableCell28";
             this.xrTableCell28.StylePriority.UseBorderColor = false;
             this.xrTableCell28.StylePriority.UseBorders = false;
+            this.xrTableCell28.Text = "anette.kontenu@gmail.com";
             this.xrTableCell28.Weight = 3.5692363739519792D;
             // 
             // xrTableRow12
@@ -1083,6 +1062,7 @@
             this.xrTableCell31.Name = "xrTableCell31";
             this.xrTableCell31.StylePriority.UseBorderColor = false;
             this.xrTableCell31.StylePriority.UseBorders = false;
+            this.xrTableCell31.Text = "Taman Pondok Indah TX-12, Wiyung, Surabaya";
             this.xrTableCell31.Weight = 3.5692363739519792D;
             // 
             // xrLabel3
@@ -1204,7 +1184,7 @@
             // xrTableCell8
             // 
             this.xrTableCell8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.JenisInvoice, "Text", "")});
+            new DevExpress.XtraReports.UI.XRBinding(this.Perihal, "Text", "")});
             this.xrTableCell8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
@@ -1376,6 +1356,7 @@
             this.xrLabel7,
             this.xrTable6,
             this.xrPageBreak2});
+            this.SubBand2.Expanded = false;
             this.SubBand2.HeightF = 946.1288F;
             this.SubBand2.Name = "SubBand2";
             // 
@@ -1981,6 +1962,7 @@
             this.xrLabel64,
             this.xrLabel65,
             this.xrLabel72});
+            this.SubBand3.Expanded = false;
             this.SubBand3.HeightF = 939.3719F;
             this.SubBand3.Name = "SubBand3";
             // 
@@ -2521,6 +2503,7 @@
             this.xrLabel114,
             this.xrLabel115,
             this.xrTable13});
+            this.SubBand4.Expanded = false;
             this.SubBand4.HeightF = 939.3719F;
             this.SubBand4.Name = "SubBand4";
             // 
@@ -2933,6 +2916,24 @@
             this.xrTableCell70.Text = "PARAF PENYEDIA JASA";
             this.xrTableCell70.Weight = 1D;
             // 
+            // KlienKTP
+            // 
+            this.KlienKTP.Name = "KlienKTP";
+            this.KlienKTP.ValueInfo = "123123123123123";
+            this.KlienKTP.Visible = false;
+            // 
+            // KlienJabatan
+            // 
+            this.KlienJabatan.Name = "KlienJabatan";
+            this.KlienJabatan.ValueInfo = "Pemilik";
+            this.KlienJabatan.Visible = false;
+            // 
+            // Perihal
+            // 
+            this.Perihal.Name = "Perihal";
+            this.Perihal.ValueInfo = "Interior";
+            this.Perihal.Visible = false;
+            // 
             // RptInvoice
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2965,12 +2966,9 @@
             this.KlienKota,
             this.KlienTelp,
             this.KlienEmail,
-            this.ProyekJenis,
-            this.ProyekNama,
-            this.ProyekAlamat,
-            this.ProyekKota,
-            this.ProyekTanggalBerlaku,
-            this.JenisInvoice});
+            this.KlienKTP,
+            this.KlienJabatan,
+            this.Perihal});
             this.ShowPrintMarginsWarning = false;
             this.SnapToGrid = false;
             this.Version = "15.2";
@@ -3007,16 +3005,10 @@
         private DevExpress.XtraReports.Parameters.Parameter Kode;
         private DevExpress.XtraReports.Parameters.Parameter Tanggal;
         private DevExpress.XtraReports.Parameters.Parameter KlienNama;
-        private DevExpress.XtraReports.Parameters.Parameter ProyekNama;
         private DevExpress.XtraReports.Parameters.Parameter KlienAlamat;
-        private DevExpress.XtraReports.Parameters.Parameter ProyekAlamat;
         private DevExpress.XtraReports.Parameters.Parameter KlienKota;
-        private DevExpress.XtraReports.Parameters.Parameter ProyekKota;
-        private DevExpress.XtraReports.Parameters.Parameter ProyekJenis;
         private DevExpress.XtraReports.Parameters.Parameter KlienTelp;
         private DevExpress.XtraReports.Parameters.Parameter KlienEmail;
-        private DevExpress.XtraReports.Parameters.Parameter ProyekTanggalBerlaku;
-        private DevExpress.XtraReports.Parameters.Parameter JenisInvoice;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
         private DevExpress.XtraReports.UI.SubBand SubBand1;
@@ -3237,5 +3229,8 @@
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow29;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell69;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell70;
+        private DevExpress.XtraReports.Parameters.Parameter KlienKTP;
+        private DevExpress.XtraReports.Parameters.Parameter KlienJabatan;
+        private DevExpress.XtraReports.Parameters.Parameter Perihal;
     }
 }
