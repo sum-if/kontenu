@@ -130,4 +130,19 @@ Penyedia Jasa dan Klien akan disebut sebagai “Para Pihak”.
 Di mana Para Pihak ingin menjalani hubungan kerjasama dalam kontrak ini dengan kesadaran pribadi tanpa paksaan pihak manapun dan Penyedia Jasa mempunyai pengalaman dan bisa memberikan jasa tersebut,
 Para Pihak dengan ini setuju untuk mengikuti ketentuan sesuai dengan kontrak konstruksi interior ini.</value>
   </data>
+  <data name="xrLabel68.Text" xml:space="preserve">
+    <value>Apabila ditemukan ada syarat dan kondisi yang tidak sesuai atau tidak dapat dijalankan pada kontrak ini, maka akan diganti dengan yang sesuai dan penggantian tidak akan menghilangkan fungsi dari kontrak dan segala perjanjian yang ada.</value>
+  </data>
+  <data name="xrLabel51.Text" xml:space="preserve">
+    <value>Kontrak desain interior ini sepenuhnya akan menjadi dasar seluruh perjanjian antara dua belah pihak. Selanjutnya kontrak ini akan menjadi pengganti seluruh perjanjian sebelumnya baik secara lisan atau tertulis.</value>
+  </data>
+  <data name="xrLabel44.Text" xml:space="preserve">
+    <value>Perbaikan desain dapat dilakukan sebanyak maksimal 3 kali selama proyek berlangsung. Revisi desain yang lebih dari batas tersebut akan dikenakan biaya tambahan sebesar 10% per satu masa revisi dari total nilai proyek desain yang tercantum pada Lampiran 2.</value>
+  </data>
+  <data name="xrLabel54.Text" xml:space="preserve">
+    <value>Dalam kasus bencana alam, huru-hara, atau kejadian yang di luar kendali kedua belah pihak sehingga menyebabkan salah satu atau kedua belah pihak tidak dapat menjalankan kewajibannya sesuai kontrak, maka setiap pihak wajib segera memberi tahu.</value>
+  </data>
+  <data name="xrLabel57.Text" xml:space="preserve">
+    <value>Setelah pemberitahuan kelanjutan kontrak akan didiskusikan lagi antara dua belah pihak, termasuk penyesuaian tanggal atau penyerahan proyek kepada Penyedia Jasa lainnya apabila Penyedia Jasa tidak menyanggupi untuk melanjutkan proyek. </value>
+  </data>
 </root>
