@@ -467,6 +467,7 @@ namespace Kontenu.Design
                 // PROYEK
                 DataProyek dProyek = new DataProyek(command, dInvoice.proyek);
                 report.Parameters["ProyekNama"].Value = dProyek.nama;
+                report.Parameters["ProyekTanggalBerlaku"].Value = OswDate.ConvertDate(dProyek.tanggaldeal, "dd/MM/yyyy", "dd MMMM yyyy");
 
                 // KLIEN
                 DataKlien dKlien = new DataKlien(command, dInvoice.klien);
@@ -475,6 +476,9 @@ namespace Kontenu.Design
                 report.Parameters["KlienKota"].Value = dKlien.kota;
                 report.Parameters["KlienEmail"].Value = dKlien.email;
                 report.Parameters["KlienTelp"].Value = dKlien.telp;
+                report.Parameters["KlienJabatan"].Value = "JABATAN";
+                report.Parameters["KlienKTP"].Value = dKlien.ktp;
+
 
 
                 // assign the printing system to the document viewer.
