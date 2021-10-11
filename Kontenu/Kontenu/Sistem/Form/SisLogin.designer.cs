@@ -50,28 +50,28 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(103, 134);
+            this.txtUsername.Location = new System.Drawing.Point(131, 212);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtUsername.Properties.Appearance.Options.UseFont = true;
-            this.txtUsername.Size = new System.Drawing.Size(203, 22);
+            this.txtUsername.Size = new System.Drawing.Size(236, 22);
             this.txtUsername.TabIndex = 10;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(103, 171);
+            this.txtPassword.Location = new System.Drawing.Point(131, 247);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtPassword.Properties.Appearance.Options.UseFont = true;
             this.txtPassword.Properties.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(203, 22);
+            this.txtPassword.Size = new System.Drawing.Size(236, 22);
             this.txtPassword.TabIndex = 20;
             // 
             // lblPassword
             // 
             this.lblPassword.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblPassword.Location = new System.Drawing.Point(29, 172);
+            this.lblPassword.Location = new System.Drawing.Point(57, 248);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(63, 16);
             this.lblPassword.TabIndex = 1;
@@ -81,7 +81,7 @@
             // 
             this.lblUsername.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblUsername.Location = new System.Drawing.Point(26, 135);
+            this.lblUsername.Location = new System.Drawing.Point(54, 213);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(64, 16);
             this.lblUsername.TabIndex = 0;
@@ -96,9 +96,9 @@
             this.labelControl16.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl16.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.labelControl16.LineColor = System.Drawing.Color.Black;
-            this.labelControl16.Location = new System.Drawing.Point(0, 99);
+            this.labelControl16.Location = new System.Drawing.Point(-2, 180);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(335, 2);
+            this.labelControl16.Size = new System.Drawing.Size(420, 2);
             this.labelControl16.TabIndex = 194;
             // 
             // btnLogin
@@ -106,7 +106,7 @@
             this.btnLogin.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnLogin.Appearance.Options.UseFont = true;
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
-            this.btnLogin.Location = new System.Drawing.Point(228, 214);
+            this.btnLogin.Location = new System.Drawing.Point(289, 282);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(78, 23);
             this.btnLogin.TabIndex = 30;
@@ -116,14 +116,14 @@
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = global::Kontenu.Properties.Resources.logo;
-            this.pictureEdit1.Location = new System.Drawing.Point(12, 3);
+            this.pictureEdit1.Location = new System.Drawing.Point(-2, -3);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.AllowFocused = false;
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.pictureEdit1.Size = new System.Drawing.Size(311, 90);
+            this.pictureEdit1.Size = new System.Drawing.Size(420, 185);
             this.pictureEdit1.TabIndex = 5;
             // 
             // SisLogin
@@ -133,7 +133,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 252);
+            this.ClientSize = new System.Drawing.Size(414, 323);
             this.Controls.Add(this.labelControl16);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblUsername);
@@ -146,7 +146,7 @@
             this.MinimizeBox = false;
             this.Name = "SisLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LOGIN";
+            this.Text = "Kontenu - Accounting Information System";
             this.Load += new System.EventHandler(this.SisLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
