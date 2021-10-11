@@ -265,4 +265,46 @@
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="client_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\client-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="daftar_proyek_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\daftar-proyek-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="invoice_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\invoice-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jabatan_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jabatan-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jasa_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jasa-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jasa_outsource_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jasa-outsource-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outsource_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\outsource-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penagihan_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penagihan-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="penerimaan_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\penerimaan-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="perusahaan_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\perusahaan-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pic_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="proyek_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\proyek-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quotation_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quotation-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unit_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unit-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

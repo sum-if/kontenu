@@ -963,6 +963,20 @@
     <Content Include="OswLib\OswLib.XML">
       <SubType>Designer</SubType>
     </Content>
+    <EmbeddedResource Include="Resources\unit-64.png" />
+    <EmbeddedResource Include="Resources\quotation-64.png" />
+    <EmbeddedResource Include="Resources\proyek-64.png" />
+    <EmbeddedResource Include="Resources\pic-64.png" />
+    <EmbeddedResource Include="Resources\perusahaan-64.png" />
+    <EmbeddedResource Include="Resources\penerimaan-64.png" />
+    <EmbeddedResource Include="Resources\penagihan-64.png" />
+    <EmbeddedResource Include="Resources\outsource-64.png" />
+    <EmbeddedResource Include="Resources\jasa-outsource-64.png" />
+    <EmbeddedResource Include="Resources\jasa-64.png" />
+    <EmbeddedResource Include="Resources\jabatan-64.png" />
+    <EmbeddedResource Include="Resources\invoice-64.png" />
+    <EmbeddedResource Include="Resources\daftar-proyek-64.png" />
+    <EmbeddedResource Include="Resources\client-64.png" />
     <EmbeddedResource Include="Resources\logo.png" />
     <EmbeddedResource Include="Resources\ubah-16.png" />
     <EmbeddedResource Include="Resources\tambah-16.png" />

@@ -123,6 +123,26 @@ namespace Kontenu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap client_64 {
+            get {
+                object obj = ResourceManager.GetObject("client_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap daftar_proyek_64 {
+            get {
+                object obj = ResourceManager.GetObject("daftar_proyek_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap database_32 {
             get {
                 object obj = ResourceManager.GetObject("database_32", resourceCulture);
@@ -183,9 +203,49 @@ namespace Kontenu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap invoice_64 {
+            get {
+                object obj = ResourceManager.GetObject("invoice_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jabatan_32 {
             get {
                 object obj = ResourceManager.GetObject("jabatan_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jabatan_64 {
+            get {
+                object obj = ResourceManager.GetObject("jabatan_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jasa_64 {
+            get {
+                object obj = ResourceManager.GetObject("jasa_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jasa_outsource_64 {
+            get {
+                object obj = ResourceManager.GetObject("jasa_outsource_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,6 +423,36 @@ namespace Kontenu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap outsource_64 {
+            get {
+                object obj = ResourceManager.GetObject("outsource_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap penagihan_64 {
+            get {
+                object obj = ResourceManager.GetObject("penagihan_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap penerimaan_64 {
+            get {
+                object obj = ResourceManager.GetObject("penerimaan_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap perusahaan_32 {
             get {
                 object obj = ResourceManager.GetObject("perusahaan_32", resourceCulture);
@@ -373,9 +463,49 @@ namespace Kontenu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap perusahaan_64 {
+            get {
+                object obj = ResourceManager.GetObject("perusahaan_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pic_64 {
+            get {
+                object obj = ResourceManager.GetObject("pic_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pilih_16 {
             get {
                 object obj = ResourceManager.GetObject("pilih_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap proyek_64 {
+            get {
+                object obj = ResourceManager.GetObject("proyek_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quotation_64 {
+            get {
+                object obj = ResourceManager.GetObject("quotation_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -516,6 +646,16 @@ namespace Kontenu.Properties {
         internal static System.Drawing.Bitmap ubahastatuspersediaan_32 {
             get {
                 object obj = ResourceManager.GetObject("ubahastatuspersediaan_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unit_64 {
+            get {
+                object obj = ResourceManager.GetObject("unit_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
