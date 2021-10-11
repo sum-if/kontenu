@@ -25,7 +25,7 @@ namespace Kontenu {
 
             // setting config
             OswConfig.KONEKSI = ConfigurationManager.ConnectionStrings["database"].ConnectionString;
-            OswConfig.DEBUG = true;
+            OswConfig.DEBUG = false;
             OswConfig.CREATOR = "Developed by: SUMiF - www.sumif.id";
             OswConfig.RESOURCE = "Kontenu.Resources.";
 

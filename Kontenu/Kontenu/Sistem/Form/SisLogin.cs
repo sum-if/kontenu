@@ -30,14 +30,31 @@ namespace Kontenu.Sistem {
             dxValidationProvider1.RemoveControlError(txtPassword);
         }
 
-        private void btnLogin_Click(object sender, EventArgs e) {
+        private void picBtnLogin_Click(object sender, EventArgs e)
+        {
+            prosesLogin();
+        }
+
+        private void picBtnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            prosesLogin();
+        }
+
+        private void prosesLogin()
+        {
             SplashScreenManager.ShowForm(typeof(SplashUtama));
             MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
             MySqlCommand command = con.CreateCommand();
             MySqlTransaction trans;
             MySqlDataReader reader;
 
-            try {
+            try
+            {
                 // buka koneksi
                 con.Open();
 
@@ -50,8 +67,10 @@ namespace Kontenu.Sistem {
                 dxValidationProvider1.SetValidationRule(txtUsername, OswValidation.IsNotBlank());
                 dxValidationProvider1.SetValidationRule(txtPassword, OswValidation.IsNotBlank());
 
-                if(!dxValidationProvider1.Validate()) {
-                    foreach(Control x in dxValidationProvider1.GetInvalidControls()) {
+                if (!dxValidationProvider1.Validate())
+                {
+                    foreach (Control x in dxValidationProvider1.GetInvalidControls())
+                    {
                         dxValidationProvider1.SetIconAlignment(x, ErrorIconAlignment.MiddleRight);
                     }
                     return;
@@ -67,9 +86,11 @@ namespace Kontenu.Sistem {
                 command.Parameters.AddWithValue("user", txtUsername.Text);
                 reader = command.ExecuteReader();
 
-                if(reader.Read()) {
+                if (reader.Read())
+                {
                     // cek bcrypt
-                    if(OswConvert.checkBCrypt(txtPassword.Text, reader["password"].ToString())) {
+                    if (OswConvert.checkBCrypt(txtPassword.Text, reader["password"].ToString()))
+                    {
                         IsLogin = 1;
                         OswConstants.KODEUSER = reader["kode"].ToString();
                         OswConstants.USERNAME = reader["username"].ToString();
@@ -82,12 +103,15 @@ namespace Kontenu.Sistem {
 
                 reader.Close();
 
-                if(IsLogin == 1) {
+                if (IsLogin == 1)
+                {
                     // tulis log
                     OswLog.setLogin(command);
 
                     this.Close();
-                } else {
+                }
+                else
+                {
                     txtUsername.Focus();
                     //OswPesan.pesanError("Data yang Anda masukkan tidak valid.", command, dokumen);
                     throw new Exception("Data yang Anda masukkan tidak valid");
@@ -95,17 +119,31 @@ namespace Kontenu.Sistem {
 
                 // Commit Transaction
                 command.Transaction.Commit();
-            } catch(MySqlException ex) {
+            }
+            catch (MySqlException ex)
+            {
                 OswPesan.pesanErrorCatch(ex, command, dokumen);
-            } catch(Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 OswPesan.pesanErrorCatch(ex, command, dokumen);
-            } finally {
+            }
+            finally
+            {
                 con.Close();
-                try {
+                try
+                {
                     SplashScreenManager.CloseForm();
-                } catch(Exception ex) {
+                }
+                catch (Exception ex)
+                {
                 }
             }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            prosesLogin();
         }
     }
 }

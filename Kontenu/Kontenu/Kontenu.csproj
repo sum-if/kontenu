@@ -31,7 +31,7 @@
     <MinimumRequiredVersion>1.0.0.68</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -64,6 +64,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon-128.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -194,6 +197,18 @@
     </Compile>
     <Compile Include="Akuntansi\Form\Master\FrmAkunSubKategoriAdd.designer.cs">
       <DependentUpon>FrmAkunSubKategoriAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\Transaksi\FrmSettingAkun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\Transaksi\FrmSettingAkun.designer.cs">
+      <DependentUpon>FrmSettingAkun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akuntansi\Form\Transaksi\FrmSettingAkunTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Akuntansi\Form\Transaksi\FrmSettingAkunTransaksi.designer.cs">
+      <DependentUpon>FrmSettingAkunTransaksi.cs</DependentUpon>
     </Compile>
     <Compile Include="Akuntansi\Rpt\Transaksi\RptCetakJurnalVoucher.cs">
       <SubType>Component</SubType>
@@ -636,6 +651,12 @@
     <EmbeddedResource Include="Akuntansi\Form\Master\FrmAkunSubKategoriAdd.resx">
       <DependentUpon>FrmAkunSubKategoriAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmSettingAkun.resx">
+      <DependentUpon>FrmSettingAkun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmSettingAkunTransaksi.resx">
+      <DependentUpon>FrmSettingAkunTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Akuntansi\Rpt\Transaksi\RptCetakJurnalVoucher.resx">
       <DependentUpon>RptCetakJurnalVoucher.cs</DependentUpon>
     </EmbeddedResource>
@@ -854,12 +875,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\login.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icon-128.ico" />
     <Content Include="id\DevExpress.Dashboard.v15.2.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -963,6 +982,11 @@
     <Content Include="OswLib\OswLib.XML">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Resources\login_page2.jpg" />
+    <EmbeddedResource Include="Resources\loading-page.jpg" />
+    <EmbeddedResource Include="Resources\login-page.jpg" />
+    <EmbeddedResource Include="Resources\login.png" />
+    <EmbeddedResource Include="Resources\exit.png" />
     <EmbeddedResource Include="Resources\unit-64.png" />
     <EmbeddedResource Include="Resources\quotation-64.png" />
     <EmbeddedResource Include="Resources\proyek-64.png" />

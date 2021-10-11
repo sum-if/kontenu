@@ -380,6 +380,7 @@ namespace Kontenu.Design
 
                 // validasi setelah simpan
                 dInvoice.valJumlahDetail();
+                dInvoice.prosesJurnal();
 
                 // tulis log
                 OswLog.setTransaksi(command, dokumen, dInvoice.ToString());
