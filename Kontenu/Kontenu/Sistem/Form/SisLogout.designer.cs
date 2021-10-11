@@ -23,55 +23,61 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.btnLogout = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.picBtnYa = new System.Windows.Forms.PictureBox();
+            this.picBtnTidak = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picBtnYa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBtnTidak)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnLogout
+            // picBtnYa
             // 
-            this.btnLogout.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.btnLogout.Appearance.Options.UseFont = true;
-            this.btnLogout.Location = new System.Drawing.Point(170, 85);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 10;
-            this.btnLogout.Text = "Ya";
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.picBtnYa.BackColor = System.Drawing.Color.Transparent;
+            this.picBtnYa.Image = global::Kontenu.Properties.Resources.button_ya;
+            this.picBtnYa.Location = new System.Drawing.Point(76, 144);
+            this.picBtnYa.Name = "picBtnYa";
+            this.picBtnYa.Size = new System.Drawing.Size(102, 29);
+            this.picBtnYa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBtnYa.TabIndex = 32;
+            this.picBtnYa.TabStop = false;
+            this.picBtnYa.Click += new System.EventHandler(this.picBtnYa_Click);
             // 
-            // simpleButton1
+            // picBtnTidak
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(278, 85);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 20;
-            this.simpleButton1.Text = "Tidak";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.picBtnTidak.BackColor = System.Drawing.Color.Transparent;
+            this.picBtnTidak.Image = global::Kontenu.Properties.Resources.button_tidak;
+            this.picBtnTidak.Location = new System.Drawing.Point(184, 144);
+            this.picBtnTidak.Name = "picBtnTidak";
+            this.picBtnTidak.Size = new System.Drawing.Size(99, 29);
+            this.picBtnTidak.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBtnTidak.TabIndex = 33;
+            this.picBtnTidak.TabStop = false;
+            this.picBtnTidak.Click += new System.EventHandler(this.picBtnTidak_Click);
             // 
             // SisLogout
             // 
-            this.AcceptButton = this.btnLogout;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::Kontenu.Properties.Resources.logout;
-            this.ClientSize = new System.Drawing.Size(449, 146);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.btnLogout);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImageStore = global::Kontenu.Properties.Resources.logout_page_stroke;
+            this.ClientSize = new System.Drawing.Size(587, 244);
+            this.Controls.Add(this.picBtnTidak);
+            this.Controls.Add(this.picBtnYa);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SisLogout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGOUT";
+            ((System.ComponentModel.ISupportInitialize)(this.picBtnYa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBtnTidak)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.SimpleButton btnLogout;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.PictureBox picBtnYa;
+        private System.Windows.Forms.PictureBox picBtnTidak;
     }
 }

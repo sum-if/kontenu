@@ -93,6 +93,26 @@ namespace Kontenu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_tidak {
+            get {
+                object obj = ResourceManager.GetObject("button_tidak", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_ya {
+            get {
+                object obj = ResourceManager.GetObject("button_ya", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cabang_32 {
             get {
                 object obj = ResourceManager.GetObject("cabang_32", resourceCulture);
@@ -456,6 +476,26 @@ namespace Kontenu.Properties {
         internal static System.Drawing.Bitmap logout_32b {
             get {
                 object obj = ResourceManager.GetObject("logout_32b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_page {
+            get {
+                object obj = ResourceManager.GetObject("logout_page", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_page_stroke {
+            get {
+                object obj = ResourceManager.GetObject("logout_page_stroke", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

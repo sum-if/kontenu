@@ -322,4 +322,16 @@
   <data name="login_page2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_page2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="button_tidak" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_tidak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_ya" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_ya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout_page" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout_page.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout_page_stroke" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout_page_stroke.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

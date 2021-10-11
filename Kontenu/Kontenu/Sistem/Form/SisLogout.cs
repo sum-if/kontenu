@@ -19,13 +19,15 @@ namespace Kontenu.Sistem {
             InitializeComponent();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e) {
+        private void picBtnYa_Click(object sender, EventArgs e)
+        {
             SplashScreenManager.ShowForm(typeof(SplashUtama));
             MySqlConnection con = new MySqlConnection(OswConfig.KONEKSI);
             MySqlCommand command = con.CreateCommand();
             MySqlTransaction trans;
 
-            try {
+            try
+            {
                 // buka koneksi
                 con.Open();
 
@@ -42,20 +44,30 @@ namespace Kontenu.Sistem {
 
                 // Commit Transaction
                 command.Transaction.Commit();
-            } catch (MySqlException ex) {
+            }
+            catch (MySqlException ex)
+            {
                 OswPesan.pesanErrorCatch(ex, command, dokumen);
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 OswPesan.pesanErrorCatch(ex, command, dokumen);
-            } finally {
+            }
+            finally
+            {
                 con.Close();
-                try {
+                try
+                {
                     SplashScreenManager.CloseForm();
-                } catch(Exception ex) {
+                }
+                catch (Exception ex)
+                {
                 }
             }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e) {
+        private void picBtnTidak_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

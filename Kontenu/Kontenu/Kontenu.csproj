@@ -982,7 +982,11 @@
     <Content Include="OswLib\OswLib.XML">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Resources\login_page2.jpg" />
+    <None Include="Resources\logout_page_stroke.jpg" />
+    <EmbeddedResource Include="Resources\logout_page.jpg" />
+    <EmbeddedResource Include="Resources\button_ya.png" />
+    <EmbeddedResource Include="Resources\button_tidak.png" />
+    <EmbeddedResource Include="Resources\login_page2.jpg" />
     <EmbeddedResource Include="Resources\loading-page.jpg" />
     <EmbeddedResource Include="Resources\login-page.jpg" />
     <EmbeddedResource Include="Resources\login.png" />
