@@ -58,7 +58,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Zoom;
-            this.BackgroundImageStore = global::Kontenu.Properties.Resources.logout_page_stroke;
+            this.BackgroundImageStore = global::Kontenu.Properties.Resources.logout_page;
             this.ClientSize = new System.Drawing.Size(587, 244);
             this.Controls.Add(this.picBtnTidak);
             this.Controls.Add(this.picBtnYa);

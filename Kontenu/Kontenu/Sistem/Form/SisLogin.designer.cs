@@ -115,7 +115,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Zoom;
-            this.BackgroundImageStore = global::Kontenu.Properties.Resources.login_page2;
+            this.BackgroundImageStore = global::Kontenu.Properties.Resources.login_page;
             this.ClientSize = new System.Drawing.Size(610, 427);
             this.Controls.Add(this.picBtnLogin);
             this.Controls.Add(this.lblUsername);

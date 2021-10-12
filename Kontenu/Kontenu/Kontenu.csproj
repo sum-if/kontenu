@@ -31,7 +31,7 @@
     <MinimumRequiredVersion>1.0.0.68</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -878,7 +878,9 @@
     <EmbeddedResource Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon-128.ico" />
+    <EmbeddedResource Include="Resources\logout_page.jpg" />
+    <EmbeddedResource Include="Resources\login_page.jpg" />
+    <EmbeddedResource Include="icon-128.ico" />
     <Content Include="id\DevExpress.Dashboard.v15.2.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -982,13 +984,9 @@
     <Content Include="OswLib\OswLib.XML">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Resources\logout_page_stroke.jpg" />
-    <EmbeddedResource Include="Resources\logout_page.jpg" />
     <EmbeddedResource Include="Resources\button_ya.png" />
     <EmbeddedResource Include="Resources\button_tidak.png" />
-    <EmbeddedResource Include="Resources\login_page2.jpg" />
     <EmbeddedResource Include="Resources\loading-page.jpg" />
-    <EmbeddedResource Include="Resources\login-page.jpg" />
     <EmbeddedResource Include="Resources\login.png" />
     <EmbeddedResource Include="Resources\exit.png" />
     <EmbeddedResource Include="Resources\unit-64.png" />

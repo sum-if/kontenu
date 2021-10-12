@@ -403,16 +403,6 @@ namespace Kontenu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login_page2 {
-            get {
-                object obj = ResourceManager.GetObject("login_page2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap loglaporan_32 {
             get {
                 object obj = ResourceManager.GetObject("loglaporan_32", resourceCulture);
@@ -486,16 +476,6 @@ namespace Kontenu.Properties {
         internal static System.Drawing.Bitmap logout_page {
             get {
                 object obj = ResourceManager.GetObject("logout_page", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logout_page_stroke {
-            get {
-                object obj = ResourceManager.GetObject("logout_page_stroke", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
