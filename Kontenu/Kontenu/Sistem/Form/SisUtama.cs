@@ -14,6 +14,10 @@ using Kontenu.OswLib;
 using DevExpress.XtraGrid;
 using Kontenu.Umum;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraBars;
+using DevExpress.LookAndFeel;
+using DevExpress.Skins;
 
 namespace Kontenu.Sistem {
     public partial class SisUtama : DevExpress.XtraEditors.XtraForm {
@@ -41,6 +45,10 @@ namespace Kontenu.Sistem {
                 // Function Code
                 OswMenu.setMenuUtama(this, Application.OpenForms, typeof(Program).Assembly);
 
+                SkinElement element = SkinManager.GetSkinElement(SkinProductId.Ribbon, DevExpress.LookAndFeel.UserLookAndFeel.Default, "StatusBarBackground");
+                element.Color.BackColor = (Color)System.Drawing.ColorTranslator.FromHtml("#424242");
+                LookAndFeelHelper.ForceDefaultLookAndFeelChanged();
+                
                 // Commit Transaction
                 command.Transaction.Commit();
             } catch(MySqlException ex) {
