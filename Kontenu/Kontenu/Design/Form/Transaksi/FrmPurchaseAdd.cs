@@ -500,8 +500,6 @@ namespace Kontenu.Design
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Qty"], "0");
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Rate"], "0");
             gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Subtotal"], "0");
-            gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Quotation"], "");
-            gridView.SetRowCellValue(e.RowHandle, gridView.Columns["Quotation Detail No"], "0");
         }
 
         private void gridView1_RowDeleted(object sender, DevExpress.Data.RowDeletedEventArgs e)

@@ -10,33 +10,33 @@ using Kontenu.OswLib;
 
 namespace Kontenu.Design
 {
-    class DataVInvoiceTotalTerima
+    class DataVPurchaseTotalBayar
     {
-        public String invoice = "";
-        public String totalterima = "0";
+        public String purchase = "";
+        public String totalbayar = "0";
         public Boolean isExist = false;
         private MySqlCommand command;
 
-        public DataVInvoiceTotalTerima(MySqlCommand command, String invoice)
+        public DataVPurchaseTotalBayar(MySqlCommand command, String purchase)
         {
             this.command = command;
-            this.invoice = invoice;
+            this.purchase = purchase;
             this.getOtherAttribute();
         }
 
         private void getOtherAttribute()
         {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT invoice,totalterima FROM v_invoice_totalterima WHERE invoice = @invoice";
+            String query = @"SELECT purchase,totalbayar FROM v_purchase_totalbayar WHERE purchase = @purchase";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
-            parameters.Add("invoice", this.invoice);
+            parameters.Add("purchase", this.purchase);
 
             MySqlDataReader reader = OswDataAccess.executeReaderQuery(query, parameters, command);
             if (reader.Read())
             {
                 this.isExist = true;
-                this.totalterima = reader.GetString("totalterima");
+                this.totalbayar = reader.GetString("totalbayar");
                 reader.Close();
             }
             else
@@ -50,7 +50,7 @@ namespace Kontenu.Design
         {
             if (this.isExist)
             {
-                throw new Exception("Data [" + this.invoice + "] sudah ada");
+                throw new Exception("Data [" + this.purchase + "] sudah ada");
             }
         }
 
@@ -58,7 +58,7 @@ namespace Kontenu.Design
         {
             if (!this.isExist)
             {
-                throw new Exception("Data [" + this.invoice + "] tidak ada");
+                throw new Exception("Data [" + this.purchase + "] tidak ada");
             }
         }
 

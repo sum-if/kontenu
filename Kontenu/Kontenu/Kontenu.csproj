@@ -269,6 +269,7 @@
     <Compile Include="Design\Data\Transaksi\DataPurchasePaymentDetail.cs" />
     <Compile Include="Design\Data\Transaksi\DataPurchaseDetail.cs" />
     <Compile Include="Design\Data\Transaksi\DataPenerimaan.cs" />
+    <Compile Include="Design\Data\View\DataVPurchaseTotalBayar.cs" />
     <Compile Include="Design\Data\View\DataVInvoiceTotalTerima.cs" />
     <Compile Include="Design\Data\Transaksi\DataPenagihan.cs" />
     <Compile Include="Design\Data\Transaksi\DataInvoice.cs" />
@@ -281,7 +282,7 @@
     <Compile Include="Design\Data\Master\DataJasaOutsource.cs" />
     <Compile Include="Design\Data\Master\DataJasa.cs" />
     <Compile Include="Design\Data\Master\DataPerusahaan.cs" />
-    <Compile Include="Design\Data\Transaksi\DataTujuanProyek.cs" />
+    <Compile Include="Design\Data\Master\DataTujuanProyek.cs" />
     <Compile Include="Design\Data\Master\DataUnit.cs" />
     <Compile Include="Design\Data\Master\DataJabatan.cs" />
     <Compile Include="Design\Data\Master\DataPIC.cs" />

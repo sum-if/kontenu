@@ -166,6 +166,22 @@ namespace Kontenu.OswLib {
             }
         }
 
+        public static bool isKelompokAkun(MySqlCommand command, String akun, String kelompokAkun)
+        {
+            String query = @"SELECT COUNT(*)
+                             FROM akun A
+                             INNER JOIN kelompokakunsetting B ON A.kode LIKE B.akun AND A.akunkategori LIKE B.kategori AND A.akunsubkategori LIKE B.subkategori AND A.akungroup LIKE B.group AND A.akunsubgroup LIKE B.subgroup
+                             WHERE A.kode = @akun AND B.kelompokakun = @kelompokakun";
+
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("akun", akun);
+            parameters.Add("kelompokakun", kelompokAkun);
+
+            int jumlah = int.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
+
+            return jumlah > 0;
+        }
+
         public static void valAdmin(MySqlCommand command, String tanggal)
         {
             DataAdmin dAdmin = new DataAdmin(command, OswDate.getTahunBulan(tanggal), Constants.PROSES_TUTUP_PERIODE);

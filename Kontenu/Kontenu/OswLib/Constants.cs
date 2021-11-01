@@ -51,10 +51,16 @@ namespace Kontenu.OswLib {
         public static String STATUS_PURCHASE_LUNAS = "Lunas";
 
 
-        // TIDAK BOLEH DI ComboQueryUmum.getAkun
-        // TIDAK BOLEH DI Tools.isKelompokAkun
+        // AKUN KONSTAN
         public static String AKUN_DESIGN_AKUN_PIUTANG = "design_akunpiutang";
         public static String AKUN_DESIGN_AKUN_EARNED = "design_akununearned";
-        
+        public static String AKUN_DESIGN_AKUN_ACCRUED = "design_akunaccrued";
+        public static String AKUN_DESIGN_AKUN_HUTANG_OUTSOURCE = "design_akunhutangoutsource";
+
+
+        // AKUN LIST
+        public static String AKUN_LIST_SEMUA = "akun_semua";
+        public static String AKUN_LIST_PENERIMAAN_INVOICE = "akun_penerimaan_invoice";
+        public static String AKUN_LIST_PURCHASE_PAYMENT = "akun_purchase_payment";
     }
 }

@@ -92,7 +92,7 @@ namespace Kontenu.Design
                 OswControlDefaultProperties.setTanggal(deTanggal);
                 OswControlDefaultProperties.setAngka(txtDiterima);
 
-                cmbAkunPenerimaan = ComboQueryUmum.getAkun(cmbAkunPenerimaan, command, "akun_penerimaan_invoice");
+                cmbAkunPenerimaan = ComboQueryUmum.getAkun(cmbAkunPenerimaan, command, Constants.AKUN_LIST_PENERIMAAN_INVOICE);
 
                 this.setDefaultInput(command);
 

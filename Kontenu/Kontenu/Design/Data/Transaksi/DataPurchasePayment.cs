@@ -18,7 +18,6 @@ namespace Kontenu.Design {
         public String outsource = "";
         public String akunkas = "";
         public String grandtotal = "0";
-        public String status = "";
         public Int64 version = 0;
         public Boolean isExist = false;
         private MySqlCommand command;
@@ -30,7 +29,6 @@ namespace Kontenu.Design {
             kolom += "Outsource:" + outsource + ";";
             kolom += "Akun Kas:" + akunkas + ";";
             kolom += "Grand Total:" + grandtotal + ";";
-            kolom += "Status:" + status + ";";
             kolom += "Version:" + version + ";";
             return kolom;
         }
@@ -43,7 +41,7 @@ namespace Kontenu.Design {
 
         private void getOtherAttribute() {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT tanggal, outsource, akunkas,grandtotal, status, version
+            String query = @"SELECT tanggal, outsource, akunkas,grandtotal, version
                              FROM purchasepayment 
                              WHERE kode = @kode";
 
@@ -57,7 +55,6 @@ namespace Kontenu.Design {
                 this.outsource = reader.GetString("outsource");
                 this.akunkas = reader.GetString("akunkas");
                 this.grandtotal = reader.GetString("grandtotal");
-                this.status = reader.GetString("status");
                 this.version = reader.GetInt64("version");
                 reader.Close();
             } else {
@@ -106,8 +103,8 @@ namespace Kontenu.Design {
             this.kode = this.generateKode();
             this.version += 1;
 
-            String query = @"INSERT INTO purchasepayment(kode, tanggal, outsource, akunkas,grandtotal, status, version,create_user) 
-                             VALUES(@kode,@tanggal,@outsource, @akunkas,@grandtotal,@status, @version,@create_user)";
+            String query = @"INSERT INTO purchasepayment(kode, tanggal, outsource, akunkas,grandtotal, version,create_user) 
+                             VALUES(@kode,@tanggal,@outsource, @akunkas,@grandtotal, @version,@create_user)";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("kode", this.kode);
@@ -115,7 +112,6 @@ namespace Kontenu.Design {
             parameters.Add("outsource", this.outsource);
             parameters.Add("akunkas", this.akunkas);
             parameters.Add("grandtotal", this.grandtotal);
-            parameters.Add("status", this.status);
             parameters.Add("version", "1");
             parameters.Add("create_user", OswConstants.KODEUSER);
 
@@ -189,30 +185,6 @@ namespace Kontenu.Design {
             parameters.Add("outsource", this.outsource);
             parameters.Add("akunkas", this.akunkas);
             parameters.Add("grandtotal", this.grandtotal);
-            parameters.Add("version", this.version.ToString());
-            parameters.Add("update_user", OswConstants.KODEUSER);
-
-            OswDataAccess.executeVoidQuery(query, parameters, command);
-        }
-
-        public void ubahStatus() {
-            // validasi
-            valExist();
-            valVersion();
-
-            this.version += 1;
-
-            // proses ubah
-            String query = @"UPDATE purchasepayment
-                             SET status = @status,
-                                 version = @version,
-                                 update_at = CURRENT_TIMESTAMP(),
-                                 update_user = @update_user
-                             WHERE kode = @kode";
-
-            Dictionary<String, String> parameters = new Dictionary<String, String>();
-            parameters.Add("kode", this.kode);
-            parameters.Add("status", this.status);
             parameters.Add("version", this.version.ToString());
             parameters.Add("update_user", OswConstants.KODEUSER);
 

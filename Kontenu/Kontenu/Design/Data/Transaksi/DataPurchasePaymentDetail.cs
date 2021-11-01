@@ -9,8 +9,10 @@ using OswLib;
 using Kontenu.OswLib;
 using Kontenu.Umum;
 
-namespace Kontenu.Design {
-    class DataPurchasePaymentDetail {
+namespace Kontenu.Design
+{
+    class DataPurchasePaymentDetail
+    {
         private String purchasepayment = "";
         private String no = "";
         public String purchase = "";
@@ -20,7 +22,8 @@ namespace Kontenu.Design {
         public Boolean isExist = false;
         private MySqlCommand command;
 
-        public override string ToString() {
+        public override string ToString()
+        {
             String kolom = "";
             kolom += "PurchasePayment:" + purchasepayment + ";";
             kolom += "Id:" + no + ";";
@@ -31,14 +34,16 @@ namespace Kontenu.Design {
             return kolom;
         }
 
-        public DataPurchasePaymentDetail(MySqlCommand command, String purchasepayment, String no) {
+        public DataPurchasePaymentDetail(MySqlCommand command, String purchasepayment, String no)
+        {
             this.command = command;
             this.purchasepayment = purchasepayment;
             this.no = no;
             this.getOtherAttribute();
         }
 
-        private void getOtherAttribute() {
+        private void getOtherAttribute()
+        {
             String query = @"SELECT purchase, grandtotal,telahdibayar,nominalbayar
                              FROM purchasepaymentdetail 
                              WHERE purchasepayment = @purchasepayment AND no = @no";
@@ -48,20 +53,24 @@ namespace Kontenu.Design {
             parameters.Add("no", this.no);
 
             MySqlDataReader reader = OswDataAccess.executeReaderQuery(query, parameters, command);
-            if(reader.Read()) {
+            if (reader.Read())
+            {
                 this.isExist = true;
                 this.purchase = reader.GetString("purchase");
                 this.grandtotal = reader.GetString("grandtotal");
                 this.telahdibayar = reader.GetString("telahdibayar");
                 this.nominalbayar = reader.GetString("nominalbayar");
                 reader.Close();
-            } else {
+            }
+            else
+            {
                 this.isExist = false;
                 reader.Close();
             }
         }
 
-        public void tambah() {
+        public void tambah()
+        {
             // validasi
             valNotExist();
 
@@ -78,32 +87,26 @@ namespace Kontenu.Design {
             parameters.Add("nominalbayar", this.nominalbayar);
 
             OswDataAccess.executeVoidQuery(query, parameters, command);
+
+            // Cek jumlah pembayaran dan update status purchase
+            DataPurchase dPurchase = new DataPurchase(command, this.purchase);
+            DataVPurchaseTotalBayar dVPurchaseTotalBayar = new DataVPurchaseTotalBayar(command, this.purchase);
+
+            if (decimal.Parse(dPurchase.grandtotal) < decimal.Parse(dVPurchaseTotalBayar.totalbayar))
+            {
+                throw new Exception("Total Bayar Purchase [" + this.purchase + "] lebih banyak Grand Total.");
+
+            }
+
+            if (decimal.Parse(dPurchase.grandtotal) == decimal.Parse(dVPurchaseTotalBayar.totalbayar))
+            {
+                dPurchase.status = Constants.STATUS_PURCHASE_LUNAS;
+                dPurchase.ubahStatus();
+            }
         }
 
-        public void ubah() {
-            // validasi
-            valExist();
-
-            // hapus detail
-            String query = @"UPDATE purchasepaymentdetail 
-                             SET purchase = @purchase,
-                                grandtotal = @grandtotal,
-                                telahdibayar = @telahdibayar,
-                                nominalbayar = @nominalbayar
-                             WHERE purchasepayment = @purchasepayment AND no = @no";
-
-            Dictionary<String, String> parameters = new Dictionary<String, String>();
-            parameters.Add("purchasepayment", this.purchasepayment);
-            parameters.Add("no", this.no);
-            parameters.Add("purchase", this.purchase);
-            parameters.Add("grandtotal", this.grandtotal);
-            parameters.Add("telahdibayar", this.telahdibayar);
-            parameters.Add("nominalbayar", this.nominalbayar);
-
-            OswDataAccess.executeVoidQuery(query, parameters, command);
-        }
-
-        public void hapus() {
+        public void hapus()
+        {
             // validasi
             valExist();
 
@@ -115,16 +118,33 @@ namespace Kontenu.Design {
             parameters.Add("no", this.no);
 
             OswDataAccess.executeVoidQuery(query, parameters, command);
+
+            // update status purchase
+            DataPurchase dPurchase = new DataPurchase(command, this.purchase);
+            DataVPurchaseTotalBayar dVPurchaseTotalBayar = new DataVPurchaseTotalBayar(command, this.purchase);
+
+            if (decimal.Parse(dVPurchaseTotalBayar.totalbayar) < 0)
+            {
+                throw new Exception("Total Bayar Purchase [" + this.purchase + "] < 0.");
+
+            }
+
+            dPurchase.status = Constants.STATUS_PURCHASE_BELUM_LUNAS;
+            dPurchase.ubahStatus();
         }
 
-        private void valNotExist() {
-            if(this.isExist) {
+        private void valNotExist()
+        {
+            if (this.isExist)
+            {
                 throw new Exception("Data [" + this.purchasepayment + " - " + this.no + "] sudah ada");
             }
         }
 
-        private void valExist() {
-            if(!this.isExist) {
+        private void valExist()
+        {
+            if (!this.isExist)
+            {
                 throw new Exception("Data [" + this.purchasepayment + " - " + this.no + "] tidak ada");
             }
         }
