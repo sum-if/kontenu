@@ -47,6 +47,9 @@ namespace Kontenu.OswLib {
         public static String STATUS_PENAGIHAN_BELUM_BAYAR = "Belum Bayar";
         public static String STATUS_PENAGIHAN_SUDAH_BAYAR = "Sudah Bayar";
 
+        public static String STATUS_PURCHASE_BELUM_LUNAS = "Belum Lunas";
+        public static String STATUS_PURCHASE_LUNAS = "Lunas";
+
 
         // TIDAK BOLEH DI ComboQueryUmum.getAkun
         // TIDAK BOLEH DI Tools.isKelompokAkun

@@ -264,24 +264,38 @@
     <Compile Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.designer.cs">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Data\DataPenerimaan.cs" />
-    <Compile Include="Design\Data\DataVInvoiceTotalTerima.cs" />
-    <Compile Include="Design\Data\DataPenagihan.cs" />
-    <Compile Include="Design\Data\DataInvoice.cs" />
-    <Compile Include="Design\Data\DataInvoiceDetail.cs" />
-    <Compile Include="Design\Data\DataProyek.cs" />
-    <Compile Include="Design\Data\DataQuotation.cs" />
-    <Compile Include="Design\Data\DataQuotationDetail.cs" />
-    <Compile Include="Design\Data\DataQuotationDetailJasa.cs" />
-    <Compile Include="Design\Data\DataJenisProyek.cs" />
-    <Compile Include="Design\Data\DataJasaOutsource.cs" />
-    <Compile Include="Design\Data\DataJasa.cs" />
-    <Compile Include="Design\Data\DataPerusahaan.cs" />
-    <Compile Include="Design\Data\DataTujuanProyek.cs" />
-    <Compile Include="Design\Data\DataUnit.cs" />
-    <Compile Include="Design\Data\DataJabatan.cs" />
-    <Compile Include="Design\Data\DataPIC.cs" />
-    <Compile Include="Design\Data\DataOutsource.cs" />
+    <Compile Include="Design\Data\Transaksi\DataPurchase.cs" />
+    <Compile Include="Design\Data\Transaksi\DataPurchaseDetail.cs" />
+    <Compile Include="Design\Data\Transaksi\DataPenerimaan.cs" />
+    <Compile Include="Design\Data\View\DataVInvoiceTotalTerima.cs" />
+    <Compile Include="Design\Data\Transaksi\DataPenagihan.cs" />
+    <Compile Include="Design\Data\Transaksi\DataInvoice.cs" />
+    <Compile Include="Design\Data\Transaksi\DataInvoiceDetail.cs" />
+    <Compile Include="Design\Data\Master\DataProyek.cs" />
+    <Compile Include="Design\Data\Transaksi\DataQuotation.cs" />
+    <Compile Include="Design\Data\Transaksi\DataQuotationDetail.cs" />
+    <Compile Include="Design\Data\Transaksi\DataQuotationDetailJasa.cs" />
+    <Compile Include="Design\Data\Master\DataJenisProyek.cs" />
+    <Compile Include="Design\Data\Master\DataJasaOutsource.cs" />
+    <Compile Include="Design\Data\Master\DataJasa.cs" />
+    <Compile Include="Design\Data\Master\DataPerusahaan.cs" />
+    <Compile Include="Design\Data\Transaksi\DataTujuanProyek.cs" />
+    <Compile Include="Design\Data\Master\DataUnit.cs" />
+    <Compile Include="Design\Data\Master\DataJabatan.cs" />
+    <Compile Include="Design\Data\Master\DataPIC.cs" />
+    <Compile Include="Design\Data\Master\DataOutsource.cs" />
+    <Compile Include="Design\Form\Transaksi\FrmPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmPurchase.designer.cs">
+      <DependentUpon>FrmPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmPurchaseAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmPurchaseAdd.designer.cs">
+      <DependentUpon>FrmPurchaseAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Design\Form\Transaksi\FrmPenerimaan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -683,6 +697,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.resx">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmPurchase.resx">
+      <DependentUpon>FrmPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmPurchaseAdd.resx">
+      <DependentUpon>FrmPurchaseAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Transaksi\FrmPenerimaan.resx">
       <DependentUpon>FrmPenerimaan.cs</DependentUpon>
