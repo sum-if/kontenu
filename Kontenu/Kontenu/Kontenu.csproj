@@ -264,6 +264,9 @@
     <Compile Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.designer.cs">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Design\Data\Transaksi\DataFinalisasiProyek.cs" />
+    <Compile Include="Design\Data\Transaksi\DataFinalisasiProyekPurchase.cs" />
+    <Compile Include="Design\Data\Transaksi\DataFinalisasiProyekPenjualan.cs" />
     <Compile Include="Design\Data\Transaksi\DataPurchasePayment.cs" />
     <Compile Include="Design\Data\Transaksi\DataPurchase.cs" />
     <Compile Include="Design\Data\Transaksi\DataPurchasePaymentDetail.cs" />
@@ -287,6 +290,18 @@
     <Compile Include="Design\Data\Master\DataJabatan.cs" />
     <Compile Include="Design\Data\Master\DataPIC.cs" />
     <Compile Include="Design\Data\Master\DataOutsource.cs" />
+    <Compile Include="Design\Form\Transaksi\FrmFinalisasiProyek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmFinalisasiProyek.designer.cs">
+      <DependentUpon>FrmFinalisasiProyek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmFinalisasiProyekAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Form\Transaksi\FrmFinalisasiProyekAdd.designer.cs">
+      <DependentUpon>FrmFinalisasiProyekAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Design\Form\Transaksi\FrmPurchasePayment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -712,6 +727,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.resx">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmFinalisasiProyek.resx">
+      <DependentUpon>FrmFinalisasiProyek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Form\Transaksi\FrmFinalisasiProyekAdd.resx">
+      <DependentUpon>FrmFinalisasiProyekAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Transaksi\FrmPurchasePayment.resx">
       <DependentUpon>FrmPurchasePayment.cs</DependentUpon>
