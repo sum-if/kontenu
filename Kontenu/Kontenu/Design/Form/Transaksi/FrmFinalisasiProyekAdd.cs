@@ -262,7 +262,7 @@ namespace Kontenu.Design
 
             OswGrid.getGridInput(gridControl2, command, query, parameters, widths, inputType,
                                  new String[] { },
-                                 new String[] { "No Purchase", "Tanggal", "Outsource", "Total Purchase", "Total Bayar" },
+                                 new String[] { "No Purchase", "Tanggal", "Outsource", "Total Purchase", "Total Bayar", "Sisa" },
                                  false);
 
             setFooterPurchase();
@@ -780,6 +780,12 @@ namespace Kontenu.Design
             GridView gridView = sender as GridView;
 
             if (gridView.GetRowCellValue(gridView.FocusedRowHandle, "No Purchase") == null)
+            {
+                gridView.FocusedColumn = gridView.Columns["No Purchase"];
+                return;
+            }
+
+            if (gridView.FocusedColumn == null)
             {
                 gridView.FocusedColumn = gridView.Columns["No Purchase"];
                 return;
