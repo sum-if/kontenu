@@ -19,7 +19,7 @@ namespace Kontenu.Design {
         public String penjualantotalinvoice = "0";
         public String penjualantotalditerima = "0";
         public String penjualansisa = "0";
-        public String purchasetotalinvoice = "0";
+        public String purchasetotalpurchase = "0";
         public String purchasetotalbayar = "0";
         public String purchasesisa = "0";
         public Int64 version = 0;
@@ -34,7 +34,7 @@ namespace Kontenu.Design {
             kolom += "Penjualan Total Invoice:" + penjualantotalinvoice + ";";
             kolom += "Penjualan Total Diterima:" + penjualantotalditerima + ";";
             kolom += "penjualansisa:" + penjualansisa + ";";
-            kolom += "purchasetotalinvoice:" + purchasetotalinvoice + ";";
+            kolom += "purchasetotalpurchase:" + purchasetotalpurchase + ";";
             kolom += "purchasetotalbayar:" + purchasetotalbayar + ";";
             kolom += "purchasesisa:" + purchasesisa + ";";
             kolom += "Version:" + version + ";";
@@ -49,7 +49,7 @@ namespace Kontenu.Design {
 
         private void getOtherAttribute() {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT tanggal, proyek, penjualantotalinvoice,penjualantotalditerima, penjualansisa, purchasetotalinvoice, purchasetotalbayar, purchasesisa, version
+            String query = @"SELECT tanggal, proyek, penjualantotalinvoice,penjualantotalditerima, penjualansisa, purchasetotalpurchase, purchasetotalbayar, purchasesisa, version
                              FROM finalisasiproyek 
                              WHERE kode = @kode";
 
@@ -64,7 +64,7 @@ namespace Kontenu.Design {
                 this.penjualantotalinvoice = reader.GetString("penjualantotalinvoice");
                 this.penjualantotalditerima = reader.GetString("penjualantotalditerima");
                 this.penjualansisa = reader.GetString("penjualansisa");
-                this.purchasetotalinvoice = reader.GetString("purchasetotalinvoice");
+                this.purchasetotalpurchase = reader.GetString("purchasetotalpurchase");
                 this.purchasetotalbayar = reader.GetString("purchasetotalbayar");
                 this.purchasesisa = reader.GetString("purchasesisa");
                 this.version = reader.GetInt64("version");
@@ -115,8 +115,8 @@ namespace Kontenu.Design {
             this.kode = this.generateKode();
             this.version += 1;
 
-            String query = @"INSERT INTO finalisasiproyek(kode, tanggal, proyek, penjualantotalinvoice,penjualantotalditerima, penjualansisa, purchasetotalinvoice, purchasetotalbayar, purchasesisa, version,create_user) 
-                             VALUES(@kode,@tanggal,@proyek, @penjualantotalinvoice,@penjualantotalditerima, @penjualansisa, @purchasetotalinvoice, @purchasetotalbayar, @purchasesisa, @version,@create_user)";
+            String query = @"INSERT INTO finalisasiproyek(kode, tanggal, proyek, penjualantotalinvoice,penjualantotalditerima, penjualansisa, purchasetotalpurchase, purchasetotalbayar, purchasesisa, version,create_user) 
+                             VALUES(@kode,@tanggal,@proyek, @penjualantotalinvoice,@penjualantotalditerima, @penjualansisa, @purchasetotalpurchase, @purchasetotalbayar, @purchasesisa, @version,@create_user)";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("kode", this.kode);
@@ -125,7 +125,7 @@ namespace Kontenu.Design {
             parameters.Add("penjualantotalinvoice", this.penjualantotalinvoice);
             parameters.Add("penjualantotalditerima", this.penjualantotalditerima);
             parameters.Add("penjualansisa", this.penjualansisa);
-            parameters.Add("purchasetotalinvoice", this.purchasetotalinvoice);
+            parameters.Add("purchasetotalpurchase", this.purchasetotalpurchase);
             parameters.Add("purchasetotalbayar", this.purchasetotalbayar);
             parameters.Add("purchasesisa", this.purchasesisa);
             parameters.Add("version", "1");
@@ -152,6 +152,11 @@ namespace Kontenu.Design {
         }
 
         public void hapusDetail() {
+            // Update status proyek jadi aktif kembali
+            DataProyek dProyek = new DataProyek(command, this.proyek);
+            dProyek.status = Constants.STATUS_PROYEK_AKTIF;
+            dProyek.ubahStatus();
+
             // PENJUALAN
             String query = @"SELECT no
                              FROM finalisasiproyekpenjualan
@@ -217,7 +222,7 @@ namespace Kontenu.Design {
                                  penjualantotalinvoice = @penjualantotalinvoice, 
                                  penjualantotalditerima = @penjualantotalditerima,
                                  penjualansisa = @penjualansisa,
-                                 purchasetotalinvoice = @purchasetotalinvoice,
+                                 purchasetotalpurchase = @purchasetotalpurchase,
                                  purchasetotalbayar = @purchasetotalbayar,
                                  purchasesisa = @purchasesisa,
                                  version = @version,
@@ -232,7 +237,7 @@ namespace Kontenu.Design {
             parameters.Add("penjualantotalinvoice", this.penjualantotalinvoice);
             parameters.Add("penjualantotalditerima", this.penjualantotalditerima);
             parameters.Add("penjualansisa", this.penjualansisa);
-            parameters.Add("purchasetotalinvoice", this.purchasetotalinvoice);
+            parameters.Add("purchasetotalpurchase", this.purchasetotalpurchase);
             parameters.Add("purchasetotalbayar", this.purchasetotalbayar);
             parameters.Add("purchasesisa", this.purchasesisa);
             parameters.Add("version", this.version.ToString());
@@ -281,6 +286,13 @@ namespace Kontenu.Design {
             //Tools.cekJurnalBalance(command, this.id, this.kode);
         }
 
+        public void prosesTutupProyek()
+        {
+            DataProyek dProyek = new DataProyek(command, this.proyek);
+            dProyek.status = Constants.STATUS_PROYEK_TIDAK_AKTIF;
+            dProyek.ubahStatus();
+        }
+
         private void valNotExist() {
             if(this.isExist) {
                 throw new Exception("Data [" + this.kode + "] sudah ada");
@@ -313,17 +325,6 @@ namespace Kontenu.Design {
 
             if(dblJumlahDetailBarang <= 0) {
                 throw new Exception("Jumlah Item detail harus lebih dari 0");
-            }
-        }
-
-        private void valDetail() {
-            if(decimal.Parse(this.penjualansisa) != 0) {
-                throw new Exception("Sisa Penjualan tidak sama dengan 0");
-            }
-
-            if (decimal.Parse(this.purchasesisa) != 0)
-            {
-                throw new Exception("Sisa Purchase tidak sama dengan 0");
             }
         }
     }

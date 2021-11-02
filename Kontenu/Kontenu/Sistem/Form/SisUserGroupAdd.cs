@@ -121,7 +121,7 @@ namespace Kontenu.Sistem {
                 }
                 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dOswUserGroup.ToString());
+                // OswLog.setTransaksi(command, dokumen, dOswUserGroup.ToString());
 
                 // reload grid di form header
                 SisUserGroup mstUserGroup = (SisUserGroup)this.Owner;

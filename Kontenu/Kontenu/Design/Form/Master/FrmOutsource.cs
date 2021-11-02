@@ -222,7 +222,7 @@ namespace Kontenu.Master {
                     dOutsource.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dOutsource.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dOutsource.ToString());
 
                     // reload grid
                     this.setGrid(command);

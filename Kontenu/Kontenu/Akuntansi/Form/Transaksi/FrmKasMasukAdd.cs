@@ -297,7 +297,7 @@ namespace Kontenu.Akuntansi {
                     dblTotal = Tools.getRoundMoney(dblTotal);
 
                     // tulis log detail
-                    OswLog.setTransaksi(command, dokumenDetail, dKasMasukDetail.ToString());
+                    // OswLog.setTransaksi(command, dokumenDetail, dKasMasukDetail.ToString());
                 }
 
                 // update total header, di buat object baru karena kalo pake yang lama isExist = False
@@ -310,7 +310,7 @@ namespace Kontenu.Akuntansi {
                 dKasMasuk.prosesJurnal();
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dKasMasuk.ToString());
+                // OswLog.setTransaksi(command, dokumen, dKasMasuk.ToString());
 
                 // reload grid di form header
                 FrmKasMasuk frmKasMasuk = (FrmKasMasuk)this.Owner;

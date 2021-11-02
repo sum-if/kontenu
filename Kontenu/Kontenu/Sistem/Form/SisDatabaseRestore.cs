@@ -94,7 +94,7 @@ namespace Kontenu.Sistem {
                 MySqlBackup mb = new MySqlBackup(command);
                 mb.ImportFromFile(beFile.Text);
 
-                OswLog.setTransaksi(command, dokumen, "Restore Database");
+                // OswLog.setTransaksi(command, dokumen, "Restore Database");
 
                 OswPesan.pesanInfo("Proses Restore Berhasil");
 

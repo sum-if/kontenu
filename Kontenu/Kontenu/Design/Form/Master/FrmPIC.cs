@@ -227,7 +227,7 @@ namespace Kontenu.Master {
                     dPIC.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dPIC.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dPIC.ToString());
 
                     // reload grid
                     this.setGrid(command);

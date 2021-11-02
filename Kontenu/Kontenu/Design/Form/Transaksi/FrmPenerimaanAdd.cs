@@ -305,7 +305,7 @@ namespace Kontenu.Design
                 }
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dPenerimaan.ToString());
+                // OswLog.setTransaksi(command, dokumen, dPenerimaan.ToString());
 
                 // reload grid di form header
                 FrmPenerimaan frmPenerimaan = (FrmPenerimaan)this.Owner;

@@ -221,7 +221,7 @@ namespace Kontenu.Sistem {
                     dOswUser.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, dokumen, dOswUser.ToString());
+                    // OswLog.setTransaksi(command, dokumen, dOswUser.ToString());
 
                     // reload grid
                     this.setGrid(command);

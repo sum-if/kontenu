@@ -14,8 +14,8 @@ namespace Kontenu.Design {
         private String finalisasiproyek = "";
         private String no = "";
         public String purchase = "";
-        public String totalinvoice = "0";
-        public String totalditerima = "0";
+        public String totalpurchase = "0";
+        public String totalbayar = "0";
         public String sisa = "0";
         public Boolean isExist = false;
         private MySqlCommand command;
@@ -25,8 +25,8 @@ namespace Kontenu.Design {
             kolom += "FinalisasiProyek:" + finalisasiproyek + ";";
             kolom += "no:" + no + ";";
             kolom += "purchase:" + purchase + ";";
-            kolom += "totalinvoice:" + totalinvoice + ";";
-            kolom += "totalditerima:" + totalditerima + ";";
+            kolom += "totalpurchase:" + totalpurchase + ";";
+            kolom += "totalbayar:" + totalbayar + ";";
             kolom += "sisa:" + sisa + ";";
             return kolom;
         }
@@ -39,7 +39,7 @@ namespace Kontenu.Design {
         }
 
         private void getOtherAttribute() {
-            String query = @"SELECT purchase, totalinvoice,totalditerima,sisa
+            String query = @"SELECT purchase, totalpurchase,totalbayar,sisa
                              FROM finalisasiproyekpurchase 
                              WHERE finalisasiproyek = @finalisasiproyek AND no = @no";
 
@@ -51,8 +51,8 @@ namespace Kontenu.Design {
             if(reader.Read()) {
                 this.isExist = true;
                 this.purchase = reader.GetString("purchase");
-                this.totalinvoice = reader.GetString("totalinvoice");
-                this.totalditerima = reader.GetString("totalditerima");
+                this.totalpurchase = reader.GetString("totalpurchase");
+                this.totalbayar = reader.GetString("totalbayar");
                 this.sisa = reader.GetString("sisa");
                 reader.Close();
             } else {
@@ -66,15 +66,15 @@ namespace Kontenu.Design {
             valNotExist();
 
             // tambah detail
-            String query = @"INSERT INTO finalisasiproyekpurchase(finalisasiproyek,no,purchase,totalinvoice,totalditerima,sisa) 
-                             VALUES(@finalisasiproyek,@no,@purchase,@totalinvoice,@totalditerima,@sisa)";
+            String query = @"INSERT INTO finalisasiproyekpurchase(finalisasiproyek,no,purchase,totalpurchase,totalbayar,sisa) 
+                             VALUES(@finalisasiproyek,@no,@purchase,@totalpurchase,@totalbayar,@sisa)";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("finalisasiproyek", this.finalisasiproyek);
             parameters.Add("no", this.no);
             parameters.Add("purchase", this.purchase);
-            parameters.Add("totalinvoice", this.totalinvoice);
-            parameters.Add("totalditerima", this.totalditerima);
+            parameters.Add("totalpurchase", this.totalpurchase);
+            parameters.Add("totalbayar", this.totalbayar);
             parameters.Add("sisa", this.sisa);
 
             OswDataAccess.executeVoidQuery(query, parameters, command);

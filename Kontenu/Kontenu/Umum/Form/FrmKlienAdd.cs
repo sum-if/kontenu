@@ -167,7 +167,7 @@ namespace Kontenu.Umum {
                 }
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dKlien.ToString());
+                // OswLog.setTransaksi(command, dokumen, dKlien.ToString());
 
                 // reload grid di form header
                 FrmKlien frmKlien = (FrmKlien)this.Owner;

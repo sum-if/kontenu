@@ -229,7 +229,7 @@ namespace Kontenu.Akuntansi {
                     dKasMasuk.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dKasMasuk.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dKasMasuk.ToString());
 
                     // reload grid
                     this.setGrid(command);

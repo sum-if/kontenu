@@ -164,7 +164,7 @@ namespace Kontenu.Master {
                 }
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dOutsource.ToString());
+                // OswLog.setTransaksi(command, dokumen, dOutsource.ToString());
 
                 // reload grid di form header
                 FrmOutsource frmOutsource = (FrmOutsource)this.Owner;

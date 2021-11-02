@@ -289,7 +289,7 @@ namespace Kontenu.Akuntansi {
                     dblTotalKredit += decimal.Parse(strngKredit);
 
                     // tulis log detail
-                    OswLog.setTransaksi(command, dokumenDetail, dJurnalVoucherDetail.ToString());
+                    // OswLog.setTransaksi(command, dokumenDetail, dJurnalVoucherDetail.ToString());
                 }
 
                 // update total header, di buat object baru karena kalo pake yang lama isExist = False
@@ -304,7 +304,7 @@ namespace Kontenu.Akuntansi {
                 dJurnalVoucher.prosesJurnal();
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dJurnalVoucher.ToString());
+                // OswLog.setTransaksi(command, dokumen, dJurnalVoucher.ToString());
 
                 // reload grid di form header
                 FrmJurnalVoucher frmJurnalVoucher = (FrmJurnalVoucher)this.Owner;

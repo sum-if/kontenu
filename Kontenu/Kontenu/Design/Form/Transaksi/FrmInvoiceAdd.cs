@@ -370,7 +370,7 @@ namespace Kontenu.Design
                     dInvoiceDetail.tambah();
 
                     // tulis log detail
-                    OswLog.setTransaksi(command, dokumenDetail, dInvoiceDetail.ToString());
+                    // OswLog.setTransaksi(command, dokumenDetail, dInvoiceDetail.ToString());
                 }
 
                 // Update header
@@ -383,7 +383,7 @@ namespace Kontenu.Design
                 dInvoice.prosesJurnal();
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dInvoice.ToString());
+                // OswLog.setTransaksi(command, dokumen, dInvoice.ToString());
 
                 // reload grid di form header
                 FrmInvoice frmInvoice = (FrmInvoice)this.Owner;

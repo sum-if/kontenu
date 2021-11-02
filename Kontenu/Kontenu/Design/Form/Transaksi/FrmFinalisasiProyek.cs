@@ -270,7 +270,7 @@ namespace Kontenu.Design
                     dFinalisasiProyek.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dFinalisasiProyek.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dFinalisasiProyek.ToString());
 
                     // reload grid
                     this.setGrid(command);

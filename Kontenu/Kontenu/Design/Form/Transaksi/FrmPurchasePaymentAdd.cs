@@ -377,7 +377,7 @@ namespace Kontenu.Design
                     dPurchasePaymentDetail.tambah();
 
                     // tulis log detail
-                    OswLog.setTransaksi(command, dokumenDetail, dPurchasePaymentDetail.ToString());
+                    // OswLog.setTransaksi(command, dokumenDetail, dPurchasePaymentDetail.ToString());
                 }
 
                 // Update header
@@ -390,7 +390,7 @@ namespace Kontenu.Design
                 dPurchasePayment.prosesJurnal();
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dPurchasePayment.ToString());
+                // OswLog.setTransaksi(command, dokumen, dPurchasePayment.ToString());
 
                 // reload grid di form header
                 FrmPurchasePayment frmPurchasePayment = (FrmPurchasePayment)this.Owner;

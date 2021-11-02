@@ -235,7 +235,7 @@ namespace Kontenu.Akuntansi {
                     }
                     
                     // tulis log
-                    OswLog.setTransaksi(command, dokumen, dOswSetting.ToString());
+                    // OswLog.setTransaksi(command, dokumen, dOswSetting.ToString());
                 }
 
                 // Commit Transaction

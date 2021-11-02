@@ -265,7 +265,7 @@ namespace Kontenu.Design
                 }
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dProyek.ToString());
+                // OswLog.setTransaksi(command, dokumen, dProyek.ToString());
 
                 // reload grid di form header
                 FrmProyek frmProyek = (FrmProyek)this.Owner;

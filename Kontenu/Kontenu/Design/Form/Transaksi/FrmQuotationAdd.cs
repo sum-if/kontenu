@@ -371,7 +371,7 @@ namespace Kontenu.Design
                         dQuotationDetail.tambah();
 
                         // tulis log detail
-                        OswLog.setTransaksi(command, dokumenDetail, dQuotationDetail.ToString());
+                        // OswLog.setTransaksi(command, dokumenDetail, dQuotationDetail.ToString());
                     }
 
                     // Update header
@@ -381,7 +381,7 @@ namespace Kontenu.Design
                 }
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dQuotation.ToString());
+                // OswLog.setTransaksi(command, dokumen, dQuotation.ToString());
 
                 // reload grid di form header
                 FrmQuotation frmQuotation = (FrmQuotation)this.Owner;

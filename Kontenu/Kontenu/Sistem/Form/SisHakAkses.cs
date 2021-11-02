@@ -171,7 +171,7 @@ namespace Kontenu.Sistem {
                     OswDataAccess.executeVoidQuery(query, parameters, command);
                 }
 
-                OswLog.setTransaksi(command, this.dokumen, "Simpan Hak Akses");
+                // OswLog.setTransaksi(command, this.dokumen, "Simpan Hak Akses");
 
                 // Commit Transaction
                 command.Transaction.Commit();

@@ -308,7 +308,7 @@ namespace Kontenu.Design
                     dPurchaseDetail.tambah();
 
                     // tulis log detail
-                    OswLog.setTransaksi(command, dokumenDetail, dPurchaseDetail.ToString());
+                    // OswLog.setTransaksi(command, dokumenDetail, dPurchaseDetail.ToString());
                 }
 
                 // Update header
@@ -321,7 +321,7 @@ namespace Kontenu.Design
                 dPurchase.prosesJurnal();
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dPurchase.ToString());
+                // OswLog.setTransaksi(command, dokumen, dPurchase.ToString());
 
                 // reload grid di form header
                 FrmPurchase frmPurchase = (FrmPurchase)this.Owner;

@@ -275,7 +275,7 @@ namespace Kontenu.Design
                     dPurchase.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dPurchase.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dPurchase.ToString());
 
                     // reload grid
                     this.setGrid(command);

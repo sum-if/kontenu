@@ -212,7 +212,7 @@ namespace Kontenu.Master {
                     dJabatan.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dJabatan.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dJabatan.ToString());
 
                     // reload grid
                     this.setGrid(command);

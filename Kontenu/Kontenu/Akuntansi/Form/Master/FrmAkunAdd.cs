@@ -200,7 +200,7 @@ namespace Kontenu.Akuntansi {
                 }
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dAkun.ToString());
+                // OswLog.setTransaksi(command, dokumen, dAkun.ToString());
 
                 // reload grid di form header
                 FrmAkun frmAkun = (FrmAkun)this.Owner;

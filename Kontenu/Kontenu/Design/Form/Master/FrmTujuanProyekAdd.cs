@@ -142,7 +142,7 @@ namespace Kontenu.Master {
                 }
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dTujuanProyek.ToString());
+                // OswLog.setTransaksi(command, dokumen, dTujuanProyek.ToString());
 
                 // reload grid di form header
                 FrmTujuanProyek frmTujuanProyek = (FrmTujuanProyek)this.Owner;

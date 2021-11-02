@@ -121,7 +121,7 @@ namespace Kontenu.Akuntansi {
                     dKelompokAkunSetting.tambah();
 
                     // tulis log
-                    OswLog.setTransaksi(command, dokumen, dKelompokAkunSetting.ToString());
+                    // OswLog.setTransaksi(command, dokumen, dKelompokAkunSetting.ToString());
                 }
 
                 OswPesan.pesanInfo("Proses Penyimpanan Setting Akun Transaksi berhasil.");

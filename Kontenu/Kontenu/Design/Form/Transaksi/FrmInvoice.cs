@@ -269,7 +269,7 @@ namespace Kontenu.Design
                     dInvoice.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dInvoice.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dInvoice.ToString());
 
                     // reload grid
                     this.setGrid(command);

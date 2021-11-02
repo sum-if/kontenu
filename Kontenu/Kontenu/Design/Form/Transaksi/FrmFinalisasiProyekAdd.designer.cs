@@ -27,15 +27,36 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFinalisasiProyekAdd));
             this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.lblPenjualanSisa = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.lblPenjualanTotalDiterima = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.lblPenjualanTotalInvoice = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.lblPurchaseSisa = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
+            this.lblPurchaseTotalBayar = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
+            this.lblPurchaseTotalPurchase = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnSimpan = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.lblGrandTotal = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.txtKodeOutsource = new DevExpress.XtraEditors.TextEdit();
+            this.txtKodeKlien = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.txtHandphone = new DevExpress.XtraEditors.TextEdit();
@@ -52,7 +73,9 @@
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.txtKota = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnCariProyek = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtProyekKode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
@@ -71,18 +94,23 @@
             this.txtProyekAlamat = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.btnCariOutsource = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCariProyek = new DevExpress.XtraEditors.SimpleButton();
-            this.txtProyekKode = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            this.xtraTabControl1.SuspendLayout();
+            this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKodeOutsource.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKodeKlien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHandphone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).BeginInit();
@@ -93,6 +121,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKota.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProyekKode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekKota.Properties)).BeginInit();
@@ -104,97 +133,302 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekJenis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekTujuan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProyekKode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraScrollableControl1
             // 
-            this.xtraScrollableControl1.Controls.Add(this.gridControl1);
+            this.xtraScrollableControl1.Controls.Add(this.xtraTabControl1);
             this.xtraScrollableControl1.Controls.Add(this.btnSimpan);
-            this.xtraScrollableControl1.Controls.Add(this.panelControl1);
             this.xtraScrollableControl1.Controls.Add(this.groupControl2);
             this.xtraScrollableControl1.Controls.Add(this.groupControl1);
             this.xtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraScrollableControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
             this.xtraScrollableControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.xtraScrollableControl1.Size = new System.Drawing.Size(983, 581);
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(983, 618);
             this.xtraScrollableControl1.TabIndex = 0;
             // 
-            // gridControl1
+            // xtraTabControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 281);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(960, 251);
-            this.gridControl1.TabIndex = 261;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.gridControl1.ProcessGridKey += new System.Windows.Forms.KeyEventHandler(this.gridControl1_ProcessGridKey);
+            this.xtraTabControl1.Location = new System.Drawing.Point(12, 281);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
+            this.xtraTabControl1.Size = new System.Drawing.Size(957, 296);
+            this.xtraTabControl1.TabIndex = 262;
+            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage2});
             // 
-            // gridView1
+            // xtraTabPage1
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridView1_InitNewRow);
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            this.gridView1.FocusedColumnChanged += new DevExpress.XtraGrid.Views.Base.FocusedColumnChangedEventHandler(this.gridView1_FocusedColumnChanged);
-            this.gridView1.RowDeleted += new DevExpress.Data.RowDeletedEventHandler(this.gridView1_RowDeleted);
-            this.gridView1.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridView1_ValidateRow);
-            // 
-            // btnSimpan
-            // 
-            this.btnSimpan.Image = ((System.Drawing.Image)(resources.GetObject("btnSimpan.Image")));
-            this.btnSimpan.Location = new System.Drawing.Point(12, 546);
-            this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(86, 23);
-            this.btnSimpan.TabIndex = 250;
-            this.btnSimpan.Text = "Simpan";
-            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
+            this.xtraTabPage1.Controls.Add(this.panelControl1);
+            this.xtraTabPage1.Controls.Add(this.gridControl1);
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(951, 268);
+            this.xtraTabPage1.Text = "Penjualan";
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.labelControl11);
+            this.panelControl1.Controls.Add(this.labelControl7);
             this.panelControl1.Controls.Add(this.labelControl13);
-            this.panelControl1.Controls.Add(this.lblGrandTotal);
+            this.panelControl1.Controls.Add(this.lblPenjualanSisa);
+            this.panelControl1.Controls.Add(this.labelControl9);
+            this.panelControl1.Controls.Add(this.lblPenjualanTotalDiterima);
+            this.panelControl1.Controls.Add(this.labelControl4);
+            this.panelControl1.Controls.Add(this.lblPenjualanTotalInvoice);
             this.panelControl1.Controls.Add(this.labelControl15);
-            this.panelControl1.Location = new System.Drawing.Point(674, 538);
+            this.panelControl1.Location = new System.Drawing.Point(630, 182);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(298, 30);
-            this.panelControl1.TabIndex = 203;
+            this.panelControl1.Size = new System.Drawing.Size(310, 77);
+            this.panelControl1.TabIndex = 263;
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl11.Location = new System.Drawing.Point(129, 53);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(6, 19);
+            this.labelControl11.TabIndex = 192;
+            this.labelControl11.Text = ":";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl7.Location = new System.Drawing.Point(129, 30);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(6, 19);
+            this.labelControl7.TabIndex = 192;
+            this.labelControl7.Text = ":";
             // 
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.labelControl13.Location = new System.Drawing.Point(108, 5);
+            this.labelControl13.Location = new System.Drawing.Point(129, 5);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(6, 19);
             this.labelControl13.TabIndex = 192;
             this.labelControl13.Text = ":";
             // 
-            // lblGrandTotal
+            // lblPenjualanSisa
             // 
-            this.lblGrandTotal.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.lblGrandTotal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblGrandTotal.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblGrandTotal.Location = new System.Drawing.Point(120, 5);
-            this.lblGrandTotal.Name = "lblGrandTotal";
-            this.lblGrandTotal.Size = new System.Drawing.Size(164, 19);
-            this.lblGrandTotal.TabIndex = 191;
-            this.lblGrandTotal.Text = "Grand Total";
+            this.lblPenjualanSisa.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPenjualanSisa.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblPenjualanSisa.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPenjualanSisa.Location = new System.Drawing.Point(141, 53);
+            this.lblPenjualanSisa.Name = "lblPenjualanSisa";
+            this.lblPenjualanSisa.Size = new System.Drawing.Size(164, 19);
+            this.lblPenjualanSisa.TabIndex = 191;
+            this.lblPenjualanSisa.Text = "Sisa";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl9.Location = new System.Drawing.Point(5, 53);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(33, 19);
+            this.labelControl9.TabIndex = 190;
+            this.labelControl9.Text = "Sisa";
+            // 
+            // lblPenjualanTotalDiterima
+            // 
+            this.lblPenjualanTotalDiterima.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPenjualanTotalDiterima.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblPenjualanTotalDiterima.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPenjualanTotalDiterima.Location = new System.Drawing.Point(141, 30);
+            this.lblPenjualanTotalDiterima.Name = "lblPenjualanTotalDiterima";
+            this.lblPenjualanTotalDiterima.Size = new System.Drawing.Size(164, 19);
+            this.lblPenjualanTotalDiterima.TabIndex = 191;
+            this.lblPenjualanTotalDiterima.Text = "Total Diterima";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl4.Location = new System.Drawing.Point(5, 30);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(119, 19);
+            this.labelControl4.TabIndex = 190;
+            this.labelControl4.Text = "Total Diterima";
+            // 
+            // lblPenjualanTotalInvoice
+            // 
+            this.lblPenjualanTotalInvoice.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPenjualanTotalInvoice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblPenjualanTotalInvoice.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPenjualanTotalInvoice.Location = new System.Drawing.Point(141, 5);
+            this.lblPenjualanTotalInvoice.Name = "lblPenjualanTotalInvoice";
+            this.lblPenjualanTotalInvoice.Size = new System.Drawing.Size(164, 19);
+            this.lblPenjualanTotalInvoice.TabIndex = 191;
+            this.lblPenjualanTotalInvoice.Text = "Total Invoice";
             // 
             // labelControl15
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl15.Location = new System.Drawing.Point(5, 5);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(97, 19);
+            this.labelControl15.Size = new System.Drawing.Size(107, 19);
             this.labelControl15.TabIndex = 190;
-            this.labelControl15.Text = "Grand Total";
+            this.labelControl15.Text = "Total Invoice";
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Location = new System.Drawing.Point(10, 10);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(929, 163);
+            this.gridControl1.TabIndex = 262;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Controls.Add(this.panelControl2);
+            this.xtraTabPage2.Controls.Add(this.gridControl2);
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(951, 268);
+            this.xtraTabPage2.Text = "Purchase";
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.labelControl5);
+            this.panelControl2.Controls.Add(this.labelControl10);
+            this.panelControl2.Controls.Add(this.labelControl12);
+            this.panelControl2.Controls.Add(this.lblPurchaseSisa);
+            this.panelControl2.Controls.Add(this.labelControl23);
+            this.panelControl2.Controls.Add(this.lblPurchaseTotalBayar);
+            this.panelControl2.Controls.Add(this.labelControl27);
+            this.panelControl2.Controls.Add(this.lblPurchaseTotalPurchase);
+            this.panelControl2.Controls.Add(this.labelControl31);
+            this.panelControl2.Location = new System.Drawing.Point(630, 182);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(310, 77);
+            this.panelControl2.TabIndex = 265;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl5.Location = new System.Drawing.Point(129, 53);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(6, 19);
+            this.labelControl5.TabIndex = 192;
+            this.labelControl5.Text = ":";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl10.Location = new System.Drawing.Point(129, 30);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(6, 19);
+            this.labelControl10.TabIndex = 192;
+            this.labelControl10.Text = ":";
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl12.Location = new System.Drawing.Point(129, 5);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(6, 19);
+            this.labelControl12.TabIndex = 192;
+            this.labelControl12.Text = ":";
+            // 
+            // lblPurchaseSisa
+            // 
+            this.lblPurchaseSisa.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPurchaseSisa.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblPurchaseSisa.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPurchaseSisa.Location = new System.Drawing.Point(141, 53);
+            this.lblPurchaseSisa.Name = "lblPurchaseSisa";
+            this.lblPurchaseSisa.Size = new System.Drawing.Size(164, 19);
+            this.lblPurchaseSisa.TabIndex = 191;
+            this.lblPurchaseSisa.Text = "Sisa";
+            // 
+            // labelControl23
+            // 
+            this.labelControl23.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl23.Location = new System.Drawing.Point(5, 53);
+            this.labelControl23.Name = "labelControl23";
+            this.labelControl23.Size = new System.Drawing.Size(33, 19);
+            this.labelControl23.TabIndex = 190;
+            this.labelControl23.Text = "Sisa";
+            // 
+            // lblPurchaseTotalBayar
+            // 
+            this.lblPurchaseTotalBayar.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPurchaseTotalBayar.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblPurchaseTotalBayar.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPurchaseTotalBayar.Location = new System.Drawing.Point(141, 30);
+            this.lblPurchaseTotalBayar.Name = "lblPurchaseTotalBayar";
+            this.lblPurchaseTotalBayar.Size = new System.Drawing.Size(164, 19);
+            this.lblPurchaseTotalBayar.TabIndex = 191;
+            this.lblPurchaseTotalBayar.Text = "Total Bayar";
+            // 
+            // labelControl27
+            // 
+            this.labelControl27.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl27.Location = new System.Drawing.Point(5, 30);
+            this.labelControl27.Name = "labelControl27";
+            this.labelControl27.Size = new System.Drawing.Size(95, 19);
+            this.labelControl27.TabIndex = 190;
+            this.labelControl27.Text = "Total Bayar";
+            // 
+            // lblPurchaseTotalPurchase
+            // 
+            this.lblPurchaseTotalPurchase.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPurchaseTotalPurchase.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblPurchaseTotalPurchase.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPurchaseTotalPurchase.Location = new System.Drawing.Point(141, 5);
+            this.lblPurchaseTotalPurchase.Name = "lblPurchaseTotalPurchase";
+            this.lblPurchaseTotalPurchase.Size = new System.Drawing.Size(164, 19);
+            this.lblPurchaseTotalPurchase.TabIndex = 191;
+            this.lblPurchaseTotalPurchase.Text = "Total Purchase";
+            // 
+            // labelControl31
+            // 
+            this.labelControl31.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl31.Location = new System.Drawing.Point(5, 5);
+            this.labelControl31.Name = "labelControl31";
+            this.labelControl31.Size = new System.Drawing.Size(122, 19);
+            this.labelControl31.TabIndex = 190;
+            this.labelControl31.Text = "Total Purchase";
+            // 
+            // gridControl2
+            // 
+            this.gridControl2.Location = new System.Drawing.Point(10, 10);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(929, 163);
+            this.gridControl2.TabIndex = 264;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridView2_InitNewRow);
+            this.gridView2.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView2_FocusedRowChanged);
+            this.gridView2.FocusedColumnChanged += new DevExpress.XtraGrid.Views.Base.FocusedColumnChangedEventHandler(this.gridView2_FocusedColumnChanged);
+            this.gridView2.RowDeleted += new DevExpress.Data.RowDeletedEventHandler(this.gridView2_RowDeleted);
+            this.gridView2.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridView2_ValidateRow);
+            // 
+            // btnSimpan
+            // 
+            this.btnSimpan.Image = ((System.Drawing.Image)(resources.GetObject("btnSimpan.Image")));
+            this.btnSimpan.Location = new System.Drawing.Point(12, 583);
+            this.btnSimpan.Name = "btnSimpan";
+            this.btnSimpan.Size = new System.Drawing.Size(86, 23);
+            this.btnSimpan.TabIndex = 250;
+            this.btnSimpan.Text = "Simpan";
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.btnCariOutsource);
-            this.groupControl2.Controls.Add(this.txtKodeOutsource);
+            this.groupControl2.Controls.Add(this.txtKodeKlien);
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Controls.Add(this.labelControl17);
             this.groupControl2.Controls.Add(this.txtHandphone);
@@ -214,15 +448,15 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(504, 268);
             this.groupControl2.TabIndex = 202;
-            this.groupControl2.Text = "Data Outsource";
+            this.groupControl2.Text = "Data Klien";
             // 
-            // txtKodeOutsource
+            // txtKodeKlien
             // 
-            this.txtKodeOutsource.Enabled = false;
-            this.txtKodeOutsource.Location = new System.Drawing.Point(136, 29);
-            this.txtKodeOutsource.Name = "txtKodeOutsource";
-            this.txtKodeOutsource.Size = new System.Drawing.Size(292, 20);
-            this.txtKodeOutsource.TabIndex = 246;
+            this.txtKodeKlien.Enabled = false;
+            this.txtKodeKlien.Location = new System.Drawing.Point(136, 29);
+            this.txtKodeKlien.Name = "txtKodeKlien";
+            this.txtKodeKlien.Size = new System.Drawing.Size(353, 20);
+            this.txtKodeKlien.TabIndex = 246;
             // 
             // labelControl2
             // 
@@ -379,6 +613,16 @@
             this.groupControl1.TabIndex = 201;
             this.groupControl1.Text = "Data FinalisasiProyek";
             // 
+            // btnCariProyek
+            // 
+            this.btnCariProyek.Image = global::Kontenu.Properties.Resources.cari_16;
+            this.btnCariProyek.Location = new System.Drawing.Point(373, 79);
+            this.btnCariProyek.Name = "btnCariProyek";
+            this.btnCariProyek.Size = new System.Drawing.Size(55, 23);
+            this.btnCariProyek.TabIndex = 250;
+            this.btnCariProyek.Text = "Cari";
+            this.btnCariProyek.Click += new System.EventHandler(this.btnCariProyek_Click);
+            // 
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(12, 84);
@@ -386,6 +630,14 @@
             this.labelControl6.Size = new System.Drawing.Size(48, 13);
             this.labelControl6.TabIndex = 226;
             this.labelControl6.Text = "Project ID";
+            // 
+            // txtProyekKode
+            // 
+            this.txtProyekKode.Enabled = false;
+            this.txtProyekKode.Location = new System.Drawing.Point(123, 81);
+            this.txtProyekKode.Name = "txtProyekKode";
+            this.txtProyekKode.Size = new System.Drawing.Size(244, 20);
+            this.txtProyekKode.TabIndex = 249;
             // 
             // labelControl30
             // 
@@ -436,7 +688,7 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(12, 31);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(60, 13);
+            this.labelControl8.Size = new System.Drawing.Size(91, 13);
             this.labelControl8.TabIndex = 177;
             this.labelControl8.Text = "No FinalisasiProyek";
             // 
@@ -538,54 +790,35 @@
             this.labelControl14.TabIndex = 208;
             this.labelControl14.Text = "Alamat";
             // 
-            // btnCariOutsource
-            // 
-            this.btnCariOutsource.Image = global::Kontenu.Properties.Resources.cari_16;
-            this.btnCariOutsource.Location = new System.Drawing.Point(434, 26);
-            this.btnCariOutsource.Name = "btnCariOutsource";
-            this.btnCariOutsource.Size = new System.Drawing.Size(55, 23);
-            this.btnCariOutsource.TabIndex = 248;
-            this.btnCariOutsource.Text = "Cari";
-            this.btnCariOutsource.Click += new System.EventHandler(this.btnCariOutsource_Click);
-            // 
-            // btnCariProyek
-            // 
-            this.btnCariProyek.Image = global::Kontenu.Properties.Resources.cari_16;
-            this.btnCariProyek.Location = new System.Drawing.Point(373, 79);
-            this.btnCariProyek.Name = "btnCariProyek";
-            this.btnCariProyek.Size = new System.Drawing.Size(55, 23);
-            this.btnCariProyek.TabIndex = 250;
-            this.btnCariProyek.Text = "Cari";
-            this.btnCariProyek.Click += new System.EventHandler(this.btnCariProyek_Click);
-            // 
-            // txtProyekKode
-            // 
-            this.txtProyekKode.Enabled = false;
-            this.txtProyekKode.Location = new System.Drawing.Point(123, 81);
-            this.txtProyekKode.Name = "txtProyekKode";
-            this.txtProyekKode.Size = new System.Drawing.Size(244, 20);
-            this.txtProyekKode.TabIndex = 249;
-            // 
             // FrmFinalisasiProyekAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 581);
+            this.ClientSize = new System.Drawing.Size(983, 618);
             this.Controls.Add(this.xtraScrollableControl1);
             this.Name = "FrmFinalisasiProyekAdd";
             this.Text = "Form";
             this.Load += new System.EventHandler(this.FrmFinalisasiProyekAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             this.xtraScrollableControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            this.xtraTabControl1.ResumeLayout(false);
+            this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.xtraTabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKodeOutsource.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKodeKlien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHandphone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).EndInit();
@@ -597,6 +830,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProyekKode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekKota.Properties)).EndInit();
@@ -608,7 +842,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekJenis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekTujuan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProyekKode.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -617,10 +850,6 @@
 
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
         private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl1;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.LabelControl lblGrandTotal;
-        private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.TextEdit txtEmail;
@@ -639,8 +868,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         public DevExpress.XtraEditors.TextEdit txtKode;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.TextEdit txtHandphone;
         public DevExpress.XtraEditors.SimpleButton btnSimpan;
@@ -655,14 +882,40 @@
         private DevExpress.XtraEditors.LabelControl labelControl30;
         private DevExpress.XtraEditors.LabelControl labelControl28;
         private DevExpress.XtraEditors.LabelControl labelControl20;
-        public DevExpress.XtraEditors.TextEdit txtKodeOutsource;
+        public DevExpress.XtraEditors.TextEdit txtKodeKlien;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.TextEdit txtProyekPIC;
         private DevExpress.XtraEditors.TextEdit txtProyekJenis;
         private DevExpress.XtraEditors.TextEdit txtProyekTujuan;
-        public DevExpress.XtraEditors.SimpleButton btnCariOutsource;
         public DevExpress.XtraEditors.SimpleButton btnCariProyek;
         public DevExpress.XtraEditors.TextEdit txtProyekKode;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.LabelControl lblPenjualanTotalInvoice;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl lblPenjualanSisa;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl lblPenjualanTotalDiterima;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.LabelControl lblPurchaseSisa;
+        private DevExpress.XtraEditors.LabelControl labelControl23;
+        private DevExpress.XtraEditors.LabelControl lblPurchaseTotalBayar;
+        private DevExpress.XtraEditors.LabelControl labelControl27;
+        private DevExpress.XtraEditors.LabelControl lblPurchaseTotalPurchase;
+        private DevExpress.XtraEditors.LabelControl labelControl31;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }
 }

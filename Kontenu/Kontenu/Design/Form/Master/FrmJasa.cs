@@ -213,7 +213,7 @@ namespace Kontenu.Master {
                     dJasa.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dJasa.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dJasa.ToString());
 
                     // reload grid
                     this.setGrid(command);

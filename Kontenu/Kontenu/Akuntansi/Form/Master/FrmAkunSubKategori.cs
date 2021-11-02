@@ -217,7 +217,7 @@ namespace Kontenu.Akuntansi {
                     dAkunSubKategori.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dAkunSubKategori.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dAkunSubKategori.ToString());
 
                     // reload grid
                     this.setGrid(command);

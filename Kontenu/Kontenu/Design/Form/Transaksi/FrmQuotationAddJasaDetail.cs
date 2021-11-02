@@ -175,7 +175,7 @@ namespace Kontenu.Design
                     dQuotationDetailJasa.tambah();
 
                     // tulis log detail
-                    OswLog.setTransaksi(command, dokumen, dQuotationDetailJasa.ToString());
+                    // OswLog.setTransaksi(command, dokumen, dQuotationDetailJasa.ToString());
                 }
 
                 // Commit Transaction

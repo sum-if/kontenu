@@ -268,7 +268,7 @@ namespace Kontenu.Design
                     dQuotation.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dQuotation.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dQuotation.ToString());
 
                     // reload grid
                     this.setGrid(command);

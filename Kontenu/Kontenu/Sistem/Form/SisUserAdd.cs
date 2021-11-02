@@ -150,7 +150,7 @@ namespace Kontenu.Sistem {
                 }
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dOswUser.ToString());
+                // OswLog.setTransaksi(command, dokumen, dOswUser.ToString());
 
                 // reload grid di form header
                 SisUser mstUser = (SisUser)this.Owner;

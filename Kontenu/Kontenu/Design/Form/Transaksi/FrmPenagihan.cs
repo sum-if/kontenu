@@ -270,7 +270,7 @@ namespace Kontenu.Design
                     dPenagihan.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dPenagihan.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dPenagihan.ToString());
 
                     // reload grid
                     this.setGrid(command);

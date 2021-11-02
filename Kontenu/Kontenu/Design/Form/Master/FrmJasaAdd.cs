@@ -151,7 +151,7 @@ namespace Kontenu.Master {
                 }
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dJasa.ToString());
+                // OswLog.setTransaksi(command, dokumen, dJasa.ToString());
 
                 // reload grid di form header
                 FrmJasa frmJasa = (FrmJasa)this.Owner;

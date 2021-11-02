@@ -97,7 +97,7 @@ namespace Kontenu.Sistem {
                 mb.ExportToFile(beFile.Text);
 
 
-                OswLog.setTransaksi(command, dokumen, "Backup Database");
+                // OswLog.setTransaksi(command, dokumen, "Backup Database");
 
                 OswPesan.pesanInfo("Proses Backup Berhasil");
 

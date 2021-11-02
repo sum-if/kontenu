@@ -222,7 +222,7 @@ namespace Kontenu.Umum {
                     dKlien.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dKlien.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dKlien.ToString());
 
                     // reload grid
                     this.setGrid(command);

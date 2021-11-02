@@ -290,7 +290,7 @@ namespace Kontenu.Design
                 }
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dPenagihan.ToString());
+                // OswLog.setTransaksi(command, dokumen, dPenagihan.ToString());
 
                 // reload grid di form header
                 FrmPenagihan frmPenagihan = (FrmPenagihan)this.Owner;

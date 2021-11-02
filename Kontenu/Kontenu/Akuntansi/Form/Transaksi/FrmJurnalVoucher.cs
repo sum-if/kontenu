@@ -224,7 +224,7 @@ namespace Kontenu.Akuntansi {
                     dJurnalVoucher.hapus();
 
                     // tulis log
-                    OswLog.setTransaksi(command, "Hapus " + dokumen, dJurnalVoucher.ToString());
+                    // OswLog.setTransaksi(command, "Hapus " + dokumen, dJurnalVoucher.ToString());
 
                     // reload grid
                     this.setGrid(command);

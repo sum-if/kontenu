@@ -172,7 +172,7 @@ namespace Kontenu.Master {
                 }
 
                 // tulis log
-                OswLog.setTransaksi(command, dokumen, dPIC.ToString());
+                // OswLog.setTransaksi(command, dokumen, dPIC.ToString());
 
                 // reload grid di form header
                 FrmPIC frmPIC = (FrmPIC)this.Owner;
