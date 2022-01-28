@@ -264,6 +264,19 @@
     <Compile Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.designer.cs">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Build\Data\Master\DataKategoriMaterial.cs" />
+    <Compile Include="Build\Form\Master\FrmKategoriMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmKategoriMaterial.designer.cs">
+      <DependentUpon>FrmKategoriMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmKategoriMaterialAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmKategoriMaterialAdd.designer.cs">
+      <DependentUpon>FrmKategoriMaterialAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Design\Data\Transaksi\DataFinalisasiProyek.cs" />
     <Compile Include="Design\Data\Transaksi\DataFinalisasiProyekPurchase.cs" />
     <Compile Include="Design\Data\Transaksi\DataFinalisasiProyekPenjualan.cs" />
@@ -727,6 +740,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.resx">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmKategoriMaterial.resx">
+      <DependentUpon>FrmKategoriMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmKategoriMaterialAdd.resx">
+      <DependentUpon>FrmKategoriMaterialAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Transaksi\FrmFinalisasiProyek.resx">
       <DependentUpon>FrmFinalisasiProyek.cs</DependentUpon>
@@ -3030,6 +3049,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Akuntansi\Form\Laporan\" />
+    <Folder Include="Build\Data\Transaksi\" />
+    <Folder Include="Build\Data\View\" />
+    <Folder Include="Build\Form\Laporan\" />
+    <Folder Include="Build\Form\Transaksi\" />
+    <Folder Include="Build\Rpt\Transaksi\" />
     <Folder Include="Design\Form\Laporan\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

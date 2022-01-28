@@ -96,5 +96,19 @@ namespace Kontenu.Umum {
 
             return OswCombo.getComboConstant(combo, isi);
         }
+
+        public static LookUpEdit getJenisCosting(LookUpEdit combo, Boolean pilihanSemua = false)
+        {
+            Dictionary<String, String> isi = new Dictionary<String, String>();
+            if (pilihanSemua)
+            {
+                isi.Add("%", "[Semua]");
+            }
+
+            isi.Add("Indirect", "Indirect");
+            isi.Add("Direct", "Direct");
+
+            return OswCombo.getComboConstant(combo, isi);
+        }
     }
 }
