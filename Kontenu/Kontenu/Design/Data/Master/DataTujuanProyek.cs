@@ -87,8 +87,9 @@ namespace Kontenu.Master {
         public void tambah() {
             // validasi
             valNotExist();
+            
 
-            this.kode = this.kode == "" ? this.generateKode() : this.kode;
+            //this.kode = this.kode == "" ? this.generateKode() : this.kode;
             this.version += 1;
 
             String query = @"INSERT INTO tujuanproyek(kode, nama, version, create_user) 

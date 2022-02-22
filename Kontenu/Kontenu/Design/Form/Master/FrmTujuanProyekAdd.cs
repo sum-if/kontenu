@@ -130,7 +130,9 @@ namespace Kontenu.Master {
                 String strngKode = txtKode.Text;
                 String strngNama = txtNama.Text;
 
+                //khusus tujuan proyek kodenya manual input
                 DataTujuanProyek dTujuanProyek = new DataTujuanProyek(command, strngKode);
+                dTujuanProyek.kode = strngKode;
                 dTujuanProyek.nama = strngNama;
 
                 if(this.isAdd) {

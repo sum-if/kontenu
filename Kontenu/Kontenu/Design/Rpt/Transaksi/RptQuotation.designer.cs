@@ -288,7 +288,7 @@
             // 
             // xrTableCell1
             // 
-            this.xrTableCell1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTableCell1.Font = new System.Drawing.Font("GT Pressura Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell1.StylePriority.UseFont = false;
@@ -300,7 +300,7 @@
             // 
             // xrTableCell4
             // 
-            this.xrTableCell4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTableCell4.Font = new System.Drawing.Font("GT Pressura Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell4.StylePriority.UseFont = false;
@@ -312,7 +312,7 @@
             // 
             // xrTableCell5
             // 
-            this.xrTableCell5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTableCell5.Font = new System.Drawing.Font("GT Pressura Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell5.StylePriority.UseFont = false;
@@ -335,7 +335,7 @@
             // 
             this.xrTableCell6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.Tanggal, "Text", "")});
-            this.xrTableCell6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell6.Font = new System.Drawing.Font("GT Pressura Mono", 9F);
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell6.StylePriority.UseFont = false;
@@ -354,7 +354,7 @@
             // 
             this.xrTableCell8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.KlienNama, "Text", "")});
-            this.xrTableCell8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell8.Font = new System.Drawing.Font("GT Pressura Mono", 9F);
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell8.StylePriority.UseFont = false;
@@ -373,7 +373,7 @@
             // 
             this.xrTableCell10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.ProyekNama, "Text", "")});
-            this.xrTableCell10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell10.Font = new System.Drawing.Font("GT Pressura Mono", 9F);
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell10.StylePriority.UseFont = false;
@@ -410,7 +410,7 @@
             // 
             this.xrTableCell29.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.KlienAlamat, "Text", "")});
-            this.xrTableCell29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell29.Font = new System.Drawing.Font("GT Pressura Mono", 9F);
             this.xrTableCell29.Name = "xrTableCell29";
             this.xrTableCell29.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell29.StylePriority.UseFont = false;
@@ -429,7 +429,7 @@
             // 
             this.xrTableCell31.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.ProyekAlamat, "Text", "")});
-            this.xrTableCell31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell31.Font = new System.Drawing.Font("GT Pressura Mono", 9F);
             this.xrTableCell31.Name = "xrTableCell31";
             this.xrTableCell31.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell31.StylePriority.UseFont = false;
@@ -455,7 +455,7 @@
             // 
             // xrTableCell38
             // 
-            this.xrTableCell38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTableCell38.Font = new System.Drawing.Font("GT Pressura Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell38.Name = "xrTableCell38";
             this.xrTableCell38.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell38.StylePriority.UseFont = false;
@@ -469,7 +469,7 @@
             // 
             this.xrTableCell39.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.KlienKota, "Text", "")});
-            this.xrTableCell39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell39.Font = new System.Drawing.Font("GT Pressura Mono", 9F);
             this.xrTableCell39.Name = "xrTableCell39";
             this.xrTableCell39.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell39.StylePriority.UseFont = false;
@@ -488,7 +488,7 @@
             // 
             this.xrTableCell40.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.ProyekKota, "Text", "")});
-            this.xrTableCell40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell40.Font = new System.Drawing.Font("GT Pressura Mono", 9F);
             this.xrTableCell40.Name = "xrTableCell40";
             this.xrTableCell40.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell40.StylePriority.UseFont = false;
@@ -516,7 +516,7 @@
             // 
             this.xrTableCell35.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.ProyekJenis, "Text", "")});
-            this.xrTableCell35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell35.Font = new System.Drawing.Font("GT Pressura Mono", 9F);
             this.xrTableCell35.Name = "xrTableCell35";
             this.xrTableCell35.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell35.StylePriority.UseFont = false;
@@ -535,7 +535,7 @@
             // 
             this.xrTableCell36.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.KlienTelp, "Text", "")});
-            this.xrTableCell36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell36.Font = new System.Drawing.Font("GT Pressura Mono", 9F);
             this.xrTableCell36.Name = "xrTableCell36";
             this.xrTableCell36.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell36.StylePriority.UseFont = false;
@@ -583,7 +583,7 @@
             // 
             this.xrTableCell33.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.KlienEmail, "Text", "")});
-            this.xrTableCell33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell33.Font = new System.Drawing.Font("GT Pressura Mono", 9F);
             this.xrTableCell33.Name = "xrTableCell33";
             this.xrTableCell33.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell33.StylePriority.UseFont = false;
@@ -660,7 +660,7 @@
             // 
             this.xrTableCell18.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.PerusahaanEmail, "Text", "")});
-            this.xrTableCell18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell18.Font = new System.Drawing.Font("AT Surt", 8F);
             this.xrTableCell18.Name = "xrTableCell18";
             this.xrTableCell18.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell18.StylePriority.UseFont = false;
@@ -679,7 +679,7 @@
             // 
             this.xrTableCell21.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.PerusahaanTelepon, "Text", "")});
-            this.xrTableCell21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell21.Font = new System.Drawing.Font("AT Surt", 8F);
             this.xrTableCell21.Name = "xrTableCell21";
             this.xrTableCell21.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell21.StylePriority.UseFont = false;
@@ -700,7 +700,7 @@
             this.xrTableCell2.BorderWidth = 2F;
             this.xrTableCell2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.PerusahaanAlamat, "Text", "")});
-            this.xrTableCell2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell2.Font = new System.Drawing.Font("AT Surt", 8F);
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell2.StylePriority.UseBorders = false;
@@ -721,11 +721,13 @@
             // 
             this.xrTableCell22.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrTableCell22.BorderWidth = 2F;
+            this.xrTableCell22.Font = new System.Drawing.Font("AT Surt", 8F);
             this.xrTableCell22.Name = "xrTableCell22";
             this.xrTableCell22.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell22.RowSpan = 3;
             this.xrTableCell22.StylePriority.UseBorders = false;
             this.xrTableCell22.StylePriority.UseBorderWidth = false;
+            this.xrTableCell22.StylePriority.UseFont = false;
             this.xrTableCell22.StylePriority.UsePadding = false;
             this.xrTableCell22.StylePriority.UseTextAlignment = false;
             this.xrTableCell22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
@@ -751,7 +753,7 @@
             // 
             this.xrTableCell28.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.PerusahaanWebsite, "Text", "")});
-            this.xrTableCell28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell28.Font = new System.Drawing.Font("AT Surt", 8F);
             this.xrTableCell28.Name = "xrTableCell28";
             this.xrTableCell28.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell28.StylePriority.UseFont = false;
@@ -772,7 +774,7 @@
             this.xrTableCell3.BorderWidth = 2F;
             this.xrTableCell3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.PerusahaanKota, "Text", "")});
-            this.xrTableCell3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell3.Font = new System.Drawing.Font("AT Surt", 8F);
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell3.StylePriority.UseBorders = false;
@@ -815,7 +817,7 @@
             // 
             this.xrTableCell24.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableCell24.BorderWidth = 2F;
-            this.xrTableCell24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.xrTableCell24.Font = new System.Drawing.Font("AT Surt", 8F);
             this.xrTableCell24.Name = "xrTableCell24";
             this.xrTableCell24.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell24.StylePriority.UseBorders = false;
@@ -835,10 +837,12 @@
             this.xrTableCell25.BorderWidth = 2F;
             this.xrTableCell25.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding(this.Kode, "Text", "")});
+            this.xrTableCell25.Font = new System.Drawing.Font("AT Surt", 8F);
             this.xrTableCell25.Name = "xrTableCell25";
             this.xrTableCell25.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell25.StylePriority.UseBorders = false;
             this.xrTableCell25.StylePriority.UseBorderWidth = false;
+            this.xrTableCell25.StylePriority.UseFont = false;
             this.xrTableCell25.StylePriority.UsePadding = false;
             this.xrTableCell25.StylePriority.UseTextAlignment = false;
             this.xrTableCell25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
