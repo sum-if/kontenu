@@ -117,6 +117,7 @@ namespace Kontenu.Master {
 
                 // Function Code
                 // validation
+                dxValidationProvider1.SetValidationRule(txtKode, OswValidation.IsNotBlank());
                 dxValidationProvider1.SetValidationRule(txtNama, OswValidation.IsNotBlank());
 
                 if(!dxValidationProvider1.Validate()) {
@@ -131,6 +132,8 @@ namespace Kontenu.Master {
                 String strngNama = txtNama.Text;
 
                 DataUnit dUnit = new DataUnit(command, strngKode);
+                //kode diinput manual
+                dUnit.kode = strngKode;
                 dUnit.nama = strngNama;
 
                 if(this.isAdd) {

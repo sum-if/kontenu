@@ -88,7 +88,7 @@ namespace Kontenu.Master {
             // validasi
             valNotExist();
 
-            this.kode = this.kode == "" ? this.generateKode() : this.kode;
+            //this.kode = this.kode == "" ? this.generateKode() : this.kode;
             this.version += 1;
 
             String query = @"INSERT INTO unit(kode, nama, version, create_user) 
