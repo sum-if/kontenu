@@ -16,6 +16,7 @@ namespace Kontenu.Master {
         public String alamat = "";
         public String kota = ""; 
         public String email = "";
+        public String telf = "";
         public String website = "";
         public byte[] logo;
         public Int64 version = 0;
@@ -29,6 +30,7 @@ namespace Kontenu.Master {
             kolom += "Alamat:" + alamat + ";";
             kolom += "Kota:" + kota + ";";
             kolom += "Email:" + email + ";";
+            kolom += "Telf:" + telf + ";";
             kolom += "Website:" + website + ";";
             kolom += "Version:" + version + ";";
             return kolom;
@@ -42,7 +44,7 @@ namespace Kontenu.Master {
 
         private void getOtherAttribute() {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT logo ,nama, alamat, kota, email, website, version
+            String query = @"SELECT logo ,nama, alamat, kota, email, telf, website, version
                              FROM perusahaan 
                              WHERE kode = @kode";
 
@@ -56,6 +58,7 @@ namespace Kontenu.Master {
                 this.alamat = reader.GetString("alamat");
                 this.kota = reader.GetString("kota");
                 this.email = reader.GetString("email");
+                this.telf = reader.GetString("telf");
                 this.website = reader.GetString("website");
                 this.logo = (reader.GetValue(0) is DBNull) ? null : (byte[])reader.GetValue(0);
                 this.version = reader.GetInt64("version");
@@ -78,8 +81,10 @@ namespace Kontenu.Master {
                              SET nama = @nama,
                                  alamat = @alamat,
                                  kota = @kota,
+                                 telf = @telf,
                                  email = @email,
                                  website = @website,
+                                 telf = @telf,
                                  logo = @logo,
                                  version = @version,
                                  update_at = CURRENT_TIMESTAMP(),
@@ -92,6 +97,7 @@ namespace Kontenu.Master {
             parameters.Add("alamat", this.alamat);
             parameters.Add("kota", this.kota);
             parameters.Add("email", this.email);
+            parameters.Add("telf", this.telf);
             parameters.Add("website", this.website);
             parameters.Add("logo", this.logo);
             parameters.Add("version", this.version.ToString());

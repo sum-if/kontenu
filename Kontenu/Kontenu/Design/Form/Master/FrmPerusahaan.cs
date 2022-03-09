@@ -62,6 +62,7 @@ namespace Kontenu.Master {
                 txtNama.EditValue = dPerusahaan.nama;
                 txtAlamat.Text = dPerusahaan.alamat;
                 txtKota.Text = dPerusahaan.kota;
+                txtTelf.Text = dPerusahaan.telf;
                 txtEmail.Text = dPerusahaan.email;
                 txtWebsite.Text = dPerusahaan.website;
 
@@ -121,7 +122,8 @@ namespace Kontenu.Master {
 
                 String strngNama = txtNama.Text;
                 String strngAlamat = txtAlamat.Text;
-                String strngTelp = txtKota.Text;
+                String strngKota = txtKota.Text;
+                String strngTelf = txtTelf.Text;
                 String strngEmail = txtEmail.Text;
                 String strngWebsite = txtWebsite.Text;
                 byte[] logo = this.arrIcon;
@@ -129,7 +131,8 @@ namespace Kontenu.Master {
                 DataPerusahaan dPerusahaan = new DataPerusahaan(command, this.kode);
                 dPerusahaan.nama = strngNama;
                 dPerusahaan.alamat = strngAlamat;
-                dPerusahaan.kota = strngTelp;
+                dPerusahaan.kota = strngKota;
+                dPerusahaan.telf = strngTelf;
                 dPerusahaan.email = strngEmail;
                 dPerusahaan.website = strngWebsite;
                 dPerusahaan.logo = logo;

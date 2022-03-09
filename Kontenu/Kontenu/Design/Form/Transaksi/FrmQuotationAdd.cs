@@ -482,7 +482,8 @@ namespace Kontenu.Design
                 report.Parameters["PerusahaanAlamat"].Value = dPerusahaan.alamat;
                 report.Parameters["PerusahaanKota"].Value = dPerusahaan.kota;
                 report.Parameters["PerusahaanEmail"].Value = dPerusahaan.email;
-                report.Parameters["PerusahaanTelepon"].Value = "+62 811 318 6880";
+                report.Parameters["PerusahaanLogo"].Value = dPerusahaan.logo;
+                report.Parameters["PerusahaanTelepon"].Value = dPerusahaan.telf;
                 report.Parameters["PerusahaanWebsite"].Value = dPerusahaan.website;
 
                 // TRANSAKSI

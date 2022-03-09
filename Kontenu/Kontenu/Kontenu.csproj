@@ -940,6 +940,9 @@
     <EmbeddedResource Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\finalisasi-proyek-64.png" />
+    <EmbeddedResource Include="Resources\pembayaran-beli-jasa-outsource-64.png" />
+    <EmbeddedResource Include="Resources\pembelian-jasa-outsource-64.png" />
     <EmbeddedResource Include="Resources\logout_page.jpg" />
     <EmbeddedResource Include="Resources\login_page.jpg" />
     <EmbeddedResource Include="icon-128.ico" />
