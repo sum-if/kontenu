@@ -164,6 +164,11 @@ namespace Kontenu.Design
             txtProyekJenis.Text = "";
             txtProyekPIC.Text = "";
 
+            if(cmbProyekID.EditValue == null)
+            {
+                return;
+            }
+
             DataProyek dProyek = new DataProyek(command, cmbProyekID.EditValue.ToString());
 
             if (dProyek.isExist)
@@ -535,7 +540,7 @@ namespace Kontenu.Design
                 String query = @"SELECT * 
                                     FROM (
 	                                    SELECT A.kode AS Kode, A.nama AS Nama, B.kode AS 'Kode Unit', B.nama AS Unit, '' AS Quotation, '0' AS 'Quotation Detail No', '' AS Deskripsi,
-                                               0 AS Qty, 0 AS Rate
+                                               0.0 + '0' AS Qty, 0.0 + '0' AS Rate
 	                                    FROM jasa A
 	                                    INNER JOIN unit B ON A.unit = B.kode
 	                                    UNION
@@ -553,7 +558,7 @@ namespace Kontenu.Design
 
                 InfUtamaDataTable form = new InfUtamaDataTable("Info Jasa", query, parameters,
                                                                 new String[] { "Kode", "Kode Unit", "Quotation Detail No", "Qty", "Rate" },
-                                                                new String[] { },
+                                                                new String[] { "Qty", "Rate" },
                                                                 new DataTable());
                 this.AddOwnedForm(form);
                 form.ShowDialog();
@@ -586,7 +591,7 @@ namespace Kontenu.Design
                     gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Quotation"], strngKodeQuotation);
                     gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Quotation Detail No"], strngQuotationDetailNo);
                     gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Deskripsi"], strngDeskripsi);
-                    gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Qty"], strngQty);
+                    gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Qty"], decimal.Parse(strngQty).ToString());
                     gridView.SetRowCellValue(gridView.FocusedRowHandle, gridView.Columns["Rate"], strngRate);
                     gridView.UpdateCurrentRow();
                 }

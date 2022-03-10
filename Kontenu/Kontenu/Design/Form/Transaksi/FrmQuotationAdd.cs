@@ -327,7 +327,7 @@ namespace Kontenu.Design
                     }
                     else
                     {
-                        dQuotation.hapusDetail();
+                        //dQuotation.hapusDetail();
                         dQuotation.ubah();
                     }
                 }
@@ -361,14 +361,30 @@ namespace Kontenu.Design
                         dblGrandTotal = Tools.getRoundMoney(dblGrandTotal + dblSubtotal);
 
                         // simpan detail
-                        DataQuotationDetail dQuotationDetail = new DataQuotationDetail(command, strngKode, strngNo);
-                        dQuotationDetail.jasa = strngKodeJasa;
-                        dQuotationDetail.deskripsi = strngDeskripsi;
-                        dQuotationDetail.jumlah = dblJumlah.ToString();
-                        dQuotationDetail.unit = strngKodeUnit;
-                        dQuotationDetail.rate = dblRate.ToString();
-                        dQuotationDetail.subtotal = dblSubtotal.ToString();
-                        dQuotationDetail.tambah();
+                        // Jika strngTEMP ada -> sudah pernah disimpan sebelumnya -> jangan di hapus dan di tambah lagi, hanya ubah
+                        if (strngTEMP != "")
+                        {
+                            DataQuotationDetail dQuotationDetail = new DataQuotationDetail(command, strngKode, strngTEMP);
+                            dQuotationDetail.jasa = strngKodeJasa;
+                            dQuotationDetail.deskripsi = strngDeskripsi;
+                            dQuotationDetail.jumlah = dblJumlah.ToString();
+                            dQuotationDetail.unit = strngKodeUnit;
+                            dQuotationDetail.rate = dblRate.ToString();
+                            dQuotationDetail.subtotal = dblSubtotal.ToString();
+                            dQuotationDetail.ubah();
+                        }
+                        else
+                        {
+                            DataQuotationDetail dQuotationDetail = new DataQuotationDetail(command, strngKode, strngNo);
+                            dQuotationDetail.jasa = strngKodeJasa;
+                            dQuotationDetail.deskripsi = strngDeskripsi;
+                            dQuotationDetail.jumlah = dblJumlah.ToString();
+                            dQuotationDetail.unit = strngKodeUnit;
+                            dQuotationDetail.rate = dblRate.ToString();
+                            dQuotationDetail.subtotal = dblSubtotal.ToString();
+                            dQuotationDetail.tambah();
+                        }
+
 
                         // tulis log detail
                         // OswLog.setTransaksi(command, dokumenDetail, dQuotationDetail.ToString());
@@ -503,7 +519,7 @@ namespace Kontenu.Design
                 report.Parameters["KlienKota"].Value = dKlien.kota;
                 report.Parameters["KlienEmail"].Value = dKlien.email;
                 report.Parameters["KlienTelp"].Value = dKlien.telp;
-                
+
 
                 // assign the printing system to the document viewer.
                 LaporanPrintPreview laporan = new LaporanPrintPreview();

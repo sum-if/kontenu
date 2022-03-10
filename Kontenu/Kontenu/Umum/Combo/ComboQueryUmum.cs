@@ -419,7 +419,7 @@ namespace Kontenu.Umum {
         {
             String query = @"(SELECT 100 AS Urutan, kode AS Kode,kode AS Nama 
                             FROM quotation
-                            WHERE klien = @klien)";
+                            WHERE klien = @klien AND status = @status)";
 
             String queryTambahan = "";
 
@@ -439,6 +439,7 @@ namespace Kontenu.Umum {
 
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("klien", klien);
+            parameters.Add("status", Constants.STATUS_QUOTATION_PROSES);
 
             return OswCombo.getComboQuery(combo, command, query, parameters, new String[] { "Kode", "Urutan" }, "Kode", "Nama");
         }
