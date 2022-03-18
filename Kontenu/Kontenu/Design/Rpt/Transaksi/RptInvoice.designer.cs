@@ -269,6 +269,8 @@
             this.xrTableCell84 = new DevExpress.XtraReports.UI.XRTableCell();
             this.ProyekNama = new DevExpress.XtraReports.Parameters.Parameter();
             this.ProyekTanggalBerlaku = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.PerusahaanLogo = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -416,6 +418,7 @@
             // SubBand1
             // 
             this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPictureBox1,
             this.xrTable4,
             this.xrLabel6,
             this.xrLabel5,
@@ -1289,7 +1292,6 @@
             this.xrTableCell17.StylePriority.UseFont = false;
             this.xrTableCell17.StylePriority.UsePadding = false;
             this.xrTableCell17.StylePriority.UseTextAlignment = false;
-            this.xrTableCell17.Text = "KONTENU";
             this.xrTableCell17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             this.xrTableCell17.Weight = 3.1109216545854039D;
             // 
@@ -1297,7 +1299,7 @@
             // 
             this.xrTableCell2.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrTableCell2.BorderWidth = 2F;
-            this.xrTableCell2.Font = new System.Drawing.Font("AT Surt Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTableCell2.Font = new System.Drawing.Font("AT Surt Medium", 16F, System.Drawing.FontStyle.Bold);
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 10, 100F);
             this.xrTableCell2.RowSpan = 3;
@@ -1307,7 +1309,7 @@
             this.xrTableCell2.StylePriority.UsePadding = false;
             this.xrTableCell2.StylePriority.UseTextAlignment = false;
             this.xrTableCell2.Text = "DESIGN STUDIO";
-            this.xrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.xrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell2.Weight = 4.63460908944256D;
             // 
             // xrTableRow8
@@ -1589,7 +1591,7 @@
             // 
             // xrLabel27
             // 
-            this.xrLabel27.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel27.ForeColor = System.Drawing.Color.Green;
             this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(294.4514F, 87.55764F);
             this.xrLabel27.Name = "xrLabel27";
@@ -1602,7 +1604,7 @@
             // 
             // xrLabel28
             // 
-            this.xrLabel28.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel28.ForeColor = System.Drawing.Color.Green;
             this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(255.9418F, 87.55764F);
             this.xrLabel28.Name = "xrLabel28";
@@ -1807,7 +1809,7 @@
             // 
             // xrLabel10
             // 
-            this.xrLabel10.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel10.ForeColor = System.Drawing.Color.Green;
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(295.4514F, 396.7521F);
             this.xrLabel10.Name = "xrLabel10";
@@ -1820,7 +1822,7 @@
             // 
             // xrLabel9
             // 
-            this.xrLabel9.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel9.ForeColor = System.Drawing.Color.Green;
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(256.9418F, 396.7521F);
             this.xrLabel9.Name = "xrLabel9";
@@ -2075,7 +2077,7 @@
             // 
             // xrLabel66
             // 
-            this.xrLabel66.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel66.ForeColor = System.Drawing.Color.Green;
             this.xrLabel66.LocationFloat = new DevExpress.Utils.PointFloat(256.941F, 683.0779F);
             this.xrLabel66.Name = "xrLabel66";
@@ -2088,7 +2090,7 @@
             // 
             // xrLabel67
             // 
-            this.xrLabel67.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel67.ForeColor = System.Drawing.Color.Green;
             this.xrLabel67.LocationFloat = new DevExpress.Utils.PointFloat(295.4507F, 683.0777F);
             this.xrLabel67.Name = "xrLabel67";
@@ -2147,7 +2149,7 @@
             // 
             // xrLabel52
             // 
-            this.xrLabel52.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel52.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel52.ForeColor = System.Drawing.Color.Green;
             this.xrLabel52.LocationFloat = new DevExpress.Utils.PointFloat(295.4507F, 582.0164F);
             this.xrLabel52.Name = "xrLabel52";
@@ -2160,7 +2162,7 @@
             // 
             // xrLabel53
             // 
-            this.xrLabel53.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel53.ForeColor = System.Drawing.Color.Green;
             this.xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(256.941F, 582.0164F);
             this.xrLabel53.Name = "xrLabel53";
@@ -2313,7 +2315,7 @@
             // 
             // xrLabel42
             // 
-            this.xrLabel42.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel42.ForeColor = System.Drawing.Color.Green;
             this.xrLabel42.LocationFloat = new DevExpress.Utils.PointFloat(255.9428F, 286.0418F);
             this.xrLabel42.Name = "xrLabel42";
@@ -2326,7 +2328,7 @@
             // 
             // xrLabel43
             // 
-            this.xrLabel43.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel43.ForeColor = System.Drawing.Color.Green;
             this.xrLabel43.LocationFloat = new DevExpress.Utils.PointFloat(294.4525F, 286.0418F);
             this.xrLabel43.Name = "xrLabel43";
@@ -2479,7 +2481,7 @@
             // 
             // xrLabel60
             // 
-            this.xrLabel60.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel60.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel60.ForeColor = System.Drawing.Color.Green;
             this.xrLabel60.LocationFloat = new DevExpress.Utils.PointFloat(256.9417F, 87.55762F);
             this.xrLabel60.Name = "xrLabel60";
@@ -2492,7 +2494,7 @@
             // 
             // xrLabel61
             // 
-            this.xrLabel61.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel61.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel61.ForeColor = System.Drawing.Color.Green;
             this.xrLabel61.LocationFloat = new DevExpress.Utils.PointFloat(295.4513F, 87.55762F);
             this.xrLabel61.Name = "xrLabel61";
@@ -2824,7 +2826,7 @@
             // 
             // xrLabel111
             // 
-            this.xrLabel111.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel111.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel111.ForeColor = System.Drawing.Color.Green;
             this.xrLabel111.LocationFloat = new DevExpress.Utils.PointFloat(255.9404F, 87.91724F);
             this.xrLabel111.Name = "xrLabel111";
@@ -2837,7 +2839,7 @@
             // 
             // xrLabel112
             // 
-            this.xrLabel112.Font = new System.Drawing.Font("Apercu Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel112.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel112.ForeColor = System.Drawing.Color.Green;
             this.xrLabel112.LocationFloat = new DevExpress.Utils.PointFloat(294.4502F, 87.91695F);
             this.xrLabel112.Name = "xrLabel112";
@@ -2972,6 +2974,19 @@
             this.ProyekTanggalBerlaku.ValueInfo = "10/08/2021";
             this.ProyekTanggalBerlaku.Visible = false;
             // 
+            // xrPictureBox1
+            // 
+            this.xrPictureBox1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PerusahaanLogo, "Image", "")});
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(28.9761F, 0F);
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(265.4738F, 67.08331F);
+            // 
+            // PerusahaanLogo
+            // 
+            this.PerusahaanLogo.Name = "PerusahaanLogo";
+            this.PerusahaanLogo.Visible = false;
+            // 
             // RptInvoice
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -3009,7 +3024,8 @@
             this.KlienJabatan,
             this.Perihal,
             this.ProyekNama,
-            this.ProyekTanggalBerlaku});
+            this.ProyekTanggalBerlaku,
+            this.PerusahaanLogo});
             this.ShowPrintMarginsWarning = false;
             this.SnapToGrid = false;
             this.Version = "15.2";
@@ -3271,5 +3287,7 @@
         private DevExpress.XtraReports.Parameters.Parameter Perihal;
         private DevExpress.XtraReports.Parameters.Parameter ProyekNama;
         private DevExpress.XtraReports.Parameters.Parameter ProyekTanggalBerlaku;
+        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
+        private DevExpress.XtraReports.Parameters.Parameter PerusahaanLogo;
     }
 }

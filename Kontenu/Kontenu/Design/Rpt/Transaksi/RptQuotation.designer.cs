@@ -120,6 +120,7 @@
             this.xrTableRow19 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell27 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.PerusahaanLogo = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrTableCell30 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTable10 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow20 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -163,7 +164,6 @@
             this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell21 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell22 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.PerusahaanLogo = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -1093,6 +1093,11 @@
             this.xrPictureBox2.StylePriority.UseBorderColor = false;
             this.xrPictureBox2.StylePriority.UseBorders = false;
             // 
+            // PerusahaanLogo
+            // 
+            this.PerusahaanLogo.Name = "PerusahaanLogo";
+            this.PerusahaanLogo.Visible = false;
+            // 
             // xrTableCell30
             // 
             this.xrTableCell30.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -1439,7 +1444,7 @@
             this.xrTableCell54.BorderWidth = 2F;
             this.xrTableCell54.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.Deskripsi")});
-            this.xrTableCell54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell54.Font = new System.Drawing.Font("AT Surt", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell54.Name = "xrTableCell54";
             this.xrTableCell54.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell54.StylePriority.UseBorders = false;
@@ -1456,7 +1461,7 @@
             this.xrTableCell55.BorderWidth = 2F;
             this.xrTableCell55.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.Jumlah", "{0:n}")});
-            this.xrTableCell55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell55.Font = new System.Drawing.Font("AT Surt Bold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell55.Name = "xrTableCell55";
             this.xrTableCell55.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell55.StylePriority.UseBorders = false;
@@ -1637,11 +1642,6 @@
             this.xrTableCell22.StylePriority.UseBorders = false;
             this.xrTableCell22.StylePriority.UseBorderWidth = false;
             this.xrTableCell22.Weight = 1.712565111776295D;
-            // 
-            // PerusahaanLogo
-            // 
-            this.PerusahaanLogo.Name = "PerusahaanLogo";
-            this.PerusahaanLogo.Visible = false;
             // 
             // RptQuotation
             // 
