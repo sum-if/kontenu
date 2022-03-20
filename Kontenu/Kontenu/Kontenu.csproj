@@ -264,6 +264,84 @@
     <Compile Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.designer.cs">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Build\Data\Master\DataLainlain.cs" />
+    <Compile Include="Build\Data\Master\DataItem.cs" />
+    <Compile Include="Build\Data\Master\DataJenisPekerjaan.cs" />
+    <Compile Include="Build\Data\Master\DataArea.cs" />
+    <Compile Include="Build\Data\Master\DataMaterial.cs" />
+    <Compile Include="Build\Data\Master\DataKategoriMaterial.cs" />
+    <Compile Include="Build\Form\Master\FrmLainlain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmLainlain.designer.cs">
+      <DependentUpon>FrmLainlain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmLainlainAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmLainlainAdd.designer.cs">
+      <DependentUpon>FrmLainlainAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmItem.designer.cs">
+      <DependentUpon>FrmItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmItemAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmItemAdd.designer.cs">
+      <DependentUpon>FrmItemAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmJenisPekerjaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmJenisPekerjaan.designer.cs">
+      <DependentUpon>FrmJenisPekerjaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmArea.designer.cs">
+      <DependentUpon>FrmArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmJenisPekerjaanAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmJenisPekerjaanAdd.designer.cs">
+      <DependentUpon>FrmJenisPekerjaanAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmAreaAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmAreaAdd.designer.cs">
+      <DependentUpon>FrmAreaAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmMaterial.designer.cs">
+      <DependentUpon>FrmMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmMaterialAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmMaterialAdd.designer.cs">
+      <DependentUpon>FrmMaterialAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmKategoriMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmKategoriMaterial.designer.cs">
+      <DependentUpon>FrmKategoriMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmKategoriMaterialAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Build\Form\Master\FrmKategoriMaterialAdd.designer.cs">
+      <DependentUpon>FrmKategoriMaterialAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Design\Data\Transaksi\DataFinalisasiProyek.cs" />
     <Compile Include="Design\Data\Transaksi\DataFinalisasiProyekPurchase.cs" />
     <Compile Include="Design\Data\Transaksi\DataFinalisasiProyekPenjualan.cs" />
@@ -727,6 +805,42 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Akuntansi\Form\Transaksi\FrmKasMasukAdd.resx">
       <DependentUpon>FrmKasMasukAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmLainlain.resx">
+      <DependentUpon>FrmLainlain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmLainlainAdd.resx">
+      <DependentUpon>FrmLainlainAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmItem.resx">
+      <DependentUpon>FrmItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmItemAdd.resx">
+      <DependentUpon>FrmItemAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmJenisPekerjaan.resx">
+      <DependentUpon>FrmJenisPekerjaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmArea.resx">
+      <DependentUpon>FrmArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmJenisPekerjaanAdd.resx">
+      <DependentUpon>FrmJenisPekerjaanAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmAreaAdd.resx">
+      <DependentUpon>FrmAreaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmMaterial.resx">
+      <DependentUpon>FrmMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmMaterialAdd.resx">
+      <DependentUpon>FrmMaterialAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmKategoriMaterial.resx">
+      <DependentUpon>FrmKategoriMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Build\Form\Master\FrmKategoriMaterialAdd.resx">
+      <DependentUpon>FrmKategoriMaterialAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Form\Transaksi\FrmFinalisasiProyek.resx">
       <DependentUpon>FrmFinalisasiProyek.cs</DependentUpon>
@@ -3033,11 +3147,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Akuntansi\Form\Laporan\" />
-    <Folder Include="Build\Data\Master\" />
     <Folder Include="Build\Data\Transaksi\" />
     <Folder Include="Build\Data\View\" />
     <Folder Include="Build\Form\Laporan\" />
-    <Folder Include="Build\Form\Master\" />
     <Folder Include="Build\Form\Transaksi\" />
     <Folder Include="Build\Rpt\Transaksi\" />
     <Folder Include="Design\Form\Laporan\" />
