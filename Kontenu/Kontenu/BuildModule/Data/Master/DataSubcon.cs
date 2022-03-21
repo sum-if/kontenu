@@ -9,12 +9,20 @@ using OswLib;
 using Kontenu.OswLib;
 
 namespace Kontenu.Master {
-    class DataMaterial {
-        private String id = "MATERIAL";
+    class DataSubcon {
+        private String id = "SUBCON";
         public String kode = "";
+        public String jenis = "";
+        public String nik = "";
         public String nama = "";
-        public String kategorimaterial = "";
-        public String unit = "";
+        public String alamat = "";
+        public String provinsi = "";
+        public String kota = ""; 
+        public String kodepos = "";
+        public String telp = "";
+        public String handphone = ""; 
+        public String email = "";
+        public String jatuhtempo = "0";
         public Int64 version = 0;
         public Boolean isExist = false;
         private MySqlCommand command;
@@ -22,14 +30,22 @@ namespace Kontenu.Master {
         public override string ToString() {
             String kolom = "";
             kolom += "Kode:" + kode + ";";
+            kolom += "Jenis:" + jenis + ";";
+            kolom += "NIK:" + nik + ";";
             kolom += "Nama:" + nama + ";";
-            kolom += "KategoriMaterial:" + kategorimaterial + ";";
-            kolom += "unit:" + unit + ";";
+            kolom += "Alamat:" + alamat + ";";
+            kolom += "Provinsi:" + provinsi + ";";
+            kolom += "Kota:" + kota + ";";
+            kolom += "Kode Pos:" + kodepos + ";";
+            kolom += "Telp:" + telp + ";";
+            kolom += "Email:" + email + ";";
+            kolom += "Handphone:" + handphone + ";";
+            kolom += "jatuhtempo:" + jatuhtempo + ";";
             kolom += "Version:" + version + ";";
             return kolom;
         }
 
-        public DataMaterial(MySqlCommand command, String kode) {
+        public DataSubcon(MySqlCommand command, String kode) {
             this.command = command;
             this.kode = kode;
             this.getOtherAttribute();
@@ -37,8 +53,8 @@ namespace Kontenu.Master {
 
         private void getOtherAttribute() {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT nama, kategorimaterial, unit,version
-                             FROM material 
+            String query = @"SELECT nama, jenis, nik, alamat, provinsi, kota, kodepos, telp, email, handphone, jatuhtempo ,version
+                             FROM subcon 
                              WHERE kode = @kode";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
@@ -47,9 +63,17 @@ namespace Kontenu.Master {
             MySqlDataReader reader = OswDataAccess.executeReaderQuery(query, parameters, command);
             if(reader.Read()) {
                 this.isExist = true;
+                this.jenis = reader.GetString("jenis");
+                this.nik = reader.GetString("nik");
                 this.nama = reader.GetString("nama");
-                this.kategorimaterial = reader.GetString("kategorimaterial");
-                this.unit = reader.GetString("unit");
+                this.alamat = reader.GetString("alamat");
+                this.provinsi = reader.GetString("provinsi");
+                this.kota = reader.GetString("kota");
+                this.kodepos = reader.GetString("kodepos");
+                this.telp = reader.GetString("telp");
+                this.email = reader.GetString("email");
+                this.handphone = reader.GetString("handphone");
+                this.jatuhtempo = reader.GetString("jatuhtempo");
                 this.version = reader.GetInt64("version");
                 reader.Close();
             } else {
@@ -82,8 +106,8 @@ namespace Kontenu.Master {
                 }
             }
 
-            DataMaterial dMaterial = new DataMaterial(command, kode);
-            if(dMaterial.isExist) {
+            DataSubcon dSubcon = new DataSubcon(command, kode);
+            if(dSubcon.isExist) {
                 kode = generateKode();
             }
 
@@ -97,14 +121,24 @@ namespace Kontenu.Master {
             this.kode = this.kode == "" ? this.generateKode() : this.kode;
             this.version += 1;
 
-            String query = @"INSERT INTO material(kode, nama, kategorimaterial, unit, version, create_user) 
-                                 VALUES(@kode, @nama, @kategorimaterial, @unit, @version, @create_user)";
+            String query = @"INSERT INTO subcon(kode, jenis, nik, nama, alamat, provinsi, kota, kodepos, telp, email, 
+                                                handphone, jatuhtempo, version, create_user) 
+                                 VALUES(@kode, @jenis, @nik, @nama, @alamat, @provinsi, @kota, @kodepos, @telp, @email, 
+                                        @handphone, @jatuhtempo, @version, @create_user)";
 
             Dictionary<String, object> parameters = new Dictionary<String, object>();
             parameters.Add("kode", this.kode);
+            parameters.Add("jenis", this.jenis);
+            parameters.Add("nik", this.nik);
             parameters.Add("nama", this.nama);
-            parameters.Add("kategorimaterial", this.kategorimaterial);
-            parameters.Add("unit", this.unit);
+            parameters.Add("alamat", this.alamat);
+            parameters.Add("provinsi", this.provinsi);
+            parameters.Add("kota", this.kota);
+            parameters.Add("kodepos", this.kodepos);
+            parameters.Add("telp", this.telp);
+            parameters.Add("email", this.email);
+            parameters.Add("handphone", this.handphone);
+            parameters.Add("jatuhtempo", this.jatuhtempo);
             parameters.Add("version", "1");
             parameters.Add("create_user", OswConstants.KODEUSER);
 
@@ -116,7 +150,7 @@ namespace Kontenu.Master {
             valExist();
             valVersion();
 
-            String query = @"DELETE FROM material
+            String query = @"DELETE FROM subcon
                              WHERE kode = @kode";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
@@ -133,10 +167,18 @@ namespace Kontenu.Master {
             this.version += 1;
 
             // proses ubah
-            String query = @"UPDATE material
-                             SET nama = @nama,
-                                 kategorimaterial = @kategorimaterial,
-                                 unit = @unit,
+            String query = @"UPDATE subcon
+                             SET jenis = @jenis,
+                                 nik = @nik,
+                                 nama = @nama,
+                                 alamat = @alamat,
+                                 provinsi = @provinsi,
+                                 kota = @kota,
+                                 kodepos = @kodepos,
+                                 telp = @telp,
+                                 email = @email,
+                                 handphone = @handphone,
+                                 jatuhtempo = @jatuhtempo,
                                  version = @version,
                                  update_at = CURRENT_TIMESTAMP(),
                                  update_user = @update_user
@@ -144,9 +186,17 @@ namespace Kontenu.Master {
 
             Dictionary<String, object> parameters = new Dictionary<String, object>();
             parameters.Add("kode", this.kode);
+            parameters.Add("jenis", this.jenis);
+            parameters.Add("nik", this.nik);
             parameters.Add("nama", this.nama);
-            parameters.Add("kategorimaterial", this.kategorimaterial);
-            parameters.Add("unit", this.unit);
+            parameters.Add("alamat", this.alamat);
+            parameters.Add("provinsi", this.provinsi);
+            parameters.Add("kota", this.kota);
+            parameters.Add("kodepos", this.kodepos);
+            parameters.Add("telp", this.telp);
+            parameters.Add("email", this.email);
+            parameters.Add("handphone", this.handphone);
+            parameters.Add("jatuhtempo", this.jatuhtempo);
             parameters.Add("version", this.version.ToString());
             parameters.Add("update_user", OswConstants.KODEUSER);
 
@@ -167,8 +217,8 @@ namespace Kontenu.Master {
         }
 
         private void valVersion() {
-            DataMaterial dMaterial = new DataMaterial(command, this.kode);
-            if(this.version != dMaterial.version) {
+            DataSubcon dSubcon = new DataSubcon(command, this.kode);
+            if(this.version != dSubcon.version) {
                 throw new Exception("Data yang dimiliki bukan yang terbaru, silahkan tutup dan lakukan proses ulang");
             }
         }
