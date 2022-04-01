@@ -15,6 +15,7 @@ namespace Kontenu.Design {
         public String kode = "";
         public String tanggaldeal = "";
         public String klien = "";
+        public String kategori = "";
         public String nama = "";
         public String alamat = "";
         public String provinsi = "";
@@ -33,6 +34,7 @@ namespace Kontenu.Design {
             kolom += "Kode:" + kode + ";";
             kolom += "Tanggal:" + tanggaldeal + ";";
             kolom += "Klien:" + klien + ";";
+            kolom += "Kategori:" + kategori + ";";
             kolom += "Proyek Nama:" + nama + ";";
             kolom += "Proyek Alamat:" + alamat + ";";
             kolom += "Proyek Provinsi:" + provinsi + ";";
@@ -54,7 +56,7 @@ namespace Kontenu.Design {
 
         private void getOtherAttribute() {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT tanggaldeal, klien,nama, alamat,provinsi,kota,kodepos,tujuanproyek,jenisproyek,pic,status, version
+            String query = @"SELECT tanggaldeal, klien, kategori, nama, alamat,provinsi,kota,kodepos,tujuanproyek,jenisproyek,pic,status, version
                              FROM proyek 
                              WHERE kode = @kode";
 
@@ -66,6 +68,7 @@ namespace Kontenu.Design {
                 this.isExist = true;
                 this.tanggaldeal = reader.GetString("tanggaldeal");
                 this.klien = reader.GetString("klien");
+                this.kategori = reader.GetString("kategori");
                 this.nama = reader.GetString("nama");
                 this.alamat = reader.GetString("alamat");
                 this.provinsi = reader.GetString("provinsi");
@@ -89,9 +92,10 @@ namespace Kontenu.Design {
             String strngTahunDuaDigit = OswDate.getTahunDuaDigit(strngTanggalSekarang);
             String strngBulan = OswDate.getBulan(strngTanggalSekarang);
             String strngTanggal = OswDate.getTanggal(strngTanggalSekarang);
-
+            String strngKategori = this.kategori;
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
+            parameters.Add("Kategori", strngKategori);
             parameters.Add("Tahun", strngTahun);
             parameters.Add("TahunDuaDigit", strngTahunDuaDigit);
             parameters.Add("Bulan", strngBulan);
@@ -123,13 +127,14 @@ namespace Kontenu.Design {
             this.kode = this.generateKode();
             this.version += 1;
 
-            String query = @"INSERT INTO proyek(kode, tanggaldeal, klien,nama, alamat,provinsi,kota,kodepos,tujuanproyek,jenisproyek,pic, status, version,create_user) 
-                             VALUES(@kode,@tanggaldeal,@klien,@nama,@alamat,@provinsi,@kota,@kodepos,@tujuanproyek,@jenisproyek,@pic, @status, @version,@create_user)";
+            String query = @"INSERT INTO proyek(kode, tanggaldeal, klien,kategori, nama, alamat,provinsi,kota,kodepos,tujuanproyek,jenisproyek,pic, status, version,create_user) 
+                             VALUES(@kode,@tanggaldeal,@klien,@kategori,@nama,@alamat,@provinsi,@kota,@kodepos,@tujuanproyek,@jenisproyek,@pic, @status, @version,@create_user)";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("kode", this.kode);
             parameters.Add("tanggaldeal", this.tanggaldeal);
             parameters.Add("klien", this.klien);
+            parameters.Add("kategori", this.kategori);
             parameters.Add("nama", this.nama);
             parameters.Add("alamat", this.alamat);
             parameters.Add("provinsi", this.provinsi);
@@ -170,6 +175,7 @@ namespace Kontenu.Design {
             String query = @"UPDATE proyek
                              SET tanggaldeal = @tanggaldeal,
                                  klien = @klien,
+                                 kategori = @kategori,
                                  nama = @nama,
                                  alamat = @alamat, 
                                  provinsi = @provinsi,
@@ -187,6 +193,7 @@ namespace Kontenu.Design {
             parameters.Add("kode", this.kode);
             parameters.Add("tanggaldeal", this.tanggaldeal);
             parameters.Add("klien", this.klien);
+            parameters.Add("kategori", this.kategori);
             parameters.Add("nama", this.nama);
             parameters.Add("alamat", this.alamat);
             parameters.Add("provinsi", this.provinsi);

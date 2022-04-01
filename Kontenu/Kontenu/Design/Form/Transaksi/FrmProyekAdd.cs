@@ -129,6 +129,9 @@ namespace Kontenu.Design
                 deTanggal.DateTime = OswDate.getDateTimeFromStringTanggal(dProyek.tanggaldeal);
                 chkTutup.Checked = dProyek.status == Constants.STATUS_PROYEK_TIDAK_AKTIF;
 
+                rdoJenisInvoiceInterior.Checked = (dProyek.kategori == Constants.JENIS_INVOICE_INTERIOR);
+                rdoJenisInvoiceProduct.Checked = (dProyek.kategori == Constants.JENIS_INVOICE_PRODUCT);
+
                 // KLIEN
                 DataKlien dKlien = new DataKlien(command, dProyek.klien);
                 txtKodeKlien.Text = dKlien.kode;
@@ -167,6 +170,7 @@ namespace Kontenu.Design
             {
                 OswControlDefaultProperties.resetAllInput(this);
                 deTanggal.EditValue = "";
+                rdoJenisInvoiceInterior.Checked = true;
 
                 chkTutup.Enabled = false;
                 chkTutup.Checked = false;
@@ -216,7 +220,7 @@ namespace Kontenu.Design
                 String strngKode = txtKode.Text;
                 String strngTanggal = deTanggal.Text;
                 String strngTutup = chkTutup.Checked ? Constants.STATUS_YA : Constants.STATUS_TIDAK;
-
+                String strngKategori = rdoJenisInvoiceInterior.Checked ? Constants.JENIS_INVOICE_INTERIOR : Constants.JENIS_INVOICE_PRODUCT;
                 String strngKlien = txtKodeKlien.Text;
 
                 String strngProyekNama = txtProyekNama.Text;
@@ -232,7 +236,7 @@ namespace Kontenu.Design
                 dProyek.tanggaldeal = strngTanggal;
 
                 dProyek.klien = strngKlien;
-
+                dProyek.kategori = strngKategori;
                 dProyek.nama = strngProyekNama;
                 dProyek.alamat = strngProyekAlamat;
                 dProyek.kota = strngProyekKota;

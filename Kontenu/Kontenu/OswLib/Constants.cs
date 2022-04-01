@@ -41,8 +41,8 @@ namespace Kontenu.OswLib {
         public static String STATUS_PROYEK_AKTIF = "Aktif";
         public static String STATUS_PROYEK_TIDAK_AKTIF = "Tidak Aktif";
 
-        public static String JENIS_INVOICE_INTERIOR = "Interior";
-        public static String JENIS_INVOICE_PRODUCT = "Product";
+        public static String JENIS_INVOICE_INTERIOR = "INT";
+        public static String JENIS_INVOICE_PRODUCT = "PRD";
 
         public static String JENIS_SUBCON_INTERNAL = "Internal";
         public static String JENIS_SUBCON_EXTERNAL = "External";
