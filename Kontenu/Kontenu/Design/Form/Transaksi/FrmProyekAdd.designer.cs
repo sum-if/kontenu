@@ -104,19 +104,17 @@
             this.xtraScrollableControl1.Controls.Add(this.groupControl1);
             this.xtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraScrollableControl1.Location = new System.Drawing.Point(0, 0);
-            this.xtraScrollableControl1.Margin = new System.Windows.Forms.Padding(4);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
-            this.xtraScrollableControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.xtraScrollableControl1.Size = new System.Drawing.Size(1493, 489);
+            this.xtraScrollableControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(979, 343);
             this.xtraScrollableControl1.TabIndex = 0;
             // 
             // btnSimpan
             // 
             this.btnSimpan.Image = ((System.Drawing.Image)(resources.GetObject("btnSimpan.Image")));
-            this.btnSimpan.Location = new System.Drawing.Point(18, 442);
-            this.btnSimpan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSimpan.Location = new System.Drawing.Point(12, 302);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(129, 34);
+            this.btnSimpan.Size = new System.Drawing.Size(86, 23);
             this.btnSimpan.TabIndex = 250;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
@@ -140,48 +138,43 @@
             this.groupControl2.Controls.Add(this.txtAlamat);
             this.groupControl2.Controls.Add(this.labelControl26);
             this.groupControl2.Controls.Add(this.txtKota);
-            this.groupControl2.Location = new System.Drawing.Point(698, 18);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupControl2.Location = new System.Drawing.Point(465, 12);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(756, 416);
+            this.groupControl2.Size = new System.Drawing.Size(504, 285);
             this.groupControl2.TabIndex = 202;
             this.groupControl2.Text = "Data Klien";
             // 
             // txtKodeKlien
             // 
             this.txtKodeKlien.Enabled = false;
-            this.txtKodeKlien.Location = new System.Drawing.Point(202, 51);
-            this.txtKodeKlien.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKodeKlien.Location = new System.Drawing.Point(135, 35);
             this.txtKodeKlien.Name = "txtKodeKlien";
-            this.txtKodeKlien.Size = new System.Drawing.Size(438, 26);
+            this.txtKodeKlien.Size = new System.Drawing.Size(292, 20);
             this.txtKodeKlien.TabIndex = 246;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(27, 56);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(18, 38);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(35, 19);
+            this.labelControl2.Size = new System.Drawing.Size(24, 13);
             this.labelControl2.TabIndex = 247;
             this.labelControl2.Text = "Kode";
             // 
             // btnCariKlien
             // 
             this.btnCariKlien.Image = global::Kontenu.Properties.Resources.cari_16;
-            this.btnCariKlien.Location = new System.Drawing.Point(650, 48);
-            this.btnCariKlien.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCariKlien.Location = new System.Drawing.Point(433, 33);
             this.btnCariKlien.Name = "btnCariKlien";
-            this.btnCariKlien.Size = new System.Drawing.Size(82, 34);
+            this.btnCariKlien.Size = new System.Drawing.Size(55, 23);
             this.btnCariKlien.TabIndex = 245;
             this.btnCariKlien.Text = "Cari";
             this.btnCariKlien.Click += new System.EventHandler(this.btnCariKlien_Click);
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(28, 247);
-            this.labelControl17.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl17.Location = new System.Drawing.Point(19, 169);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(81, 19);
+            this.labelControl17.Size = new System.Drawing.Size(55, 13);
             this.labelControl17.TabIndex = 244;
             this.labelControl17.Text = "Handphone";
             // 
@@ -189,18 +182,16 @@
             // 
             this.txtHandphone.EditValue = "";
             this.txtHandphone.Enabled = false;
-            this.txtHandphone.Location = new System.Drawing.Point(204, 243);
-            this.txtHandphone.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHandphone.Location = new System.Drawing.Point(136, 166);
             this.txtHandphone.Name = "txtHandphone";
-            this.txtHandphone.Size = new System.Drawing.Size(530, 26);
+            this.txtHandphone.Size = new System.Drawing.Size(353, 20);
             this.txtHandphone.TabIndex = 243;
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(28, 285);
-            this.labelControl18.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl18.Location = new System.Drawing.Point(19, 195);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(39, 19);
+            this.labelControl18.Size = new System.Drawing.Size(24, 13);
             this.labelControl18.TabIndex = 215;
             this.labelControl18.Text = "Email";
             // 
@@ -208,27 +199,24 @@
             // 
             this.txtEmail.EditValue = "";
             this.txtEmail.Enabled = false;
-            this.txtEmail.Location = new System.Drawing.Point(204, 281);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Location = new System.Drawing.Point(136, 192);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(530, 26);
+            this.txtEmail.Size = new System.Drawing.Size(353, 20);
             this.txtEmail.TabIndex = 200;
             // 
             // txtNama
             // 
             this.txtNama.Enabled = false;
-            this.txtNama.Location = new System.Drawing.Point(202, 89);
-            this.txtNama.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNama.Location = new System.Drawing.Point(135, 61);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(530, 26);
+            this.txtNama.Size = new System.Drawing.Size(353, 20);
             this.txtNama.TabIndex = 110;
             // 
             // labelControl21
             // 
-            this.labelControl21.Location = new System.Drawing.Point(27, 208);
-            this.labelControl21.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl21.Location = new System.Drawing.Point(18, 142);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(57, 19);
+            this.labelControl21.Size = new System.Drawing.Size(38, 13);
             this.labelControl21.TabIndex = 206;
             this.labelControl21.Text = "Telepon";
             // 
@@ -236,18 +224,16 @@
             // 
             this.txtTelepon.EditValue = "";
             this.txtTelepon.Enabled = false;
-            this.txtTelepon.Location = new System.Drawing.Point(202, 203);
-            this.txtTelepon.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelepon.Location = new System.Drawing.Point(135, 139);
             this.txtTelepon.Name = "txtTelepon";
-            this.txtTelepon.Size = new System.Drawing.Size(530, 26);
+            this.txtTelepon.Size = new System.Drawing.Size(353, 20);
             this.txtTelepon.TabIndex = 170;
             // 
             // labelControl22
             // 
-            this.labelControl22.Location = new System.Drawing.Point(27, 94);
-            this.labelControl22.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl22.Location = new System.Drawing.Point(18, 64);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(41, 19);
+            this.labelControl22.Size = new System.Drawing.Size(27, 13);
             this.labelControl22.TabIndex = 203;
             this.labelControl22.Text = "Nama";
             // 
@@ -255,18 +241,16 @@
             // 
             this.txtProvinsi.EditValue = "";
             this.txtProvinsi.Enabled = false;
-            this.txtProvinsi.Location = new System.Drawing.Point(202, 165);
-            this.txtProvinsi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProvinsi.Location = new System.Drawing.Point(135, 113);
             this.txtProvinsi.Name = "txtProvinsi";
-            this.txtProvinsi.Size = new System.Drawing.Size(170, 26);
+            this.txtProvinsi.Size = new System.Drawing.Size(113, 20);
             this.txtProvinsi.TabIndex = 140;
             // 
             // labelControl25
             // 
-            this.labelControl25.Location = new System.Drawing.Point(27, 170);
-            this.labelControl25.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl25.Location = new System.Drawing.Point(18, 116);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(140, 19);
+            this.labelControl25.Size = new System.Drawing.Size(96, 13);
             this.labelControl25.TabIndex = 205;
             this.labelControl25.Text = "Kota/Prov/Kode Pos";
             // 
@@ -274,27 +258,24 @@
             // 
             this.txtKodePos.EditValue = "";
             this.txtKodePos.Enabled = false;
-            this.txtKodePos.Location = new System.Drawing.Point(626, 165);
-            this.txtKodePos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKodePos.Location = new System.Drawing.Point(417, 113);
             this.txtKodePos.Name = "txtKodePos";
-            this.txtKodePos.Size = new System.Drawing.Size(108, 26);
+            this.txtKodePos.Size = new System.Drawing.Size(72, 20);
             this.txtKodePos.TabIndex = 160;
             // 
             // txtAlamat
             // 
             this.txtAlamat.Enabled = false;
-            this.txtAlamat.Location = new System.Drawing.Point(202, 127);
-            this.txtAlamat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAlamat.Location = new System.Drawing.Point(135, 87);
             this.txtAlamat.Name = "txtAlamat";
-            this.txtAlamat.Size = new System.Drawing.Size(531, 26);
+            this.txtAlamat.Size = new System.Drawing.Size(354, 20);
             this.txtAlamat.TabIndex = 120;
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(27, 132);
-            this.labelControl26.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl26.Location = new System.Drawing.Point(18, 90);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(50, 19);
+            this.labelControl26.Size = new System.Drawing.Size(33, 13);
             this.labelControl26.TabIndex = 204;
             this.labelControl26.Text = "Alamat";
             // 
@@ -302,10 +283,9 @@
             // 
             this.txtKota.EditValue = "";
             this.txtKota.Enabled = false;
-            this.txtKota.Location = new System.Drawing.Point(381, 165);
-            this.txtKota.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKota.Location = new System.Drawing.Point(254, 113);
             this.txtKota.Name = "txtKota";
-            this.txtKota.Size = new System.Drawing.Size(236, 26);
+            this.txtKota.Size = new System.Drawing.Size(157, 20);
             this.txtKota.TabIndex = 150;
             // 
             // groupControl1
@@ -332,20 +312,18 @@
             this.groupControl1.Controls.Add(this.txtProyekKodePos);
             this.groupControl1.Controls.Add(this.txtProyekAlamat);
             this.groupControl1.Controls.Add(this.txtProyekProvinsi);
-            this.groupControl1.Location = new System.Drawing.Point(18, 18);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupControl1.Location = new System.Drawing.Point(12, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(670, 416);
+            this.groupControl1.Size = new System.Drawing.Size(447, 285);
             this.groupControl1.TabIndex = 201;
             this.groupControl1.Text = "Data Proyek";
             // 
             // rdoJenisInvoiceProduct
             // 
             this.rdoJenisInvoiceProduct.AutoSize = true;
-            this.rdoJenisInvoiceProduct.Location = new System.Drawing.Point(300, 48);
-            this.rdoJenisInvoiceProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.rdoJenisInvoiceProduct.Location = new System.Drawing.Point(200, 33);
             this.rdoJenisInvoiceProduct.Name = "rdoJenisInvoiceProduct";
-            this.rdoJenisInvoiceProduct.Size = new System.Drawing.Size(88, 23);
+            this.rdoJenisInvoiceProduct.Size = new System.Drawing.Size(62, 17);
             this.rdoJenisInvoiceProduct.TabIndex = 226;
             this.rdoJenisInvoiceProduct.TabStop = true;
             this.rdoJenisInvoiceProduct.Text = "Product";
@@ -353,20 +331,18 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(20, 51);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Location = new System.Drawing.Point(13, 35);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(91, 19);
+            this.labelControl4.Size = new System.Drawing.Size(40, 13);
             this.labelControl4.TabIndex = 225;
-            this.labelControl4.Text = "Jenis Invoice";
+            this.labelControl4.Text = "Kategori";
             // 
             // rdoJenisInvoiceInterior
             // 
             this.rdoJenisInvoiceInterior.AutoSize = true;
-            this.rdoJenisInvoiceInterior.Location = new System.Drawing.Point(186, 48);
-            this.rdoJenisInvoiceInterior.Margin = new System.Windows.Forms.Padding(4);
+            this.rdoJenisInvoiceInterior.Location = new System.Drawing.Point(124, 33);
             this.rdoJenisInvoiceInterior.Name = "rdoJenisInvoiceInterior";
-            this.rdoJenisInvoiceInterior.Size = new System.Drawing.Size(87, 23);
+            this.rdoJenisInvoiceInterior.Size = new System.Drawing.Size(61, 17);
             this.rdoJenisInvoiceInterior.TabIndex = 224;
             this.rdoJenisInvoiceInterior.TabStop = true;
             this.rdoJenisInvoiceInterior.Text = "Interior";
@@ -374,189 +350,169 @@
             // 
             // labelControl30
             // 
-            this.labelControl30.Location = new System.Drawing.Point(20, 357);
-            this.labelControl30.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl30.Location = new System.Drawing.Point(13, 244);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(25, 19);
+            this.labelControl30.Size = new System.Drawing.Size(17, 13);
             this.labelControl30.TabIndex = 218;
             this.labelControl30.Text = "PIC";
             // 
             // chkTutup
             // 
             this.chkTutup.AutoSize = true;
-            this.chkTutup.Location = new System.Drawing.Point(186, 390);
-            this.chkTutup.Margin = new System.Windows.Forms.Padding(4);
+            this.chkTutup.Location = new System.Drawing.Point(124, 267);
             this.chkTutup.Name = "chkTutup";
-            this.chkTutup.Size = new System.Drawing.Size(112, 23);
+            this.chkTutup.Size = new System.Drawing.Size(76, 17);
             this.chkTutup.TabIndex = 80;
             this.chkTutup.Text = "Tidak Aktif";
             this.chkTutup.UseVisualStyleBackColor = true;
             // 
             // labelControl28
             // 
-            this.labelControl28.Location = new System.Drawing.Point(20, 319);
-            this.labelControl28.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl28.Location = new System.Drawing.Point(13, 218);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(89, 19);
+            this.labelControl28.Size = new System.Drawing.Size(60, 13);
             this.labelControl28.TabIndex = 217;
             this.labelControl28.Text = "Jenis Proyek";
             // 
             // deTanggal
             // 
             this.deTanggal.EditValue = null;
-            this.deTanggal.Location = new System.Drawing.Point(186, 124);
-            this.deTanggal.Margin = new System.Windows.Forms.Padding(4);
+            this.deTanggal.Location = new System.Drawing.Point(124, 85);
             this.deTanggal.Name = "deTanggal";
             this.deTanggal.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deTanggal.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deTanggal.Size = new System.Drawing.Size(458, 26);
+            this.deTanggal.Size = new System.Drawing.Size(305, 20);
             this.deTanggal.TabIndex = 20;
             // 
             // labelControl20
             // 
-            this.labelControl20.Location = new System.Drawing.Point(20, 281);
-            this.labelControl20.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl20.Location = new System.Drawing.Point(13, 192);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(104, 19);
+            this.labelControl20.Size = new System.Drawing.Size(69, 13);
             this.labelControl20.TabIndex = 216;
             this.labelControl20.Text = "Tujuan Proyek";
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(20, 89);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl8.Location = new System.Drawing.Point(13, 61);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(70, 19);
+            this.labelControl8.Size = new System.Drawing.Size(47, 13);
             this.labelControl8.TabIndex = 177;
             this.labelControl8.Text = "Proyek ID";
             // 
             // cmbProyekPIC
             // 
-            this.cmbProyekPIC.Location = new System.Drawing.Point(186, 352);
-            this.cmbProyekPIC.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbProyekPIC.Location = new System.Drawing.Point(124, 241);
             this.cmbProyekPIC.Name = "cmbProyekPIC";
             this.cmbProyekPIC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbProyekPIC.Size = new System.Drawing.Size(458, 26);
+            this.cmbProyekPIC.Size = new System.Drawing.Size(305, 20);
             this.cmbProyekPIC.TabIndex = 215;
             // 
             // txtKode
             // 
-            this.txtKode.Location = new System.Drawing.Point(186, 86);
-            this.txtKode.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKode.Location = new System.Drawing.Point(124, 59);
             this.txtKode.Name = "txtKode";
-            this.txtKode.Size = new System.Drawing.Size(458, 26);
+            this.txtKode.Size = new System.Drawing.Size(305, 20);
             this.txtKode.TabIndex = 10;
             // 
             // cmbProyekJenis
             // 
-            this.cmbProyekJenis.Location = new System.Drawing.Point(186, 314);
-            this.cmbProyekJenis.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbProyekJenis.Location = new System.Drawing.Point(124, 215);
             this.cmbProyekJenis.Name = "cmbProyekJenis";
             this.cmbProyekJenis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbProyekJenis.Size = new System.Drawing.Size(458, 26);
+            this.cmbProyekJenis.Size = new System.Drawing.Size(305, 20);
             this.cmbProyekJenis.TabIndex = 214;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(20, 127);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Location = new System.Drawing.Point(13, 87);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(105, 19);
+            this.labelControl1.Size = new System.Drawing.Size(72, 13);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tanggal Daftar";
             // 
             // cmbProyekTujuan
             // 
-            this.cmbProyekTujuan.Location = new System.Drawing.Point(186, 276);
-            this.cmbProyekTujuan.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbProyekTujuan.Location = new System.Drawing.Point(124, 189);
             this.cmbProyekTujuan.Name = "cmbProyekTujuan";
             this.cmbProyekTujuan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbProyekTujuan.Size = new System.Drawing.Size(458, 26);
+            this.cmbProyekTujuan.Size = new System.Drawing.Size(305, 20);
             this.cmbProyekTujuan.TabIndex = 213;
             this.cmbProyekTujuan.EditValueChanged += new System.EventHandler(this.cmbProyekTujuan_EditValueChanged);
             // 
             // txtProyekNama
             // 
-            this.txtProyekNama.Location = new System.Drawing.Point(186, 162);
-            this.txtProyekNama.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProyekNama.Location = new System.Drawing.Point(124, 111);
             this.txtProyekNama.Name = "txtProyekNama";
-            this.txtProyekNama.Size = new System.Drawing.Size(458, 26);
+            this.txtProyekNama.Size = new System.Drawing.Size(305, 20);
             this.txtProyekNama.TabIndex = 205;
             // 
             // txtProyekKota
             // 
             this.txtProyekKota.EditValue = "";
-            this.txtProyekKota.Location = new System.Drawing.Point(186, 238);
-            this.txtProyekKota.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProyekKota.Location = new System.Drawing.Point(124, 163);
             this.txtProyekKota.Name = "txtProyekKota";
-            this.txtProyekKota.Size = new System.Drawing.Size(135, 26);
+            this.txtProyekKota.Size = new System.Drawing.Size(90, 20);
             this.txtProyekKota.TabIndex = 209;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(20, 167);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Location = new System.Drawing.Point(13, 114);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(41, 19);
+            this.labelControl3.Size = new System.Drawing.Size(27, 13);
             this.labelControl3.TabIndex = 206;
             this.labelControl3.Text = "Nama";
             // 
             // labelControl19
             // 
-            this.labelControl19.Location = new System.Drawing.Point(20, 243);
-            this.labelControl19.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl19.Location = new System.Drawing.Point(13, 166);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(140, 19);
+            this.labelControl19.Size = new System.Drawing.Size(96, 13);
             this.labelControl19.TabIndex = 212;
             this.labelControl19.Text = "Kota/Prov/Kode Pos";
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(20, 205);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl14.Location = new System.Drawing.Point(13, 140);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(50, 19);
+            this.labelControl14.Size = new System.Drawing.Size(33, 13);
             this.labelControl14.TabIndex = 208;
             this.labelControl14.Text = "Alamat";
             // 
             // txtProyekKodePos
             // 
             this.txtProyekKodePos.EditValue = "";
-            this.txtProyekKodePos.Location = new System.Drawing.Point(536, 238);
-            this.txtProyekKodePos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProyekKodePos.Location = new System.Drawing.Point(357, 163);
             this.txtProyekKodePos.Name = "txtProyekKodePos";
-            this.txtProyekKodePos.Size = new System.Drawing.Size(108, 26);
+            this.txtProyekKodePos.Size = new System.Drawing.Size(72, 20);
             this.txtProyekKodePos.TabIndex = 211;
             // 
             // txtProyekAlamat
             // 
-            this.txtProyekAlamat.Location = new System.Drawing.Point(186, 200);
-            this.txtProyekAlamat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProyekAlamat.Location = new System.Drawing.Point(124, 137);
             this.txtProyekAlamat.Name = "txtProyekAlamat";
-            this.txtProyekAlamat.Size = new System.Drawing.Size(458, 26);
+            this.txtProyekAlamat.Size = new System.Drawing.Size(305, 20);
             this.txtProyekAlamat.TabIndex = 207;
             // 
             // txtProyekProvinsi
             // 
             this.txtProyekProvinsi.EditValue = "";
-            this.txtProyekProvinsi.Location = new System.Drawing.Point(330, 238);
-            this.txtProyekProvinsi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProyekProvinsi.Location = new System.Drawing.Point(220, 163);
             this.txtProyekProvinsi.Name = "txtProyekProvinsi";
-            this.txtProyekProvinsi.Size = new System.Drawing.Size(196, 26);
+            this.txtProyekProvinsi.Size = new System.Drawing.Size(131, 20);
             this.txtProyekProvinsi.TabIndex = 210;
             // 
             // FrmProyekAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1493, 489);
+            this.ClientSize = new System.Drawing.Size(979, 343);
             this.Controls.Add(this.xtraScrollableControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmProyekAdd";
             this.Text = "Form";
             this.Load += new System.EventHandler(this.FrmProyekAdd_Load);

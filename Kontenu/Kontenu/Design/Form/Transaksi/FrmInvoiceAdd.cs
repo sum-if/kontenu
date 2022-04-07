@@ -154,6 +154,7 @@ namespace Kontenu.Design
 
         private void updateDataProyek(MySqlCommand command, bool isFormEditLoad = false)
         {
+            
             txtProyekNama.Text = "";
             txtProyekAlamat.Text = "";
             txtProyekKota.Text = "";
@@ -171,8 +172,11 @@ namespace Kontenu.Design
 
             DataProyek dProyek = new DataProyek(command, cmbProyekID.EditValue.ToString());
 
+
             if (dProyek.isExist)
             {
+                rdoJenisInvoiceInterior.Checked = (dProyek.kategori == Constants.JENIS_INVOICE_INTERIOR);
+                rdoJenisInvoiceProduct.Checked = (dProyek.kategori == Constants.JENIS_INVOICE_PRODUCT);
                 txtProyekNama.Text = dProyek.nama;
                 txtProyekAlamat.Text = dProyek.alamat;
                 txtProyekKota.Text = dProyek.kota;
