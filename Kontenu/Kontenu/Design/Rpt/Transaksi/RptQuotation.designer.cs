@@ -164,6 +164,9 @@
             this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell21 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell22 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.PICNama = new DevExpress.XtraReports.Parameters.Parameter();
+            this.PICEmail = new DevExpress.XtraReports.Parameters.Parameter();
+            this.PICTelp = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -906,13 +909,14 @@
             // 
             // xrTableCell19
             // 
+            this.xrTableCell19.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PICNama, "Text", "")});
             this.xrTableCell19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.xrTableCell19.Name = "xrTableCell19";
             this.xrTableCell19.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell19.StylePriority.UseFont = false;
             this.xrTableCell19.StylePriority.UsePadding = false;
             this.xrTableCell19.StylePriority.UseTextAlignment = false;
-            this.xrTableCell19.Text = "Anette F. Panghegar";
             this.xrTableCell19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell19.Weight = 2.8335302536895393D;
             // 
@@ -942,13 +946,14 @@
             // 
             // xrTableCell41
             // 
+            this.xrTableCell41.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PICTelp, "Text", "")});
             this.xrTableCell41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrTableCell41.Name = "xrTableCell41";
             this.xrTableCell41.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell41.StylePriority.UseFont = false;
             this.xrTableCell41.StylePriority.UsePadding = false;
             this.xrTableCell41.StylePriority.UseTextAlignment = false;
-            this.xrTableCell41.Text = "+62 817 0333 7713";
             this.xrTableCell41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell41.Weight = 2.8335304810832445D;
             // 
@@ -980,6 +985,8 @@
             // 
             this.xrTableCell43.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrTableCell43.BorderWidth = 2F;
+            this.xrTableCell43.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PICEmail, "Text", "")});
             this.xrTableCell43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrTableCell43.Name = "xrTableCell43";
             this.xrTableCell43.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
@@ -988,7 +995,6 @@
             this.xrTableCell43.StylePriority.UseFont = false;
             this.xrTableCell43.StylePriority.UsePadding = false;
             this.xrTableCell43.StylePriority.UseTextAlignment = false;
-            this.xrTableCell43.Text = "anette.kontenu@gmail.com";
             this.xrTableCell43.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell43.Weight = 2.8335304810832445D;
             // 
@@ -1653,6 +1659,24 @@
             this.xrTableCell22.StylePriority.UseBorderWidth = false;
             this.xrTableCell22.Weight = 1.712565111776295D;
             // 
+            // PICNama
+            // 
+            this.PICNama.Description = "PICNama";
+            this.PICNama.Name = "PICNama";
+            this.PICNama.Visible = false;
+            // 
+            // PICEmail
+            // 
+            this.PICEmail.Description = "PICEmail";
+            this.PICEmail.Name = "PICEmail";
+            this.PICEmail.Visible = false;
+            // 
+            // PICTelp
+            // 
+            this.PICTelp.Description = "PICTelp";
+            this.PICTelp.Name = "PICTelp";
+            this.PICTelp.Visible = false;
+            // 
             // RptQuotation
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1696,7 +1720,10 @@
             this.ProyekAlamat,
             this.ProyekKota,
             this.ProyekTanggalBerlaku,
-            this.PerusahaanLogo});
+            this.PerusahaanLogo,
+            this.PICNama,
+            this.PICEmail,
+            this.PICTelp});
             this.ShowPrintMarginsWarning = false;
             this.SnapToGrid = false;
             this.Version = "15.2";
@@ -1846,5 +1873,8 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell23;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell24;
         private DevExpress.XtraReports.Parameters.Parameter PerusahaanLogo;
+        private DevExpress.XtraReports.Parameters.Parameter PICNama;
+        private DevExpress.XtraReports.Parameters.Parameter PICTelp;
+        private DevExpress.XtraReports.Parameters.Parameter PICEmail;
     }
 }
