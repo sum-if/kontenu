@@ -20,6 +20,7 @@ namespace Kontenu.Design {
         public String alamat = "";
         public String provinsi = "";
         public String kota = "";
+        public String telepon = "";
         public String kodepos = "";
         public String tujuanproyek = "";
         public String jenisproyek = "";
@@ -39,6 +40,7 @@ namespace Kontenu.Design {
             kolom += "Proyek Alamat:" + alamat + ";";
             kolom += "Proyek Provinsi:" + provinsi + ";";
             kolom += "Proyek Kota:" + kota + ";";
+            kolom += "Proyek Telepon:" + telepon + ";";
             kolom += "Proyek Kode Pos:" + kodepos + ";";
             kolom += "Tujuan Proyek:" + tujuanproyek + ";";
             kolom += "Jenis Proyek:" + jenisproyek + ";";
@@ -56,7 +58,7 @@ namespace Kontenu.Design {
 
         private void getOtherAttribute() {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT tanggaldeal, klien, kategori, nama, alamat,provinsi,kota,kodepos,tujuanproyek,jenisproyek,pic,status, version
+            String query = @"SELECT tanggaldeal, klien, kategori, nama, alamat,provinsi,kota,telepon,kodepos,tujuanproyek,jenisproyek,pic,status, version
                              FROM proyek 
                              WHERE kode = @kode";
 
@@ -73,6 +75,7 @@ namespace Kontenu.Design {
                 this.alamat = reader.GetString("alamat");
                 this.provinsi = reader.GetString("provinsi");
                 this.kota = reader.GetString("kota");
+                this.telepon = reader.GetString("telepon");
                 this.kodepos = reader.GetString("kodepos");
                 this.tujuanproyek = reader.GetString("tujuanproyek");
                 this.jenisproyek = reader.GetString("jenisproyek");
@@ -127,8 +130,8 @@ namespace Kontenu.Design {
             this.kode = this.generateKode();
             this.version += 1;
 
-            String query = @"INSERT INTO proyek(kode, tanggaldeal, klien,kategori, nama, alamat,provinsi,kota,kodepos,tujuanproyek,jenisproyek,pic, status, version,create_user) 
-                             VALUES(@kode,@tanggaldeal,@klien,@kategori,@nama,@alamat,@provinsi,@kota,@kodepos,@tujuanproyek,@jenisproyek,@pic, @status, @version,@create_user)";
+            String query = @"INSERT INTO proyek(kode, tanggaldeal, klien,kategori, nama, alamat,provinsi,kota,telepon,kodepos,tujuanproyek,jenisproyek,pic, status, version,create_user) 
+                             VALUES(@kode,@tanggaldeal,@klien,@kategori,@nama,@alamat,@provinsi,@kota,@telepon,@kodepos,@tujuanproyek,@jenisproyek,@pic, @status, @version,@create_user)";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("kode", this.kode);
@@ -139,6 +142,7 @@ namespace Kontenu.Design {
             parameters.Add("alamat", this.alamat);
             parameters.Add("provinsi", this.provinsi);
             parameters.Add("kota", this.kota);
+            parameters.Add("telepon", this.telepon);
             parameters.Add("kodepos", this.kodepos);
             parameters.Add("tujuanproyek", this.tujuanproyek);
             parameters.Add("jenisproyek", this.jenisproyek);
@@ -180,6 +184,7 @@ namespace Kontenu.Design {
                                  alamat = @alamat, 
                                  provinsi = @provinsi,
                                  kota = @kota,
+                                 telepon = @telepon,
                                  kodepos = @kodepos,
                                  tujuanproyek = @tujuanproyek,
                                  jenisproyek = @jenisproyek,
@@ -198,6 +203,7 @@ namespace Kontenu.Design {
             parameters.Add("alamat", this.alamat);
             parameters.Add("provinsi", this.provinsi);
             parameters.Add("kota", this.kota);
+            parameters.Add("telepon", this.telepon);
             parameters.Add("kodepos", this.kodepos);
             parameters.Add("tujuanproyek", this.tujuanproyek);
             parameters.Add("jenisproyek", this.jenisproyek);

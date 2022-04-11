@@ -69,6 +69,8 @@
             this.txtProyekKodePos = new DevExpress.XtraEditors.TextEdit();
             this.txtProyekAlamat = new DevExpress.XtraEditors.TextEdit();
             this.txtProyekProvinsi = new DevExpress.XtraEditors.TextEdit();
+            this.txtProyekTelepon = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -95,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekKodePos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekProvinsi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProyekTelepon.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraScrollableControl1
@@ -106,13 +109,13 @@
             this.xtraScrollableControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
             this.xtraScrollableControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.xtraScrollableControl1.Size = new System.Drawing.Size(979, 343);
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(979, 384);
             this.xtraScrollableControl1.TabIndex = 0;
             // 
             // btnSimpan
             // 
             this.btnSimpan.Image = ((System.Drawing.Image)(resources.GetObject("btnSimpan.Image")));
-            this.btnSimpan.Location = new System.Drawing.Point(12, 302);
+            this.btnSimpan.Location = new System.Drawing.Point(12, 338);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(86, 23);
             this.btnSimpan.TabIndex = 250;
@@ -290,6 +293,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.txtProyekTelepon);
+            this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Controls.Add(this.rdoJenisInvoiceProduct);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.rdoJenisInvoiceInterior);
@@ -314,7 +319,7 @@
             this.groupControl1.Controls.Add(this.txtProyekProvinsi);
             this.groupControl1.Location = new System.Drawing.Point(12, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(447, 285);
+            this.groupControl1.Size = new System.Drawing.Size(447, 320);
             this.groupControl1.TabIndex = 201;
             this.groupControl1.Text = "Data Proyek";
             // 
@@ -350,7 +355,7 @@
             // 
             // labelControl30
             // 
-            this.labelControl30.Location = new System.Drawing.Point(13, 244);
+            this.labelControl30.Location = new System.Drawing.Point(13, 278);
             this.labelControl30.Name = "labelControl30";
             this.labelControl30.Size = new System.Drawing.Size(17, 13);
             this.labelControl30.TabIndex = 218;
@@ -359,7 +364,7 @@
             // chkTutup
             // 
             this.chkTutup.AutoSize = true;
-            this.chkTutup.Location = new System.Drawing.Point(124, 267);
+            this.chkTutup.Location = new System.Drawing.Point(124, 301);
             this.chkTutup.Name = "chkTutup";
             this.chkTutup.Size = new System.Drawing.Size(76, 17);
             this.chkTutup.TabIndex = 80;
@@ -368,7 +373,7 @@
             // 
             // labelControl28
             // 
-            this.labelControl28.Location = new System.Drawing.Point(13, 218);
+            this.labelControl28.Location = new System.Drawing.Point(13, 252);
             this.labelControl28.Name = "labelControl28";
             this.labelControl28.Size = new System.Drawing.Size(60, 13);
             this.labelControl28.TabIndex = 217;
@@ -388,7 +393,7 @@
             // 
             // labelControl20
             // 
-            this.labelControl20.Location = new System.Drawing.Point(13, 192);
+            this.labelControl20.Location = new System.Drawing.Point(13, 226);
             this.labelControl20.Name = "labelControl20";
             this.labelControl20.Size = new System.Drawing.Size(69, 13);
             this.labelControl20.TabIndex = 216;
@@ -404,7 +409,7 @@
             // 
             // cmbProyekPIC
             // 
-            this.cmbProyekPIC.Location = new System.Drawing.Point(124, 241);
+            this.cmbProyekPIC.Location = new System.Drawing.Point(124, 275);
             this.cmbProyekPIC.Name = "cmbProyekPIC";
             this.cmbProyekPIC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -420,7 +425,7 @@
             // 
             // cmbProyekJenis
             // 
-            this.cmbProyekJenis.Location = new System.Drawing.Point(124, 215);
+            this.cmbProyekJenis.Location = new System.Drawing.Point(124, 249);
             this.cmbProyekJenis.Name = "cmbProyekJenis";
             this.cmbProyekJenis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -437,7 +442,7 @@
             // 
             // cmbProyekTujuan
             // 
-            this.cmbProyekTujuan.Location = new System.Drawing.Point(124, 189);
+            this.cmbProyekTujuan.Location = new System.Drawing.Point(124, 223);
             this.cmbProyekTujuan.Name = "cmbProyekTujuan";
             this.cmbProyekTujuan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -507,11 +512,26 @@
             this.txtProyekProvinsi.Size = new System.Drawing.Size(131, 20);
             this.txtProyekProvinsi.TabIndex = 210;
             // 
+            // txtProyekTelepon
+            // 
+            this.txtProyekTelepon.Location = new System.Drawing.Point(124, 192);
+            this.txtProyekTelepon.Name = "txtProyekTelepon";
+            this.txtProyekTelepon.Size = new System.Drawing.Size(305, 20);
+            this.txtProyekTelepon.TabIndex = 227;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(13, 195);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(38, 13);
+            this.labelControl5.TabIndex = 228;
+            this.labelControl5.Text = "Telepon";
+            // 
             // FrmProyekAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 343);
+            this.ClientSize = new System.Drawing.Size(979, 384);
             this.Controls.Add(this.xtraScrollableControl1);
             this.Name = "FrmProyekAdd";
             this.Text = "Form";
@@ -544,6 +564,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekKodePos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekProvinsi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProyekTelepon.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -594,5 +615,7 @@
         private System.Windows.Forms.RadioButton rdoJenisInvoiceProduct;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private System.Windows.Forms.RadioButton rdoJenisInvoiceInterior;
+        private DevExpress.XtraEditors.TextEdit txtProyekTelepon;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }

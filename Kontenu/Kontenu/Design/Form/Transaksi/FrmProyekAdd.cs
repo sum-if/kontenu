@@ -138,7 +138,7 @@ namespace Kontenu.Design
                 txtNama.EditValue = dKlien.nama;
                 txtAlamat.Text = dKlien.alamat;
                 txtProvinsi.Text = dKlien.provinsi;
-                txtKota.Text = dKlien.kota;
+                txtKota.Text = dKlien.kota;                
                 txtKodePos.Text = dKlien.kodepos;
                 txtTelepon.Text = dKlien.telp;
                 txtHandphone.Text = dKlien.handphone;
@@ -150,6 +150,7 @@ namespace Kontenu.Design
                 txtProyekKota.Text = dProyek.kota;
                 txtProyekProvinsi.Text = dProyek.provinsi;
                 txtProyekKodePos.Text = dProyek.kodepos;
+                txtProyekTelepon.Text = dProyek.telepon;
 
                 cmbProyekTujuan.EditValue = dProyek.tujuanproyek;
                 cmbProyekJenis.EditValue = dProyek.jenisproyek;
@@ -226,6 +227,7 @@ namespace Kontenu.Design
                 String strngProyekNama = txtProyekNama.Text;
                 String strngProyekAlamat = txtProyekAlamat.Text;
                 String strngProyekKota = txtProyekKota.Text;
+                String strngProyekTelepon = txtProyekTelepon.Text;
                 String strngProyekProvinsi = txtProyekProvinsi.Text;
                 String strngProyekKodePos = txtProyekKodePos.Text;
                 String strngProyekTujuan = cmbProyekTujuan.EditValue.ToString();
@@ -240,6 +242,7 @@ namespace Kontenu.Design
                 dProyek.nama = strngProyekNama;
                 dProyek.alamat = strngProyekAlamat;
                 dProyek.kota = strngProyekKota;
+                dProyek.telepon = strngProyekTelepon;
                 dProyek.provinsi = strngProyekProvinsi;
                 dProyek.kodepos = strngProyekKodePos;
                 dProyek.tujuanproyek = strngProyekTujuan;
