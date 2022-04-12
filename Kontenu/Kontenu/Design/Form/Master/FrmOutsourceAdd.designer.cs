@@ -32,7 +32,6 @@
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.txtAlamat = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtProvinsi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtTelp = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -42,16 +41,17 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtKota = new DevExpress.XtraEditors.TextEdit();
             this.txtKodePos = new DevExpress.XtraEditors.TextEdit();
+            this.txtProvinsi = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlamat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProvinsi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHandphone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKota.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKodePos.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProvinsi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSimpan
@@ -109,20 +109,13 @@
             this.labelControl1.TabIndex = 254;
             this.labelControl1.Text = "Alamat";
             // 
-            // txtProvinsi
-            // 
-            this.txtProvinsi.Location = new System.Drawing.Point(133, 90);
-            this.txtProvinsi.Name = "txtProvinsi";
-            this.txtProvinsi.Size = new System.Drawing.Size(116, 20);
-            this.txtProvinsi.TabIndex = 50;
-            // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(14, 94);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(96, 13);
             this.labelControl2.TabIndex = 256;
-            this.labelControl2.Text = "Prov/Kota/Kode Pos";
+            this.labelControl2.Text = "Kota/Prov/Kode Pos";
             // 
             // txtTelp
             // 
@@ -171,7 +164,7 @@
             // 
             // txtKota
             // 
-            this.txtKota.Location = new System.Drawing.Point(255, 91);
+            this.txtKota.Location = new System.Drawing.Point(133, 91);
             this.txtKota.Name = "txtKota";
             this.txtKota.Size = new System.Drawing.Size(116, 20);
             this.txtKota.TabIndex = 60;
@@ -183,11 +176,19 @@
             this.txtKodePos.Size = new System.Drawing.Size(77, 20);
             this.txtKodePos.TabIndex = 70;
             // 
+            // txtProvinsi
+            // 
+            this.txtProvinsi.Location = new System.Drawing.Point(255, 91);
+            this.txtProvinsi.Name = "txtProvinsi";
+            this.txtProvinsi.Size = new System.Drawing.Size(116, 20);
+            this.txtProvinsi.TabIndex = 65;
+            // 
             // FrmOutsourceAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 223);
+            this.Controls.Add(this.txtProvinsi);
             this.Controls.Add(this.txtKodePos);
             this.Controls.Add(this.txtKota);
             this.Controls.Add(this.txtEmail);
@@ -196,7 +197,6 @@
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.txtTelp);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.txtProvinsi);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.txtAlamat);
             this.Controls.Add(this.labelControl1);
@@ -212,12 +212,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlamat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProvinsi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHandphone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKota.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKodePos.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProvinsi.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,7 +233,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.TextEdit txtAlamat;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txtProvinsi;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtTelp;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -243,5 +242,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit txtKota;
         private DevExpress.XtraEditors.TextEdit txtKodePos;
+        private DevExpress.XtraEditors.TextEdit txtProvinsi;
     }
 }
