@@ -38,6 +38,7 @@ namespace Kontenu.Master {
         private String id = "PIC";
         private String dokumen = "PIC";
         private Boolean isAdd;
+        private byte[] arrGambar;
 
         public FrmPICAdd(bool pIsAdd) {
             isAdd = pIsAdd;
@@ -105,6 +106,18 @@ namespace Kontenu.Master {
                 cmbJabatan.EditValue = dPIC.jabatan;
                 txtHandphone.Text = dPIC.handphone;
                 txtEmail.Text = dPIC.email;
+
+                if (dPIC.ttd != null)
+                {
+                    String strfn = Convert.ToString(DateTime.Now.ToFileTime());
+                    FileStream fs = new FileStream(strfn, FileMode.CreateNew, FileAccess.Write);
+                    fs.Write(dPIC.ttd, 0, dPIC.ttd.Length);
+                    fs.Flush();
+                    fs.Close();
+                    picGambar.Image = Image.FromFile(strfn);
+                    arrGambar = dPIC.ttd;
+                }
+
             } else {
                 OswControlDefaultProperties.resetAllInput(this);
                 cmbJabatan.ItemIndex = 0;
@@ -162,6 +175,7 @@ namespace Kontenu.Master {
                 dPIC.handphone = strngHandphone;
                 dPIC.email = strngEmail;
                 dPIC.ktp = strngKTP;
+                dPIC.ttd = this.arrGambar;
 
                 if(this.isAdd) {
                     dPIC.tambah();
@@ -199,6 +213,35 @@ namespace Kontenu.Master {
                 } catch(Exception ex) {
                 }
             }
+        }
+
+        private void btnAmbilGambar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.openFileDialog1.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+                {
+                    String strFn = this.openFileDialog1.FileName;
+                    picGambar.Image = Image.FromFile(strFn);
+                    FileInfo fiImage = new FileInfo(strFn);
+                    long ImageFileLength = fiImage.Length;
+                    FileStream fs = new FileStream(strFn, FileMode.Open, FileAccess.Read, FileShare.Read);
+                    arrGambar = new byte[Convert.ToInt32(ImageFileLength)];
+                    int iBytesRead = fs.Read(arrGambar, 0, Convert.ToInt32(ImageFileLength));
+                    fs.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                OswPesan.pesanError(ex.Message);
+            }
+        }
+
+        private void btnHapusGambar_Click(object sender, EventArgs e)
+        {
+            arrGambar = null;
+            picGambar.Image = null;
         }
 
     }

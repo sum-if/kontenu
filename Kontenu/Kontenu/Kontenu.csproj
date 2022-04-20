@@ -1092,6 +1092,12 @@
     <EmbeddedResource Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\area-64.png" />
+    <EmbeddedResource Include="Resources\invoice-new-64.png" />
+    <EmbeddedResource Include="Resources\jenis-pekerjaan-64.png" />
+    <EmbeddedResource Include="Resources\lain-lain-64.png" />
+    <EmbeddedResource Include="Resources\supplier-64.png" />
+    <EmbeddedResource Include="Resources\material-64.png" />
     <EmbeddedResource Include="Resources\finalisasi-proyek-64.png" />
     <EmbeddedResource Include="Resources\pembayaran-beli-jasa-outsource-64.png" />
     <EmbeddedResource Include="Resources\pembelian-jasa-outsource-64.png" />

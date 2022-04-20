@@ -21,6 +21,7 @@ namespace Kontenu.Master {
         public String handphone = ""; 
         public String email = "";
         public String ktp = "";
+        public byte[] ttd;
         public Int64 version = 0;
         public Boolean isExist = false;
         private MySqlCommand command;
@@ -49,7 +50,7 @@ namespace Kontenu.Master {
 
         private void getOtherAttribute() {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT nama, alamat, provinsi, kota, kodepos, jabatan, email, handphone, ktp ,version
+            String query = @"SELECT ttd, nama, alamat, provinsi, kota, kodepos, jabatan, email, handphone, ktp ,version
                              FROM pic 
                              WHERE kode = @kode";
 
@@ -68,6 +69,7 @@ namespace Kontenu.Master {
                 this.email = reader.GetString("email");
                 this.handphone = reader.GetString("handphone");
                 this.ktp = reader.GetString("ktp");
+                this.ttd = (reader.GetValue(0) is DBNull) ? null : (byte[])reader.GetValue(0);                
                 this.version = reader.GetInt64("version");
                 reader.Close();
             } else {
@@ -116,9 +118,9 @@ namespace Kontenu.Master {
             this.version += 1;
 
             String query = @"INSERT INTO pic(kode, nama, alamat, provinsi, kota, kodepos, jabatan, email, 
-                                                handphone, ktp, version, create_user) 
+                                                handphone, ktp, ttd, version, create_user) 
                                  VALUES(@kode, @nama, @alamat, @provinsi, @kota, @kodepos, @jabatan, @email, 
-                                        @handphone, @ktp, @version, @create_user)";
+                                        @handphone, @ktp, @ttd, @version, @create_user)";
 
             Dictionary<String, object> parameters = new Dictionary<String, object>();
             parameters.Add("kode", this.kode);
@@ -131,6 +133,7 @@ namespace Kontenu.Master {
             parameters.Add("email", this.email);
             parameters.Add("handphone", this.handphone);
             parameters.Add("ktp", this.ktp);
+            parameters.Add("ttd", this.ttd);
             parameters.Add("version", "1");
             parameters.Add("create_user", OswConstants.KODEUSER);
 
@@ -169,6 +172,7 @@ namespace Kontenu.Master {
                                  email = @email,
                                  handphone = @handphone,
                                  ktp = @ktp,
+                                 ttd=@ttd,
                                  version = @version,
                                  update_at = CURRENT_TIMESTAMP(),
                                  update_user = @update_user
@@ -185,6 +189,7 @@ namespace Kontenu.Master {
             parameters.Add("email", this.email);
             parameters.Add("handphone", this.handphone);
             parameters.Add("ktp", this.ktp);
+            parameters.Add("ttd", this.ttd);
             parameters.Add("version", this.version.ToString());
             parameters.Add("update_user", OswConstants.KODEUSER);
 

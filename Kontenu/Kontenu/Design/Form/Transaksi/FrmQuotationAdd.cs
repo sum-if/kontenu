@@ -504,7 +504,8 @@ namespace Kontenu.Design
 
                 // TRANSAKSI
                 DataQuotation dQuotation = new DataQuotation(command, kode);
-                report.Parameters["Kode"].Value = "# "+dQuotation.kode;
+                report.Parameters["Kode"].Value = dQuotation.kode;
+                report.Parameters["kodePagar"].Value = "# " + dQuotation.kode;
                 report.Parameters["Tanggal"].Value = dQuotation.tanggal;
                 report.Parameters["ProyekNama"].Value = dQuotation.proyeknama;
                 report.Parameters["ProyekAlamat"].Value = dQuotation.proyekalamat;
@@ -525,6 +526,7 @@ namespace Kontenu.Design
                 report.Parameters["PICNama"].Value = dPIC.nama;             
                 report.Parameters["PICEmail"].Value = dPIC.email;
                 report.Parameters["PICTelp"].Value = dPIC.handphone;
+                report.Parameters["PICTtd"].Value = dPIC.ttd;
 
                 // assign the printing system to the document viewer.
                 LaporanPrintPreview laporan = new LaporanPrintPreview();

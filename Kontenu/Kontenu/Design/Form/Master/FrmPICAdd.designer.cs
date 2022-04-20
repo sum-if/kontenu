@@ -44,6 +44,11 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.cmbJabatan = new DevExpress.XtraEditors.LookUpEdit();
             this.txtProvinsi = new DevExpress.XtraEditors.TextEdit();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.picGambar = new System.Windows.Forms.PictureBox();
+            this.btnHapusGambar = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAmbilGambar = new DevExpress.XtraEditors.SimpleButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).BeginInit();
@@ -55,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKTP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbJabatan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProvinsi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGambar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSimpan
@@ -203,11 +209,52 @@
             this.txtProvinsi.Size = new System.Drawing.Size(116, 20);
             this.txtProvinsi.TabIndex = 65;
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // picGambar
+            // 
+            this.picGambar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picGambar.InitialImage = null;
+            this.picGambar.Location = new System.Drawing.Point(509, 12);
+            this.picGambar.Name = "picGambar";
+            this.picGambar.Size = new System.Drawing.Size(176, 120);
+            this.picGambar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picGambar.TabIndex = 267;
+            this.picGambar.TabStop = false;
+            // 
+            // btnHapusGambar
+            // 
+            this.btnHapusGambar.Location = new System.Drawing.Point(518, 170);
+            this.btnHapusGambar.Name = "btnHapusGambar";
+            this.btnHapusGambar.Size = new System.Drawing.Size(155, 23);
+            this.btnHapusGambar.TabIndex = 269;
+            this.btnHapusGambar.Text = "Hapus Gambar TTD";
+            this.btnHapusGambar.Click += new System.EventHandler(this.btnHapusGambar_Click);
+            // 
+            // btnAmbilGambar
+            // 
+            this.btnAmbilGambar.Location = new System.Drawing.Point(518, 141);
+            this.btnAmbilGambar.Name = "btnAmbilGambar";
+            this.btnAmbilGambar.Size = new System.Drawing.Size(155, 23);
+            this.btnAmbilGambar.TabIndex = 268;
+            this.btnAmbilGambar.Text = "Ambil Gambar TTD";
+            this.btnAmbilGambar.Click += new System.EventHandler(this.btnAmbilGambar_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FrmPICAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 253);
+            this.ClientSize = new System.Drawing.Size(730, 253);
+            this.Controls.Add(this.btnHapusGambar);
+            this.Controls.Add(this.btnAmbilGambar);
+            this.Controls.Add(this.picGambar);
             this.Controls.Add(this.txtProvinsi);
             this.Controls.Add(this.cmbJabatan);
             this.Controls.Add(this.txtKTP);
@@ -241,6 +288,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKTP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbJabatan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProvinsi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGambar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,5 +316,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LookUpEdit cmbJabatan;
         private DevExpress.XtraEditors.TextEdit txtProvinsi;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.PictureBox picGambar;
+        private DevExpress.XtraEditors.SimpleButton btnHapusGambar;
+        private DevExpress.XtraEditors.SimpleButton btnAmbilGambar;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

@@ -89,6 +89,8 @@
             this.PerusahaanKode = new DevExpress.XtraReports.Parameters.Parameter();
             this.qtySatuan = new DevExpress.XtraReports.UI.CalculatedField();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.PICTtd = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -106,12 +108,15 @@
             this.xrTableCell49 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow13 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell19 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.PICNama = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrTableCell20 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow14 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell41 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.PICTelp = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrTableCell42 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow15 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell43 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.PICEmail = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrTableCell44 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
@@ -133,6 +138,7 @@
             this.xrTableRow21 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell69 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell71 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.kodePagar = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrTableCell65 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
@@ -164,9 +170,6 @@
             this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell21 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell22 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.PICNama = new DevExpress.XtraReports.Parameters.Parameter();
-            this.PICEmail = new DevExpress.XtraReports.Parameters.Parameter();
-            this.PICTelp = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -656,7 +659,7 @@
             // Kode
             // 
             this.Kode.Name = "Kode";
-            this.Kode.ValueInfo = "KTN-QUO21060004";
+            this.Kode.ValueInfo = "KTN-QTT2022/03/21001";
             this.Kode.Visible = false;
             // 
             // PerusahaanNama
@@ -694,6 +697,7 @@
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPictureBox1,
             this.xrLine1,
             this.xrTable2,
             this.xrLabel4,
@@ -702,6 +706,20 @@
             this.ReportFooter.KeepTogether = true;
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
+            // 
+            // xrPictureBox1
+            // 
+            this.xrPictureBox1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PICTtd, "Image", "")});
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(520.8685F, 178.0834F);
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(212.5F, 90.33109F);
+            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            // 
+            // PICTtd
+            // 
+            this.PICTtd.Name = "PICTtd";
+            this.PICTtd.Visible = false;
             // 
             // xrLine1
             // 
@@ -920,6 +938,12 @@
             this.xrTableCell19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell19.Weight = 2.8335302536895393D;
             // 
+            // PICNama
+            // 
+            this.PICNama.Description = "PICNama";
+            this.PICNama.Name = "PICNama";
+            this.PICNama.Visible = false;
+            // 
             // xrTableCell20
             // 
             this.xrTableCell20.Borders = DevExpress.XtraPrinting.BorderSide.Left;
@@ -956,6 +980,12 @@
             this.xrTableCell41.StylePriority.UseTextAlignment = false;
             this.xrTableCell41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell41.Weight = 2.8335304810832445D;
+            // 
+            // PICTelp
+            // 
+            this.PICTelp.Description = "PICTelp";
+            this.PICTelp.Name = "PICTelp";
+            this.PICTelp.Visible = false;
             // 
             // xrTableCell42
             // 
@@ -997,6 +1027,12 @@
             this.xrTableCell43.StylePriority.UseTextAlignment = false;
             this.xrTableCell43.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell43.Weight = 2.8335304810832445D;
+            // 
+            // PICEmail
+            // 
+            this.PICEmail.Description = "PICEmail";
+            this.PICEmail.Name = "PICEmail";
+            this.PICEmail.Visible = false;
             // 
             // xrTableCell44
             // 
@@ -1253,7 +1289,7 @@
             this.xrTableCell71.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableCell71.BorderWidth = 1F;
             this.xrTableCell71.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.Kode, "Text", "")});
+            new DevExpress.XtraReports.UI.XRBinding(this.kodePagar, "Text", "")});
             this.xrTableCell71.Font = new System.Drawing.Font("AT Surt Light", 10F);
             this.xrTableCell71.Name = "xrTableCell71";
             this.xrTableCell71.StylePriority.UseBorders = false;
@@ -1262,6 +1298,12 @@
             this.xrTableCell71.StylePriority.UseTextAlignment = false;
             this.xrTableCell71.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell71.Weight = 1.7365201431756137D;
+            // 
+            // kodePagar
+            // 
+            this.kodePagar.Description = "kodePagar";
+            this.kodePagar.Name = "kodePagar";
+            this.kodePagar.Visible = false;
             // 
             // xrTableCell65
             // 
@@ -1659,24 +1701,6 @@
             this.xrTableCell22.StylePriority.UseBorderWidth = false;
             this.xrTableCell22.Weight = 1.712565111776295D;
             // 
-            // PICNama
-            // 
-            this.PICNama.Description = "PICNama";
-            this.PICNama.Name = "PICNama";
-            this.PICNama.Visible = false;
-            // 
-            // PICEmail
-            // 
-            this.PICEmail.Description = "PICEmail";
-            this.PICEmail.Name = "PICEmail";
-            this.PICEmail.Visible = false;
-            // 
-            // PICTelp
-            // 
-            this.PICTelp.Description = "PICTelp";
-            this.PICTelp.Name = "PICTelp";
-            this.PICTelp.Visible = false;
-            // 
             // RptQuotation
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1723,7 +1747,9 @@
             this.PerusahaanLogo,
             this.PICNama,
             this.PICEmail,
-            this.PICTelp});
+            this.PICTelp,
+            this.kodePagar,
+            this.PICTtd});
             this.ShowPrintMarginsWarning = false;
             this.SnapToGrid = false;
             this.Version = "15.2";
@@ -1876,5 +1902,8 @@
         private DevExpress.XtraReports.Parameters.Parameter PICNama;
         private DevExpress.XtraReports.Parameters.Parameter PICTelp;
         private DevExpress.XtraReports.Parameters.Parameter PICEmail;
+        private DevExpress.XtraReports.Parameters.Parameter kodePagar;
+        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
+        private DevExpress.XtraReports.Parameters.Parameter PICTtd;
     }
 }
