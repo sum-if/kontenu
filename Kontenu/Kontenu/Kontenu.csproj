@@ -454,11 +454,11 @@
     <Compile Include="Design\Form\Transaksi\FrmPenagihanAdd.designer.cs">
       <DependentUpon>FrmPenagihanAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\Rpt\Transaksi\RptInvoice.cs">
+    <Compile Include="Design\Rpt\Transaksi\RptFormalLetter.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Design\Rpt\Transaksi\RptInvoice.designer.cs">
-      <DependentUpon>RptInvoice.cs</DependentUpon>
+    <Compile Include="Design\Rpt\Transaksi\RptFormalLetter.designer.cs">
+      <DependentUpon>RptFormalLetter.cs</DependentUpon>
     </Compile>
     <Compile Include="Design\Rpt\Transaksi\RptPenerimaan.cs">
       <SubType>Component</SubType>
@@ -471,6 +471,12 @@
     </Compile>
     <Compile Include="Design\Rpt\Transaksi\RptPenagihan.designer.cs">
       <DependentUpon>RptPenagihan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Rpt\Transaksi\RptInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\Rpt\Transaksi\RptInvoice.designer.cs">
+      <DependentUpon>RptInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="Design\Rpt\Transaksi\RptQuotation.cs">
       <SubType>Component</SubType>
@@ -910,14 +916,17 @@
     <EmbeddedResource Include="Design\Form\Transaksi\FrmPenagihanAdd.resx">
       <DependentUpon>FrmPenagihanAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Design\Rpt\Transaksi\RptInvoice.resx">
-      <DependentUpon>RptInvoice.cs</DependentUpon>
+    <EmbeddedResource Include="Design\Rpt\Transaksi\RptFormalLetter.resx">
+      <DependentUpon>RptFormalLetter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Rpt\Transaksi\RptPenerimaan.resx">
       <DependentUpon>RptPenerimaan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Rpt\Transaksi\RptPenagihan.resx">
       <DependentUpon>RptPenagihan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Rpt\Transaksi\RptInvoice.resx">
+      <DependentUpon>RptInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Rpt\Transaksi\RptQuotation.resx">
       <DependentUpon>RptQuotation.cs</DependentUpon>

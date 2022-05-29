@@ -78,6 +78,7 @@
             this.txtProyekAlamat = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.btnCetakFL = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -114,6 +115,7 @@
             // 
             // xtraScrollableControl1
             // 
+            this.xtraScrollableControl1.Controls.Add(this.btnCetakFL);
             this.xtraScrollableControl1.Controls.Add(this.btnCetak);
             this.xtraScrollableControl1.Controls.Add(this.gridControl1);
             this.xtraScrollableControl1.Controls.Add(this.btnSimpan);
@@ -614,6 +616,16 @@
             this.labelControl14.TabIndex = 208;
             this.labelControl14.Text = "Alamat";
             // 
+            // btnCetakFL
+            // 
+            this.btnCetakFL.Image = ((System.Drawing.Image)(resources.GetObject("btnCetakFL.Image")));
+            this.btnCetakFL.Location = new System.Drawing.Point(211, 546);
+            this.btnCetakFL.Name = "btnCetakFL";
+            this.btnCetakFL.Size = new System.Drawing.Size(105, 23);
+            this.btnCetakFL.TabIndex = 264;
+            this.btnCetakFL.Text = "Formal Letter";
+            this.btnCetakFL.Click += new System.EventHandler(this.btnCetakFL_Click);
+            // 
             // FrmInvoiceAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -717,5 +729,6 @@
         private DevExpress.XtraEditors.TextEdit txtProyekJenis;
         private DevExpress.XtraEditors.TextEdit txtProyekTujuan;
         private DevExpress.XtraEditors.LookUpEdit cmbQuotation;
+        private DevExpress.XtraEditors.SimpleButton btnCetakFL;
     }
 }
