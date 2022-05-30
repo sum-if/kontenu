@@ -55,117 +55,104 @@
             // btnSimpan
             // 
             this.btnSimpan.Image = global::Kontenu.Properties.Resources.simpan_16;
-            this.btnSimpan.Location = new System.Drawing.Point(207, 430);
-            this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimpan.Location = new System.Drawing.Point(138, 294);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(112, 34);
+            this.btnSimpan.Size = new System.Drawing.Size(75, 23);
             this.btnSimpan.TabIndex = 150;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(18, 168);
-            this.labelControl18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl18.Location = new System.Drawing.Point(12, 115);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(39, 19);
+            this.labelControl18.Size = new System.Drawing.Size(24, 13);
             this.labelControl18.TabIndex = 215;
             this.labelControl18.Text = "Email";
             // 
             // txtEmail
             // 
             this.txtEmail.EditValue = "";
-            this.txtEmail.Location = new System.Drawing.Point(207, 163);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Location = new System.Drawing.Point(138, 112);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(572, 26);
+            this.txtEmail.Size = new System.Drawing.Size(381, 20);
             this.txtEmail.TabIndex = 90;
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(207, 13);
-            this.txtNama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNama.Location = new System.Drawing.Point(138, 9);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(572, 26);
+            this.txtNama.Size = new System.Drawing.Size(381, 20);
             this.txtNama.TabIndex = 10;
             // 
             // labelControl21
             // 
-            this.labelControl21.Location = new System.Drawing.Point(18, 94);
-            this.labelControl21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl21.Location = new System.Drawing.Point(12, 64);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(31, 19);
+            this.labelControl21.Size = new System.Drawing.Size(22, 13);
             this.labelControl21.TabIndex = 206;
             this.labelControl21.Text = "Kota";
             // 
             // txtKota
             // 
             this.txtKota.EditValue = "";
-            this.txtKota.Location = new System.Drawing.Point(207, 89);
-            this.txtKota.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKota.Location = new System.Drawing.Point(138, 61);
             this.txtKota.Name = "txtKota";
-            this.txtKota.Size = new System.Drawing.Size(572, 26);
+            this.txtKota.Size = new System.Drawing.Size(381, 20);
             this.txtKota.TabIndex = 60;
             // 
             // labelControl22
             // 
-            this.labelControl22.Location = new System.Drawing.Point(18, 18);
-            this.labelControl22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl22.Location = new System.Drawing.Point(12, 12);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(41, 19);
+            this.labelControl22.Size = new System.Drawing.Size(27, 13);
             this.labelControl22.TabIndex = 203;
             this.labelControl22.Text = "Nama";
             // 
             // txtAlamat
             // 
-            this.txtAlamat.Location = new System.Drawing.Point(207, 51);
-            this.txtAlamat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAlamat.Location = new System.Drawing.Point(138, 35);
             this.txtAlamat.Name = "txtAlamat";
-            this.txtAlamat.Size = new System.Drawing.Size(572, 26);
+            this.txtAlamat.Size = new System.Drawing.Size(381, 20);
             this.txtAlamat.TabIndex = 20;
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(18, 56);
-            this.labelControl26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl26.Location = new System.Drawing.Point(12, 38);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(50, 19);
+            this.labelControl26.Size = new System.Drawing.Size(33, 13);
             this.labelControl26.TabIndex = 204;
             this.labelControl26.Text = "Alamat";
             // 
             // txtWebsite
             // 
-            this.txtWebsite.Location = new System.Drawing.Point(207, 201);
-            this.txtWebsite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtWebsite.Location = new System.Drawing.Point(138, 138);
             this.txtWebsite.Name = "txtWebsite";
-            this.txtWebsite.Size = new System.Drawing.Size(572, 26);
+            this.txtWebsite.Size = new System.Drawing.Size(381, 20);
             this.txtWebsite.TabIndex = 100;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(18, 206);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Location = new System.Drawing.Point(12, 141);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(55, 19);
+            this.labelControl1.Size = new System.Drawing.Size(39, 13);
             this.labelControl1.TabIndex = 221;
             this.labelControl1.Text = "Website";
             // 
             // btnHapusGambar
             // 
-            this.btnHapusGambar.Location = new System.Drawing.Point(480, 295);
-            this.btnHapusGambar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHapusGambar.Location = new System.Drawing.Point(320, 202);
             this.btnHapusGambar.Name = "btnHapusGambar";
-            this.btnHapusGambar.Size = new System.Drawing.Size(128, 34);
+            this.btnHapusGambar.Size = new System.Drawing.Size(85, 23);
             this.btnHapusGambar.TabIndex = 140;
             this.btnHapusGambar.Text = "Hapus Logo";
             this.btnHapusGambar.Click += new System.EventHandler(this.btnHapusGambar_Click);
             // 
             // btnAmbilGambar
             // 
-            this.btnAmbilGambar.Location = new System.Drawing.Point(480, 252);
-            this.btnAmbilGambar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAmbilGambar.Location = new System.Drawing.Point(320, 172);
             this.btnAmbilGambar.Name = "btnAmbilGambar";
-            this.btnAmbilGambar.Size = new System.Drawing.Size(128, 34);
+            this.btnAmbilGambar.Size = new System.Drawing.Size(85, 23);
             this.btnAmbilGambar.TabIndex = 130;
             this.btnAmbilGambar.Text = "Ambil Logo";
             this.btnAmbilGambar.Click += new System.EventHandler(this.btnAmbilGambar_Click);
@@ -174,10 +161,9 @@
             // 
             this.picGambar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picGambar.InitialImage = null;
-            this.picGambar.Location = new System.Drawing.Point(207, 252);
-            this.picGambar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picGambar.Location = new System.Drawing.Point(138, 172);
             this.picGambar.Name = "picGambar";
-            this.picGambar.Size = new System.Drawing.Size(263, 169);
+            this.picGambar.Size = new System.Drawing.Size(176, 116);
             this.picGambar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picGambar.TabIndex = 223;
             this.picGambar.TabStop = false;
@@ -188,27 +174,25 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(18, 131);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(12, 90);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(28, 19);
+            this.labelControl2.Size = new System.Drawing.Size(20, 13);
             this.labelControl2.TabIndex = 225;
-            this.labelControl2.Text = "Telf";
+            this.labelControl2.Text = "Telp";
             // 
             // txtTelf
             // 
             this.txtTelf.EditValue = "";
-            this.txtTelf.Location = new System.Drawing.Point(207, 126);
-            this.txtTelf.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelf.Location = new System.Drawing.Point(138, 86);
             this.txtTelf.Name = "txtTelf";
-            this.txtTelf.Size = new System.Drawing.Size(572, 26);
+            this.txtTelf.Size = new System.Drawing.Size(381, 20);
             this.txtTelf.TabIndex = 224;
             // 
             // FrmPerusahaan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 476);
+            this.ClientSize = new System.Drawing.Size(533, 326);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.txtTelf);
             this.Controls.Add(this.btnHapusGambar);
@@ -225,7 +209,6 @@
             this.Controls.Add(this.txtAlamat);
             this.Controls.Add(this.labelControl26);
             this.Controls.Add(this.btnSimpan);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmPerusahaan";
             this.Text = "Perusahaan";
             this.Load += new System.EventHandler(this.FrmPerusahaan_Load);

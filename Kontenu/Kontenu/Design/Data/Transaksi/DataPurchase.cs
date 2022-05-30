@@ -72,13 +72,14 @@ namespace Kontenu.Design {
             String strngTahunDuaDigit = OswDate.getTahunDuaDigit(strngTanggalSekarang);
             String strngBulan = OswDate.getBulan(strngTanggalSekarang);
             String strngTanggal = OswDate.getTanggal(strngTanggalSekarang);
-
+            String strngProyek = this.proyek;
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("Tahun", strngTahun);
             parameters.Add("TahunDuaDigit", strngTahunDuaDigit);
             parameters.Add("Bulan", strngBulan);
             parameters.Add("Tanggal", strngTanggal);
+            parameters.Add("Proyek", strngProyek);
 
             String kode = OswFormatDokumen.generate(command, id, parameters);
 

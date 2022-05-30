@@ -80,6 +80,7 @@ namespace Kontenu.Design {
             String strngTahunDuaDigit = OswDate.getTahunDuaDigit(strngTanggalSekarang);
             String strngBulan = OswDate.getBulan(strngTanggalSekarang);
             String strngTanggal = OswDate.getTanggal(strngTanggalSekarang);
+            String strngInvoice = this.invoice;
 
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
@@ -87,6 +88,8 @@ namespace Kontenu.Design {
             parameters.Add("TahunDuaDigit", strngTahunDuaDigit);
             parameters.Add("Bulan", strngBulan);
             parameters.Add("Tanggal", strngTanggal);
+            parameters.Add("Invoice", strngInvoice);
+
 
             String kode = OswFormatDokumen.generate(command, id, parameters);
 

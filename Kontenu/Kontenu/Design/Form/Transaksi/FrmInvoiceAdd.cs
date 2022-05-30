@@ -73,10 +73,12 @@ namespace Kontenu.Design
                 if (!this.isAdd)
                 {
                     this.dokumen = "Ubah " + dOswJenisDokumen.nama;
+                    cmbProyekID = ComboQueryUmum.getProyek(cmbProyekID, command);
                 }
                 else
                 {
                     this.dokumen = "Tambah " + dOswJenisDokumen.nama;
+                    cmbProyekID = ComboQueryUmum.getProyekAktif(cmbProyekID, command);
                 }
 
                 this.dokumenDetail = "Tambah " + dOswJenisDokumen.nama;
@@ -86,7 +88,7 @@ namespace Kontenu.Design
                 OswControlDefaultProperties.setInput(this, id, command);
                 OswControlDefaultProperties.setTanggal(deTanggal);
 
-                cmbProyekID = ComboQueryUmum.getProyek(cmbProyekID, command);
+                //cmbProyekID = ComboQueryUmum.getProyek(cmbProyekID, command);
 
 
                 this.setDefaultInput(command);
