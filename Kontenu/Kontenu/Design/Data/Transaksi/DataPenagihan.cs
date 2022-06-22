@@ -210,6 +210,35 @@ namespace Kontenu.Design {
             OswDataAccess.executeVoidQuery(query, parameters, command);
         }
 
+        public void kurangTotalTagih()
+        {
+            // validasi
+            //valExist();
+
+            // update jumlah terima di faktur
+            DataPenagihan dPenagihan = new DataPenagihan(command, this.kode);
+            double dblJumlahLama = double.Parse(dPenagihan.telahdibayar);
+            double dblJumlahBaru = dblJumlahLama - double.Parse(this.ditagihkan);
+
+            // total bayar < 0
+            if (dblJumlahBaru < 0)
+            {
+                throw new Exception("Total Dibayar [" + this.kode + "] Tidak Boleh Kurang dari 0, Mohon Kontak System Administrator");
+            }
+
+            String query = @"UPDATE penagihan
+                             SET telahdibayar = @telahdibayar
+                             WHERE kode = @kode";
+
+            Dictionary<String, String> parameters = new Dictionary<String, String>();            
+            parameters.Add("kode", this.kode);
+            parameters.Add("telahdibayar", dblJumlahBaru.ToString());
+
+            OswDataAccess.executeVoidQuery(query, parameters, command);
+
+            
+        }
+
         public void prosesJurnal()
         {
             /*
@@ -324,6 +353,8 @@ namespace Kontenu.Design {
 
 //            Tools.cekJurnalBalance(command, this.id, this.kode);
         }
+
+
 
         private void valNotExist() {
             if(this.isExist) {

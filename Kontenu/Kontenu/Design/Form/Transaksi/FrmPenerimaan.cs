@@ -36,8 +36,8 @@ namespace Kontenu.Design
 {
     public partial class FrmPenerimaan : DevExpress.XtraEditors.XtraForm
     {
-        private String id = "PENAGIHAN";
-        private String dokumen = "PENAGIHAN";
+        private String id = "PENERIMAAN";
+        private String dokumen = "PENERIMAAN";
 
         public FrmPenerimaan()
         {

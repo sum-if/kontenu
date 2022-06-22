@@ -8,6 +8,7 @@ using System.Data;
 using OswLib;
 using Kontenu.OswLib;
 
+
 namespace Kontenu.Master {
     class DataOutsource {
         private String id = "OUTSOURCE";

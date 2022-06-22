@@ -8,7 +8,9 @@ using System.Data;
 using OswLib;
 using Kontenu.OswLib;
 using Kontenu.Umum;
+using Kontenu.Design;
 using Kontenu.Akuntansi;
+using Kontenu.Master;
 
 namespace Kontenu.Design {
     class DataPurchase {
@@ -127,6 +129,10 @@ namespace Kontenu.Design {
             // validasi
             valExist();
 
+            // hapus jurnal
+            DataJurnal dJurnal = new DataJurnal(command, this.id, this.kode);
+            dJurnal.hapusJurnal();
+
             // hapus detail
             this.hapusDetail();
 
@@ -222,42 +228,42 @@ namespace Kontenu.Design {
 
         public void prosesJurnal()
         {
-            ///*
-            //Purchase [NAMA PROJECT] dari [NAMA CLIENT]																																				
-            //No	Status				Akun						Nilai														Contoh di atas											
-            //1	Debet				konstanta.design_akunpiutang						grand total														 9.180.000
-            //2	Kredit				konstanta.design_akununearned						grand total														 9.180.000
-            //*/
+            /*
+            Purchase [NAMA PROJECT] dari [NAMA CLIENT]																																				
+            No	Status				Akun						Nilai														Contoh di atas											
+            1	Debet				konstanta.design_akunaccrued						grand total														 9.180.000
+            2	Kredit				konstanta.design_akunhutangoutsource				grand total														 9.180.000
+            */
 
-            //int no = 1;
-            //DataKlien dKlien = new DataKlien(command, this.klien);
-            //DataProyek dProyek = new DataProyek(command, this.proyek);
+            int no = 1;
+            DataOutsource dOutsource = new DataOutsource(command, this.outsource);
+            DataProyek dProyek = new DataProyek(command, this.proyek);
 
-            //String strngKeteranganJurnal = "Purchase ["+ dProyek.nama +"] dari ["+ dKlien.nama +"]";
+            String strngKeteranganJurnal = "Purchase [" + dProyek.nama + "] dari [" + dOutsource.nama + "]";
 
-            //// Debet				konstanta.design_akunpiutang						grand total														 9.180.000
-            //String strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_DESIGN_AKUN_PIUTANG);
-            //DataAkun dAkun = new DataAkun(command, strngAkun);
-            //if (!dAkun.isExist)
-            //{
-            //    throw new Exception("Akun Design Piutang [" + strngAkun + "] tidak ditemukan.");
-            //}
+            // Debet				konstanta.design_akunaccrued						grand total														 9.180.000
+            String strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_DESIGN_AKUN_ACCRUED);
+            DataAkun dAkun = new DataAkun(command, strngAkun);
+            if (!dAkun.isExist)
+            {
+                throw new Exception("Akun Design Accrued [" + strngAkun + "] tidak ditemukan.");
+            }
 
-            //DataJurnal dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, this.grandtotal, "0");
-            //dJurnal.prosesJurnal();
+            DataJurnal dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, this.grandtotal, "0");
+            dJurnal.prosesJurnal();
 
-            //// Kredit				konstanta.design_akununearned						grand total														 9.180.000
-            //strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_DESIGN_AKUN_EARNED);
-            //dAkun = new DataAkun(command, strngAkun);
-            //if (!dAkun.isExist)
-            //{
-            //    throw new Exception("Akun Design Unearned [" + strngAkun + "] tidak ditemukan.");
-            //}
+            // Kredit				konstanta.design_akunhutangoutsource						grand total														 9.180.000
+            strngAkun = OswConstants.getIsiSettingDB(command, Constants.AKUN_DESIGN_AKUN_HUTANG_OUTSOURCE);
+            dAkun = new DataAkun(command, strngAkun);
+            if (!dAkun.isExist)
+            {
+                throw new Exception("Akun Design Hutang Outsource [" + strngAkun + "] tidak ditemukan.");
+            }
 
-            //dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, "0", this.grandtotal);
-            //dJurnal.prosesJurnal();
+            dJurnal = new DataJurnal(command, this.id, this.kode, this.tanggal, strngKeteranganJurnal, (no++).ToString(), strngAkun, "0", this.grandtotal);
+            dJurnal.prosesJurnal();
 
-            //Tools.cekJurnalBalance(command, this.id, this.kode);
+            Tools.cekJurnalBalance(command, this.id, this.kode);
         }
 
         private void valNotExist() {

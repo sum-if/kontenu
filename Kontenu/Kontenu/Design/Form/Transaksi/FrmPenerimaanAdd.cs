@@ -88,12 +88,12 @@ namespace Kontenu.Design
 
                 this.Text = this.dokumen;
 
-                OswControlDefaultProperties.setInput(this, id, command);
+                OswControlDefaultProperties.setInput(this, id, command, false);
                 OswControlDefaultProperties.setTanggal(deTanggal);
                 OswControlDefaultProperties.setAngka(txtDiterima);
 
                 cmbAkunPenerimaan = ComboQueryUmum.getAkun(cmbAkunPenerimaan, command, Constants.AKUN_LIST_PENERIMAAN_INVOICE);
-
+                txtDiterima.Enabled = false;
                 this.setDefaultInput(command);
 
                 // Commit Transaction
@@ -475,7 +475,7 @@ namespace Kontenu.Design
                 String strngKodeKlien = txtKodeKlien.Text;
 
                 String query = @"SELECT AAAA.kode AS Kode, AAAA.tanggal AS Tanggal, A.jenis AS Jenis, B.nama AS Proyek, 
-                                        A.grandtotal AS 'Grand Total', AA.totaltagih AS 'Total Tagih', AAA.totalterima AS 'Total Terima'
+                                        A.grandtotal AS 'Grand Total', AAAA.ditagihkan AS 'Ditagihkan', AA.totaltagih AS 'Total Tagih', AAA.totalterima AS 'Total Terima'
                                 FROM penagihan AAAA
                                 INNER JOIN invoice A ON AAAA.invoice = A.kode
                                 INNER JOIN v_invoice_totaltagih AA ON A.kode = AA.invoice
@@ -489,9 +489,9 @@ namespace Kontenu.Design
                 parameters.Add("klien", strngKodeKlien);
 
                 InfUtamaDictionary form = new InfUtamaDictionary("Info Penagihan", query, parameters,
-                                                                new String[] { "Kode", "Total Terima" },
+                                                                new String[] { "Kode", "Total Terima", "Ditagihkan" },
                                                                 new String[] { },
-                                                                new String[] { "Grand Total", "Total Tagih", "Total Terima" });
+                                                                new String[] { "Ditagihkan", "Total Terima", "Grand Total", "Total Tagih" });
                 this.AddOwnedForm(form);
                 form.ShowDialog();
                 if (!form.hasil.ContainsKey("Kode"))
@@ -501,6 +501,7 @@ namespace Kontenu.Design
 
                 String strngKodePenagihan = form.hasil["Kode"];
                 String strngTotalTerima = form.hasil["Total Terima"];
+                String strngDitagihkan = form.hasil["Ditagihkan"];
 
                 // Penagihan 
                 DataPenagihan dPenagihan = new DataPenagihan(command, strngKodePenagihan);
@@ -511,6 +512,7 @@ namespace Kontenu.Design
                 txtKodeInvoice.Text = dInvoice.kode;
                 txtTanggalInvoice.Text = dInvoice.tanggal;
                 txtNoQuotation.Text = dInvoice.quotation;
+                txtDiterima.EditValue = strngDitagihkan;
 
                 // Proyek
                 DataProyek dProyek = new DataProyek(command, dInvoice.proyek);

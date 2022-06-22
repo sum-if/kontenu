@@ -131,6 +131,11 @@ namespace Kontenu.Design {
             parameters.Add("create_user", OswConstants.KODEUSER);
 
             OswDataAccess.executeVoidQuery(query, parameters, command);
+            //DataPenerimaan dPenerimaan = new DataPenerimaan(command, this.kode);
+            DataPenagihan dPenagihan = new DataPenagihan(command, this.penagihan);
+            dPenagihan.status = Constants.STATUS_PENAGIHAN_SUDAH_BAYAR;
+            dPenagihan.ubahStatus();
+
         }
 
         public void hapus() {
@@ -145,6 +150,11 @@ namespace Kontenu.Design {
             parameters.Add("kode", this.kode);
 
             OswDataAccess.executeVoidQuery(query, parameters, command);
+
+            DataPenagihan dPenagihan = new DataPenagihan(command, this.penagihan);
+            dPenagihan.status = Constants.STATUS_PENAGIHAN_BELUM_BAYAR;
+            dPenagihan.ubahStatus();
+            //dPenagihan.kurangTotalTagih();
         }
 
         public void ubah() {
