@@ -27,6 +27,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvoiceAdd));
             this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
+            this.btnCetakFL = new DevExpress.XtraEditors.SimpleButton();
             this.btnCetak = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -78,7 +79,6 @@
             this.txtProyekAlamat = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.btnCetakFL = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -128,6 +128,16 @@
             this.xtraScrollableControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.xtraScrollableControl1.Size = new System.Drawing.Size(995, 480);
             this.xtraScrollableControl1.TabIndex = 0;
+            // 
+            // btnCetakFL
+            // 
+            this.btnCetakFL.Image = ((System.Drawing.Image)(resources.GetObject("btnCetakFL.Image")));
+            this.btnCetakFL.Location = new System.Drawing.Point(211, 546);
+            this.btnCetakFL.Name = "btnCetakFL";
+            this.btnCetakFL.Size = new System.Drawing.Size(105, 23);
+            this.btnCetakFL.TabIndex = 264;
+            this.btnCetakFL.Text = "Formal Letter";
+            this.btnCetakFL.Click += new System.EventHandler(this.btnCetakFL_Click);
             // 
             // btnCetak
             // 
@@ -218,10 +228,10 @@
             this.groupControl2.Controls.Add(this.labelControl18);
             this.groupControl2.Controls.Add(this.txtEmail);
             this.groupControl2.Controls.Add(this.txtNama);
+            this.groupControl2.Controls.Add(this.txtProvinsi);
             this.groupControl2.Controls.Add(this.labelControl21);
             this.groupControl2.Controls.Add(this.txtTelepon);
             this.groupControl2.Controls.Add(this.labelControl22);
-            this.groupControl2.Controls.Add(this.txtProvinsi);
             this.groupControl2.Controls.Add(this.labelControl25);
             this.groupControl2.Controls.Add(this.txtKodePos);
             this.groupControl2.Controls.Add(this.txtAlamat);
@@ -320,7 +330,7 @@
             // 
             this.txtProvinsi.EditValue = "";
             this.txtProvinsi.Enabled = false;
-            this.txtProvinsi.Location = new System.Drawing.Point(136, 107);
+            this.txtProvinsi.Location = new System.Drawing.Point(298, 107);
             this.txtProvinsi.Name = "txtProvinsi";
             this.txtProvinsi.Size = new System.Drawing.Size(113, 20);
             this.txtProvinsi.TabIndex = 140;
@@ -362,7 +372,7 @@
             // 
             this.txtKota.EditValue = "";
             this.txtKota.Enabled = false;
-            this.txtKota.Location = new System.Drawing.Point(255, 107);
+            this.txtKota.Location = new System.Drawing.Point(136, 107);
             this.txtKota.Name = "txtKota";
             this.txtKota.Size = new System.Drawing.Size(157, 20);
             this.txtKota.TabIndex = 150;
@@ -615,16 +625,6 @@
             this.labelControl14.Size = new System.Drawing.Size(33, 13);
             this.labelControl14.TabIndex = 208;
             this.labelControl14.Text = "Alamat";
-            // 
-            // btnCetakFL
-            // 
-            this.btnCetakFL.Image = ((System.Drawing.Image)(resources.GetObject("btnCetakFL.Image")));
-            this.btnCetakFL.Location = new System.Drawing.Point(211, 546);
-            this.btnCetakFL.Name = "btnCetakFL";
-            this.btnCetakFL.Size = new System.Drawing.Size(105, 23);
-            this.btnCetakFL.TabIndex = 264;
-            this.btnCetakFL.Text = "Formal Letter";
-            this.btnCetakFL.Click += new System.EventHandler(this.btnCetakFL_Click);
             // 
             // FrmInvoiceAdd
             // 

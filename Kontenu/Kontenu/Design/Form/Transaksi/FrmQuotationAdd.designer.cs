@@ -356,10 +356,10 @@
             this.groupControl2.Controls.Add(this.labelControl18);
             this.groupControl2.Controls.Add(this.txtEmail);
             this.groupControl2.Controls.Add(this.txtNama);
+            this.groupControl2.Controls.Add(this.txtProvinsi);
             this.groupControl2.Controls.Add(this.labelControl21);
             this.groupControl2.Controls.Add(this.txtTelepon);
             this.groupControl2.Controls.Add(this.labelControl22);
-            this.groupControl2.Controls.Add(this.txtProvinsi);
             this.groupControl2.Controls.Add(this.labelControl25);
             this.groupControl2.Controls.Add(this.txtKodePos);
             this.groupControl2.Controls.Add(this.txtAlamat);
@@ -468,7 +468,7 @@
             // 
             this.txtProvinsi.EditValue = "";
             this.txtProvinsi.Enabled = false;
-            this.txtProvinsi.Location = new System.Drawing.Point(135, 113);
+            this.txtProvinsi.Location = new System.Drawing.Point(298, 114);
             this.txtProvinsi.Name = "txtProvinsi";
             this.txtProvinsi.Size = new System.Drawing.Size(113, 20);
             this.txtProvinsi.TabIndex = 140;
@@ -510,7 +510,7 @@
             // 
             this.txtKota.EditValue = "";
             this.txtKota.Enabled = false;
-            this.txtKota.Location = new System.Drawing.Point(254, 113);
+            this.txtKota.Location = new System.Drawing.Point(135, 114);
             this.txtKota.Name = "txtKota";
             this.txtKota.Size = new System.Drawing.Size(157, 20);
             this.txtKota.TabIndex = 150;

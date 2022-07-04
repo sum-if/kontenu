@@ -47,6 +47,8 @@
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.txtKota = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtProyekTelepon = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.rdoJenisInvoiceProduct = new System.Windows.Forms.RadioButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.rdoJenisInvoiceInterior = new System.Windows.Forms.RadioButton();
@@ -69,8 +71,6 @@
             this.txtProyekKodePos = new DevExpress.XtraEditors.TextEdit();
             this.txtProyekAlamat = new DevExpress.XtraEditors.TextEdit();
             this.txtProyekProvinsi = new DevExpress.XtraEditors.TextEdit();
-            this.txtProyekTelepon = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -86,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKota.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProyekTelepon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProyekPIC.Properties)).BeginInit();
@@ -97,7 +98,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekKodePos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekProvinsi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProyekTelepon.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraScrollableControl1
@@ -244,7 +244,7 @@
             // 
             this.txtProvinsi.EditValue = "";
             this.txtProvinsi.Enabled = false;
-            this.txtProvinsi.Location = new System.Drawing.Point(135, 113);
+            this.txtProvinsi.Location = new System.Drawing.Point(298, 113);
             this.txtProvinsi.Name = "txtProvinsi";
             this.txtProvinsi.Size = new System.Drawing.Size(113, 20);
             this.txtProvinsi.TabIndex = 140;
@@ -286,7 +286,7 @@
             // 
             this.txtKota.EditValue = "";
             this.txtKota.Enabled = false;
-            this.txtKota.Location = new System.Drawing.Point(254, 113);
+            this.txtKota.Location = new System.Drawing.Point(136, 113);
             this.txtKota.Name = "txtKota";
             this.txtKota.Size = new System.Drawing.Size(157, 20);
             this.txtKota.TabIndex = 150;
@@ -322,6 +322,21 @@
             this.groupControl1.Size = new System.Drawing.Size(447, 320);
             this.groupControl1.TabIndex = 201;
             this.groupControl1.Text = "Data Proyek";
+            // 
+            // txtProyekTelepon
+            // 
+            this.txtProyekTelepon.Location = new System.Drawing.Point(124, 192);
+            this.txtProyekTelepon.Name = "txtProyekTelepon";
+            this.txtProyekTelepon.Size = new System.Drawing.Size(305, 20);
+            this.txtProyekTelepon.TabIndex = 227;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(13, 195);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(38, 13);
+            this.labelControl5.TabIndex = 228;
+            this.labelControl5.Text = "Telepon";
             // 
             // rdoJenisInvoiceProduct
             // 
@@ -512,21 +527,6 @@
             this.txtProyekProvinsi.Size = new System.Drawing.Size(131, 20);
             this.txtProyekProvinsi.TabIndex = 210;
             // 
-            // txtProyekTelepon
-            // 
-            this.txtProyekTelepon.Location = new System.Drawing.Point(124, 192);
-            this.txtProyekTelepon.Name = "txtProyekTelepon";
-            this.txtProyekTelepon.Size = new System.Drawing.Size(305, 20);
-            this.txtProyekTelepon.TabIndex = 227;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(13, 195);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(38, 13);
-            this.labelControl5.TabIndex = 228;
-            this.labelControl5.Text = "Telepon";
-            // 
             // FrmProyekAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,6 +553,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProyekTelepon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProyekPIC.Properties)).EndInit();
@@ -564,7 +565,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekKodePos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekProvinsi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProyekTelepon.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
