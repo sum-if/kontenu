@@ -599,7 +599,7 @@ namespace Kontenu.Design
                 report.Parameters["KlienKota"].Value = dKlien.kota;
                 report.Parameters["KlienEmail"].Value = dKlien.email;
                 report.Parameters["KlienTelp"].Value = dKlien.telp;
-                report.Parameters["KlienJabatan"].Value = "JABATAN";
+                report.Parameters["KlienJabatan"].Value = dProyek.jabatanklien;
                 report.Parameters["KlienKTP"].Value = dKlien.ktp;
 
 

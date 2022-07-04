@@ -35,6 +35,7 @@
             this.lblGrandTotal = new DevExpress.XtraEditors.LabelControl();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.btnCariOutsource = new DevExpress.XtraEditors.SimpleButton();
             this.txtKodeOutsource = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
@@ -52,7 +53,9 @@
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.txtKota = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnCariProyek = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtProyekKode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
@@ -71,9 +74,6 @@
             this.txtProyekAlamat = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.btnCariOutsource = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCariProyek = new DevExpress.XtraEditors.SimpleButton();
-            this.txtProyekKode = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -93,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKota.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProyekKode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekKota.Properties)).BeginInit();
@@ -104,7 +105,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekJenis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekTujuan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProyekKode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraScrollableControl1
@@ -216,6 +216,16 @@
             this.groupControl2.TabIndex = 202;
             this.groupControl2.Text = "Data Outsource";
             // 
+            // btnCariOutsource
+            // 
+            this.btnCariOutsource.Image = global::Kontenu.Properties.Resources.cari_16;
+            this.btnCariOutsource.Location = new System.Drawing.Point(434, 26);
+            this.btnCariOutsource.Name = "btnCariOutsource";
+            this.btnCariOutsource.Size = new System.Drawing.Size(55, 23);
+            this.btnCariOutsource.TabIndex = 248;
+            this.btnCariOutsource.Text = "Cari";
+            this.btnCariOutsource.Click += new System.EventHandler(this.btnCariOutsource_Click);
+            // 
             // txtKodeOutsource
             // 
             this.txtKodeOutsource.Enabled = false;
@@ -303,7 +313,7 @@
             // 
             this.txtProvinsi.EditValue = "";
             this.txtProvinsi.Enabled = false;
-            this.txtProvinsi.Location = new System.Drawing.Point(136, 107);
+            this.txtProvinsi.Location = new System.Drawing.Point(298, 107);
             this.txtProvinsi.Name = "txtProvinsi";
             this.txtProvinsi.Size = new System.Drawing.Size(113, 20);
             this.txtProvinsi.TabIndex = 140;
@@ -345,7 +355,7 @@
             // 
             this.txtKota.EditValue = "";
             this.txtKota.Enabled = false;
-            this.txtKota.Location = new System.Drawing.Point(255, 107);
+            this.txtKota.Location = new System.Drawing.Point(137, 107);
             this.txtKota.Name = "txtKota";
             this.txtKota.Size = new System.Drawing.Size(157, 20);
             this.txtKota.TabIndex = 150;
@@ -379,6 +389,16 @@
             this.groupControl1.TabIndex = 201;
             this.groupControl1.Text = "Data Purchase";
             // 
+            // btnCariProyek
+            // 
+            this.btnCariProyek.Image = global::Kontenu.Properties.Resources.cari_16;
+            this.btnCariProyek.Location = new System.Drawing.Point(373, 79);
+            this.btnCariProyek.Name = "btnCariProyek";
+            this.btnCariProyek.Size = new System.Drawing.Size(55, 23);
+            this.btnCariProyek.TabIndex = 250;
+            this.btnCariProyek.Text = "Cari";
+            this.btnCariProyek.Click += new System.EventHandler(this.btnCariProyek_Click);
+            // 
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(12, 84);
@@ -386,6 +406,14 @@
             this.labelControl6.Size = new System.Drawing.Size(48, 13);
             this.labelControl6.TabIndex = 226;
             this.labelControl6.Text = "Project ID";
+            // 
+            // txtProyekKode
+            // 
+            this.txtProyekKode.Enabled = false;
+            this.txtProyekKode.Location = new System.Drawing.Point(123, 81);
+            this.txtProyekKode.Name = "txtProyekKode";
+            this.txtProyekKode.Size = new System.Drawing.Size(244, 20);
+            this.txtProyekKode.TabIndex = 249;
             // 
             // labelControl30
             // 
@@ -538,34 +566,6 @@
             this.labelControl14.TabIndex = 208;
             this.labelControl14.Text = "Alamat";
             // 
-            // btnCariOutsource
-            // 
-            this.btnCariOutsource.Image = global::Kontenu.Properties.Resources.cari_16;
-            this.btnCariOutsource.Location = new System.Drawing.Point(434, 26);
-            this.btnCariOutsource.Name = "btnCariOutsource";
-            this.btnCariOutsource.Size = new System.Drawing.Size(55, 23);
-            this.btnCariOutsource.TabIndex = 248;
-            this.btnCariOutsource.Text = "Cari";
-            this.btnCariOutsource.Click += new System.EventHandler(this.btnCariOutsource_Click);
-            // 
-            // btnCariProyek
-            // 
-            this.btnCariProyek.Image = global::Kontenu.Properties.Resources.cari_16;
-            this.btnCariProyek.Location = new System.Drawing.Point(373, 79);
-            this.btnCariProyek.Name = "btnCariProyek";
-            this.btnCariProyek.Size = new System.Drawing.Size(55, 23);
-            this.btnCariProyek.TabIndex = 250;
-            this.btnCariProyek.Text = "Cari";
-            this.btnCariProyek.Click += new System.EventHandler(this.btnCariProyek_Click);
-            // 
-            // txtProyekKode
-            // 
-            this.txtProyekKode.Enabled = false;
-            this.txtProyekKode.Location = new System.Drawing.Point(123, 81);
-            this.txtProyekKode.Name = "txtProyekKode";
-            this.txtProyekKode.Size = new System.Drawing.Size(244, 20);
-            this.txtProyekKode.TabIndex = 249;
-            // 
             // FrmPurchaseAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -597,6 +597,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProyekKode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deTanggal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekKota.Properties)).EndInit();
@@ -608,7 +609,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekJenis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekTujuan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProyekKode.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

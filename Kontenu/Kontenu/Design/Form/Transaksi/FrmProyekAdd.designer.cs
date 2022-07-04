@@ -71,6 +71,8 @@
             this.txtProyekKodePos = new DevExpress.XtraEditors.TextEdit();
             this.txtProyekAlamat = new DevExpress.XtraEditors.TextEdit();
             this.txtProyekProvinsi = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtJabatanKontrak = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -98,6 +100,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekKodePos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekProvinsi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtJabatanKontrak.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraScrollableControl1
@@ -124,6 +127,8 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.labelControl6);
+            this.groupControl2.Controls.Add(this.txtJabatanKontrak);
             this.groupControl2.Controls.Add(this.txtKodeKlien);
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Controls.Add(this.btnCariKlien);
@@ -527,6 +532,22 @@
             this.txtProyekProvinsi.Size = new System.Drawing.Size(131, 20);
             this.txtProyekProvinsi.TabIndex = 210;
             // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(19, 226);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(79, 13);
+            this.labelControl6.TabIndex = 249;
+            this.labelControl6.Text = "Jabatan Kontrak";
+            // 
+            // txtJabatanKontrak
+            // 
+            this.txtJabatanKontrak.EditValue = "";
+            this.txtJabatanKontrak.Location = new System.Drawing.Point(136, 223);
+            this.txtJabatanKontrak.Name = "txtJabatanKontrak";
+            this.txtJabatanKontrak.Size = new System.Drawing.Size(353, 20);
+            this.txtJabatanKontrak.TabIndex = 248;
+            // 
             // FrmProyekAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -565,6 +586,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekKodePos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekProvinsi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtJabatanKontrak.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -617,5 +639,7 @@
         private System.Windows.Forms.RadioButton rdoJenisInvoiceInterior;
         private DevExpress.XtraEditors.TextEdit txtProyekTelepon;
         private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.TextEdit txtJabatanKontrak;
     }
 }

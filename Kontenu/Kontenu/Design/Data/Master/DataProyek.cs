@@ -22,6 +22,7 @@ namespace Kontenu.Design {
         public String kota = "";
         public String telepon = "";
         public String kodepos = "";
+        public String jabatanklien = "";
         public String tujuanproyek = "";
         public String jenisproyek = "";
         public String pic = "";
@@ -42,6 +43,7 @@ namespace Kontenu.Design {
             kolom += "Proyek Kota:" + kota + ";";
             kolom += "Proyek Telepon:" + telepon + ";";
             kolom += "Proyek Kode Pos:" + kodepos + ";";
+            kolom += "JabatanKlien:" + jabatanklien + ";";
             kolom += "Tujuan Proyek:" + tujuanproyek + ";";
             kolom += "Jenis Proyek:" + jenisproyek + ";";
             kolom += "PIC:" + pic + ";";
@@ -58,7 +60,7 @@ namespace Kontenu.Design {
 
         private void getOtherAttribute() {
             // cek apakah ada di database berdasarkan PK
-            String query = @"SELECT tanggaldeal, klien, kategori, nama, alamat,provinsi,kota,telepon,kodepos,tujuanproyek,jenisproyek,pic,status, version
+            String query = @"SELECT tanggaldeal, klien, kategori, nama, alamat,provinsi,kota,telepon,kodepos,jabatanklien,tujuanproyek,jenisproyek,pic,status, version
                              FROM proyek 
                              WHERE kode = @kode";
 
@@ -75,8 +77,9 @@ namespace Kontenu.Design {
                 this.alamat = reader.GetString("alamat");
                 this.provinsi = reader.GetString("provinsi");
                 this.kota = reader.GetString("kota");
-                this.telepon = reader.GetString("telepon");
+                this.telepon = reader.GetString("telepon");              
                 this.kodepos = reader.GetString("kodepos");
+                this.jabatanklien = reader.GetString("jabatanklien");
                 this.tujuanproyek = reader.GetString("tujuanproyek");
                 this.jenisproyek = reader.GetString("jenisproyek");
                 this.pic = reader.GetString("pic");
@@ -130,8 +133,8 @@ namespace Kontenu.Design {
             this.kode = this.generateKode();
             this.version += 1;
 
-            String query = @"INSERT INTO proyek(kode, tanggaldeal, klien,kategori, nama, alamat,provinsi,kota,telepon,kodepos,tujuanproyek,jenisproyek,pic, status, version,create_user) 
-                             VALUES(@kode,@tanggaldeal,@klien,@kategori,@nama,@alamat,@provinsi,@kota,@telepon,@kodepos,@tujuanproyek,@jenisproyek,@pic, @status, @version,@create_user)";
+            String query = @"INSERT INTO proyek(kode, tanggaldeal, klien,kategori, nama, alamat,provinsi,kota,telepon,kodepos,jabatanklien,tujuanproyek,jenisproyek,pic, status, version,create_user) 
+                             VALUES(@kode,@tanggaldeal,@klien,@kategori,@nama,@alamat,@provinsi,@kota,@telepon,@kodepos,@jabatanklien,@tujuanproyek,@jenisproyek,@pic, @status, @version,@create_user)";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
             parameters.Add("kode", this.kode);
@@ -144,6 +147,7 @@ namespace Kontenu.Design {
             parameters.Add("kota", this.kota);
             parameters.Add("telepon", this.telepon);
             parameters.Add("kodepos", this.kodepos);
+            parameters.Add("jabatanklien", this.jabatanklien);
             parameters.Add("tujuanproyek", this.tujuanproyek);
             parameters.Add("jenisproyek", this.jenisproyek);
             parameters.Add("pic", this.pic);
@@ -186,6 +190,7 @@ namespace Kontenu.Design {
                                  kota = @kota,
                                  telepon = @telepon,
                                  kodepos = @kodepos,
+                                 jabatanklien = @jabatanklien,
                                  tujuanproyek = @tujuanproyek,
                                  jenisproyek = @jenisproyek,
                                  pic = @pic, 
@@ -205,6 +210,7 @@ namespace Kontenu.Design {
             parameters.Add("kota", this.kota);
             parameters.Add("telepon", this.telepon);
             parameters.Add("kodepos", this.kodepos);
+            parameters.Add("jabatanklien", this.jabatanklien);
             parameters.Add("tujuanproyek", this.tujuanproyek);
             parameters.Add("jenisproyek", this.jenisproyek);
             parameters.Add("pic", this.pic);

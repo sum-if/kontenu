@@ -151,6 +151,7 @@ namespace Kontenu.Design
                 txtProyekProvinsi.Text = dProyek.provinsi;
                 txtProyekKodePos.Text = dProyek.kodepos;
                 txtProyekTelepon.Text = dProyek.telepon;
+                txtJabatanKontrak.Text = dProyek.jabatanklien;     
 
                 cmbProyekTujuan.EditValue = dProyek.tujuanproyek;
                 cmbProyekJenis.EditValue = dProyek.jenisproyek;
@@ -233,6 +234,7 @@ namespace Kontenu.Design
                 String strngProyekTujuan = cmbProyekTujuan.EditValue.ToString();
                 String strngProyekJenis = cmbProyekJenis.EditValue.ToString();
                 String strngProyekPIC = cmbProyekPIC.EditValue.ToString();
+                String stringJabatanKontrak = txtJabatanKontrak.Text;
 
                 DataProyek dProyek = new DataProyek(command, strngKode);
                 dProyek.tanggaldeal = strngTanggal;
@@ -248,6 +250,8 @@ namespace Kontenu.Design
                 dProyek.tujuanproyek = strngProyekTujuan;
                 dProyek.jenisproyek = strngProyekJenis;
                 dProyek.pic = strngProyekPIC;
+                dProyek.jabatanklien = stringJabatanKontrak;
+
 
                 if (this.isAdd)
                 {
