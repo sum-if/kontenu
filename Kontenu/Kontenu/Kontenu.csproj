@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://labs.sumif.id/kontenu/</InstallUrl>
+    <InstallUrl>https://app.kontenudesignstudio.com/kontenu/</InstallUrl>
     <TargetCulture>id-ID</TargetCulture>
     <ProductName>Kontenu</ProductName>
     <PublisherName>SUMiF</PublisherName>
@@ -31,7 +31,7 @@
     <MinimumRequiredVersion>1.0.0.68</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

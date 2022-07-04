@@ -113,9 +113,10 @@ namespace Kontenu.Design {
         public void tambah() {
             // validasi
             valNotExist();
-
+            
             this.kode = this.generateKode();
             this.version += 1;
+            valSisaTagihan();
 
             String query = @"INSERT INTO penagihan(kode, tanggal, klien, invoice, sisa,grandtotal, telahdibayar, ditagihkan,status, version,create_user) 
                              VALUES(@kode,@tanggal,@klien, @invoice, @sisa,@grandtotal,@telahdibayar,@ditagihkan,@status, @version,@create_user)";
@@ -135,6 +136,8 @@ namespace Kontenu.Design {
 
             OswDataAccess.executeVoidQuery(query, parameters, command);
         }
+
+
 
         public void hapus() {
             // validasi
@@ -372,6 +375,43 @@ namespace Kontenu.Design {
             DataPenagihan dPenagihan = new DataPenagihan(command, this.kode);
             if(this.version != dPenagihan.version) {
                 throw new Exception("Data yang dimiliki bukan yang terbaru, silahkan tutup dan lakukan proses ulang");
+            }
+        }
+
+        public void valJumlahDetail()
+        {
+            String query = @"SELECT COUNT(*)
+                             FROM invoicedetail A
+                             WHERE A.invoice = @invoice";
+
+            Dictionary<String, String> parameters = new Dictionary<string, string>();
+            parameters.Add("invoice", this.kode);
+
+            decimal dblJumlahDetailBarang = decimal.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
+
+            if (dblJumlahDetailBarang <= 0)
+            {
+                throw new Exception("Jumlah Item detail harus lebih dari 0");
+            }
+        }
+
+        public void valSisaTagihan()
+        {
+            String query = @"SELECT A.grandtotal - B.totaltagih
+                             FROM invoice A
+                             INNER JOIN v_invoice_totaltagih B
+                             ON A.kode=B.invoice
+                             WHERE A.kode = @invoice";
+
+            Dictionary<String, String> parameters = new Dictionary<string, string>();
+            parameters.Add("invoice", this.invoice);
+
+            decimal dblSisaTagihan = decimal.Parse(OswDataAccess.executeScalarQuery(query, parameters, command));
+            decimal dblDitagihkan = decimal.Parse(this.ditagihkan);
+
+            if (dblSisaTagihan - dblDitagihkan <= 0)
+            {
+                throw new Exception("Jumlah Tagihan harus lebih dari 0");
             }
         }
 

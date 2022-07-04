@@ -218,7 +218,7 @@ namespace Kontenu.Design
         {
             String strngKode = txtKode.Text;
 
-            String query = @"SELECT 0 AS No, '' AS 'Kode Jasa', '' AS Jasa, '' AS Deskripsi, '' AS Quotation, 0 AS 'Quotation Detail No', 0 AS Qty, 
+            String query = @"SELECT 1 AS No, '' AS 'Kode Jasa', '' AS Jasa, '' AS Deskripsi, '' AS Quotation, 0 AS 'Quotation Detail No', 0 AS Qty, 
                                     '' AS 'Kode Unit', '' AS Unit, 0 AS Rate, 0 AS Subtotal";
 
             Dictionary<String, String> parameters = new Dictionary<String, String>();
@@ -459,7 +459,7 @@ namespace Kontenu.Design
                 command.Transaction = trans;
 
                 // function code
-                RptFormalLetter report = new RptFormalLetter();
+                RptInvoice report = new RptInvoice();
 
                 // PERUSAHAAN
                 DataPerusahaan dPerusahaan = new DataPerusahaan(command, Constants.PERUSAHAAN_KONTENU);
@@ -480,6 +480,9 @@ namespace Kontenu.Design
                 // PROYEK
                 DataProyek dProyek = new DataProyek(command, dInvoice.proyek);
                 report.Parameters["ProyekNama"].Value = dProyek.nama;
+                report.Parameters["ProyekAlamat"].Value = dProyek.alamat;
+                report.Parameters["ProyekKota"].Value = dProyek.kota;
+                report.Parameters["ProyekJenis"].Value = dProyek.jenisproyek;
                 report.Parameters["ProyekTanggalBerlaku"].Value = OswDate.ConvertDate(dProyek.tanggaldeal, "dd/MM/yyyy", "dd MMMM yyyy");
 
                 // KLIEN
@@ -492,7 +495,26 @@ namespace Kontenu.Design
                 report.Parameters["KlienJabatan"].Value = "JABATAN";
                 report.Parameters["KlienKTP"].Value = dKlien.ktp;
 
-
+                if (dInvoice.quotation == "")
+                {
+                    //jika invoice tidak ada quot, maka PIC kosong. Sehingga didefault pake nama anet untuk design
+                    String strKodePIC = "PIC-001";                    
+                    DataPIC dPIC = new DataPIC(command, strKodePIC);
+                    report.Parameters["PICNama"].Value = dPIC.nama;
+                    report.Parameters["PICEmail"].Value = dPIC.email;
+                    report.Parameters["PICTelp"].Value = dPIC.handphone;
+                    report.Parameters["PICTtd"].Value = dPIC.ttd;
+                }
+                else {
+                    DataQuotation dQuotation = new DataQuotation(command, dInvoice.quotation);
+                    DataPIC dPIC = new DataPIC(command, dQuotation.pic);
+                    report.Parameters["PICNama"].Value = dPIC.nama;
+                    report.Parameters["PICEmail"].Value = dPIC.email;
+                    report.Parameters["PICTelp"].Value = dPIC.handphone;
+                    report.Parameters["PICTtd"].Value = dPIC.ttd;
+                }
+                
+                
 
                 // assign the printing system to the document viewer.
                 LaporanPrintPreview laporan = new LaporanPrintPreview();
@@ -562,6 +584,7 @@ namespace Kontenu.Design
                 // TRANSAKSI
                 DataInvoice dInvoice = new DataInvoice(command, kode);
                 report.Parameters["Kode"].Value = kode;
+                report.Parameters["kodeFL"].Value = kode.Substring(7);
                 report.Parameters["Tanggal"].Value = dInvoice.tanggal;
 
                 // PROYEK

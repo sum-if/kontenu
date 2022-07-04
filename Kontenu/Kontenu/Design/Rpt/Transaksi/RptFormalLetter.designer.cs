@@ -51,6 +51,8 @@
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.PerusahaanLogo = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrTable4 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow20 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell51 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -269,8 +271,7 @@
             this.xrTableCell84 = new DevExpress.XtraReports.UI.XRTableCell();
             this.ProyekNama = new DevExpress.XtraReports.Parameters.Parameter();
             this.ProyekTanggalBerlaku = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.PerusahaanLogo = new DevExpress.XtraReports.Parameters.Parameter();
+            this.kodeFL = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -434,6 +435,19 @@
             this.SubBand1.KeepTogether = true;
             this.SubBand1.Name = "SubBand1";
             this.SubBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBand;
+            // 
+            // xrPictureBox1
+            // 
+            this.xrPictureBox1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PerusahaanLogo, "Image", "")});
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(28.9761F, 0F);
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(265.4738F, 67.08331F);
+            // 
+            // PerusahaanLogo
+            // 
+            this.PerusahaanLogo.Name = "PerusahaanLogo";
+            this.PerusahaanLogo.Visible = false;
             // 
             // xrTable4
             // 
@@ -1219,7 +1233,7 @@
             // xrTableCell6
             // 
             this.xrTableCell6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.Kode, "Text", "")});
+            new DevExpress.XtraReports.UI.XRBinding(this.kodeFL, "Text", "")});
             this.xrTableCell6.Font = new System.Drawing.Font("AT Surt Extd", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
@@ -2974,18 +2988,11 @@
             this.ProyekTanggalBerlaku.ValueInfo = "10/08/2021";
             this.ProyekTanggalBerlaku.Visible = false;
             // 
-            // xrPictureBox1
+            // kodeFL
             // 
-            this.xrPictureBox1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.PerusahaanLogo, "Image", "")});
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(28.9761F, 0F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(265.4738F, 67.08331F);
-            // 
-            // PerusahaanLogo
-            // 
-            this.PerusahaanLogo.Name = "PerusahaanLogo";
-            this.PerusahaanLogo.Visible = false;
+            this.kodeFL.Description = "kode";
+            this.kodeFL.Name = "kodeFL";
+            this.kodeFL.Visible = false;
             // 
             // RptFormalLetter
             // 
@@ -3025,7 +3032,8 @@
             this.Perihal,
             this.ProyekNama,
             this.ProyekTanggalBerlaku,
-            this.PerusahaanLogo});
+            this.PerusahaanLogo,
+            this.kodeFL});
             this.ShowPrintMarginsWarning = false;
             this.SnapToGrid = false;
             this.Version = "15.2";
@@ -3289,5 +3297,6 @@
         private DevExpress.XtraReports.Parameters.Parameter ProyekTanggalBerlaku;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.Parameters.Parameter PerusahaanLogo;
+        private DevExpress.XtraReports.Parameters.Parameter kodeFL;
     }
 }
