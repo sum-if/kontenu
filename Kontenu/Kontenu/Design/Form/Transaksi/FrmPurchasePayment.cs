@@ -106,7 +106,7 @@ namespace Kontenu.Design
             String strngKode = txtKode.Text;
             String strngOutsource = cmbOutsource.EditValue.ToString();
 
-            String query = @"SELECT A.kode AS Nomor, A.tanggal AS Tanggal, B.nama AS Outsource, 
+            String query = @"SELECT A.kode AS Nomor, A.tanggal AS Tanggal, B.nama AS 'Nama Outsource', 
                                     A.grandtotal AS 'Grand Total'
                             FROM purchasepayment A
                             INNER JOIN outsource B ON A.outsource = B.kode

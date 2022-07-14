@@ -28,6 +28,7 @@
             this.btnUbah = new DevExpress.XtraEditors.SimpleButton();
             this.btnTambah = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl = new DevExpress.XtraEditors.GroupControl();
+            this.cmbJabatan = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -44,9 +45,9 @@
             this.btnCari = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.cmbJabatan = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl)).BeginInit();
             this.groupControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbJabatan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHandphone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKota.Properties)).BeginInit();
@@ -55,7 +56,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbJabatan.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCetak
@@ -121,6 +121,15 @@
             this.groupControl.TabIndex = 31;
             this.groupControl.Text = "Pencarian";
             // 
+            // cmbJabatan
+            // 
+            this.cmbJabatan.Location = new System.Drawing.Point(488, 23);
+            this.cmbJabatan.Name = "cmbJabatan";
+            this.cmbJabatan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbJabatan.Size = new System.Drawing.Size(282, 20);
+            this.cmbJabatan.TabIndex = 158;
+            // 
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(419, 78);
@@ -140,9 +149,9 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(419, 52);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(55, 13);
+            this.labelControl5.Size = new System.Drawing.Size(20, 13);
             this.labelControl5.TabIndex = 155;
-            this.labelControl5.Text = "Handphone";
+            this.labelControl5.Text = "Telp";
             // 
             // txtHandphone
             // 
@@ -245,15 +254,6 @@
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             // 
-            // cmbJabatan
-            // 
-            this.cmbJabatan.Location = new System.Drawing.Point(488, 23);
-            this.cmbJabatan.Name = "cmbJabatan";
-            this.cmbJabatan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbJabatan.Size = new System.Drawing.Size(282, 20);
-            this.cmbJabatan.TabIndex = 158;
-            // 
             // FrmPIC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +271,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl)).EndInit();
             this.groupControl.ResumeLayout(false);
             this.groupControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbJabatan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHandphone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKota.Properties)).EndInit();
@@ -279,7 +280,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbJabatan.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

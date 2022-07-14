@@ -104,7 +104,7 @@ namespace Kontenu.Design
             String strngKlien = txtNamaKlien.Text;
             String strngInvoice = txtInvoice.Text;
 
-            String query = @"SELECT A.kode AS Nomor, A.tanggal AS Tanggal, B.nama AS Klien, C.nama AS 'Nama Proyek', AA.kode AS Invoice, 
+            String query = @"SELECT A.kode AS Nomor, A.tanggal AS Tanggal, B.nama AS 'Nama Klien', C.nama AS 'Nama Proyek', AA.kode AS Invoice, 
 		                            A.penagihan AS Penagihan, A.grandtotal AS 'Grand Total', A.diterima AS 'Diterima'
                             FROM penerimaan A
                             INNER JOIN penagihan AAA ON A.penagihan = AAA.kode

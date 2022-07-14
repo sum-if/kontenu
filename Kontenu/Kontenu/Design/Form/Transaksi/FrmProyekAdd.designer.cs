@@ -29,6 +29,8 @@
             this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
             this.btnSimpan = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtJabatanKontrak = new DevExpress.XtraEditors.TextEdit();
             this.txtKodeKlien = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnCariKlien = new DevExpress.XtraEditors.SimpleButton();
@@ -71,12 +73,11 @@
             this.txtProyekKodePos = new DevExpress.XtraEditors.TextEdit();
             this.txtProyekAlamat = new DevExpress.XtraEditors.TextEdit();
             this.txtProyekProvinsi = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtJabatanKontrak = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtJabatanKontrak.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKodeKlien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHandphone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
@@ -100,7 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekKodePos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekProvinsi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtJabatanKontrak.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraScrollableControl1
@@ -151,6 +151,22 @@
             this.groupControl2.Size = new System.Drawing.Size(504, 285);
             this.groupControl2.TabIndex = 202;
             this.groupControl2.Text = "Data Klien";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(19, 226);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(79, 13);
+            this.labelControl6.TabIndex = 249;
+            this.labelControl6.Text = "Jabatan Kontrak";
+            // 
+            // txtJabatanKontrak
+            // 
+            this.txtJabatanKontrak.EditValue = "";
+            this.txtJabatanKontrak.Location = new System.Drawing.Point(136, 223);
+            this.txtJabatanKontrak.Name = "txtJabatanKontrak";
+            this.txtJabatanKontrak.Size = new System.Drawing.Size(353, 20);
+            this.txtJabatanKontrak.TabIndex = 248;
             // 
             // txtKodeKlien
             // 
@@ -224,9 +240,9 @@
             // 
             this.labelControl21.Location = new System.Drawing.Point(18, 142);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(38, 13);
+            this.labelControl21.Size = new System.Drawing.Size(20, 13);
             this.labelControl21.TabIndex = 206;
-            this.labelControl21.Text = "Telepon";
+            this.labelControl21.Text = "Telp";
             // 
             // txtTelepon
             // 
@@ -532,22 +548,6 @@
             this.txtProyekProvinsi.Size = new System.Drawing.Size(131, 20);
             this.txtProyekProvinsi.TabIndex = 210;
             // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(19, 226);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(79, 13);
-            this.labelControl6.TabIndex = 249;
-            this.labelControl6.Text = "Jabatan Kontrak";
-            // 
-            // txtJabatanKontrak
-            // 
-            this.txtJabatanKontrak.EditValue = "";
-            this.txtJabatanKontrak.Location = new System.Drawing.Point(136, 223);
-            this.txtJabatanKontrak.Name = "txtJabatanKontrak";
-            this.txtJabatanKontrak.Size = new System.Drawing.Size(353, 20);
-            this.txtJabatanKontrak.TabIndex = 248;
-            // 
             // FrmProyekAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -562,6 +562,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtJabatanKontrak.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKodeKlien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHandphone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
@@ -586,7 +587,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekKodePos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekAlamat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProyekProvinsi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtJabatanKontrak.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

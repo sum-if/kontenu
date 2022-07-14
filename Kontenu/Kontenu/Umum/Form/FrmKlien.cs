@@ -87,7 +87,7 @@ namespace Kontenu.Umum {
             String strngEmail = txtEmail.Text;
 
 
-            String query = @"SELECT A.kode AS Kode, A.nama AS Nama, A.alamat AS Alamat, A.provinsi AS Provinsi, A.kota AS Kota, A.kodepos AS 'Kode Pos', A.telp AS Telp, A.handphone AS Handphone, A.email AS Email
+            String query = @"SELECT A.kode AS Kode, A.nama AS Nama, A.alamat AS Alamat, A.kota AS Kota, A.provinsi AS Provinsi, A.kodepos AS 'Kode Pos', A.telp AS Telp, A.handphone AS Handphone, A.email AS Email
                             FROM klien A
                             WHERE A.kode LIKE @kode AND A.nama LIKE @nama AND A.alamat LIKE @alamat AND A.kota LIKE @kota AND A.telp LIKE @telp AND A.handphone LIKE @handphone AND A.email LIKE @email
                             ORDER BY A.kode";

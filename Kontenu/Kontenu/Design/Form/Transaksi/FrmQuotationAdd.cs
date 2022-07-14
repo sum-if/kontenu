@@ -510,7 +510,12 @@ namespace Kontenu.Design
                 report.Parameters["ProyekNama"].Value = dQuotation.proyeknama;
                 report.Parameters["ProyekAlamat"].Value = dQuotation.proyekalamat;
                 report.Parameters["ProyekKota"].Value = dQuotation.proyekkota;
-                report.Parameters["ProyekJenis"].Value = (new DataJenisProyek(command, dQuotation.jenisproyek)).nama;
+                //report.Parameters["ProyekJenis"].Value = (new DataJenisProyek(command, dQuotation.jenisproyek)).nama;
+                String jenisProyek = (new DataJenisProyek(command, dQuotation.jenisproyek)).nama;
+                report.Parameters["ProyekJenisBefore"].Value = jenisProyek.Substring(0, jenisProyek.IndexOf("-"));
+                report.Parameters["ProyekJenisAfter"].Value = jenisProyek.Substring(jenisProyek.IndexOf("-") + 2);
+                
+
                 report.Parameters["ProyekTanggalBerlaku"].Value = dQuotation.tanggalberlaku;
 
                 // KLIEN

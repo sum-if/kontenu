@@ -91,7 +91,7 @@ namespace Kontenu.Master {
             String strngEmail = txtEmail.Text;
 
 
-            String query = @"SELECT A.kode AS Kode, A.ktp AS KTP, A.nama AS Nama, A.alamat AS Alamat, A.provinsi AS Provinsi, A.kota AS Kota, A.kodepos AS 'Kode Pos', B.nama AS Jabatan, A.handphone AS Handphone, A.email AS Email
+            String query = @"SELECT A.kode AS Kode, A.ktp AS KTP, A.nama AS Nama, A.alamat AS Alamat, A.kota AS Kota, A.provinsi AS Provinsi,  A.kodepos AS 'Kode Pos', B.nama AS Jabatan, A.handphone AS Telp, A.email AS Email
                             FROM pic A
                             INNER JOIN jabatan B ON A.jabatan = B.kode
                             WHERE A.ktp LIKE @ktp AND A.nama LIKE @nama AND A.alamat LIKE @alamat AND A.kota LIKE @kota AND A.jabatan LIKE @jabatan AND A.handphone LIKE @handphone AND A.email LIKE @email

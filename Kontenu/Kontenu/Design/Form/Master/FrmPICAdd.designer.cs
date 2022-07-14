@@ -145,9 +145,9 @@
             // 
             this.labelControl4.Location = new System.Drawing.Point(14, 172);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(55, 13);
+            this.labelControl4.Size = new System.Drawing.Size(20, 13);
             this.labelControl4.TabIndex = 260;
-            this.labelControl4.Text = "Handphone";
+            this.labelControl4.Text = "Telp";
             // 
             // txtEmail
             // 

@@ -108,8 +108,8 @@ namespace Kontenu.Design
             String strngNamaProyek = txtNamaProyek.Text;
             String strngJenisProyek = cmbProyekJenis.EditValue.ToString();
 
-            String query = @"SELECT A.kode AS 'Proyek ID', A.tanggaldeal AS Tanggal, A.nama AS Nama, A.alamat AS Alamat, A.kota AS Kota, 
-                                    B.nama AS Klien, B.telp AS Telp, B.email AS Email, C.nama AS Jenis, 
+            String query = @"SELECT A.kode AS 'Proyek ID', A.tanggaldeal AS Tanggal, A.nama AS 'Nama Proyek', A.alamat AS 'Alamat Proyek', A.kota AS 'Kota Proyek', 
+                                    B.nama AS 'Nama Klien', B.telp AS 'Telp Klien', B.email AS 'Email Klien', C.nama AS 'Jenis Proyek', 
 		                            A.status AS Status
                             FROM proyek A
                             INNER JOIN klien B ON A.klien = B.kode

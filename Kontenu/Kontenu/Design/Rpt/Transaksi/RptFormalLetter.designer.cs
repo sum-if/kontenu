@@ -126,6 +126,7 @@
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.kodeFL = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Perihal = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -271,7 +272,12 @@
             this.xrTableCell84 = new DevExpress.XtraReports.UI.XRTableCell();
             this.ProyekNama = new DevExpress.XtraReports.Parameters.Parameter();
             this.ProyekTanggalBerlaku = new DevExpress.XtraReports.Parameters.Parameter();
-            this.kodeFL = new DevExpress.XtraReports.Parameters.Parameter();
+            this.PICNama = new DevExpress.XtraReports.Parameters.Parameter();
+            this.PICAlamat = new DevExpress.XtraReports.Parameters.Parameter();
+            this.PICEmail = new DevExpress.XtraReports.Parameters.Parameter();
+            this.PICHandphone = new DevExpress.XtraReports.Parameters.Parameter();
+            this.PICKTP = new DevExpress.XtraReports.Parameters.Parameter();
+            this.PICJabatan = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -914,10 +920,11 @@
             // 
             this.xrTableCell13.BorderColor = System.Drawing.Color.Gray;
             this.xrTableCell13.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PICNama, "Text", "")});
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.StylePriority.UseBorderColor = false;
             this.xrTableCell13.StylePriority.UseBorders = false;
-            this.xrTableCell13.Text = "Anette Firmawan Panghegar";
             this.xrTableCell13.Weight = 3.5692363739519792D;
             // 
             // xrTableRow5
@@ -955,10 +962,11 @@
             // 
             this.xrTableCell15.BorderColor = System.Drawing.Color.Gray;
             this.xrTableCell15.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell15.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PICKTP, "Text", "")});
             this.xrTableCell15.Name = "xrTableCell15";
             this.xrTableCell15.StylePriority.UseBorderColor = false;
             this.xrTableCell15.StylePriority.UseBorders = false;
-            this.xrTableCell15.Text = "3678205309960000";
             this.xrTableCell15.Weight = 3.5692363739519792D;
             // 
             // xrTableRow9
@@ -996,10 +1004,11 @@
             // 
             this.xrTableCell19.BorderColor = System.Drawing.Color.Gray;
             this.xrTableCell19.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell19.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PICKTP, "Text", "")});
             this.xrTableCell19.Name = "xrTableCell19";
             this.xrTableCell19.StylePriority.UseBorderColor = false;
             this.xrTableCell19.StylePriority.UseBorders = false;
-            this.xrTableCell19.Text = "Pemilik";
             this.xrTableCell19.Weight = 3.5692363739519792D;
             // 
             // xrTableRow10
@@ -1037,10 +1046,11 @@
             // 
             this.xrTableCell22.BorderColor = System.Drawing.Color.Gray;
             this.xrTableCell22.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell22.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PICHandphone, "Text", "")});
             this.xrTableCell22.Name = "xrTableCell22";
             this.xrTableCell22.StylePriority.UseBorderColor = false;
             this.xrTableCell22.StylePriority.UseBorders = false;
-            this.xrTableCell22.Text = "+62 817 0333 7713";
             this.xrTableCell22.Weight = 3.5692363739519792D;
             // 
             // xrTableRow11
@@ -1078,10 +1088,11 @@
             // 
             this.xrTableCell28.BorderColor = System.Drawing.Color.Gray;
             this.xrTableCell28.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell28.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PICEmail, "Text", "")});
             this.xrTableCell28.Name = "xrTableCell28";
             this.xrTableCell28.StylePriority.UseBorderColor = false;
             this.xrTableCell28.StylePriority.UseBorders = false;
-            this.xrTableCell28.Text = "anette.kontenu@gmail.com";
             this.xrTableCell28.Weight = 3.5692363739519792D;
             // 
             // xrTableRow12
@@ -1119,10 +1130,11 @@
             // 
             this.xrTableCell31.BorderColor = System.Drawing.Color.Gray;
             this.xrTableCell31.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell31.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PICAlamat, "Text", "")});
             this.xrTableCell31.Name = "xrTableCell31";
             this.xrTableCell31.StylePriority.UseBorderColor = false;
             this.xrTableCell31.StylePriority.UseBorders = false;
-            this.xrTableCell31.Text = "Taman Pondok Indah TX-12, Wiyung, Surabaya";
             this.xrTableCell31.Weight = 3.5692363739519792D;
             // 
             // xrLabel3
@@ -1242,6 +1254,12 @@
             this.xrTableCell6.StylePriority.UseTextAlignment = false;
             this.xrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell6.Weight = 0.72399156043984614D;
+            // 
+            // kodeFL
+            // 
+            this.kodeFL.Description = "kode";
+            this.kodeFL.Name = "kodeFL";
+            this.kodeFL.Visible = false;
             // 
             // xrTableCell8
             // 
@@ -2958,18 +2976,19 @@
             // 
             // xrTableCell83
             // 
+            this.xrTableCell83.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding(this.PICJabatan, "Text", "")});
             this.xrTableCell83.Font = new System.Drawing.Font("AT Surt Extd", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell83.Name = "xrTableCell83";
             this.xrTableCell83.StylePriority.UseFont = false;
             this.xrTableCell83.StylePriority.UseTextAlignment = false;
-            this.xrTableCell83.Text = "Kontenu Design Studio";
             this.xrTableCell83.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrTableCell83.Weight = 1D;
             // 
             // xrTableCell84
             // 
             this.xrTableCell84.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.ProyekNama, "Text", "")});
+            new DevExpress.XtraReports.UI.XRBinding(this.KlienJabatan, "Text", "")});
             this.xrTableCell84.Font = new System.Drawing.Font("AT Surt Extd", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell84.Name = "xrTableCell84";
             this.xrTableCell84.StylePriority.UseFont = false;
@@ -2988,11 +3007,41 @@
             this.ProyekTanggalBerlaku.ValueInfo = "10/08/2021";
             this.ProyekTanggalBerlaku.Visible = false;
             // 
-            // kodeFL
+            // PICNama
             // 
-            this.kodeFL.Description = "kode";
-            this.kodeFL.Name = "kodeFL";
-            this.kodeFL.Visible = false;
+            this.PICNama.Description = "PICNama";
+            this.PICNama.Name = "PICNama";
+            this.PICNama.Visible = false;
+            // 
+            // PICAlamat
+            // 
+            this.PICAlamat.Description = "PICAlamat";
+            this.PICAlamat.Name = "PICAlamat";
+            this.PICAlamat.Visible = false;
+            // 
+            // PICEmail
+            // 
+            this.PICEmail.Description = "PICEmail";
+            this.PICEmail.Name = "PICEmail";
+            this.PICEmail.Visible = false;
+            // 
+            // PICHandphone
+            // 
+            this.PICHandphone.Description = "PICHandphone";
+            this.PICHandphone.Name = "PICHandphone";
+            this.PICHandphone.Visible = false;
+            // 
+            // PICKTP
+            // 
+            this.PICKTP.Description = "PICKTP";
+            this.PICKTP.Name = "PICKTP";
+            this.PICKTP.Visible = false;
+            // 
+            // PICJabatan
+            // 
+            this.PICJabatan.Description = "PICJabatan";
+            this.PICJabatan.Name = "PICJabatan";
+            this.PICJabatan.Visible = false;
             // 
             // RptFormalLetter
             // 
@@ -3033,7 +3082,13 @@
             this.ProyekNama,
             this.ProyekTanggalBerlaku,
             this.PerusahaanLogo,
-            this.kodeFL});
+            this.kodeFL,
+            this.PICNama,
+            this.PICAlamat,
+            this.PICEmail,
+            this.PICHandphone,
+            this.PICKTP,
+            this.PICJabatan});
             this.ShowPrintMarginsWarning = false;
             this.SnapToGrid = false;
             this.Version = "15.2";
@@ -3298,5 +3353,11 @@
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.Parameters.Parameter PerusahaanLogo;
         private DevExpress.XtraReports.Parameters.Parameter kodeFL;
+        private DevExpress.XtraReports.Parameters.Parameter PICNama;
+        private DevExpress.XtraReports.Parameters.Parameter PICKTP;
+        private DevExpress.XtraReports.Parameters.Parameter PICHandphone;
+        private DevExpress.XtraReports.Parameters.Parameter PICEmail;
+        private DevExpress.XtraReports.Parameters.Parameter PICAlamat;
+        private DevExpress.XtraReports.Parameters.Parameter PICJabatan;
     }
 }

@@ -990,7 +990,6 @@
             this.xrTableCell9.StylePriority.UseFont = false;
             this.xrTableCell9.StylePriority.UsePadding = false;
             this.xrTableCell9.StylePriority.UseTextAlignment = false;
-            this.xrTableCell9.Text = "This quotation is valid until :";
             this.xrTableCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell9.Weight = 1.7356363840373461D;
             // 
@@ -1060,7 +1059,7 @@
             // 
             this.xrTableCell49.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrTableCell49.BorderWidth = 2F;
-            this.xrTableCell49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrTableCell49.Font = new System.Drawing.Font("GT Pressura", 8.25F);
             this.xrTableCell49.Name = "xrTableCell49";
             this.xrTableCell49.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 4, 4, 4, 100F);
             this.xrTableCell49.StylePriority.UseBorders = false;
@@ -1068,6 +1067,7 @@
             this.xrTableCell49.StylePriority.UseFont = false;
             this.xrTableCell49.StylePriority.UsePadding = false;
             this.xrTableCell49.StylePriority.UseTextAlignment = false;
+            this.xrTableCell49.Text = "- Kindly appraise us with the transaction proof after payment is done";
             this.xrTableCell49.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell49.Weight = 2.18572776384092D;
             // 

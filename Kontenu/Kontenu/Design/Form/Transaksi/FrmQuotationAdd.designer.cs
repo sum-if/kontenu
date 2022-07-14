@@ -59,10 +59,10 @@
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.txtNama = new DevExpress.XtraEditors.TextEdit();
+            this.txtProvinsi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.txtTelepon = new DevExpress.XtraEditors.TextEdit();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
-            this.txtProvinsi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.txtKodePos = new DevExpress.XtraEditors.TextEdit();
             this.txtAlamat = new DevExpress.XtraEditors.TextEdit();
@@ -99,8 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtHandphone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTelepon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProvinsi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelepon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKodePos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlamat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKota.Properties)).BeginInit();
@@ -439,13 +439,22 @@
             this.txtNama.Size = new System.Drawing.Size(353, 20);
             this.txtNama.TabIndex = 110;
             // 
+            // txtProvinsi
+            // 
+            this.txtProvinsi.EditValue = "";
+            this.txtProvinsi.Enabled = false;
+            this.txtProvinsi.Location = new System.Drawing.Point(298, 114);
+            this.txtProvinsi.Name = "txtProvinsi";
+            this.txtProvinsi.Size = new System.Drawing.Size(113, 20);
+            this.txtProvinsi.TabIndex = 140;
+            // 
             // labelControl21
             // 
             this.labelControl21.Location = new System.Drawing.Point(18, 142);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(38, 13);
+            this.labelControl21.Size = new System.Drawing.Size(20, 13);
             this.labelControl21.TabIndex = 206;
-            this.labelControl21.Text = "Telepon";
+            this.labelControl21.Text = "Telp";
             // 
             // txtTelepon
             // 
@@ -463,15 +472,6 @@
             this.labelControl22.Size = new System.Drawing.Size(27, 13);
             this.labelControl22.TabIndex = 203;
             this.labelControl22.Text = "Nama";
-            // 
-            // txtProvinsi
-            // 
-            this.txtProvinsi.EditValue = "";
-            this.txtProvinsi.Enabled = false;
-            this.txtProvinsi.Location = new System.Drawing.Point(298, 114);
-            this.txtProvinsi.Name = "txtProvinsi";
-            this.txtProvinsi.Size = new System.Drawing.Size(113, 20);
-            this.txtProvinsi.TabIndex = 140;
             // 
             // labelControl25
             // 
@@ -546,9 +546,9 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(17, 89);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(52, 13);
+            this.labelControl5.Size = new System.Drawing.Size(76, 13);
             this.labelControl5.TabIndex = 219;
-            this.labelControl5.Text = "Tgl Berlaku";
+            this.labelControl5.Text = "Tanggal Berlaku";
             // 
             // chkTutup
             // 
@@ -639,8 +639,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtHandphone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNama.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTelepon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProvinsi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelepon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKodePos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlamat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKota.Properties)).EndInit();

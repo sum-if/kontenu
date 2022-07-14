@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="customSqlQuery1.Sql" xml:space="preserve">
-    <value>SELECT A.no AS No, B.kode AS 'Kode Jasa', B.nama AS Jasa, A.deskripsi AS Deskripsi, A.jumlah AS Jumlah, C.kode AS 'Kode Unit', C.nama AS Unit, A.rate AS Rate, A.subtotal AS Subtotal, COALESCE(D.no,0) AS 'No Detail', COALESCE(D.keterangan) AS 'Deskripsi Detail'
+    <value>SELECT CONCAT(LPAD(A.no,2,0),".") AS No, B.kode AS 'Kode Jasa', B.nama AS Jasa, A.deskripsi AS Deskripsi, A.jumlah AS Jumlah, C.kode AS 'Kode Unit', C.nama AS Unit, A.rate AS Rate, A.subtotal AS Subtotal, COALESCE(D.no,0) AS 'No Detail', COALESCE(D.keterangan) AS 'Deskripsi Detail'
 FROM quotationdetail A
 INNER JOIN jasa B ON A.jasa = B.kode
 INNER JOIN unit C ON A.unit = C.kode
@@ -130,7 +130,7 @@ WHERE A.quotation = @Kode
 ORDER BY A.no, D.no</value>
   </data>
   <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iTm8iIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJLb2RlIEphc2EiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSmFzYSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZXNrcmlwc2kiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSnVtbGFoIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJLb2RlIFVuaXQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVW5pdCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJSYXRlIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTdWJ0b3RhbCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iTm8gRGV0YWlsIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iRGVza3JpcHNpIERldGFpbCIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iTm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iS29kZSBKYXNhIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ikphc2EiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGVza3JpcHNpIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ikp1bWxhaCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iS29kZSBVbml0IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlVuaXQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUmF0ZSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iU3VidG90YWwiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik5vIERldGFpbCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkRlc2tyaXBzaSBEZXRhaWwiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="xrPictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

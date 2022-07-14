@@ -475,6 +475,7 @@ namespace Kontenu.Design
                 // TRANSAKSI
                 DataInvoice dInvoice = new DataInvoice(command, kode);
                 report.Parameters["Kode"].Value = kode;
+                report.Parameters["kodePagar"].Value = "# " + dInvoice.kode;
                 report.Parameters["Tanggal"].Value = dInvoice.tanggal;
 
                 // PROYEK
@@ -590,7 +591,7 @@ namespace Kontenu.Design
                 // PROYEK
                 DataProyek dProyek = new DataProyek(command, dInvoice.proyek);
                 report.Parameters["ProyekNama"].Value = dProyek.nama;
-                report.Parameters["ProyekTanggalBerlaku"].Value = OswDate.ConvertDate(dProyek.tanggaldeal, "dd/MM/yyyy", "dd MMMM yyyy");
+                report.Parameters["ProyekTanggalBerlaku"].Value = OswDate.ConvertDate(dProyek.tanggaldeal, "dd/MM/yyyy", "dd MMMM yyyy");                
 
                 // KLIEN
                 DataKlien dKlien = new DataKlien(command, dInvoice.klien);
@@ -602,6 +603,17 @@ namespace Kontenu.Design
                 report.Parameters["KlienJabatan"].Value = dProyek.jabatanklien;
                 report.Parameters["KlienKTP"].Value = dKlien.ktp;
 
+
+                // PIC
+                DataPIC dPIC = new DataPIC(command, dProyek.pic);
+                report.Parameters["PICNama"].Value = dPIC.nama;
+                report.Parameters["PICAlamat"].Value = dPIC.alamat;
+                report.Parameters["PICEmail"].Value = dPIC.email;
+
+                DataJabatan dJabatan = new DataJabatan(command, dPIC.jabatan);
+                report.Parameters["PICJabatan"].Value = dJabatan.nama;
+                report.Parameters["PICKTP"].Value = dPIC.ktp;
+                report.Parameters["PICHandphone"].Value = dPIC.handphone;                
 
 
                 // assign the printing system to the document viewer.

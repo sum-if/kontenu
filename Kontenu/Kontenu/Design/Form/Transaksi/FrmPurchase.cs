@@ -108,7 +108,7 @@ namespace Kontenu.Design
             String strngNamaProyek = txtNamaProyek.Text;
             String strngOutsource = cmbOutsource.EditValue.ToString();
 
-            String query = @"SELECT A.kode AS Nomor, A.tanggal AS Tanggal, B.nama AS Outsource, 
+            String query = @"SELECT A.kode AS Nomor, A.tanggal AS Tanggal, B.nama AS 'Nama Outsource', 
                                     C.nama AS 'Nama Proyek', C.alamat AS 'Alamat Proyek', C.kota AS 'Kota Proyek', 
                                     A.grandtotal AS 'Grand Total', A.status AS Status
                             FROM purchase A
