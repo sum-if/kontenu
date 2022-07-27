@@ -414,17 +414,17 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(12, 112);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(64, 13);
+            this.labelControl5.Size = new System.Drawing.Size(48, 13);
             this.labelControl5.TabIndex = 227;
-            this.labelControl5.Text = "No Quotation";
+            this.labelControl5.Text = "Quotation";
             // 
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(12, 86);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(48, 13);
+            this.labelControl6.Size = new System.Drawing.Size(63, 13);
             this.labelControl6.TabIndex = 226;
-            this.labelControl6.Text = "Project ID";
+            this.labelControl6.Text = "Nama Proyek";
             // 
             // cmbQuotation
             // 
@@ -525,9 +525,9 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(12, 32);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(51, 13);
+            this.labelControl8.Size = new System.Drawing.Size(31, 13);
             this.labelControl8.TabIndex = 177;
-            this.labelControl8.Text = "No Invoice";
+            this.labelControl8.Text = "Nomor";
             // 
             // labelControl19
             // 

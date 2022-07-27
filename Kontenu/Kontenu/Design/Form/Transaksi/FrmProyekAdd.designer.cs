@@ -355,9 +355,9 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(13, 195);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(38, 13);
+            this.labelControl5.Size = new System.Drawing.Size(20, 13);
             this.labelControl5.TabIndex = 228;
-            this.labelControl5.Text = "Telepon";
+            this.labelControl5.Text = "Telp";
             // 
             // rdoJenisInvoiceProduct
             // 

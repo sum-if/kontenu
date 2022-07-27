@@ -29,33 +29,33 @@
             this.btnUbah = new DevExpress.XtraEditors.SimpleButton();
             this.btnTambah = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
+            this.cmbProyekJenis = new DevExpress.XtraEditors.LookUpEdit();
             this.txtNamaProyek = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtNamaKlien = new DevExpress.XtraEditors.TextEdit();
             this.btnCari = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.deTanggalAkhir = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.deTanggalAwal = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtKode = new DevExpress.XtraEditors.TextEdit();
             this.lblNama = new DevExpress.XtraEditors.LabelControl();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.deTanggalAwal = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.deTanggalAkhir = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbProyekJenis = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl)).BeginInit();
             this.groupControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbProyekJenis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamaProyek.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamaKlien.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAkhir.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAkhir.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAwal.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAwal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAwal.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAwal.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAkhir.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAkhir.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbProyekJenis.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCetak
@@ -119,6 +119,23 @@
             this.groupControl.TabIndex = 31;
             this.groupControl.Text = "Pencarian";
             // 
+            // labelControl28
+            // 
+            this.labelControl28.Location = new System.Drawing.Point(415, 61);
+            this.labelControl28.Name = "labelControl28";
+            this.labelControl28.Size = new System.Drawing.Size(60, 13);
+            this.labelControl28.TabIndex = 219;
+            this.labelControl28.Text = "Jenis Proyek";
+            // 
+            // cmbProyekJenis
+            // 
+            this.cmbProyekJenis.Location = new System.Drawing.Point(510, 58);
+            this.cmbProyekJenis.Name = "cmbProyekJenis";
+            this.cmbProyekJenis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbProyekJenis.Size = new System.Drawing.Size(276, 20);
+            this.cmbProyekJenis.TabIndex = 218;
+            // 
             // txtNamaProyek
             // 
             this.txtNamaProyek.Location = new System.Drawing.Point(112, 84);
@@ -159,6 +176,46 @@
             this.labelControl3.TabIndex = 66;
             this.labelControl3.Text = "Nama Klien";
             // 
+            // deTanggalAkhir
+            // 
+            this.deTanggalAkhir.EditValue = null;
+            this.deTanggalAkhir.Location = new System.Drawing.Point(258, 32);
+            this.deTanggalAkhir.Name = "deTanggalAkhir";
+            this.deTanggalAkhir.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deTanggalAkhir.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deTanggalAkhir.Size = new System.Drawing.Size(130, 20);
+            this.deTanggalAkhir.TabIndex = 60;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(248, 35);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(4, 13);
+            this.labelControl2.TabIndex = 63;
+            this.labelControl2.Text = "-";
+            // 
+            // deTanggalAwal
+            // 
+            this.deTanggalAwal.EditValue = null;
+            this.deTanggalAwal.Location = new System.Drawing.Point(112, 32);
+            this.deTanggalAwal.Name = "deTanggalAwal";
+            this.deTanggalAwal.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deTanggalAwal.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deTanggalAwal.Size = new System.Drawing.Size(130, 20);
+            this.deTanggalAwal.TabIndex = 50;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(17, 35);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(72, 13);
+            this.labelControl1.TabIndex = 61;
+            this.labelControl1.Text = "Tanggal Daftar";
+            // 
             // txtKode
             // 
             this.txtKode.Location = new System.Drawing.Point(112, 58);
@@ -190,63 +247,6 @@
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(17, 35);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(38, 13);
-            this.labelControl1.TabIndex = 61;
-            this.labelControl1.Text = "Tanggal";
-            // 
-            // deTanggalAwal
-            // 
-            this.deTanggalAwal.EditValue = null;
-            this.deTanggalAwal.Location = new System.Drawing.Point(112, 32);
-            this.deTanggalAwal.Name = "deTanggalAwal";
-            this.deTanggalAwal.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deTanggalAwal.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deTanggalAwal.Size = new System.Drawing.Size(130, 20);
-            this.deTanggalAwal.TabIndex = 50;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(248, 35);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(4, 13);
-            this.labelControl2.TabIndex = 63;
-            this.labelControl2.Text = "-";
-            // 
-            // deTanggalAkhir
-            // 
-            this.deTanggalAkhir.EditValue = null;
-            this.deTanggalAkhir.Location = new System.Drawing.Point(258, 32);
-            this.deTanggalAkhir.Name = "deTanggalAkhir";
-            this.deTanggalAkhir.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deTanggalAkhir.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deTanggalAkhir.Size = new System.Drawing.Size(130, 20);
-            this.deTanggalAkhir.TabIndex = 60;
-            // 
-            // labelControl28
-            // 
-            this.labelControl28.Location = new System.Drawing.Point(415, 61);
-            this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(60, 13);
-            this.labelControl28.TabIndex = 219;
-            this.labelControl28.Text = "Jenis Proyek";
-            // 
-            // cmbProyekJenis
-            // 
-            this.cmbProyekJenis.Location = new System.Drawing.Point(510, 58);
-            this.cmbProyekJenis.Name = "cmbProyekJenis";
-            this.cmbProyekJenis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbProyekJenis.Size = new System.Drawing.Size(276, 20);
-            this.cmbProyekJenis.TabIndex = 218;
-            // 
             // FrmProyek
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,16 +264,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl)).EndInit();
             this.groupControl.ResumeLayout(false);
             this.groupControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbProyekJenis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamaProyek.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamaKlien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAkhir.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAkhir.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAwal.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAwal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAwal.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAwal.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAkhir.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deTanggalAkhir.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbProyekJenis.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

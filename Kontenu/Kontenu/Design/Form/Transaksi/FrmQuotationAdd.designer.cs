@@ -533,13 +533,13 @@
             // deTanggalBerlaku
             // 
             this.deTanggalBerlaku.EditValue = null;
-            this.deTanggalBerlaku.Location = new System.Drawing.Point(101, 87);
+            this.deTanggalBerlaku.Location = new System.Drawing.Point(128, 87);
             this.deTanggalBerlaku.Name = "deTanggalBerlaku";
             this.deTanggalBerlaku.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deTanggalBerlaku.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deTanggalBerlaku.Size = new System.Drawing.Size(332, 20);
+            this.deTanggalBerlaku.Size = new System.Drawing.Size(305, 20);
             this.deTanggalBerlaku.TabIndex = 220;
             // 
             // labelControl5
@@ -553,7 +553,7 @@
             // chkTutup
             // 
             this.chkTutup.AutoSize = true;
-            this.chkTutup.Location = new System.Drawing.Point(101, 116);
+            this.chkTutup.Location = new System.Drawing.Point(128, 113);
             this.chkTutup.Name = "chkTutup";
             this.chkTutup.Size = new System.Drawing.Size(54, 17);
             this.chkTutup.TabIndex = 80;
@@ -563,13 +563,13 @@
             // deTanggal
             // 
             this.deTanggal.EditValue = null;
-            this.deTanggal.Location = new System.Drawing.Point(101, 61);
+            this.deTanggal.Location = new System.Drawing.Point(128, 61);
             this.deTanggal.Name = "deTanggal";
             this.deTanggal.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deTanggal.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deTanggal.Size = new System.Drawing.Size(332, 20);
+            this.deTanggal.Size = new System.Drawing.Size(305, 20);
             this.deTanggal.TabIndex = 20;
             // 
             // labelControl8
@@ -582,9 +582,9 @@
             // 
             // txtKode
             // 
-            this.txtKode.Location = new System.Drawing.Point(101, 35);
+            this.txtKode.Location = new System.Drawing.Point(128, 35);
             this.txtKode.Name = "txtKode";
-            this.txtKode.Size = new System.Drawing.Size(332, 20);
+            this.txtKode.Size = new System.Drawing.Size(305, 20);
             this.txtKode.TabIndex = 10;
             // 
             // labelControl1
