@@ -126,7 +126,7 @@
             this.xtraScrollableControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
             this.xtraScrollableControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.xtraScrollableControl1.Size = new System.Drawing.Size(995, 480);
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(995, 594);
             this.xtraScrollableControl1.TabIndex = 0;
             // 
             // btnCetakFL
@@ -146,7 +146,7 @@
             this.btnCetak.Name = "btnCetak";
             this.btnCetak.Size = new System.Drawing.Size(86, 23);
             this.btnCetak.TabIndex = 263;
-            this.btnCetak.Text = "Cetak";
+            this.btnCetak.Text = "Invoice";
             this.btnCetak.Click += new System.EventHandler(this.btnCetak_Click);
             // 
             // gridControl1
@@ -630,7 +630,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 480);
+            this.ClientSize = new System.Drawing.Size(995, 594);
             this.Controls.Add(this.xtraScrollableControl1);
             this.Name = "FrmInvoiceAdd";
             this.Text = "Form";

@@ -484,6 +484,9 @@ namespace Kontenu.Design
                 report.Parameters["ProyekAlamat"].Value = dProyek.alamat;
                 report.Parameters["ProyekKota"].Value = dProyek.kota;
                 report.Parameters["ProyekJenis"].Value = dProyek.jenisproyek;
+                String jenisProyek = (new DataJenisProyek(command, dProyek.jenisproyek)).nama;
+                report.Parameters["ProyekJenisBefore"].Value = jenisProyek.Substring(0, jenisProyek.IndexOf("-"));
+                report.Parameters["ProyekJenisAfter"].Value = jenisProyek.Substring(jenisProyek.IndexOf("-") + 2);
                 report.Parameters["ProyekTanggalBerlaku"].Value = OswDate.ConvertDate(dProyek.tanggaldeal, "dd/MM/yyyy", "dd MMMM yyyy");
 
                 // KLIEN
@@ -581,11 +584,17 @@ namespace Kontenu.Design
                 report.Parameters["PerusahaanLogo"].Value = dPerusahaan.logo;
                 report.Parameters["PerusahaanTelepon"].Value = dPerusahaan.telf;
                 report.Parameters["PerusahaanWebsite"].Value = dPerusahaan.website;
+                report.Parameters["corporateIdentity"].Value = dPerusahaan.website + "\n" +
+                   dPerusahaan.email + "\n" + "\n"+
+                   dPerusahaan.alamat + "\n"+
+                   dPerusahaan.kota + "\n" + "\n"+
+                   dPerusahaan.telf + "\n";
+
 
                 // TRANSAKSI
                 DataInvoice dInvoice = new DataInvoice(command, kode);
                 report.Parameters["Kode"].Value = kode;
-                report.Parameters["kodeFL"].Value = kode.Substring(7);
+                report.Parameters["kodeFL"].Value = "KTN-FL"+kode.Substring(7);
                 report.Parameters["Tanggal"].Value = dInvoice.tanggal;
 
                 // PROYEK
@@ -609,6 +618,7 @@ namespace Kontenu.Design
                 report.Parameters["PICNama"].Value = dPIC.nama;
                 report.Parameters["PICAlamat"].Value = dPIC.alamat;
                 report.Parameters["PICEmail"].Value = dPIC.email;
+                report.Parameters["PICTtd"].Value = dPIC.ttd;
 
                 DataJabatan dJabatan = new DataJabatan(command, dPIC.jabatan);
                 report.Parameters["PICJabatan"].Value = dJabatan.nama;

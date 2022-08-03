@@ -124,7 +124,7 @@ namespace Kontenu.Design
             {
                 String strngKode = txtKode.Text;
                 deTanggal.Enabled = false;
-                btnCetak.Enabled = true;
+                btnCetak1.Enabled = true;
 
                 // PENAGIHAN
                 DataPenagihan dPenagihan = new DataPenagihan(command, strngKode);
@@ -181,7 +181,7 @@ namespace Kontenu.Design
                 dblDitagihkan = 0;
                 dblSisa = 0;
 
-                btnCetak.Enabled = false;
+                btnCetak1.Enabled = false;
             }
 
             this.setGrid(command);
@@ -370,6 +370,7 @@ namespace Kontenu.Design
                 // TRANSAKSI
                 DataPenagihan dPenagihan = new DataPenagihan(command, kode);
                 report.Parameters["Kode"].Value = kode;
+                report.Parameters["kodePagar"].Value = "# " + kode;
                 report.Parameters["Tanggal"].Value = dPenagihan.tanggal;
 
                 // PROYEK
@@ -378,7 +379,9 @@ namespace Kontenu.Design
                 report.Parameters["ProyekNama"].Value = dProyek.nama;
                 report.Parameters["ProyekAlamat"].Value = dProyek.alamat;
                 report.Parameters["ProyekKota"].Value = dProyek.kota;
-                report.Parameters["ProyekJenis"].Value = (new DataJenisProyek(command, dProyek.jenisproyek)).nama;
+                String jenisProyek = (new DataJenisProyek(command, dProyek.jenisproyek)).nama;
+                report.Parameters["ProyekJenisBefore"].Value = jenisProyek.Substring(0, jenisProyek.IndexOf("-"));
+                report.Parameters["ProyekJenisAfter"].Value = jenisProyek.Substring(jenisProyek.IndexOf("-") + 2);
                 report.Parameters["ProyekTanggalBerlaku"].Value = dProyek.tanggaldeal;
 
                 // KLIEN
@@ -648,6 +651,18 @@ namespace Kontenu.Design
                 {
                 }
             }
+        }
+
+        private void btnCetak_Click_1(object sender, EventArgs e)
+        {
+            String strngKode = txtKode.Text;
+            cetak(strngKode);
+        }
+
+        private void btnCetak1_Click(object sender, EventArgs e)
+        {
+            String strngKode = txtKode.Text;
+            cetak(strngKode);
         }
 
     }
