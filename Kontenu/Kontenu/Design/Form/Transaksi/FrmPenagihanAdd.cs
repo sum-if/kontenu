@@ -673,5 +673,11 @@ namespace Kontenu.Design
             cetak(strngKode);
         }
 
+        private void btnCetak_Click_2(object sender, EventArgs e)
+        {
+            String strngKode = txtKode.Text;
+            cetak(strngKode);
+        }
+
     }
 }

@@ -91,6 +91,7 @@
             this.txtKodeKlien = new DevExpress.XtraEditors.TextEdit();
             this.txtNama = new DevExpress.XtraEditors.TextEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
+            this.btnCetak = new DevExpress.XtraEditors.SimpleButton();
             this.btnCetak1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
@@ -132,6 +133,7 @@
             // 
             // xtraScrollableControl1
             // 
+            this.xtraScrollableControl1.Controls.Add(this.btnCetak);
             this.xtraScrollableControl1.Controls.Add(this.btnCetak1);
             this.xtraScrollableControl1.Controls.Add(this.gridControl1);
             this.xtraScrollableControl1.Controls.Add(this.btnSimpan);
@@ -165,7 +167,7 @@
             this.btnSimpan.Image = ((System.Drawing.Image)(resources.GetObject("btnSimpan.Image")));
             this.btnSimpan.Location = new System.Drawing.Point(12, 460);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(86, 44);
+            this.btnSimpan.Size = new System.Drawing.Size(86, 23);
             this.btnSimpan.TabIndex = 250;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
@@ -272,36 +274,36 @@
             this.labelControl27.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl27.Location = new System.Drawing.Point(22, 80);
             this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(39, 19);
+            this.labelControl27.Size = new System.Drawing.Size(33, 19);
             this.labelControl27.TabIndex = 190;
-            this.labelControl27.Text = "SISA";
+            this.labelControl27.Text = "Sisa";
             // 
             // labelControl16
             // 
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl16.Location = new System.Drawing.Point(22, 55);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(108, 19);
+            this.labelControl16.Size = new System.Drawing.Size(89, 19);
             this.labelControl16.TabIndex = 190;
-            this.labelControl16.Text = "DITAGIHKAN";
+            this.labelControl16.Text = "Ditagihkan";
             // 
             // labelControl10
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl10.Location = new System.Drawing.Point(22, 30);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(137, 19);
+            this.labelControl10.Size = new System.Drawing.Size(114, 19);
             this.labelControl10.TabIndex = 190;
-            this.labelControl10.Text = "TELAH DIBAYAR";
+            this.labelControl10.Text = "Telah Dibayar";
             // 
             // labelControl15
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl15.Location = new System.Drawing.Point(22, 5);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(120, 19);
+            this.labelControl15.Size = new System.Drawing.Size(97, 19);
             this.labelControl15.TabIndex = 190;
-            this.labelControl15.Text = "GRAND TOTAL";
+            this.labelControl15.Text = "Grand Total";
             // 
             // groupControl2
             // 
@@ -348,9 +350,9 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(12, 110);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(64, 13);
+            this.labelControl5.Size = new System.Drawing.Size(48, 13);
             this.labelControl5.TabIndex = 227;
-            this.labelControl5.Text = "No Quotation";
+            this.labelControl5.Text = "Quotation";
             // 
             // labelControl6
             // 
@@ -364,9 +366,9 @@
             // 
             this.labelControl9.Location = new System.Drawing.Point(12, 32);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(51, 13);
+            this.labelControl9.Size = new System.Drawing.Size(69, 13);
             this.labelControl9.TabIndex = 218;
-            this.labelControl9.Text = "No Invoice";
+            this.labelControl9.Text = "Nomor Invoice";
             // 
             // labelControl7
             // 
@@ -580,9 +582,9 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(16, 31);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(66, 13);
+            this.labelControl8.Size = new System.Drawing.Size(84, 13);
             this.labelControl8.TabIndex = 177;
-            this.labelControl8.Text = "No Penagihan";
+            this.labelControl8.Text = "Nomor Penagihan";
             // 
             // labelControl2
             // 
@@ -620,7 +622,7 @@
             // 
             this.txtKota.EditValue = "";
             this.txtKota.Enabled = false;
-            this.txtKota.Location = new System.Drawing.Point(246, 159);
+            this.txtKota.Location = new System.Drawing.Point(127, 159);
             this.txtKota.Name = "txtKota";
             this.txtKota.Size = new System.Drawing.Size(147, 20);
             this.txtKota.TabIndex = 150;
@@ -687,7 +689,7 @@
             // 
             this.txtProvinsi.EditValue = "";
             this.txtProvinsi.Enabled = false;
-            this.txtProvinsi.Location = new System.Drawing.Point(127, 159);
+            this.txtProvinsi.Location = new System.Drawing.Point(280, 159);
             this.txtProvinsi.Name = "txtProvinsi";
             this.txtProvinsi.Size = new System.Drawing.Size(113, 20);
             this.txtProvinsi.TabIndex = 140;
@@ -747,19 +749,29 @@
             // 
             this.labelControl21.Location = new System.Drawing.Point(16, 188);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(38, 13);
+            this.labelControl21.Size = new System.Drawing.Size(19, 13);
             this.labelControl21.TabIndex = 206;
-            this.labelControl21.Text = "Telepon";
+            this.labelControl21.Text = "Telf";
+            // 
+            // btnCetak
+            // 
+            this.btnCetak.Image = ((System.Drawing.Image)(resources.GetObject("btnCetak.Image")));
+            this.btnCetak.Location = new System.Drawing.Point(104, 460);
+            this.btnCetak.Name = "btnCetak";
+            this.btnCetak.Size = new System.Drawing.Size(86, 23);
+            this.btnCetak.TabIndex = 264;
+            this.btnCetak.Text = "Cetak";
+            this.btnCetak.Click += new System.EventHandler(this.btnCetak_Click_2);
             // 
             // btnCetak1
             // 
             this.btnCetak1.Image = global::Kontenu.Properties.Resources.cetak_16;
-            this.btnCetak1.Location = new System.Drawing.Point(113, 460);
+            this.btnCetak1.Location = new System.Drawing.Point(343, 510);
             this.btnCetak1.Name = "btnCetak1";
-            this.btnCetak1.Size = new System.Drawing.Size(139, 44);
+            this.btnCetak1.Size = new System.Drawing.Size(74, 44);
             this.btnCetak1.TabIndex = 263;
-            this.btnCetak1.Text = "Cetak Penagihan";
-            this.btnCetak1.Click += new System.EventHandler(this.btnCetak1_Click);
+            this.btnCetak1.Text = "Cetak";
+            this.btnCetak1.Visible = false;
             // 
             // FrmPenagihanAdd
             // 
@@ -881,6 +893,7 @@
         private DevExpress.XtraEditors.TextEdit txtDitagihkan;
         public DevExpress.XtraEditors.SimpleButton btnCariKlien;
         public DevExpress.XtraEditors.TextEdit txtKodeKlien;
+        private DevExpress.XtraEditors.SimpleButton btnCetak;
         private DevExpress.XtraEditors.SimpleButton btnCetak1;
     }
 }
