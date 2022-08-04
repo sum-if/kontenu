@@ -364,8 +364,9 @@ namespace Kontenu.Design
                 report.Parameters["PerusahaanAlamat"].Value = dPerusahaan.alamat;
                 report.Parameters["PerusahaanKota"].Value = dPerusahaan.kota;
                 report.Parameters["PerusahaanEmail"].Value = dPerusahaan.email;
-                report.Parameters["PerusahaanTelepon"].Value = "+62 811 318 6880";
+                report.Parameters["PerusahaanTelepon"].Value = dPerusahaan.telf;
                 report.Parameters["PerusahaanWebsite"].Value = dPerusahaan.website;
+                report.Parameters["PerusahaanLogo"].Value = dPerusahaan.logo;
 
                 // TRANSAKSI
                 DataPenagihan dPenagihan = new DataPenagihan(command, kode);
@@ -383,6 +384,13 @@ namespace Kontenu.Design
                 report.Parameters["ProyekJenisBefore"].Value = jenisProyek.Substring(0, jenisProyek.IndexOf("-"));
                 report.Parameters["ProyekJenisAfter"].Value = jenisProyek.Substring(jenisProyek.IndexOf("-") + 2);
                 report.Parameters["ProyekTanggalBerlaku"].Value = dProyek.tanggaldeal;
+
+                DataPIC dPIC = new DataPIC(command, dProyek.pic);
+                report.Parameters["PICNama"].Value = dPIC.nama;
+                report.Parameters["PICAlamat"].Value = dPIC.alamat;
+                report.Parameters["PICEmail"].Value = dPIC.email;
+                report.Parameters["PICTtd"].Value = dPIC.ttd;                
+                report.Parameters["PICHandphone"].Value = dPIC.handphone;    
 
                 // KLIEN
                 DataKlien dKlien = new DataKlien(command, dPenagihan.klien);
